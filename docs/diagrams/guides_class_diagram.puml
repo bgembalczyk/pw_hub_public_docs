@@ -1,0 +1,165 @@
+@startuml
+
+title Guides Module - Class Diagram
+
+skinparam class {
+    BackgroundColor<<Model>> LightBlue
+    BorderColor<<Model>> DarkBlue
+    BackgroundColor<<View>> LightGreen
+    BorderColor<<View>> DarkGreen
+}
+
+' ============================================================================
+' MODELS
+' ============================================================================
+
+class GuideCategory <<Model>> {
+    --Fields--
+    +id: BigAutoField
+    +name: CharField(max_length=100)
+    +slug: SlugField(max_length=100, unique=True)
+    +icon: CharField(max_length=50, blank=True)
+    +order: IntegerField(default=0)
+    --Methods--
+    +__str__(): str
+}
+
+class Guide <<Model>> {
+    --Fields--
+    +id: BigAutoField
+    +title: CharField(max_length=255)
+    +summary: TextField
+    +content: TextField(blank=True)
+    +category: ForeignKey(GuideCategory)
+    +author: ForeignKey(User, null=True, blank=True)
+    +image: ImageField(upload_to="guides/images/", blank=True, null=True)
+    +source: CharField(max_length=255, blank=True)
+    +published: BooleanField(default=False)
+    +published_at: DateTimeField(null=True, blank=True)
+    +language: CharField(max_length=2, choices=[PL, EN], default="PL")
+    +created_at: DateTimeField(auto_now_add=True)
+    +updated_at: DateTimeField(auto_now=True)
+    --Methods--
+    +__str__(): str
+    +get_absolute_url(): str
+}
+
+class Contact <<Model>> {
+    --Fields--
+    +id: BigAutoField
+    +name: CharField(max_length=255)
+    +description: TextField
+    +contact_type: CharField(max_length=50, choices=[office, service, organization, department, other])
+    +unit: ForeignKey(Unit, null=True, blank=True)
+    +location: CharField(max_length=255, blank=True)
+    +room_number: CharField(max_length=50, blank=True)
+    +opening_hours: CharField(max_length=255, blank=True)
+    +email: EmailField(blank=True)
+    +phone: CharField(max_length=50, blank=True)
+    +website: URLField(blank=True)
+    +icon: CharField(max_length=50, default="bi-building")
+    +order: IntegerField(default=0)
+    +created_at: DateTimeField(auto_now_add=True)
+    +updated_at: DateTimeField(auto_now=True)
+    --Methods--
+    +__str__(): str
+    +get_contact_link(): str
+}
+
+' ============================================================================
+' VIEWS
+' ============================================================================
+
+class GuideListView <<View>> {
+    --Attributes--
+    +model: Guide
+    +context_object_name: "guides"
+    +template_name: "guides/guide_list.html"
+    +paginate_by: 20
+    --Methods--
+    +get_context_data(**kwargs): dict
+}
+
+class GuideDetailView <<View>> {
+    --Attributes--
+    +model: Guide
+    +context_object_name: "guide"
+    +template_name: "guides/guide_detail.html"
+}
+
+' ============================================================================
+' ADMIN
+' ============================================================================
+
+class GuideCategoryAdmin {
+    +list_display: tuple
+    +prepopulated_fields: dict
+    +search_fields: tuple
+}
+
+class GuideAdmin {
+    +list_display: tuple
+    +list_filter: tuple
+    +search_fields: tuple
+    +raw_id_fields: tuple
+}
+
+class ContactAdmin {
+    +list_display: tuple
+    +list_filter: tuple
+    +search_fields: tuple
+}
+
+' ============================================================================
+' RELATIONSHIPS
+' ============================================================================
+
+GuideCategory "1" --> "0..*" Guide : has many
+Guide "*" --> "1" GuideCategory : belongs to
+Guide "*" --> "0..1" User : authored by
+Contact "*" --> "0..1" Unit : belongs to
+
+GuideListView ..> Guide : queries
+GuideListView ..> Contact : queries
+GuideDetailView ..> Guide : queries
+
+GuideCategoryAdmin ..> GuideCategory : manages
+GuideAdmin ..> Guide : manages
+ContactAdmin ..> Contact : manages
+
+' ============================================================================
+' NOTES
+' ============================================================================
+
+note right of Guide
+  Main model for student guides.
+  Each guide belongs to a category,
+  can optionally have an author and image,
+  and supports publishing workflow.
+
+  ordering: ["-created_at"]
+end note
+
+note right of GuideCategory
+  Categories for organizing guides.
+  Uses slug for URL-friendly names
+  and icon for visual representation.
+
+  ordering: ["order", "name"]
+end note
+
+note right of Contact
+  Contact information for university
+  offices and services. Can be linked
+  to an organizational unit.
+
+  ordering: ["order", "name"]
+end note
+
+note bottom of GuideListView
+  Displays both guides and contacts
+  in a single view matching the
+  UI mockup design.
+end note
+
+@enduml

@@ -1,0 +1,331 @@
+@startuml
+
+!define NODE_COLOR #E3F2FD
+!define DEVICE_COLOR #BBDEFB
+!define SERVER_COLOR #C5E1A5
+!define DATABASE_COLOR #C5CAE9
+!define EXTERNAL_COLOR #FFCCBC
+!define CLOUD_COLOR #FFF9C4
+
+title PW Companion - Deployment Diagram
+
+skinparam linetype ortho
+
+' ============================================================================
+' LEGEND
+' ============================================================================
+legend right
+  |= Color |= Node Type |
+  | <back:#E3F2FD>   </back> | Deployment Node |
+  | <back:#BBDEFB>   </back> | Mobile Device |
+  | <back:#C5E1A5>   </back> | Application Server |
+  | <back:#C5CAE9>   </back> | Database Server |
+  | <back:#FFCCBC>   </back> | External Service |
+  | <back:#FFF9C4>   </back> | Cloud Service |
+endlegend
+
+' ============================================================================
+' MOBILE DEVICES (CLIENT TIER)
+' ============================================================================
+
+node "Android Device" as AndroidDevice DEVICE_COLOR {
+  artifact "Flutter Mobile App\n(Android)" as AndroidApp
+  artifact "Google Play Services" as PlayServices
+}
+
+node "iOS Device" as iOSDevice DEVICE_COLOR {
+  artifact "Flutter Mobile App\n(iOS)" as iOSApp
+  artifact "Apple Services" as AppleServices
+}
+
+' ============================================================================
+' PRODUCTION ENVIRONMENT
+' ============================================================================
+
+node "Production Server" as ProdServer NODE_COLOR {
+  
+  node "<<Container>>\nTraefik Reverse Proxy" as Traefik SERVER_COLOR {
+    artifact "Traefik v2.x" as TraefikApp
+    note right of TraefikApp
+      - HTTPS/TLS termination
+      - Load balancing
+      - Automatic SSL (Let's Encrypt)
+      - Routes to Django
+      - Port 80 (HTTP) -> 443 (HTTPS)
+      - Port 443 (HTTPS)
+    end note
+  }
+  
+  node "<<Container>>\nDjango Application Server" as DjangoServer SERVER_COLOR {
+    artifact "Django 5.x\n+ DRF" as DjangoApp
+    artifact "Gunicorn WSGI" as Gunicorn
+    artifact "Celery Workers" as Celery
+    artifact "Celery Beat" as CeleryBeat
+    note right of DjangoApp
+      - REST API endpoints
+      - Business logic
+      - Authentication & Authorization
+      - Admin interface
+      - Static files serving
+    end note
+  }
+  
+  node "<<Container>>\nPostgreSQL Server" as PostgresServer DATABASE_COLOR {
+    artifact "PostgreSQL 16" as PostgresDB
+    artifact "PostGIS Extension" as PostGIS
+    database "pw_hub Database" as Database
+    note right of PostgresDB
+      - Primary data store
+      - GIS support for maps
+      - Backups to volume
+      - Data persistence
+    end note
+  }
+  
+  node "<<Container>>\nRedis Server" as RedisServer SERVER_COLOR {
+    artifact "Redis 6.x" as RedisApp
+    note right of RedisApp
+      - Cache layer
+      - Celery message broker
+      - Session storage
+      - Rate limiting
+    end note
+  }
+}
+
+' ============================================================================
+' VOLUMES (PERSISTENT STORAGE)
+' ============================================================================
+
+node "Docker Volumes" as Volumes NODE_COLOR {
+  artifact "production_postgres_data" as PostgresData
+  artifact "production_postgres_data_backups" as PostgresBackups
+  artifact "production_traefik\n(SSL certificates)" as TraefikData
+}
+
+' ============================================================================
+' DEVELOPMENT ENVIRONMENT
+' ============================================================================
+
+node "Development Workstation" as DevWorkstation NODE_COLOR {
+  
+  node "<<Container>>\nLocal Django" as LocalDjango SERVER_COLOR {
+    artifact "Django Dev Server" as DjangoDevServer
+    note bottom of DjangoDevServer
+      - Hot reload
+      - Debug mode
+      - Port 8000
+    end note
+  }
+  
+  node "<<Container>>\nLocal PostgreSQL" as LocalPostgres DATABASE_COLOR {
+    artifact "PostgreSQL 16" as LocalDB
+    database "test_pw_hub" as TestDatabase
+  }
+  
+  node "Development Tools" as DevTools SERVER_COLOR {
+    artifact "VS Code / IDE" as IDE
+    artifact "Flutter SDK" as FlutterSDK
+    artifact "Docker Desktop" as DockerDesktop
+    artifact "Git" as Git
+  }
+}
+
+' ============================================================================
+' EXTERNAL SYSTEMS
+' ============================================================================
+
+cloud "University Infrastructure" as UniversityCloud CLOUD_COLOR {
+  
+  node "<<External System>>\nUSOS API" as USOS EXTERNAL_COLOR {
+    artifact "USOS REST API" as USOSApi
+    note right of USOSApi
+      - Course information
+      - Exam schedules
+      - Payment deadlines
+      - Registration periods
+      - Read-only access
+    end note
+  }
+  
+  node "<<External System>>\nSSO / OAuth2" as SSO EXTERNAL_COLOR {
+    artifact "University Identity Provider" as IdP
+    note right of IdP
+      - OAuth2 / OpenID Connect
+      - Centralized authentication
+      - Student accounts
+      - Staff accounts
+    end note
+  }
+  
+  node "<<External System>>\nCampus Maps Data" as CampusMaps EXTERNAL_COLOR {
+    artifact "PW Maps Database" as PWMapsDB
+    note right of PWMapsDB
+      - Building locations
+      - Room information
+      - Accessibility data
+    end note
+  }
+}
+
+cloud "Third-Party Services" as ThirdPartyCloud CLOUD_COLOR {
+  
+  node "<<External Service>>\nFirebase Cloud Messaging" as FCM EXTERNAL_COLOR {
+    artifact "FCM API" as FCMApi
+    note bottom of FCMApi
+      - Push notifications for Android
+      - Message delivery
+      - Topic subscriptions
+    end note
+  }
+  
+  node "<<External Service>>\nApple Push Notification Service" as APNs EXTERNAL_COLOR {
+    artifact "APNs API" as APNsApi
+    note bottom of APNsApi
+      - Push notifications for iOS
+      - Message delivery
+      - Silent notifications
+    end note
+  }
+  
+  node "<<External Service>>\nOpenStreetMap" as OSM EXTERNAL_COLOR {
+    artifact "OSM Tile Server" as OSMTiles
+    artifact "Routing Engine" as OSMRouting
+    note bottom of OSMTiles
+      - Map tiles
+      - Route calculation
+      - Geocoding
+    end note
+  }
+}
+
+' ============================================================================
+' CI/CD PIPELINE
+' ============================================================================
+
+node "GitLab CI/CD" as GitLabCI NODE_COLOR {
+  
+  artifact "<<Stage>>\nLint (pre-commit)" as LintStage
+  artifact "<<Stage>>\nTest (pytest)" as TestStage
+  artifact "<<Stage>>\nBuild (Docker)" as BuildStage
+  artifact "<<Stage>>\nDeploy" as DeployStage
+  
+  note right of GitLabCI
+    Pipeline stages:
+    1. Lint: pre-commit hooks
+    2. Test: pytest in Docker
+    3. Build: Docker images
+    4. Deploy: to production server
+    
+    Uses: Docker-in-Docker
+  end note
+}
+
+node "Container Registry" as Registry NODE_COLOR {
+  artifact "Django Image\npw_hub_production_django" as DjangoImage
+  artifact "PostgreSQL Image\npw_hub_production_postgres" as PostgresImage
+  artifact "Traefik Image\npw_hub_production_traefik" as TraefikImage
+}
+
+' ============================================================================
+' NETWORK CONNECTIONS - Mobile to Backend
+' ============================================================================
+
+AndroidApp -down-> Traefik : "HTTPS/REST\nPort 443"
+iOSApp -down-> Traefik : "HTTPS/REST\nPort 443"
+
+PlayServices .up.> FCM : "Receive push"
+AppleServices .up.> APNs : "Receive push"
+
+' ============================================================================
+' NETWORK CONNECTIONS - Production Internal
+' ============================================================================
+
+Traefik -down-> DjangoApp : "HTTP\nInternal network"
+DjangoApp -down-> PostgresDB : "PostgreSQL protocol\nPort 5432"
+DjangoApp -right-> RedisApp : "Redis protocol\nPort 6379"
+Celery -up-> RedisApp : "Message queue"
+CeleryBeat -up-> RedisApp : "Scheduled tasks"
+
+PostgresDB -down-> PostgresData : "Persist data"
+PostgresDB -down-> PostgresBackups : "Store backups"
+Traefik -down-> TraefikData : "Store SSL certs"
+
+' ============================================================================
+' NETWORK CONNECTIONS - Backend to External Systems
+' ============================================================================
+
+DjangoApp ..> USOS : "HTTPS/REST\nRead-only"
+DjangoApp ..> SSO : "OAuth2/OIDC\nAuthentication"
+DjangoApp ..> CampusMaps : "HTTPS/API\nMap data"
+DjangoApp ..> OSM : "HTTPS/API\nRouting"
+DjangoApp ..> FCM : "HTTPS/API\nAndroid push"
+DjangoApp ..> APNs : "HTTPS/API\niOS push"
+
+' ============================================================================
+' NETWORK CONNECTIONS - Development
+' ============================================================================
+
+IDE -down-> Git : "Source control"
+FlutterSDK .right.> AndroidApp : "Build & deploy"
+FlutterSDK .right.> iOSApp : "Build & deploy"
+
+LocalDjango -down-> LocalDB : "PostgreSQL\nPort 5432"
+IDE -down-> LocalDjango : "Development\nPort 8000"
+
+' ============================================================================
+' NETWORK CONNECTIONS - CI/CD
+' ============================================================================
+
+Git -down-> GitLabCI : "Git push\ntrigger pipeline"
+
+LintStage -down-> TestStage : "On success"
+TestStage -down-> BuildStage : "On success"
+BuildStage -down-> DeployStage : "On success"
+
+BuildStage -right-> Registry : "Push images"
+Registry -down-> ProdServer : "Pull images\non deploy"
+
+DeployStage ..> ProdServer : "SSH deploy\ndocker-compose"
+
+' ============================================================================
+' DEPLOYMENT NOTES
+' ============================================================================
+
+note top of ProdServer
+  **Production Deployment**
+  - Docker Compose orchestration
+  - All services in Docker containers
+  - Internal Docker network
+  - Persistent volumes for data
+  - Automated backups
+  - SSL/TLS encryption
+  - Environment-based configuration
+end note
+
+note bottom of DevWorkstation
+  **Local Development**
+  - Docker Compose for services
+  - Hot reload for rapid development
+  - Same stack as production
+  - Test database isolated
+  - Direct access to services
+end note
+
+note top of UniversityCloud
+  **PW Infrastructure**
+  All systems are read-only
+  No data modifications
+  Secure OAuth2 authentication
+  Periodic synchronization
+end note
+
+note bottom of ThirdPartyCloud
+  **External Services**
+  - API-based integration
+  - Rate limiting considerations
+  - Fallback mechanisms
+  - Caching where possible
+end note
+
+@enduml

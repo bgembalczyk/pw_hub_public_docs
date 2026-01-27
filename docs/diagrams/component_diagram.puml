@@ -1,0 +1,362 @@
+@startuml
+
+!define RECTANGLE_COLOR #E3F2FD
+!define COMPONENT_COLOR #BBDEFB
+!define DATABASE_COLOR #C5CAE9
+!define EXTERNAL_COLOR #FFCCBC
+
+title PW Companion - Component Diagram
+
+skinparam componentStyle rectangle
+skinparam linetype ortho
+
+' ============================================================================
+' LEGEND
+' ============================================================================
+legend right
+  |= Color |= Component Type |
+  | <back:#E3F2FD>   </back> | Container/Layer |
+  | <back:#BBDEFB>   </back> | Application Component |
+  | <back:#C5CAE9>   </back> | Database |
+  | <back:#FFCCBC>   </back> | External System |
+endlegend
+
+' ============================================================================
+' MOBILE APPLICATION LAYER
+' ============================================================================
+
+rectangle "Mobile Application Layer" RECTANGLE_COLOR {
+  
+  component "Flutter Mobile App" as FlutterApp COMPONENT_COLOR {
+    component [Authentication\nModule] as AuthModule
+    component [News/Announcements\nModule] as NewsModule
+    component [Events\nModule] as EventsModule
+    component [Event Registration\nModule] as RegistrationModule
+    component [Maps & Navigation\nModule] as MapsModule
+    component [USOS Integration\nModule] as UsosClientModule
+    component [Notifications\nModule] as NotifModule
+    component [Guides & Contacts\nModule] as GuidesModule
+    component [QR Code Scanner\n& Generator] as QRModule
+  }
+}
+
+' ============================================================================
+' API GATEWAY / BACKEND LAYER
+' ============================================================================
+
+rectangle "Backend API Layer" RECTANGLE_COLOR {
+  
+  component "Django REST Framework" as DRF COMPONENT_COLOR {
+    component [API Router] as APIRouter
+    component [Authentication\nEndpoints] as AuthAPI
+    component [Announcements\nEndpoints] as NewsAPI
+    component [Events\nEndpoints] as EventsAPI
+    component [Registration\nEndpoints] as RegAPI
+    component [User\nEndpoints] as UserAPI
+    component [Maps\nEndpoints] as MapsAPI
+    component [Guides\nEndpoints] as GuidesAPI
+  }
+}
+
+' ============================================================================
+' BUSINESS LOGIC LAYER (Django Apps)
+' ============================================================================
+
+rectangle "Business Logic Layer (Django Apps)" RECTANGLE_COLOR {
+  
+  package "Users App" COMPONENT_COLOR {
+    component [User Models] as UserModel
+    component [User Views] as UserViews
+    component [User API ViewSets] as UserViewSet
+    component [User Serializers] as UserSerializer
+    component [Preferences\nManagement] as UserPrefs
+  }
+  
+  package "Announcements App" COMPONENT_COLOR {
+    component [Announcement\nModels] as AnnouncementModel
+    component [Announcement\nViews] as AnnouncementViews
+    component [Content\nModeration] as ContentMod
+    component [Multi-language\nSupport] as I18nAnnouncement
+  }
+  
+  package "Events App" COMPONENT_COLOR {
+    component [Event Models] as EventModel
+    component [Event Views] as EventViews
+    component [Event Categories\n& Filters] as EventFilters
+    component [Accessibility\nInformation] as AccessibilityInfo
+  }
+  
+  package "Event Registration App" COMPONENT_COLOR {
+    component [Registration\nModels] as RegModel
+    component [Ticket Generator\n(QR)] as TicketGen
+    component [Participant\nManagement] as ParticipantMgmt
+    component [Capacity\nManagement] as CapacityMgmt
+  }
+  
+  package "Maps App" COMPONENT_COLOR {
+    component [Location Models] as LocationModel
+    component [Route\nCalculation] as RouteCalc
+    component [Accessible Route\nPlanning] as AccessibleRoute
+    component [Campus Maps\nData] as CampusMaps
+  }
+  
+  package "Guides App" COMPONENT_COLOR {
+    component [Guide Models] as GuideModel
+    component [Guide Content\nManagement] as GuideContent
+  }
+  
+  package "Notifications App" COMPONENT_COLOR {
+    component [Notification\nModels] as NotifModel
+    component [Push Notification\nService] as PushService
+    component [Notification\nPreferences] as NotifPrefs
+  }
+  
+  package "Permissions & Authorization" COMPONENT_COLOR {
+    component [Permission\nModels] as PermModel
+    component [Permission Groups\n& Schemes] as PermGroups
+    component [Role-based Access\nControl (RBAC)] as RBAC
+  }
+  
+  package "Units App" COMPONENT_COLOR {
+    component [Organizational\nUnit Models] as UnitModel
+    component [Unit Hierarchy\nManagement] as UnitHierarchy
+  }
+}
+
+' ============================================================================
+' DATA ACCESS LAYER
+' ============================================================================
+
+rectangle "Data Access Layer" RECTANGLE_COLOR {
+  
+  component "Django ORM" as ORM COMPONENT_COLOR {
+    component [Models Layer] as ModelsLayer
+    component [QuerySets] as QuerySets
+    component [Migrations] as Migrations
+  }
+}
+
+' ============================================================================
+' DATABASE LAYER
+' ============================================================================
+
+rectangle "Database Layer" RECTANGLE_COLOR {
+  
+  database "PostgreSQL" as PostgreSQL DATABASE_COLOR {
+    component [Users & Auth\nTables] as UserTables
+    component [Announcements\nTables] as NewsTables
+    component [Events\nTables] as EventTables
+    component [Registrations\nTables] as RegTables
+    component [Permissions\nTables] as PermTables
+    component [Units\nTables] as UnitTables
+    component [Maps/Locations\nTables] as MapsTables
+    component [Guides\nTables] as GuidesTables
+    component [Notifications\nTables] as NotifTables
+  }
+}
+
+' ============================================================================
+' EXTERNAL SYSTEMS
+' ============================================================================
+
+rectangle "External Systems" RECTANGLE_COLOR {
+  
+  component "USOS API" as USOS EXTERNAL_COLOR {
+    component [Course Data] as USOSCourses
+    component [Exam Schedules] as USOSExams
+    component [Payment Info] as USOSPayments
+    component [Registration\nDeadlines] as USOSDeadlines
+  }
+  
+  component "SSO / OAuth2" as SSO EXTERNAL_COLOR {
+    component [University\nIdentity Provider] as IdP
+    component [OAuth2\nAuthentication] as OAuth
+  }
+  
+  component "Maps Service" as MapsService EXTERNAL_COLOR {
+    component [OpenStreetMap] as OSM
+    component [PW Campus\nMaps Data] as PWMaps
+  }
+  
+  component "Push Notification\nService" as PushNotifService EXTERNAL_COLOR {
+    component [FCM\n(Firebase Cloud Messaging)] as FCM
+    component [APNs\n(Apple Push Notifications)] as APNs
+  }
+}
+
+' ============================================================================
+' RELATIONSHIPS - Mobile to Backend
+' ============================================================================
+
+AuthModule --> APIRouter : "HTTPS/REST"
+NewsModule --> APIRouter : "HTTPS/REST"
+EventsModule --> APIRouter : "HTTPS/REST"
+RegistrationModule --> APIRouter : "HTTPS/REST"
+MapsModule --> APIRouter : "HTTPS/REST"
+UsosClientModule --> APIRouter : "HTTPS/REST"
+NotifModule --> APIRouter : "HTTPS/REST"
+GuidesModule --> APIRouter : "HTTPS/REST"
+
+' ============================================================================
+' RELATIONSHIPS - API Router to Endpoints
+' ============================================================================
+
+APIRouter --> AuthAPI
+APIRouter --> NewsAPI
+APIRouter --> EventsAPI
+APIRouter --> RegAPI
+APIRouter --> UserAPI
+APIRouter --> MapsAPI
+APIRouter --> GuidesAPI
+
+' ============================================================================
+' RELATIONSHIPS - Endpoints to ViewSets
+' ============================================================================
+
+AuthAPI --> UserViewSet
+UserAPI --> UserViewSet
+NewsAPI --> AnnouncementViews
+EventsAPI --> EventViews
+RegAPI --> ParticipantMgmt
+MapsAPI --> LocationModel
+GuidesAPI --> GuideContent
+
+' ============================================================================
+' RELATIONSHIPS - Business Logic to Models
+' ============================================================================
+
+UserViewSet --> UserModel
+UserViews --> UserModel
+UserViewSet --> UserSerializer
+
+AnnouncementViews --> AnnouncementModel
+AnnouncementViews --> I18nAnnouncement
+AnnouncementViews --> ContentMod
+
+EventViews --> EventModel
+EventViews --> EventFilters
+EventViews --> AccessibilityInfo
+
+ParticipantMgmt --> RegModel
+ParticipantMgmt --> TicketGen
+ParticipantMgmt --> CapacityMgmt
+
+LocationModel --> CampusMaps
+RouteCalc --> AccessibleRoute
+
+GuideContent --> GuideModel
+
+PushService --> NotifModel
+NotifPrefs --> NotifModel
+
+PermGroups --> PermModel
+RBAC --> PermGroups
+
+UnitHierarchy --> UnitModel
+
+' ============================================================================
+' RELATIONSHIPS - Business Logic to ORM
+' ============================================================================
+
+UserModel --> ORM
+AnnouncementModel --> ORM
+EventModel --> ORM
+RegModel --> ORM
+LocationModel --> ORM
+GuideModel --> ORM
+NotifModel --> ORM
+PermModel --> ORM
+UnitModel --> ORM
+
+' ============================================================================
+' RELATIONSHIPS - ORM to Database
+' ============================================================================
+
+ORM --> PostgreSQL
+ModelsLayer --> UserTables
+ModelsLayer --> NewsTables
+ModelsLayer --> EventTables
+ModelsLayer --> RegTables
+ModelsLayer --> PermTables
+ModelsLayer --> UnitTables
+ModelsLayer --> MapsTables
+ModelsLayer --> GuidesTables
+ModelsLayer --> NotifTables
+
+' ============================================================================
+' RELATIONSHIPS - Backend to External Systems
+' ============================================================================
+
+AuthAPI ..> SSO : "OAuth2\nAuthentication"
+IdP ..> OAuth
+OAuth ..> UserModel : "Creates/Updates\nUser"
+
+UsosClientModule ..> USOS : "HTTPS/API"
+EventModel ..> USOS : "Sync deadlines"
+
+MapsModule ..> MapsService : "HTTPS/API"
+CampusMaps ..> PWMaps : "Data source"
+RouteCalc ..> OSM : "Routing"
+
+PushService ..> PushNotifService : "Send notifications"
+PushNotifService ..> FCM : "Android"
+PushNotifService ..> APNs : "iOS"
+
+' ============================================================================
+' NOTES
+' ============================================================================
+
+note top of FlutterApp
+  Cross-platform mobile application
+  for Android and iOS
+  
+  Key features:
+  - News & announcements
+  - Event calendar & registration
+  - Digital tickets (QR codes)
+  - Campus maps & navigation
+  - USOS integration
+  - Accessibility support
+end note
+
+note bottom of DRF
+  RESTful API built with
+  Django REST Framework
+  
+  Provides:
+  - JSON API endpoints
+  - Authentication & permissions
+  - API documentation (Swagger)
+  - CORS support
+end note
+
+note right of PostgreSQL
+  Relational database
+  
+  Features:
+  - ACID compliance
+  - GIS support (PostGIS)
+  - Full-text search
+  - JSON support
+end note
+
+note left of USOS
+  External academic system
+  
+  Integration mode:
+  - Read-only access
+  - Periodic sync
+  - No modifications to USOS data
+end note
+
+note bottom of SSO
+  University Single Sign-On
+  
+  Features:
+  - OAuth2/OIDC protocol
+  - Centralized authentication
+  - No local passwords
+  - Role assignment
+end note
+
+@enduml

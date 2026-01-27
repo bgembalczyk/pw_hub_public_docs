@@ -1,0 +1,157 @@
+@startsalt
+{
+  {T
+   + Elementy Nawigacji | Wspólne Komponenty
+  }
+  ==
+  {
+    == 1. Menu Główne - Panel Jednostki
+    .
+    {+
+      {/ <b>Menu Jednostki
+        * <&home> Dashboard
+        * <&calendar> Wydarzenia
+        * <&document> Aktualności
+        * <&bar-chart> Statystyki
+        * <&people> Użytkownicy
+        * <&cog> Ustawienia
+      |
+      Główny obszar treści
+      }
+    }
+  }
+  --
+  {
+    == 2. Menu Główne - Panel Administratora
+    .
+    {+
+      {/ <b>Menu Administratora
+        * <&home> Dashboard
+        * <&document> Aktualności
+        * <&calendar> Wydarzenia
+        * <&book> Poradniki
+        * <&people> Użytkownicy
+        * <&building> Jednostki
+        * <&flag> Moderacja
+        * <&graph> Statystyki
+        * <&cog> Konfiguracja
+      |
+      Główny obszar treści
+      }
+    }
+  }
+  --
+  {
+    == 3. Breadcrumbs (Ścieżka Nawigacyjna)
+    .
+    <&home> [Strona główna] > [Zarządzanie treścią] > [Wydarzenia] > Edycja wydarzenia
+  }
+  --
+  {
+    == 4. Górny Pasek Nawigacji
+    .
+    {T
+     + [Logo PW] PW Companion | Panel Jednostki | Powiadomienia (3) | [Jan Kowalski ▼] | [Wyloguj]
+    }
+  }
+  --
+  {
+    == 5. Górny Pasek z Wyszukiwaniem
+    .
+    {T
+     + [Logo PW] | [  Szukaj w systemie...              ] [🔍] | <&bell> (3) | [Admin ▼] | [Wyloguj]
+    }
+  }
+  --
+  {
+    == 6. Paginacja (Standardowa)
+    .
+    {
+      [< Poprzednia] | Strona 1 z 10 | [Następna >]
+    }
+  }
+  --
+  {
+    == 7. Paginacja (Rozszerzona)
+    .
+    {
+      [<< Pierwsza] | [< Poprzednia] | [1] [2] [3] ... [8] [9] [10] | [Następna >] | [Ostatnia >>]
+      .
+      Pokaż: [30 ▼] wyników na stronę | Łącznie: 287 elementów
+    }
+  }
+  --
+  {
+    == 8. Menu Kontekstowe (Akcje)
+    .
+    {#
+      . **Element** | **Akcje**
+      . Wydarzenie "Dni Otwarte" | [Edytuj] [Podgląd] [Usuń] [⋮ Więcej ▼]
+    }
+    .
+    Menu rozwijane "Więcej":
+    * Duplikuj
+    * Eksportuj
+    * Zmień status
+    * Historia zmian
+    * --
+    * Archiwizuj
+  }
+  --
+  {
+    == 9. Zakładki (Tabs)
+    .
+    [Ogólne] [Szczegóły] [Uczestnicy] [Statystyki] [Historia]
+    .
+    Zawartość aktywnej zakładki...
+  }
+  --
+  {
+    == 10. Menu Użytkownika (Dropdown)
+    .
+    [Jan Kowalski ▼]
+    .
+    Po kliknięciu:
+    * <&person> Mój profil
+    * <&cog> Ustawienia konta
+    * <&key> Zmień hasło
+    * <&question-mark> Pomoc
+    * --
+    * <&account-logout> Wyloguj się
+  }
+  --
+  {
+    == 11. Nawigacja Stopki
+    .
+    {
+      [O systemie] | [Pomoc] | [Kontakt] | [Regulamin] | [Polityka prywatności]
+      .
+      <i>© 2026 Politechnika Warszawska. Wszystkie prawa zastrzeżone. Wersja 1.2.3
+    }
+  }
+  --
+  {
+    == 12. Skróty Klawiszowe (Keyboard Navigation)
+    .
+    **Dostępne skróty:**
+    * Alt + H - Strona główna (Home)
+    * Alt + N - Nowy element
+    * Alt + S - Szukaj
+    * Alt + P - Profil użytkownika
+    * Esc - Zamknij modal/anuluj
+    * Tab / Shift+Tab - Nawigacja między polami
+    * Enter - Zatwierdź/Zapisz
+  }
+  --
+  {
+    == Zasady Dostępności (WCAG 2.1)
+    .
+    * Wszystkie elementy nawigacji dostępne z klawiatury
+    * Etykiety ARIA dla czytników ekranu
+    * Fokus wizualny na aktywnym elemencie
+    * Odpowiedni kontrast kolorów (minimum 4.5:1)
+    * Semantyczne znaczniki HTML (nav, main, header, footer)
+    * Skip links dla szybkiej nawigacji
+  }
+}
+@endsalt

@@ -1,0 +1,60 @@
+@startuml Migration Checks Comparison
+!theme plain
+
+title Porównanie sprawdzeń migracji w CI/CD Pipeline
+
+actor Developer
+participant "GitLab CI" as CI
+participant "migrations-integritycheck" as IntCheck
+participant "makemigrations-check" as MakeCheck
+database "Git Repository" as Git
+database "PostgreSQL" as DB
+
+== Developer tworzy MR ==
+Developer -> Git: Push branch z zmianami
+Git -> CI: Trigger pipeline
+
+== Stage: migrations (równoległe wykonanie) ==
+
+par Równoległe sprawdzenie #1
+    CI -> IntCheck: Start job
+    IntCheck -> Git: git diff origin/main...HEAD
+    IntCheck -> IntCheck: Filtruj pliki migracji (*.py)
+    
+    alt Brak zmian w migracjach
+        IntCheck -> CI: ✅ PASS (brak zmian)
+    else Nowe migracje
+        IntCheck -> Git: git ls-tree origin/main
+        IntCheck -> IntCheck: Sprawdź czy pliki istniały
+        alt Tylko nowe pliki
+            IntCheck -> CI: ✅ PASS (nowe migracje)
+        else Edycja istniejących
+            IntCheck -> CI: ❌ FAIL (modyfikacja migracji)
+        end
+    end
+else Równoległe sprawdzenie #2
+    CI -> MakeCheck: Start job (Docker)
+    MakeCheck -> MakeCheck: docker compose build
+    MakeCheck -> DB: Uruchom PostgreSQL
+    MakeCheck -> DB: Uruchom MySQL
+    MakeCheck -> MakeCheck: docker compose up
+    MakeCheck -> MakeCheck: django migrate
+    MakeCheck -> MakeCheck: Load models z apps
+    MakeCheck -> MakeCheck: Load migrations z systemu plików
+    MakeCheck -> MakeCheck: Porównaj models vs migrations
+    
+    alt Modele zsynchronizowane
+        MakeCheck -> CI: ✅ PASS (brak brakujących migracji)
+    else Niezsynchronizowane
+        MakeCheck -> CI: ❌ FAIL (brakujące migracje)
+    end
+end
+
+== Wynik ==
+alt Oba sprawdzenia OK
+    CI -> Developer: ✅ Pipeline passed
+else Którekolwiek failed
+    CI -> Developer: ❌ Pipeline failed
+end
+
+@enduml

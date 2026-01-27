@@ -1,0 +1,75 @@
+@startuml Migration Checks Coverage
+!theme plain
+
+title Zakres wykrywania problemów przez sprawdzenia migracji
+
+package "Potencjalne problemy" {
+    
+    rectangle "Edycja istniejącej\nmigracji" as EditMigr #ffcccc
+    rectangle "Brak migracji dla\nnowego pola" as MissingNew #ccffcc
+    rectangle "Brak migracji dla\nusunięcia pola" as MissingDel #ccffcc
+    rectangle "Brak migracji dla\nzmiany typu" as MissingType #ccffcc
+    rectangle "Konflikt numeracji\nmigracji" as Conflict #ffcccc
+    rectangle "Nowa poprawna\nmigracja" as NewOk #ccccff
+    rectangle "Squashed\nmigration" as Squash #ffffcc
+}
+
+rectangle "migrations-integritycheck\n(Git-based, 5s)" as IntCheck #lightblue {
+    rectangle "Wykrywa" as IntDetect
+    rectangle "Akceptuje" as IntAccept
+}
+
+rectangle "makemigrations-check\n(Django-based, 60-120s)" as MakeCheck #lightgreen {
+    rectangle "Wykrywa" as MakeDetect
+    rectangle "Akceptuje" as MakeAccept
+}
+
+EditMigr -down-> IntDetect
+Conflict -down-> IntDetect
+
+MissingNew -down-> MakeDetect
+MissingDel -down-> MakeDetect
+MissingType -down-> MakeDetect
+
+NewOk -down-> IntAccept
+NewOk -down-> MakeAccept
+
+Squash -down-> MakeAccept
+
+note right of EditMigr
+    ❌ migrations-integritycheck: FAIL
+    ⚠️ makemigrations-check: NIE wykryje
+    
+    Przykład: Developer edytuje
+    0005_add_field.py który już
+    istnieje w main branch
+end note
+
+note right of MissingNew
+    ⚠️ migrations-integritycheck: NIE wykryje
+    ❌ makemigrations-check: FAIL
+    
+    Przykład: Dodano pole do modelu
+    class User(Model):
+        email = EmailField()  # nowe
+    ale brak pliku migracji
+end note
+
+note bottom of NewOk
+    ✅ Oba akceptują
+    
+    Developer prawidłowo:
+    1. Zmienia model
+    2. Uruchamia makemigrations
+    3. Commituje oba pliki
+end note
+
+legend left
+    |= Kolor |= Znaczenie |
+    | #ffcccc | Błąd integralności Git |
+    | #ccffcc | Brak synchronizacji model↔migracja |
+    | #ccccff | Prawidłowe użycie |
+    | #ffffcc | Specjalny przypadek |
+endlegend
+
+@enduml

@@ -1,0 +1,239 @@
+@startsalt
+{
+  {T
+   + Formularze | Wspólne Komponenty
+  }
+  ==
+  {
+    == 1. Formularz Tworzenia Wydarzenia - Podstawowe Informacje
+    .
+    **Tytuł wydarzenia:** <i>(wymagane)</i>
+    [ Dni Otwarte WEiTI 2026                                                    ]
+    .
+    **Opis krótkki:** <i>(wymagane, max 200 znaków)</i>
+    [ Zapraszamy na Dni Otwarte Wydziału Elektroniki i Technik Informacyjnych  ]
+    <i>150/200 znaków</i>
+    .
+    **Szczegółowy opis:** <i>(opcjonalne)</i>
+    {
+      ^Edytor WYSIWYG^
+      =====================================
+      Szczegółowy opis wydarzenia z możliwością
+      formatowania tekstu, dodawania linków,
+      list, pogrubień, kursywy itp.
+      =====================================
+      [B] [I] [U] [Link] [Lista] [Obraz]
+    }
+    .
+    **Kategoria:** <i>(wymagane)</i>
+    [Wybierz kategorię ▼]
+    .
+    **Priorytet:**
+    ( ) Niski  (X) Średni  ( ) Wysoki
+    .
+    **Tagi:** <i>(opcjonalne)</i>
+    [ rekrutacja, dni otwarte, WEiTI                                           ]
+    <i>Oddziel przecinkami</i>
+  }
+  --
+  {
+    == 2. Formularz - Data i Miejsce
+    .
+    **Data rozpoczęcia:** <i>(wymagane)</i>
+    [2026-03-15] [14:00]
+    .
+    **Data zakończenia:** <i>(opcjonalne)</i>
+    [2026-03-15] [18:00]
+    .
+    (X) Wydarzenie całodniowe
+    ( ) Wydarzenie wielodniowe
+    .
+    **Lokalizacja:**
+    [Gmach Główny WEiTI, ul. Nowowiejska 15/19, Warszawa                       ]
+    .
+    **Sala/Pomieszczenie:**
+    [Aula Główna                                                               ]
+    .
+    **Link do mapy:**
+    [https://maps.google.com/...                                               ]
+  }
+  --
+  {
+    == 3. Formularz - Rejestracja i Limity
+    .
+    (X) Wymagana rejestracja uczestników
+    ( ) Wydarzenie bez rejestracji
+    .
+    **Limit miejsc:**
+    [X] Ustaw limit: [ 100 ] miejsc
+    [ ] Bez limitu
+    .
+    **Termin rejestracji:**
+    Data rozpoczęcia: [2026-02-15] [09:00]
+    Data zakończenia: [2026-03-14] [23:59]
+    .
+    **Dodatkowe pola formularza rejestracji:**
+    [X] Imię i nazwisko
+    [X] Email
+    [X] Numer telefonu
+    [ ] Uczelnia/Wydział
+    [ ] Rok studiów
+    [ ] Pytanie dodatkowe: [                                                   ]
+  }
+  --
+  {
+    == 4. Formularz Filtrowania - Lista Wydarzeń
+    .
+    **Filtry:**
+    .
+    Status: [Wszystkie ▼] | Kategoria: [Wszystkie ▼] | Priorytet: [Wszystkie ▼]
+    .
+    Data od: [2026-01-01] | Data do: [2026-12-31]
+    .
+    Szukaj w tytule: [                                                         ]
+    .
+    [Zastosuj filtry] [Wyczyść filtry]
+  }
+  --
+  {
+    == 5. Formularz Logowania
+    .
+    **Email lub nazwa użytkownika:**
+    [                                                                           ]
+    .
+    **Hasło:**
+    [                                                                           ]
+    .
+    [X] Zapamiętaj mnie
+    .
+    [Zaloguj się] | [Zapomniałem hasła]
+    .
+    --
+    .
+    [Zaloguj przez SSO PW] | [Zaloguj przez Microsoft]
+  }
+  --
+  {
+    == 6. Formularz Edycji Użytkownika
+    .
+    **Podstawowe dane:**
+    .
+    Imię: [ Jan                          ] Nazwisko: [ Kowalski                ]
+    .
+    Email: [ j.kowalski@pw.edu.pl                                              ]
+    .
+    Telefon: [ +48 123 456 789                                                 ]
+    .
+    **Jednostka organizacyjna:**
+    [Wydział Elektroniki i Technik Informacyjnych ▼]
+    .
+    **Rola:**
+    [Administrator jednostki ▼]
+    .
+    **Status konta:**
+    (X) Aktywne
+    ( ) Nieaktywne
+    ( ) Zablokowane
+    .
+    **Uprawnienia dodatkowe:**
+    [ ] Moderacja treści
+    [X] Dostęp do statystyk
+    [ ] Zarządzanie użytkownikami
+    [X] Publikacja bez moderacji
+    .
+    [Zapisz zmiany] [Anuluj] [Resetuj hasło]
+  }
+  --
+  {
+    == 7. Formularz Wyszukiwania Zaawansowanego
+    .
+    **Szukaj w:**
+    [X] Tytuł
+    [X] Opis
+    [ ] Tagi
+    [ ] Autor
+    .
+    **Typ treści:**
+    [X] Wydarzenia
+    [X] Aktualności
+    [ ] Poradniki
+    .
+    **Zakres dat:**
+    ( ) Dowolny
+    (X) Określony zakres: od [2026-01-01] do [2026-12-31]
+    ( ) Ostatnie 7 dni
+    ( ) Ostatnie 30 dni
+    .
+    **Jednostka:**
+    [Wszystkie jednostki ▼]
+    .
+    **Dodatkowe opcje:**
+    [ ] Tylko opublikowane
+    [ ] Tylko wersje robocze
+    [ ] Tylko archiwalne
+    .
+    [Szukaj] [Wyczyść]
+  }
+  --
+  {
+    == 8. Inline Edycja (w tabeli)
+    .
+    {#
+      . **Tytuł** | **Data** | **Status** | **Akcje**
+      . [Dni Otwarte WEiTI__] | [2026-03-15] [14:00] | [Opublikowane ▼] | [✓] [✗]
+    }
+    .
+    <i>Kliknij na pole aby edytować bezpośrednio, ✓ zapisz, ✗ anuluj</i>
+  }
+  --
+  {
+    == 9. Walidacja Formularza - Przykłady Komunikatów
+    .
+    **Tytuł wydarzenia:** <i>(wymagane)</i>
+    [                                                                           ]
+    <color:red>⚠ To pole jest wymagane</color>
+    .
+    **Email:**
+    [ invalid-email                                                            ]
+    <color:red>⚠ Wprowadź poprawny adres email</color>
+    .
+    **Data zakończenia:**
+    [2026-03-10]
+    <color:red>⚠ Data zakończenia nie może być wcześniejsza niż data rozpoczęcia</color>
+    .
+    **Limit miejsc:**
+    [ -5 ]
+    <color:red>⚠ Wartość musi być liczbą dodatnią</color>
+  }
+  --
+  {
+    == 10. Wysyłanie Formularza - Stany
+    .
+    **Stan domyślny:**
+    [Zapisz] [Anuluj]
+    .
+    **Stan podczas wysyłania:**
+    [⏳ Zapisywanie...] (przycisk nieaktywny)
+    .
+    **Stan sukcesu:**
+    <color:green>✓ Zapisano pomyślnie</color>
+    [Zapisz] [Anuluj]
+    .
+    **Stan błędu:**
+    <color:red>✗ Błąd podczas zapisywania. Spróbuj ponownie.</color>
+    [Spróbuj ponownie] [Anuluj]
+  }
+  --
+  {
+    == Zasady Dostępności dla Formularzy (WCAG 2.1)
+    .
+    * Wszystkie pola mają etykiety (labels) powiązane z inputami
+    * Pola wymagane oznaczone wizualnie i w kodzie (required, aria-required)
+    * Komunikaty błędów powiązane z polami (aria-describedby)
+    * Odpowiednia kolejność tabulacji (tabindex)
+    * Fokus wizualny na aktywnym polu
+    * Instrukcje wypełniania formularza czytelne dla czytników ekranu
+    * Komunikaty sukcesu/błędu ogłaszane przez czytniki (aria-live)
+  }
+}
+@endsalt

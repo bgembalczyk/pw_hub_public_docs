@@ -1,0 +1,102 @@
+@startsalt
+{
+  {T
+   + Panel Administratora Merytorycznego | PW Companion App
+  }
+  ==
+  {+
+    {/ <b>Menu Główne
+      * <&home> <b>Dashboard</b>
+      * <&document> Aktualności
+      * <&calendar> Wydarzenia
+      * <&book> Poradniki
+      * <&people> Użytkownicy
+      * <&building> Jednostki
+      * <&flag> Moderacja
+      * <&graph> Statystyki
+      * <&cog> Konfiguracja
+    | 
+    {^"Dashboard Administratora"
+      {
+        == Witaj, Administrator Systemu
+        .
+        **Ostatnie logowanie:** 2026-01-13 09:00
+        **Rola:** Administrator Merytoryczny
+        **Poziom dostępu:** Pełny dostęp do systemu
+      }
+      --
+      {
+        == Statystyki Ogólne Systemu
+        .
+        {#
+          . **Metryka** | **Wartość** | **Zmiana (7 dni)** | **Status**
+          . Aktywni użytkownicy (ostatnie 24h) | 3,456 | +234 (+7%) | <color:green>↗ Wzrost</color>
+          . Łączna liczba użytkowników | 12,847 | +567 (+5%) | <color:green>↗ Wzrost</color>
+          . Opublikowane wydarzenia | 145 | +12 (+9%) | <color:green>↗ Wzrost</color>
+          . Opublikowane aktualności | 423 | +34 (+9%) | <color:green>↗ Wzrost</color>
+          . Aktywne jednostki | 18 | 0 (0%) | <color:gray>→ Stabilnie</color>
+          . Oczekujące moderacje | 7 | +3 | <color:orange>⚠ Wymaga uwagi</color>
+        }
+      }
+      --
+      {
+        == Ostatnie Aktywności w Systemie
+        .
+        {#
+          . **Data/Czas** | **Typ** | **Opis** | **Jednostka** | **Akcja**
+          . 2026-01-13 10:45 | Wydarzenie | Nowe: "Konferencja Naukowa 2026" | Wydział Chemiczny | [Zobacz] [Moderuj]
+          . 2026-01-13 10:30 | Aktualność | Edycja: "Zmiana harmonogramu sesji" | WEiTI | [Zobacz]
+          . 2026-01-13 10:15 | Użytkownik | Nowa rejestracja: Anna Kowalska | MEiL | [Zatwierdź] [Odrzuć]
+          . 2026-01-13 09:50 | Zgłoszenie | Problem z wyświetlaniem biletów | WIL | [Zobacz] [Rozwiąż]
+          . 2026-01-13 09:30 | Wydarzenie | Publikacja: "Dni Otwarte 2026" | WEiTI | [Zobacz]
+          . 2026-01-13 09:00 | Jednostka | Aktualizacja danych kontaktowych | Wydział Architektury | [Zobacz]
+        }
+      }
+      --
+      {
+        == Elementy Wymagające Uwagi
+        .
+        {#
+          . **Priorytet** | **Typ** | **Opis** | **Od kiedy** | **Akcja**
+          . <color:red>Wysoki</color> | Moderacja | 3 aktualności oczekują na zatwierdzenie | 2 dni | [Moderuj teraz]
+          . <color:orange>Średni</color> | Zgłoszenia | 4 zgłoszenia użytkowników nierozwiązane | 1 dzień | [Przejdź do zgłoszeń]
+          . <color:orange>Średni</color> | Użytkownicy | 5 kont użytkowników do weryfikacji | 3 dni | [Weryfikuj konta]
+          . Niski | Statystyki | Raport miesięczny gotowy do przeglądu | Dzisiaj | [Zobacz raport]
+        }
+      }
+      --
+      {
+        == Top 5 Najbardziej Aktywnych Jednostek (ostatnie 7 dni)
+        .
+        {#
+          . **Pozycja** | **Jednostka** | **Publikacje** | **Wydarzenia** | **Użytkownicy aktywni**
+          . 1. | Wydział Elektroniki i Technik Informacyjnych | 15 | 8 | 234
+          . 2. | Wydział Mechaniczny Energetyki i Lotnictwa | 12 | 6 | 198
+          . 3. | Wydział Inżynierii Lądowej | 10 | 4 | 167
+          . 4. | Wydział Chemiczny | 8 | 5 | 145
+          . 5. | Wydział Architektury | 7 | 3 | 123
+        }
+      }
+      --
+      {
+        == Szybkie Akcje
+        .
+        [+ Nowa Aktualność Globalna] | [+ Nowe Wydarzenie] | [Moderacja (7)] | [Zarządzaj Jednostkami] | [Raporty systemowe]
+      }
+      --
+      {
+        == Powiadomienia Systemowe (3)
+        .
+        * **Przypomnienie:** Comiesięczny przegląd bezpieczeństwa - termin 2026-01-15
+        * **Uwaga:** Serwer API osiągnął 85% wykorzystania zasobów
+        * **Info:** Planowana konserwacja systemu: 2026-01-20 02:00-04:00
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Zalogowano jako: Administrator Systemu (admin@pw.edu.pl) | <&account-logout> [Wyloguj]
+  }
+}
+@endsalt

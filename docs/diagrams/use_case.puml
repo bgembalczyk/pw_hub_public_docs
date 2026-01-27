@@ -1,0 +1,267 @@
+@startuml
+
+title PW Companion - Use Case Diagram
+left to right direction
+
+skinparam actorStyle awesome
+skinparam packageStyle rectangle
+
+' ============================================================================
+' ACTORS
+' ============================================================================
+
+actor "Student" as Student
+actor "Organizator\n(Event Organizer)" as Organizer
+actor "Administrator" as Admin
+
+' External systems
+actor "USOS System" as USOS <<external>>
+actor "SSO\n(Single Sign-On)" as SSO <<external>>
+
+' ============================================================================
+' USE CASES - AUTHENTICATION & AUTHORIZATION
+' ============================================================================
+
+package "Authentication & Authorization" {
+  usecase "Login via SSO" as UC_Login
+  usecase "Manage User Roles" as UC_ManageRoles
+  usecase "Manage Permissions" as UC_ManagePermissions
+}
+
+' ============================================================================
+' USE CASES - ANNOUNCEMENTS / NEWS
+' ============================================================================
+
+package "Announcements & News" {
+  usecase "Browse Announcements" as UC_BrowseNews
+  usecase "Filter Announcements\nby Category" as UC_FilterNews
+  usecase "Mark as Read" as UC_MarkRead
+  usecase "View Announcement\nDetails" as UC_ViewNewsDetails
+  usecase "Create Announcement" as UC_CreateNews
+  usecase "Moderate Content" as UC_ModerateContent
+}
+
+' ============================================================================
+' USE CASES - EVENTS
+' ============================================================================
+
+package "Events Management" {
+  usecase "Browse Events" as UC_BrowseEvents
+  usecase "View Calendar" as UC_ViewCalendar
+  usecase "Search Events" as UC_SearchEvents
+  usecase "Filter Events\n(category, language,\naccessibility)" as UC_FilterEvents
+  usecase "View Event Details" as UC_ViewEventDetails
+  usecase "Create Event" as UC_CreateEvent
+  usecase "Edit Event" as UC_EditEvent
+  usecase "Publish Event" as UC_PublishEvent
+  usecase "View Accessibility\nInformation" as UC_ViewAccessibility
+}
+
+' ============================================================================
+' USE CASES - EVENT REGISTRATION
+' ============================================================================
+
+package "Event Registration" {
+  usecase "Register for Event" as UC_RegisterEvent
+  usecase "Cancel Registration" as UC_CancelRegistration
+  usecase "Manage Event\nRegistrations" as UC_ManageRegistrations
+  usecase "View Participant List" as UC_ViewParticipants
+  usecase "Generate Digital\nTicket (QR)" as UC_GenerateTicket
+  usecase "View Ticket" as UC_ViewTicket
+  usecase "Verify Ticket\n(QR Scan)" as UC_VerifyTicket
+}
+
+' ============================================================================
+' USE CASES - MAPS & NAVIGATION
+' ============================================================================
+
+package "Campus Maps & Navigation" {
+  usecase "View Campus Map" as UC_ViewMap
+  usecase "Search Location" as UC_SearchLocation
+  usecase "Get Navigation Route" as UC_GetRoute
+  usecase "Get Accessible Route\n(wheelchair friendly)" as UC_GetAccessibleRoute
+}
+
+' ============================================================================
+' USE CASES - USOS INTEGRATION
+' ============================================================================
+
+package "USOS Integration" {
+  usecase "View USOS Reminders" as UC_ViewUsosReminders
+  usecase "Sync with USOS" as UC_SyncUsos
+  usecase "Get Exam Reminders" as UC_ExamReminders
+  usecase "Get Payment Reminders" as UC_PaymentReminders
+  usecase "Get Course\nRegistration Reminders" as UC_CourseReminders
+}
+
+' ============================================================================
+' USE CASES - NOTIFICATIONS
+' ============================================================================
+
+package "Notifications" {
+  usecase "Receive Push\nNotifications" as UC_PushNotifications
+  usecase "Manage Notification\nPreferences" as UC_ManageNotifPrefs
+  usecase "View Notifications" as UC_ViewNotifications
+}
+
+' ============================================================================
+' USE CASES - GUIDES & CONTACTS
+' ============================================================================
+
+package "Guides & Contacts" {
+  usecase "Browse Guides" as UC_BrowseGuides
+  usecase "View Guide Content" as UC_ViewGuide
+  usecase "View Contact\nInformation" as UC_ViewContacts
+  usecase "Create/Edit Guides" as UC_ManageGuides
+}
+
+' ============================================================================
+' USE CASES - ADMINISTRATION
+' ============================================================================
+
+package "System Administration" {
+  usecase "Manage Users" as UC_ManageUsers
+  usecase "Manage Organizational\nUnits" as UC_ManageUnits
+  usecase "Configure Integrations" as UC_ConfigureIntegrations
+  usecase "View System Logs" as UC_ViewLogs
+}
+
+' ============================================================================
+' RELATIONSHIPS - STUDENT
+' ============================================================================
+
+' Authentication
+Student --> UC_Login
+
+' Announcements
+Student --> UC_BrowseNews
+Student --> UC_FilterNews
+Student --> UC_MarkRead
+Student --> UC_ViewNewsDetails
+
+' Events
+Student --> UC_BrowseEvents
+Student --> UC_ViewCalendar
+Student --> UC_SearchEvents
+Student --> UC_FilterEvents
+Student --> UC_ViewEventDetails
+Student --> UC_ViewAccessibility
+
+' Event Registration
+Student --> UC_RegisterEvent
+Student --> UC_CancelRegistration
+Student --> UC_GenerateTicket
+Student --> UC_ViewTicket
+
+' Maps
+Student --> UC_ViewMap
+Student --> UC_SearchLocation
+Student --> UC_GetRoute
+Student --> UC_GetAccessibleRoute
+
+' USOS
+Student --> UC_ViewUsosReminders
+Student --> UC_SyncUsos
+Student --> UC_ExamReminders
+Student --> UC_PaymentReminders
+Student --> UC_CourseReminders
+
+' Notifications
+Student --> UC_PushNotifications
+Student --> UC_ManageNotifPrefs
+Student --> UC_ViewNotifications
+
+' Guides
+Student --> UC_BrowseGuides
+Student --> UC_ViewGuide
+Student --> UC_ViewContacts
+
+' ============================================================================
+' RELATIONSHIPS - ORGANIZER
+' ============================================================================
+
+' Authentication
+Organizer --> UC_Login
+
+' Events Management
+Organizer --> UC_CreateEvent
+Organizer --> UC_EditEvent
+Organizer --> UC_PublishEvent
+Organizer --> UC_BrowseEvents
+Organizer --> UC_ViewEventDetails
+
+' Event Registration Management
+Organizer --> UC_ManageRegistrations
+Organizer --> UC_ViewParticipants
+Organizer --> UC_VerifyTicket
+
+' Guides (optional - can create guides for their events)
+Organizer --> UC_BrowseGuides
+Organizer --> UC_ViewGuide
+
+' ============================================================================
+' RELATIONSHIPS - ADMINISTRATOR
+' ============================================================================
+
+' Authentication & Authorization
+Admin --> UC_Login
+Admin --> UC_ManageRoles
+Admin --> UC_ManagePermissions
+
+' Content Moderation
+Admin --> UC_ModerateContent
+
+' System Administration
+Admin --> UC_ManageUsers
+Admin --> UC_ManageUnits
+Admin --> UC_ConfigureIntegrations
+Admin --> UC_ViewLogs
+
+' Guides Management
+Admin --> UC_ManageGuides
+
+' Can do everything that Organizer can do
+Admin --> UC_CreateEvent
+Admin --> UC_EditEvent
+Admin --> UC_PublishEvent
+Admin --> UC_ManageRegistrations
+
+' Can do everything that Student can do
+Admin --> UC_BrowseNews
+Admin --> UC_BrowseEvents
+Admin --> UC_ViewEventDetails
+
+' ============================================================================
+' RELATIONSHIPS - EXTERNAL SYSTEMS
+' ============================================================================
+
+UC_Login ..> SSO : <<uses>>
+UC_SyncUsos ..> USOS : <<uses>>
+UC_ViewUsosReminders ..> USOS : <<uses>>
+UC_ExamReminders ..> USOS : <<uses>>
+UC_PaymentReminders ..> USOS : <<uses>>
+UC_CourseReminders ..> USOS : <<uses>>
+
+' ============================================================================
+' INCLUDE & EXTEND RELATIONSHIPS
+' ============================================================================
+
+' Registration requires login
+UC_RegisterEvent ..> UC_Login : <<include>>
+UC_CreateEvent ..> UC_Login : <<include>>
+UC_CreateNews ..> UC_Login : <<include>>
+
+' Ticket generation is part of registration
+UC_RegisterEvent ..> UC_GenerateTicket : <<include>>
+
+' Filtering extends browsing
+UC_FilterEvents ..> UC_BrowseEvents : <<extend>>
+UC_FilterNews ..> UC_BrowseNews : <<extend>>
+
+' Accessible route extends regular route
+UC_GetAccessibleRoute ..> UC_GetRoute : <<extend>>
+
+' View accessibility info extends event details
+UC_ViewAccessibility ..> UC_ViewEventDetails : <<extend>>
+
+@enduml

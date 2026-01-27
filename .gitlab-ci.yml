@@ -1,0 +1,102 @@
+stages:
+  - lint
+  - migrations
+  - test
+
+variables:
+  POSTGRES_USER: 'pw_hub'
+  POSTGRES_PASSWORD: ''
+  POSTGRES_DB: 'test_pw_hub'
+  POSTGRES_HOST_AUTH_METHOD: trust
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  PYTHONDONTWRITEBYTECODE: "1"
+
+# === STAGE 1: LINT ===
+precommit:
+  stage: lint
+  image: python:3.12-slim
+  variables:
+    PRE_COMMIT_HOME: "${CI_PROJECT_DIR}/.cache/pre-commit"
+    UV_CACHE_DIR: "${CI_PROJECT_DIR}/.uv-cache"
+    GIT_STRATEGY: fetch
+  cache:
+    key: "precommit-uv"
+    policy: pull-push
+    paths:
+      - ${PRE_COMMIT_HOME}
+      - ${UV_CACHE_DIR}
+      - .venv
+  before_script:
+    # 1) git + curl + certy
+    - apt-get update && apt-get install -y --no-install-recommends git curl ca-certificates && rm -rf /var/lib/apt/lists/*
+    - git --version
+    # 2) oznacz repo jako "safe"
+    - git config --global --add safe.directory "${CI_PROJECT_DIR}"
+    # 3) instalacja uv
+    - curl -LsSf https://astral.sh/uv/install.sh | sh
+    - export PATH="$HOME/.local/bin:$PATH"
+    - uv --version
+    # 4) venv + pre-commit
+    - uv venv .venv
+    - . .venv/bin/activate
+    - uv pip install -q pre-commit pre-commit-uv
+    - git rev-parse --is-inside-work-tree
+  script:
+    - pre-commit run --show-diff-on-failure --color=always --all-files
+
+migrations-integritycheck:
+  stage: migrations
+  image: python:3.12
+  services: [ ]
+  before_script: [ ]
+  after_script: [ ]
+  script:
+    - ./bin/check_migration_integrity.sh
+
+# === STAGE 2: MIGRATIONS ===
+makemigrations-check:
+  stage: migrations
+  image: docker:25.0-cli            # ⬅ tu zmiana: obraz z dockerem
+  services:
+    - name: docker:25.0-dind        # ⬅ docker-in-docker
+      alias: docker
+  variables:
+    DOCKER_TLS_CERTDIR: ""          # ułatwia połączenie z dind
+    DOCKER_HOST: tcp://docker:2375  # alias serwisu 'docker'
+    DOCKER_DRIVER: overlay2
+    MYSQL_USER: 'debug'
+    MYSQL_PASSWORD: 'debug'
+    MYSQL_DATABASE: 'test_ewniosek'
+    MYSQL_ROOT_PASSWORD: 'debug'
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    CELERY_BROKER_URL: 'redis://redis:6379/0'
+  before_script:
+    - docker version
+    - docker compose version
+  script:
+    - docker compose -f docker-compose.local.yml -f compose.gitlab-test.yml build
+    # Ensure celerybeat does not crash due to non-existent tables
+    - docker compose -f docker-compose.local.yml -f compose.gitlab-test.yml run --rm django python manage.py migrate
+    - docker compose -f docker-compose.local.yml -f compose.gitlab-test.yml up -d
+    - docker compose -f docker-compose.local.yml -f compose.gitlab-test.yml run --rm django python manage.py makemigrations --no-input --check
+
+# === STAGE 3: TEST ===
+pytest:
+  stage: test
+  image: docker:25.0-cli
+  services:
+    - name: docker:25.0-dind
+  variables:
+    DOCKER_TLS_CERTDIR: ""           # ułatwia połączenie z dind
+    DOCKER_HOST: tcp://docker:2375   # alias serwisu 'docker'
+    DOCKER_DRIVER: overlay2
+  before_script:
+    - docker version
+    - docker compose version
+    - docker compose -f docker-compose.local.yml build
+    - docker compose -f docker-compose.docs.yml build
+    # Ensure celerybeat does not crash due to non-existent tables
+    - docker compose -f docker-compose.local.yml run --rm django python manage.py migrate
+    - docker compose -f docker-compose.local.yml up -d
+  script:
+    - docker compose -f docker-compose.local.yml run --rm django pytest

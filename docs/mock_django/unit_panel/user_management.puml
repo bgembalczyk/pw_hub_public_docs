@@ -1,0 +1,83 @@
+@startsalt
+{
+  {T
+   + Panel Jednostki | Zarządzanie Użytkownikami
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&calendar> Wydarzenia
+      * <&document> Aktualności
+      * <&bar-chart> Statystyki
+      * <&people> <b>Użytkownicy</b>
+      * <&cog> Ustawienia
+    | 
+    {^"Zarządzanie Użytkownikami Jednostki"
+      {
+        == Filtry
+        .
+        Rola: [Wszystkie ▼] | Status: [Aktywni ▼] | Wydział: [Wszystkie ▼]
+        .
+        Szukaj (imię, nazwisko, email): [                                    ] [Szukaj] [Wyczyść]
+      }
+      --
+      {
+        == Lista Użytkowników Jednostki (234)
+        .
+        {#
+          . **Imię i Nazwisko** | **Email** | **Rola** | **Wydział** | **Status** | **Ostatnie logowanie** | **Akcje**
+          . Jan Kowalski | j.kowalski@pw.edu.pl | <color:blue>Administrator jednostki</color> | WEiTI | <color:green>Aktywny</color> | 2026-01-13 09:15 | [Edytuj] [Uprawnienia]
+          . Anna Nowak | a.nowak@pw.edu.pl | <color:purple>Moderator</color> | WEiTI | <color:green>Aktywny</color> | 2026-01-13 08:30 | [Edytuj] [Uprawnienia] [Dezaktywuj]
+          . Piotr Wiśniewski | p.wisniewski@pw.edu.pl | <color:purple>Moderator</color> | WEiTI | <color:green>Aktywny</color> | 2026-01-12 16:45 | [Edytuj] [Uprawnienia] [Dezaktywuj]
+          . Maria Lewandowska | m.lewandowska@pw.edu.pl | Redaktor | WEiTI | <color:green>Aktywny</color> | 2026-01-10 11:20 | [Edytuj] [Uprawnienia] [Dezaktywuj]
+          . Tomasz Kamiński | t.kaminski@pw.edu.pl | Redaktor | WEiTI | <color:orange>Nieaktywny</color> | 2025-12-15 14:30 | [Edytuj] [Aktywuj] [Usuń]
+          . Katarzyna Zielińska | k.zielinska@pw.edu.pl | Obserwator | WEiTI | <color:green>Aktywny</color> | 2026-01-13 07:50 | [Edytuj] [Uprawnienia] [Dezaktywuj]
+          . Marek Szymański | m.szymanski@pw.edu.pl | Obserwator | WEiTI | <color:green>Aktywny</color> | 2026-01-11 13:15 | [Edytuj] [Uprawnienia] [Dezaktywuj]
+        }
+      }
+      --
+      {
+        [< Poprzednia] | Strona 1 z 34 | [Następna >]
+      }
+      --
+      {
+        [+ Dodaj Nowego Użytkownika] | [Importuj użytkowników z CSV] | [Eksportuj listę]
+      }
+      --
+      {
+        == Role i Uprawnienia
+        .
+        {#
+          . **Rola** | **Uprawnienia** | **Liczba użytkowników**
+          . <color:blue>Administrator jednostki</color> | Pełny dostęp do zarządzania treścią i użytkownikami jednostki | 3
+          . <color:purple>Moderator</color> | Tworzenie, edycja, publikacja i moderacja wszystkich treści | 12
+          . Redaktor | Tworzenie i edycja treści (wymaga zatwierdzenia moderatora) | 45
+          . Obserwator | Tylko odczyt (dostęp do statystyk i raportów) | 174
+        }
+      }
+      --
+      {
+        == Statystyki użytkowników
+        * Łączna liczba użytkowników jednostki: **234**
+        * Aktywni użytkownicy (logowanie w ciągu ostatnich 30 dni): **187** (80%)
+        * Nowi użytkownicy w tym miesiącu: **12**
+        * Oczekujące zaproszenia: **5**
+      }
+      --
+      {
+        == Legenda
+        * <color:green>Aktywny</color> - użytkownik może się logować
+        * <color:orange>Nieaktywny</color> - konto zablokowane lub nieaktywowane
+        * <color:blue>Administrator jednostki</color> - najwyższe uprawnienia w jednostce
+        * <color:purple>Moderator</color> - uprawnienia do publikacji treści
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Jednostki WEiTI | Zalogowano: Jan Kowalski
+  }
+}
+@endsalt

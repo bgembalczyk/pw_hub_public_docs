@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Ogłoszenia – PW Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f6f7f9;
+            color: #1c1c1e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding-bottom: 70px;
+        }
+
+
+        .navbar {
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #dadada;
+        }
+
+        .navbar .navbar-icon-btn {
+            color: #007aff;
+            font-size: 1.5rem;
+        }
+
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #dadada;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1030;
+        }
+
+        .bottom-nav a {
+            color: #8e8e93;
+            font-size: 1.4rem;
+            text-decoration: none;
+            text-align: center;
+            width: 20%;
+        }
+
+        .bottom-nav a.active {
+            color: #007aff;
+        }
+
+        .notice-post img {
+            height: 160px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Górny pasek nawigacji -->
+<nav class="navbar navbar-light sticky-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+        <a href="#" class="navbar-icon-btn"><i class="bi bi-gear"></i></a>
+
+        <!-- Logo zamiast tekstu -->
+        <img src="assets/logo_black.pdf" alt="Logo" style="height: 28px;" class="mx-auto d-block"/>
+
+        <a href="#" class="navbar-icon-btn"><i class="bi bi-list"></i></a>
+    </div>
+</nav>
+
+<!-- Przycisk filtrów -->
+<div class="px-3 mt-2 mb-3">
+    <button class="btn btn-outline-primary rounded-pill d-flex align-items-center px-3 py-1" type="button">
+        <i class="bi bi-funnel me-2"></i> Filtruj
+    </button>
+</div>
+
+<!-- Treść strony -->
+<div class="container mt-3 mb-5 px-3">
+    <h6 class="text-secondary text-uppercase mb-3" style="letter-spacing: 0.05em;">Nowe ogłoszenia</h6>
+
+    <!-- Ogłoszenie 1 -->
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/ai5.jpg" alt="Zdjęcie ogłoszenia" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-shield-lock me-1"></i>Cyberbezpieczeństwo
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Sztuczna inteligencja i cyberbezpieczeństwo sercem
+                    cyfrowej tarczy surowcowej Polski
+                </div>
+                <small class="text-muted text-nowrap">20.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Wydział Elektroniki i Technik Informacyjnych</div>
+            <div class="text-muted small">
+                W dobie rosnących zagrożeń i dynamicznych przemian technologicznych, Politechnika Warszawska wraz z
+                Państwowym Instytutem Geologicznym – PIB podejmuje ambitne działania na rzecz cyfrowej tarczy surowcowej
+                kraju. Projekt e-Geologia, łącząc zaawansowaną analizę danych z cyberbezpieczeństwem, stanowi fundament
+                nowoczesnej infrastruktury geologicznej, która ma realny wpływ na strategiczne bezpieczeństwo Polski.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni2.jpg" alt="Zdjęcie ogłoszenia" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-airplane-engines me-1"></i>Erasmus+
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Erasmus+ Uniwersytet Deusto oferuje miejsca na
+                    staże badawcze
+                </div>
+                <small class="text-muted text-nowrap">20.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEITI / Erasmus+</div>
+            <div class="text-muted small">
+                Jeśli interesuje Cię praca badawcza w środowisku międzynarodowym i chcesz rozwijać się w zakresie
+                nowoczesnych technologii, oferta Uniwersytetu Deusto w Hiszpanii może być dla Ciebie idealnym wyborem. W
+                ramach programu Erasmus+ studenci PW mają szansę uczestniczyć w projektach DeustoTech – instytutu
+                znanego z innowacyjności i ścisłej współpracy z przemysłem.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/hackathon.jpg" alt="Zdjęcie ogłoszenia" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-trophy me-1"></i>Hackathon
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Kraken i Inteligentne Systemy zgarniają całą pulę w
+                    Real Estate Hackathon
+                </div>
+                <small class="text-muted text-nowrap">20.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: KNMP Kraken</div>
+            <div class="text-muted small">
+                Real Estate Hackathon 2025 okazał się pełnym sukcesem dla Politechniki Warszawskiej, której zespoły
+                całkowicie zdominowały podium, prezentując imponujące projekty z zakresu inteligentnych i zrównoważonych
+                rozwiązań biurowych. Wydarzenie, będące okazją do współpracy między wydziałami i kierunkami, uwypukliło
+                siłę interdyscyplinarnego podejścia do projektowania przyszłości miejsc pracy.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm.jpg" alt="Makieta projektu EKODEMIK" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-tree me-1"></i>Zrównoważony rozwój
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">EKODEMIK – studencki głos w sprawie przyszłości
+                    akademików PW
+                </div>
+                <small class="text-muted text-nowrap">18.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: BKiP / KN Architektury Kryzysu Klimatycznego</div>
+            <div class="text-muted small">
+                Odpowiadając na wyzwania klimatyczne i potrzebę poprawy jakości życia w domach studenckich, studenci
+                Politechniki Warszawskiej z Koła Architektury Kryzysu Klimatycznego zaprojektowali innowacyjną koncepcję
+                przekształcenia otoczenia akademików. EKODEMIK to wizja zielonego kampusu, która powstała w bezpośrednim
+                dialogu z mieszkańcami i spotkała się z pozytywnym odzewem administracji.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/expert.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-briefcase me-1"></i>Kariera
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Od Politechniki Warszawskiej do Management
+                    Trainee!
+                </div>
+                <small class="text-muted text-nowrap">18.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Jeśli kończysz studia i marzysz o dynamicznym starcie kariery w międzynarodowym środowisku, program
+                liderski Grupy Jeronimo Martins może być dla Ciebie idealną okazją. To prestiżowa ścieżka zawodowa
+                obejmująca rozwój w ramach marek takich jak Biedronka i Hebe, gwarantująca stabilne zatrudnienie,
+                atrakcyjne wynagrodzenie oraz szeroki pakiet benefitów.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/mentor.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-person-hearts me-1"></i>Mentoring
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Otwieramy rekrutację do 7 edycji Programu
+                    Mentoringowego PW
+                </div>
+                <small class="text-muted text-nowrap">18.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Program Mentoringowy Politechniki Warszawskiej to unikalna szansa na rozwój zawodowy i osobisty przy
+                wsparciu doświadczonych absolwentów. W ramach 7. edycji, 37 mentorów czeka na ambitnych studentów i
+                młodych absolwentów, gotowych do pięciomiesięcznej współpracy opartej na regularnych spotkaniach,
+                inspiracji i wspólnym planowaniu kariery.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/hackathon2.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-lightbulb me-1"></i>Startupy
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Dołącz do 8. edycji Szkoły Pionierów PFR i zbuduj
+                    swój startup
+                </div>
+                <small class="text-muted text-nowrap">18.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Jeśli chcesz tworzyć innowacyjne rozwiązania odpowiadające na globalne wyzwania klimatyczne, Szkoła
+                Pionierów PFR to idealna przestrzeń do rozwinięcia Twojego pomysłu. Wspierana przez Allegro, 8. edycja
+                programu stawia na technologie i sztuczną inteligencję w służbie klimatu, oferując intensywną edukację,
+                networking oraz szansę na pozyskanie finansowania i wejście na międzynarodową scenę startupową.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/it8.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-universal-access me-1"></i>Dostępność
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Szkoła Dostępności Cyfrowej – projekt edukacyjny
+                    dla specjalistów ds. dostępności
+                </div>
+                <small class="text-muted text-nowrap">17.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro ds. Społecznej Odpowiedzialności Uczelni</div>
+            <div class="text-muted small">
+                Szkoła Dostępności Cyfrowej to kompleksowy program edukacyjny skierowany do osób pragnących rozwijać
+                kompetencje w zakresie tworzenia i audytowania rozwiązań cyfrowych zgodnych ze standardami dostępności.
+                Realizowany z udziałem Ministerstwa Cyfryzacji projekt oferuje nie tylko praktyczne szkolenia i
+                certyfikaty, ale także realne przygotowanie do pracy jako specjalista ds. dostępności w zgodzie z
+                aktualnymi regulacjami prawnymi.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/committe.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-journal-check me-1"></i>Uczelnia
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Powołanie Komisji Rzetelności Naukowej PW</div>
+                <small class="text-muted text-nowrap">17.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Jego Magnificencja Rektor</div>
+            <div class="text-muted small">
+                W trosce o wysokie standardy etyki i jakości badań naukowych Politechnika Warszawska powołała Komisję
+                Rzetelności Naukowej. Jej zadaniem będzie monitorowanie i ocena działalności publikacyjnej oraz
+                współpracy naukowej środowiska akademickiego PW, co stanowi istotny krok w kierunku transparentności i
+                odpowiedzialności w nauce.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm2.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-exclamation-triangle me-1"></i>Kwaterunek
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">🚨 OSTATNI DZIEŃ REJESTRACJI! Wakacyjna akcja
+                    kwaterunkowa 2025
+                </div>
+                <small class="text-muted text-nowrap">16.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Kwaterunkowa Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Wakacyjna akcja kwaterunkowa PW dobiega końca, a dzisiejszy dzień to ostatnia szansa na zgłoszenie się i
+                zapewnienie sobie miejsca w domu studenckim na lato 2025. Proces rejestracji odbywa się online, a
+                potwierdzenie zakwaterowania wymaga uregulowania opłaty gwarancyjnej – warto działać szybko i nie
+                przegapić terminu!
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/hackathon4.jpg" alt="Zwycięzcy Enactus Poland National Competition 2025" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-trophy me-1"></i>Konkurs
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Enactus World Cup: studenci PW z projektem MedWave
+                    w globalnym finale
+                </div>
+                <small class="text-muted text-nowrap">16.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: BKiP / Enactus PW</div>
+            <div class="text-muted small">
+                Projekt MedWave, opracowany przez studentów z PW, zwyciężył w Enactus Poland National Competition 2025.
+                Narzędzie AI wspiera lekarzy w tworzeniu dokumentacji medycznej. Zespół zakwalifikował się do światowego
+                finału Enactus World Cup w Bangkoku...
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm3.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-exclamation-triangle me-1"></i>Kwaterunek
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">🚨 OSTATNI DZIEŃ REJESTRACJI! Wakacyjna akcja
+                    kwaterunkowa 2025
+                </div>
+                <small class="text-muted text-nowrap">16.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Kwaterunkowa Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Wakacyjna akcja kwaterunkowa 2025 wkracza w decydującą fazę – dzisiaj mija termin zgłoszeń! Studenci
+                zainteresowani zakwaterowaniem na lato mają ostatnią szansę, by zarejestrować się online i zagwarantować
+                sobie miejsce w domu studenckim przed ogłoszeniem wyników 24 czerwca.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/health.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-heart-pulse-fill me-1"></i>Zdrowie
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">🎓 Masz dostęp do bezpłatnej opieki medycznej w
+                    CenterMed Warszawa!
+                </div>
+                <small class="text-muted text-nowrap">13.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: SSPW / CenterMed Warszawa</div>
+            <div class="text-muted small">
+                CenterMed Warszawa oferuje studentom Politechniki Warszawskiej kompleksową i łatwo dostępną opiekę
+                medyczną – zarówno w ramach NFZ, jak i w formie płatnych usług ze zniżką. Dzięki dogodnym lokalizacjom w
+                pobliżu uczelni i akademików, szerokiemu zakresowi badań oraz specjalistycznym konsultacjom, studenci
+                mogą szybko i wygodnie zadbać o swoje zdrowie.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/teamwork.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-award-fill me-1"></i>Granty
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Konkurs na granty rektorskie 2025 dla kół
+                    naukowych
+                </div>
+                <small class="text-muted text-nowrap">13.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Jego Magnificencja Rektor</div>
+            <div class="text-muted small">
+                Ruszył konkurs na granty dla kół naukowych PW – do zdobycia 600 tys. zł na projekty badawcze,
+                koncepcyjne i konstrukcyjne. Termin składania wniosków: do 30 czerwca przez EZD. Wyniki poznamy podczas
+                targów KONIK...
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/expert2.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-person-check-fill me-1"></i>Rekrutacja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">📢 Trwa rekrutacja do Polskiej Komisji
+                    Akredytacyjnej – dołącz do Zespołu Ekspertów ds. Studenckich!
+                </div>
+                <small class="text-muted text-nowrap">13.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Parlament Studentów Rzeczypospolitej Polskiej</div>
+            <div class="text-muted small">
+                Jeśli interesujesz się jakością kształcenia i chcesz zaangażować się w ocenę programów studiów na
+                polskich uczelniach, dołączenie do Zespołu Ekspertów ds. Studenckich PKA to świetna okazja. Udział w
+                pracach Komisji to nie tylko prestiżowe doświadczenie, ale także szansa na współpracę z ekspertami i
+                zdobycie cennych kompetencji w zakresie szkolnictwa wyższego.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm4.jpg" alt="Miniatura" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-people-fill me-1"></i>Studenci
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Parlament Studentów RP na konferencji o stanie
+                    akademików w Polsce
+                </div>
+                <small class="text-muted text-nowrap">13.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Parlament Studentów Rzeczypospolitej Polskiej</div>
+            <div class="text-muted small">
+                Konferencja w Ministerstwie Nauki i Szkolnictwa Wyższego poświęcona problematyce domów studenckich stała
+                się ważnym forum wymiany wiedzy i doświadczeń między środowiskiem akademickim a władzami publicznymi.
+                Dzięki zaangażowaniu Parlamentu Studentów RP głos studentów w sprawie warunków socjalno-bytowych
+                wybrzmiał mocno i merytorycznie, torując drogę do działań na rzecz poprawy sytuacji mieszkaniowej na
+                uczelniach.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/scientist.jpg" alt="Naukowcy z PW podglądają komórki" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-eyeglasses me-1"></i>Badania
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Naukowcy z PW podglądają żywe komórki</div>
+                <small class="text-muted text-nowrap">13.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: MCHTR / QCI Lab</div>
+            <div class="text-muted small">
+                Zespół z QCI Lab opracował algorytm IGA, który pozwala obrazować żywe komórki z niską fototoksycznością.
+                Badania realizowane są z partnerami z Norwegii i Niemiec, a wyniki opublikowano w czasopiśmie <i>ACS
+                Photonics</i>...
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/research.jpg" alt="PW na konferencji Women in Tech" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-cpu me-1"></i>Innowacje
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Technologie z PW na targach w Poznaniu, Katowicach
+                    i Warszawie
+                </div>
+                <small class="text-muted text-nowrap">13.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Komunikacji i Promocji</div>
+            <div class="text-muted small">
+                PW zaprezentowała swoje osiągnięcia z zakresu AI, mikroelektroniki i technologii kwantowych podczas
+                trzech prestiżowych wydarzeń. Wystawiono m.in. motocykl wyścigowy, mikrograwitacyjne eksperymenty i
+                teleskop GROMiT...
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/library3.jpg" alt="Strefa relaksu i nauki - widok z góry" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-cup-hot-fill me-1"></i>Kampus
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Strefa relaksu i nauki – nowa przestrzeń dla
+                    studentów w płockiej Filii PW
+                </div>
+                <small class="text-muted text-nowrap">13.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Filia w Płocku</div>
+            <div class="text-muted small">
+                Nowa przestrzeń dla studentów w Płocku – z miejscami do pracy, relaksu i rozrywki. Powstała dzięki
+                Stowarzyszeniu Przyjaciół PW w Płocku i firmie Artplex. Miejsce sprzyja nauce i integracji...
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm17.jpg" alt="Dom Studencki Żaczek" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-exclamation-triangle-fill me-1"></i>Kwaterunek
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Nowy komunikat w sprawie DS „Żaczek”</div>
+                <small class="text-muted text-nowrap">13.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Rzecznik Prasowy / SSPW</div>
+            <div class="text-muted small">
+                DS „Żaczek” zostanie czasowo zamknięty z końcem czerwca ze względów przeciwpożarowych. Uczelnia zapewnia
+                alternatywne zakwaterowanie i pomoc w przeprowadzce. Planowany remont potrwa około 3 lata...
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/transport.jpg" alt="Goście z ZDM na prezentacji" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-signpost-split me-1"></i>Infrastruktura
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">✨ Goście z Zarządu Dróg Miejskich na naszym
+                    wydziale – prezentacja o bezpiecznych przejściach dla pieszych
+                </div>
+                <small class="text-muted text-nowrap">11.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Koło Naukowe Inżynierii Komunikacyjnej</div>
+            <div class="text-muted small">
+                Bezpieczeństwo pieszych w przestrzeni miejskiej to temat, który nie traci na aktualności – dlatego z
+                radością gościliśmy ekspertów z Zarządu Dróg Miejskich w Warszawie, którzy podzielili się praktyczną
+                wiedzą z zakresu projektowania bezpiecznej infrastruktury. Spotkanie było okazją do analizy błędów
+                projektowych oraz poznania sprawdzonych rozwiązań, a jego zapis dostępny jest dla wszystkich w formie
+                wideo.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/teamwork2.jpg" alt="Studenci współpracujący nad projektem" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-bar-chart-line me-1"></i>Ankieta
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">🎓 Działasz w kole naukowym? Robisz badania na
+                    uczelni? Wypełnij ankietę PSRP!
+                </div>
+                <small class="text-muted text-nowrap">11.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Parlament Studentów Rzeczypospolitej Polskiej</div>
+            <div class="text-muted small">
+                Jeśli działasz naukowo – w kole, projekcie badawczym czy indywidualnie – Twój głos może realnie wpłynąć
+                na kształtowanie lepszego systemu wsparcia dla studentów zaangażowanych w rozwój nauki. Parlament
+                Studentów RP prowadzi ogólnopolską ankietę, której celem jest zebranie doświadczeń i potrzeb środowiska
+                studenckiego w zakresie działalności badawczej.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm16.jpg" alt="Akcja kwaterunkowa PW" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-house-door-fill me-1"></i>Kwaterunek
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">🚨 STARTUJEMY! Wakacyjna akcja kwaterunkowa
+                    oficjalnie ruszyła!
+                </div>
+                <small class="text-muted text-nowrap">10.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Kwaterunkowa Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Wakacje coraz bliżej, a z nimi możliwość skorzystania z akademików Politechniki Warszawskiej w ramach
+                letniej akcji kwaterunkowej. Od 10 do 16 czerwca studenci mogą zgłaszać się przez system ESKS, aby
+                zapewnić sobie miejsce w domu studenckim na wakacyjny okres – warto działać szybko i nie zostawiać
+                rejestracji na ostatnią chwilę.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/covid.jpg" alt="Program ambasadorski AstraZeneca" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-person-lines-fill me-1"></i>Kariera
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Zostań Student Ambassador AstraZeneca na rok
+                    akademicki 2025/2026!
+                </div>
+                <small class="text-muted text-nowrap">10.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Jeśli studiujesz kierunki związane z technologią, naukami przyrodniczymi lub zarządzaniem i chcesz
+                rozwijać swoje kompetencje w globalnym środowisku, program ambasadorski AstraZeneca to szansa na
+                wyjątkowe doświadczenie. Jako Student Ambassador będziesz reprezentować firmę na uczelni, zdobywając
+                cenne umiejętności i nawiązując kontakty z ekspertami z branży biotechnologicznej.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni3.jpg" alt="Gmach Główny PW" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-shield-lock me-1"></i>Organizacja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Funkcjonowanie PW w dniach 19–22 czerwca 2025 r.
+                </div>
+                <small class="text-muted text-nowrap">09.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Kanclerz</div>
+            <div class="text-muted small">
+                W związku z długim weekendem dostęp do wybranych budynków PW będzie możliwy tylko za okazaniem
+                przepustki. Zapewniono dyżury techniczne i możliwość kontaktu ze Strażą Akademicką lub dyżurnym
+                kanclerzem.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/expert4.jpg" alt="Rekrutacja do PKA" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-award me-1"></i>Rekrutacja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">🎓 Ruszyła rekrutacja do zespołu ekspertów ds.
+                    studenckich Polskiej Komisji Akredytacyjnej!
+                </div>
+                <small class="text-muted text-nowrap">09.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Parlament Studentów Rzeczypospolitej Polskiej</div>
+            <div class="text-muted small">
+                Dołączenie do zespołu ekspertów PKA to możliwość zdobycia wyjątkowego doświadczenia w obszarze
+                szkolnictwa wyższego i bezpośredniego udziału w procesach kształtujących ofertę edukacyjną uczelni w
+                Polsce. Kandydaci będą uczestniczyć w wizytacjach, analizować programy studiów i współpracować z
+                ekspertami z całego kraju, mając realny wpływ na jakość i rozwój edukacji akademickiej.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/student.jpg" alt="Student piszący pracę dyplomową" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-file-earmark-text me-1"></i>Konkurs
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">7 edycja konkursu na najlepszą pracę dyplomową
+                    AGRO
+                </div>
+                <small class="text-muted text-nowrap">09.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Konkurs AGRO to doskonała okazja dla studentów, którzy obronili prace dyplomowe w latach 2024–2025 i
+                poruszają tematykę innowacji w rolnictwie lub zrównoważonej produkcji żywności. Oprócz szansy na nagrody
+                finansowe i publikację wyników, laureaci mogą liczyć na cenne doświadczenie w branży dzięki stażom i
+                wizytom studyjnym u renomowanych partnerów.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm7.jpg" alt="Dom Studencki" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-check-circle me-1"></i>Kwaterunek
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">📣 Akcja kwaterunkowa zakończona! 🏁</div>
+                <small class="text-muted text-nowrap">09.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Kwaterunkowa Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Po zakończeniu akcji kwaterunkowej nadszedł czas na potwierdzenie przyznanych miejsc – studenci
+                zakwalifikowani do zakwaterowania muszą dopełnić formalności, by nie stracić miejsca. Warto uważnie
+                sprawdzić wyniki i zapoznać się ze szczegółowymi zasadami, zwłaszcza jeśli rozważasz złożenie odwołania.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/survey.jpg" alt="Ankieta dydaktyczna" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-bar-chart-line me-1"></i>Ankiety
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">⏳ Ostatnie odliczanie – nie przegap ankiet!</div>
+                <small class="text-muted text-nowrap">07.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Dydaktyczna Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                To ostatnia szansa, by ocenić prowadzących i pomóc ulepszyć zajęcia na Twoim wydziale! Każda uwaga to
+                krok w stronę lepszej edukacji – wypełnij ankiety już teraz!
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm8.jpg" alt="Dom studencki PW" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-house-door-fill me-1"></i>Kwaterunek
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">⏰ Zostały tylko 3 dni! Wakacyjna akcja
+                    kwaterunkowa
+                </div>
+                <small class="text-muted text-nowrap">06.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Kwaterunkowa Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Czas ucieka – wakacyjna akcja kwaterunkowa wkrótce dobiegnie końca, a możliwość zapewnienia sobie
+                miejsca w akademiku przepadnie razem z nią. Rejestracja trwa tylko do 16 czerwca, dlatego warto działać
+                szybko, by móc spokojnie planować letni wypoczynek z gwarancją zakwaterowania.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/study.jpg" alt="Student podczas nauki" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-mortarboard me-1"></i>Sesja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Sesja – czas najwyższego stresu studenckiego!</div>
+                <small class="text-muted text-nowrap">06.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WRS MiNI PW</div>
+            <div class="text-muted small">
+                Nadchodzi jeden z najbardziej wymagających okresów w życiu studenta – sesja egzaminacyjna. Wydziałowa
+                Rada Samorządu MiNI wspiera swoich kolegów i koleżanki, udostępniając dodatkowe przestrzenie do nauki i
+                życząc wszystkim sukcesów oraz jak najmniej stresu przy zaliczeniach.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni2.jpg" alt="Bluzy PW Elektryczny" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-bag-heart me-1"></i>Merch
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">📣 Sklep z merchem PW Elektryczny znów otwarty!
+                </div>
+                <small class="text-muted text-nowrap">06.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WRS Elektryczny PW</div>
+            <div class="text-muted small">
+                Fani wydziałowego stylu mają kolejną szansę, by zaopatrzyć się w bluzy PW Elektryczny – klasyczne,
+                oversize, z haftem czy personalizacją. To świetna okazja, by pokazać swoją przynależność do społeczności
+                Wydziału Elektrycznego i przy okazji wyglądać stylowo w nadchodzących miesiącach.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/it3.jpg" alt="Obraz promujący IT Camp" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-laptop me-1"></i>Kariera
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">DataArt International IT Camp 2025</div>
+                <small class="text-muted text-nowrap">06.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Rozpoczynasz przygodę z branżą IT lub planujesz się przebranżowić? DataArt International IT Camp 2025 to
+                świetna okazja, by zdobyć praktyczną wiedzę i inspirację od profesjonalistów. W ramach programu możesz
+                swobodnie wybierać spośród tematycznych sesji i warsztatów, które pomogą Ci lepiej zrozumieć rynek,
+                narzędzia i oczekiwania w świecie nowych technologii.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm19.jpg" alt="Dom Studencki Żaczek" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-exclamation-triangle me-1"></i>Komunikat
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Obowiązek wykwaterowania z DS „Żaczek”</div>
+                <small class="text-muted text-nowrap">06.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Kanclerz</div>
+            <div class="text-muted small">
+                Ze względu na stan techniczny budynku mieszkańcy DS „Żaczek” muszą opuścić akademik do 7 lipca.
+                Uczelnia zapewni miejsca zastępcze w innych domach studenckich PW.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/lecture.jpg" alt="Złota Kreda" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-award me-1"></i>Złota Kreda
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">✨ Głos w Twoich Rękach! Złota Kreda 2025 ✨</div>
+                <small class="text-muted text-nowrap">06.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Dydaktyczna Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Złota Kreda to wyjątkowa inicjatywa Samorządu Studentów PW, w której to sami studenci decydują, którzy
+                prowadzący zasługują na wyróżnienie za jakość nauczania i postawę pełną empatii. Głosowanie w
+                plebiscycie to nie tylko forma uznania, ale także ważny sygnał doceniający zaangażowanie dydaktyczne
+                wykładowców i prowadzących zajęcia.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/hackathon4.jpg" alt="Hack4Music – plakat wydarzenia" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-music-note-beamed me-1"></i>Hackathon
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Dołącz do Hack4Music – stwórz z nami przyszłość
+                    muzyki
+                </div>
+                <small class="text-muted text-nowrap">05.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Hack4Music to wyjątkowe wydarzenie na styku technologii i sztuki, gdzie programiści, projektanci i
+                miłośnicy muzyki wspólnie tworzą innowacyjne rozwiązania ułatwiające dostęp do kultury muzycznej.
+                Organizowany przez NOSPR hackathon to nie tylko przestrzeń kreatywnej pracy, ale też okazja do
+                nawiązania wartościowych kontaktów i rywalizacji o nagrody w inspirującym środowisku.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/scientist8.jpg" alt="Laureatki Excellence in Engineering 2025" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-pink bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-award-fill me-1"></i>Sukces
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Reprezentantki PW na liście TOP100 Women in
+                    Engineering
+                </div>
+                <small class="text-muted text-nowrap">05.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Komunikacji i Promocji</div>
+            <div class="text-muted small">
+                Aż osiem naukowczyń z PW wyróżniono w prestiżowym zestawieniu. Dr hab. inż. Agnieszka Gadomska-Gajadhur
+                zdobyła nagrodę główną w kategorii etyki i innowacji.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/hackathon5.jpg" alt="Zwycięski zespół KN Kraken" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-rocket-takeoff me-1"></i>Innowacja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Sukces reprezentantów KN Kraken na SpaceShield
+                    Hack
+                </div>
+                <small class="text-muted text-nowrap">05.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: BKiP / KN Kraken</div>
+            <div class="text-muted small">
+                Członkowie Koła Naukowego Kraken po raz kolejny udowodnili swoją kreatywność i zaangażowanie, triumfując
+                w hackathonie SpaceShield Hack. Ich innowacyjny projekt, łączący tematykę kosmiczną z wyzwaniami
+                środowiskowymi, został wyróżniony jako najlepszy w swojej kategorii i może stanowić inspirację dla
+                dalszego rozwoju technologii przeciwdziałających skutkom zmian klimatu.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/committe2.jpg" alt="Biuro dziekana – komunikat" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-calendar-x me-1"></i>Organizacja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Nieobecność Prodziekana ds. nauczania i dodatkowe
+                    terminy przyjęć studentów
+                </div>
+                <small class="text-muted text-nowrap">04.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEITI / Dziekanat ds. nauczania</div>
+            <div class="text-muted small">
+                W związku z krótką nieobecnością Prodziekana ds. nauczania zaplanowane przyjęcia studentów w dniach 9 i
+                11 czerwca nie odbędą się zgodnie z harmonogramem. Dziekanat informuje jednak o możliwości skorzystania
+                z dodatkowych godzin konsultacyjnych w czwartek 12 czerwca.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/meeting2.jpg" alt="Posiedzenie Parlamentu SSPW" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-people-fill me-1"></i>Samorząd
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">IV Zwyczajne Posiedzenie Parlamentu Samorządu
+                    Studentów PW
+                </div>
+                <small class="text-muted text-nowrap">04.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Parlament Studentów PW</div>
+            <div class="text-muted small">
+                Posiedzenia Parlamentu SSPW to ważna przestrzeń debaty i dialogu między studentami a władzami
+                Politechniki Warszawskiej. Dzisiejsze obrady będą okazją do poruszenia kluczowych spraw studenckich, w
+                tym kwestii związanych z akademikiem „Żaczek”, a także bezpośredniego spotkania z Rektorem, Prorektorem
+                ds. studenckich i Kanclerz uczelni.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm10.jpg" alt="Dom Studencki Żaczek" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-exclamation-triangle-fill me-1"></i>Zakwaterowanie
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Komunikat w sprawie Domu Studenckiego „Żaczek”
+                </div>
+                <small class="text-muted text-nowrap">04.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Rzecznik Prasowy</div>
+            <div class="text-muted small">
+                PW podejmuje działania zmierzające do zamknięcia akademika „Żaczek” i przeniesienia studentów do innych
+                domów.
+                Zapowiedziano generalny remont oraz zapewnienie wsparcia mieszkańcom.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm11.jpg" alt="Akcja kwaterunkowa lato 2025" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-house-door-fill me-1"></i>Zakwaterowanie
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">📣 Wakacyjna akcja kwaterunkowa startuje!</div>
+                <small class="text-muted text-nowrap">03.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Kwaterunkowa Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Zbliżające się wakacje to idealny moment, by zadbać o zakwaterowanie – bez względu na to, czy planujesz
+                zostać w akademiku, czy potrzebujesz miejsca tylko na lato. Już 10 czerwca rusza rejestracja w ramach
+                letniej akcji kwaterunkowej, a wszystkie szczegóły dostępne są online, byś mógł wszystko załatwić
+                wygodnie i z wyprzedzeniem.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/survey2.jpg" alt="Ankietyzacja PW" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-bar-chart-fill me-1"></i>Dydaktyka
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">💼 Czas na ankietyzację!</div>
+                <small class="text-muted text-nowrap">03.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Dydaktyczna Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Zanim zakończysz semestr i rozpoczniesz wakacyjny odpoczynek, poświęć chwilę na wypełnienie ankiet
+                ewaluacyjnych w USOS. To właśnie dzięki Twojej opinii możliwe są realne zmiany i udoskonalenia zajęć –
+                głos studentów ma znaczenie i wpływa na kształt przyszłych semestrów.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/survey4.jpg" alt="Ankiety na MiNI" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-ui-checks-grid me-1"></i>Dydaktyka
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">📃 Ankietyzacja – podziel się opinią o przedmiotach
+                    i prowadzących!
+                </div>
+                <small class="text-muted text-nowrap">02.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Dydaktyczna Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Ankietyzacja to ważny element wpływu studentów na jakość kształcenia – dzięki niej uczelnia może
+                reagować na realne potrzeby i sugestie uczestników zajęć. Każda opinia się liczy, niezależnie od tego,
+                czy wskazuje na problem, czy docenia dobre praktyki, a dodatkową motywacją może być szansa na nagrodę za
+                pełne zaangażowanie.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/library5.jpg" alt="Biblioteka WEITI" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-clock-history me-1"></i>Dostępność
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Wydłużone godziny otwarcia Biblioteki Wydziałowej
+                </div>
+                <small class="text-muted text-nowrap">02.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEITI / Biblioteka</div>
+            <div class="text-muted small">
+                W dniach 9–13, 16–18 i 23–24 czerwca biblioteka czynna będzie od 9:00 do 20:00. W weekendy i 19–22
+                czerwca biblioteka będzie nieczynna.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/ai.jpg" alt="Centrum Wiarygodnej Sztucznej Inteligencji" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-cpu-fill me-1"></i>Badania i AI
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Centrum Wiarygodnej Sztucznej Inteligencji na PW
+                    zainaugurowało swoją działalność
+                </div>
+                <small class="text-muted text-nowrap">01.06.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Centrum Wiarygodnej Sztucznej Inteligencji</div>
+            <div class="text-muted small">
+                Na PW rozpoczęło działalność Centrum CCAI kierowane przez prof. Przemysława Biecka. Celem jest rozwój
+                systemów explainable AI,
+                audyt algorytmów i edukacja specjalistów. To interdyscyplinarna jednostka łącząca informatykę,
+                matematykę i nauki społeczne.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/electronics2.jpg" alt="Laboratorium LATTICE w CEZAMAT" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-lightning-charge-fill me-1"></i>Infrastruktura
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Laboratorium dla elektroniki nowej generacji</div>
+                <small class="text-muted text-nowrap">30.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: CEZAMAT</div>
+            <div class="text-muted small">
+                W CEZAMAT uruchomiono laboratorium LATTICE z nowym reaktorem MOCVD do badań nad materiałami 2D.
+                To inwestycja w przyszłość elektroniki: miniaturyzacja, energooszczędność i nowe właściwości.
+                Projekt prof. Zdrojka i dr Sitka otrzymał 9,3 mln zł finansowania z MEiN.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/logistics.jpg" alt="Praktyki w Rhenus" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-truck me-1"></i>Kariera
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Wakacyjne praktyki w Rhenus – zdobywaj
+                    doświadczenie w branży TSL
+                </div>
+                <small class="text-muted text-nowrap">29.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Letnie praktyki w Rhenus to świetna okazja, by zdobyć pierwsze doświadczenia zawodowe w dynamicznie
+                rozwijającej się branży transportu, spedycji i logistyki. Elastyczny grafik, pełne wsparcie mentora oraz
+                konkretne zadania umożliwiające naukę przez działanie sprawiają, że to idealna propozycja zarówno dla
+                osób dopiero wchodzących na rynek pracy, jak i tych, którzy chcą związać się z TSL na dłużej.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/it24.jpg" alt="First Ascent Poland" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-rocket-takeoff-fill me-1"></i>Rekrutacja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Apply to First Ascent Poland! – bezpłatny tech
+                    retreat dla studentów
+                </div>
+                <small class="text-muted text-nowrap">29.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                First Ascent Poland to niepowtarzalna okazja, by w kameralnym gronie najlepszych studentów z całego
+                kraju zgłębić najnowsze trendy w technologiach i programowaniu. Organizowany przez renomowaną firmę
+                Bending Spoons retreat to nie tylko warsztaty i wykłady, ale także networking, inspiracje i pełne
+                zanurzenie w świat IT – całkowicie za darmo.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/it23.jpg" alt="Java JUMP – kurs dla kobiet w IT" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-pink bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-laptop-fill me-1"></i>Kursy IT
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Program wakacyjny Java JUMP – intensywny kurs dla
+                    kobiet w IT
+                </div>
+                <small class="text-muted text-nowrap">28.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Karier</div>
+            <div class="text-muted small">
+                Java JUMP to intensywny bootcamp, który otwiera drzwi do świata programowania kobietom z różnych
+                kierunków studiów – nawet tym bez wcześniejszego doświadczenia w IT. Program skupia się na praktycznej
+                nauce języka Java i rozwoju kompetencji technicznych, dając uczestniczkom realną szansę na rozpoczęcie
+                kariery zawodowej w prestiżowych firmach technologicznych.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/rocket.jpg" alt="Rakieta Twardowsky 2 i jej twórcy" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-rocket-fill me-1"></i>Projekty studenckie
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Nowa rakieta studentów PW – Twardowsky 2</div>
+                <small class="text-muted text-nowrap">28.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: BKiP / SKA</div>
+            <div class="text-muted small">
+                SKA PW zaprezentowało swoją najpotężniejszą rakietę – Twardowsky 2. 4-metrowa konstrukcja ma wynieść
+                ładunek CubeSat na 9 km wysokości.
+                Projekt przygotowano na zawody EuRoC i Spaceport America Cup – nowatorski silnik i system odzysku to
+                kluczowe elementy.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/sport2.jpg" alt="Hala sportowa PW" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-building-fill me-1"></i>Inwestycje PW
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Budowa hali sportowo-widowiskowej na Stadionie
+                    Syrenki
+                </div>
+                <small class="text-muted text-nowrap">26.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Jego Magnificencja Rektor</div>
+            <div class="text-muted small">
+                Politechnika Warszawska planuje halę widowiskowo-sportową przy Stadionie Syrenki. Budowa potrwa do
+                czerwca 2028 r.,
+                a koszt inwestycji to 100 mln zł. Koordynatorem projektu został mgr inż. Mirosław Dudra.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/civil2.jpg" alt="Zespoły Rurki z klejem i Mostozaury" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-trophy-fill me-1"></i>Konkursy
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Rurki z klejem i Mostozaury na podium wyKOMBinuj
+                    mOst 2025
+                </div>
+                <small class="text-muted text-nowrap">23.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: BKiP / WIL</div>
+            <div class="text-muted small">
+                Tegoroczna edycja ogólnopolskiego konkursu „wyKOMBinuj mOst” ponownie okazała się triumfem konstruktorów
+                z Politechniki Warszawskiej, którzy pokazali nie tylko precyzję i pomysłowość, ale też imponującą
+                wytrzymałość swoich projektów. W rywalizacji liczyły się zarówno lekkość, jak i nośność konstrukcji, a
+                zespoły PW potwierdziły swoją dominację w tej nietypowej, technicznej konkurencji.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm24.jpg" alt="DS PW Babilon" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-tools me-1"></i>Inwestycje w akademikach
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Montaż drzwi EI 60 w DS Babilon</div>
+                <small class="text-muted text-nowrap">21.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Jego Magnificencja Rektor</div>
+            <div class="text-muted small">
+                W DS PW Babilon przy ul. Kopińskiej zostaną zamontowane drzwi o odporności ogniowej EI 60 w
+                rozdzielniach elektrycznych.
+                Inwestycja o wartości 200 tys. zł potrwa do końca 2025 r. Koordynatorem zadania jest mgr Rafał Byczot.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm25.jpg" alt="DS Riviera" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-house-gear-fill me-1"></i>Modernizacja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Przebudowa windy przeciwpożarowej w DS Riviera
+                </div>
+                <small class="text-muted text-nowrap">21.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Jego Magnificencja Rektor</div>
+            <div class="text-muted small">
+                W akademiku Riviera przy ul. Waryńskiego rozpoczęła się przebudowa windy przeciwpożarowej. Koszt
+                inwestycji wynosi 800 tys. zł,
+                a zakończenie prac planowane jest do końca grudnia. Projekt koordynuje Michał Waś.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/scientist2.jpg" alt="Zespół Wydziału Chemicznego" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-flask-fill me-1"></i>Badania PW
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Ambipolarny przełom w elektronice organicznej</div>
+                <small class="text-muted text-nowrap">21.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Wydział Chemiczny</div>
+            <div class="text-muted small">
+                Przełomowe badania zespołu z Wydziału Chemicznego Politechniki Warszawskiej mogą zmienić oblicze
+                elektroniki organicznej – nowo opracowany tranzystor OECT cechuje się ambipolarnym przewodnictwem i
+                stabilnością w środowisku wodnym. Innowacyjna technologia oparta na elektropolimeryzacji otwiera nowe
+                możliwości dla przyszłościowych rozwiązań w dziedzinach takich jak neuroelektronika czy systemy
+                neuromorficzne.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/scientist5.jpg" alt="Dr Agnieszka Kucharska – SAS Educator Award" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-award-fill me-1"></i>Nagrody i wyróżnienia
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Dr Agnieszka Kucharska z PW z nagrodą 2025 SAS
+                    Educator Award
+                </div>
+                <small class="text-muted text-nowrap">20.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Wydział Zarządzania</div>
+            <div class="text-muted small">
+                Doceniona na arenie międzynarodowej, dr Agnieszka Kucharska została wyróżniona za nowatorskie podejście
+                do nauczania analizy danych i promowanie nowoczesnych narzędzi BI w ramach specjalistycznego kursu
+                mikropoświadczeniowego. Jej praca na Wydziale Zarządzania PW pokazuje, jak skutecznie łączyć edukację
+                akademicką z potrzebami współczesnego rynku technologii.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/ai8.jpg" alt="Neural Hologram Vision – projekt DeepQuadrature" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-cpu-fill me-1"></i>Sztuczna inteligencja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">DeepQuadrature: jedna ramka, pełna precyzja</div>
+                <small class="text-muted text-nowrap">20.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Wydział Mechatroniki</div>
+            <div class="text-muted small">
+                Nowatorskie podejście badaczy z Politechniki Warszawskiej pokazuje, jak sztuczna inteligencja może
+                rewolucjonizować precyzyjne pomiary optyczne. DeepQuadrature, opracowane we współpracy międzynarodowej,
+                umożliwia jednoramkową analizę obrazów holograficznych i stanowi dostępne publicznie narzędzie, które
+                może znaleźć szerokie zastosowanie w naukach przyrodniczych i technice.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/it13.jpg" alt="Lekcja Google Cybersecurity Seminars PW" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-shield-lock-fill me-1"></i>Cyberbezpieczeństwo
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Cyberbezpieczeństwo w praktyce – studenci PW uczą w
+                    szkołach
+                </div>
+                <small class="text-muted text-nowrap">19.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Komunikacji i Promocji</div>
+            <div class="text-muted small">
+                Cyberbezpieczeństwo staje się kluczowym elementem edukacji młodzieży, a studenci Politechniki
+                Warszawskiej aktywnie włączają się w jego popularyzację. Dzięki wsparciu Google i zaangażowaniu
+                studentów z trzech wydziałów, projekt obejmuje praktyczne lekcje pokazowe, które rozwijają świadomość
+                cyfrową uczniów w całej Polsce.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/library6.jpg" alt="Nowości biblioteczne – maj 2025" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-book-half me-1"></i>Biblioteka
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Nowości biblioteczne – maj 2025</div>
+                <small class="text-muted text-nowrap">15.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEITI / Biblioteka</div>
+            <div class="text-muted small">
+                Majowe nowości w bibliotece WEiTI to gratka dla pasjonatów nowoczesnych technologii – na półkach
+                pojawiły się najnowsze publikacje poświęcone generatywnej AI, uczeniu maszynowemu, Pythonowi, C++,
+                DevOps i Kubernetes. Zbiory te stanowią cenne wsparcie dla studentów i badaczy poszukujących aktualnych
+                źródeł wiedzy z obszaru informatyki i inżynierii danych.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni.jpg" alt="Harmonogram roku akademickiego 2025/2026" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-calendar-range me-1"></i>Terminarz
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Harmonogram roku akademickiego 2025/2026</div>
+                <small class="text-muted text-nowrap">14.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Dydaktyczna Samorządu Studentów PW</div>
+            <div class="text-muted small">
+                Opublikowano terminy zajęć, sesji i przerw w roku akademickim 2025/2026. Zajęcia potrwają od 2
+                października do 30 września.
+                Dla Filii w Płocku przewidziano odrębny dzień Juwenaliów.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni3.jpg" alt="Stypendium Senatu PW" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-cash-coin me-1"></i>Stypendia
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Wydłużenie terminu składania wniosków o Stypendium
+                    Senatu PW
+                </div>
+                <small class="text-muted text-nowrap">14.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Kanclerza</div>
+            <div class="text-muted small">
+                Dla wszystkich zainteresowanych wsparciem finansowym od uczelni nadarza się dodatkowa szansa –
+                Politechnika Warszawska ogłosiła przedłużenie terminu składania wniosków o Stypendium Senatu. To ważna
+                informacja zarówno dla studentów, jak i doktorantów planujących aplikację, którzy zyskali kilka dni
+                więcej na dopełnienie formalności.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/it11.jpg" alt="Wybór specjalności na WEiTI" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-gear-fill me-1"></i>Studia
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Wybór specjalności dla studentów 4 semestru –
+                    2025L
+                </div>
+                <small class="text-muted text-nowrap">05.05.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. nauczania</div>
+            <div class="text-muted small">
+                Rozpoczął się kluczowy etap dla studentów kończących 4. semestr – wybór specjalności, który zadecyduje o
+                dalszym kierunku kształcenia. Proces odbywa się elektronicznie i wymaga dokładności oraz znajomości
+                zasad przypisanych do poszczególnych kierunków, dlatego warto dokładnie zapoznać się z instrukcją i
+                uczestniczyć w spotkaniach informacyjnych z kierownikami specjalności.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/diploma.jpg" alt="Odbiór dyplomów" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-award-fill me-1"></i>Dyplomy
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">ODBIÓR DYPLOMÓW – zmiana lokalizacji!</div>
+                <small class="text-muted text-nowrap">28.04.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Dział ds. Studiów</div>
+            <div class="text-muted small">
+                Absolwenci odbierający dyplomy powinni zwrócić uwagę na zmianę miejsca ich wydawania – od teraz
+                formalności załatwiane są przy ul. Rektorskiej 4. Nowa lokalizacja oraz zaktualizowane godziny przyjęć
+                ułatwią organizację odbioru dokumentów, a w razie wątpliwości warto skorzystać z kontaktu telefonicznego
+                lub mailowego.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni2.jpg" alt="Zmiana organizacji zajęć" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-calendar-event-fill me-1"></i>Wydział
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Zmiana organizacji zajęć 15 maja na WEiTI</div>
+                <small class="text-muted text-nowrap">28.04.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekan</div>
+            <div class="text-muted small">
+                W związku z obchodami Dnia Wydziału WEiTI i Elkonaliów zaplanowanymi na 15 maja, wprowadzono częściowe
+                zmiany w organizacji zajęć. Studenci powinni zwrócić szczególną uwagę na godziny rozpoczęcia swoich
+                wykładów – te po 14:00 nie odbędą się, natomiast wszystkie inne zajęcia pozostają bez zmian.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/committe2.jpg" alt="Zmiany w regulaminie studiów PW" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-file-earmark-text me-1"></i>Regulamin
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Zmiany w Regulaminie studiów PW od października
+                    2025 r.
+                </div>
+                <small class="text-muted text-nowrap">23.04.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Senat PW</div>
+            <div class="text-muted small">
+                Od 1 października 2025 r. wejdą w życie nowe przepisy regulaminowe, dotyczące m.in. ślubowania,
+                opiekunów studentów z niepełnosprawnością, zasad odwoławczych i organizacji zajęć. Nowy regulamin
+                zostanie udostępniony przed rozpoczęciem semestru.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni3.jpg" alt="Odbiór decyzji stypendialnych" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-cash-stack me-1"></i>Stypendia
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Odbiór decyzji stypendialnych</div>
+                <small class="text-muted text-nowrap">17.04.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. Studenckich</div>
+            <div class="text-muted small">
+                Studenci WEiTI mogą już zapoznać się z decyzjami stypendialnymi za pośrednictwem systemu USOSWeb. Dla
+                tych, którzy chcą szybciej otrzymać świadczenie, możliwe jest zrzeczenie się prawa do odwołania, co
+                znacząco przyspiesza procedurę i umożliwia wcześniejszą wypłatę środków.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni.jpg" alt="Przerwa w pracy dziekanatu" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-exclamation-triangle-fill me-1"></i>Komunikat
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Dziekanat ds. Studenckich nieczynny 10–11
+                    kwietnia
+                </div>
+                <small class="text-muted text-nowrap">17.04.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. Studenckich</div>
+            <div class="text-muted small">
+                W związku z czasową niedostępnością Dziekanatu ds. Studenckich na początku kwietnia, studenci zostali
+                poinformowani o możliwości uzyskania pomocy w innych jednostkach wydziału. Taka organizacja miała
+                zapewnić ciągłość obsługi w pilnych sprawach studenckich.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/study3.jpg" alt="Egzamin B2" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-translate me-1"></i>Języki
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Egzamin B2 dla studentów niestacjonarnych – sesja
+                    letnia
+                </div>
+                <small class="text-muted text-nowrap">01.04.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Studium Języków Obcych</div>
+            <div class="text-muted small">
+                Studenci studiów niestacjonarnych PW powinni przygotować się do egzaminu językowego na poziomie B2,
+                który odbędzie się w czerwcu 2025 roku. Egzamin obejmuje zarówno część pisemną, jak i ustną, a
+                organizatorzy przewidzieli także procedury dla osób z wcześniejszymi zaliczeniami, wyjątkami zdrowotnymi
+                oraz potrzebą egzaminu komisyjnego.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/hackathon7.jpg" alt="Zaliczanie praktyk zawodowych" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-briefcase me-1"></i>Praktyki
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Zaliczanie praktyk zawodowych w semestrze 2025L
+                </div>
+                <small class="text-muted text-nowrap">31.03.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. Studenckich</div>
+            <div class="text-muted small">
+                Zaliczenie praktyk zawodowych w semestrze letnim 2025 to obowiązkowy element programu studiów,
+                szczególnie istotny dla studentów 6. semestru. Rejestracja odbywa się za pośrednictwem USOS, a dalsze
+                instrukcje dotyczące przebiegu i dokumentacji praktyk udzielane są przez opiekunów instytutowych – warto
+                działać z wyprzedzeniem, by uniknąć niepotrzebnych komplikacji.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/study5.jpg" alt="Egzamin C1" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-globe me-1"></i>Egzamin
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">C1 Exam in Academic English – sesja letnia
+                    2024/2025
+                </div>
+                <small class="text-muted text-nowrap">28.03.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Studium Języków Obcych</div>
+            <div class="text-muted small">
+                Studenci studiów anglojęzycznych przygotowujący się do letniej sesji egzaminacyjnej powinni pamiętać o
+                zbliżającym się terminie egzaminu z języka akademickiego na poziomie C1. Organizatorzy przewidzieli
+                pełną ścieżkę rejestracji, możliwość automatycznego zwolnienia z części ustnej oraz opcję egzaminu
+                warunkowego – wszystko z myślą o sprawnym i przejrzystym przebiegu sesji.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/study2.jpg" alt="Egzamin B2 ACERT" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-journal-check me-1"></i>B2 ACERT
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Egzamin B2 ACERT – sesja letnia 2024/2025</div>
+                <small class="text-muted text-nowrap">25.03.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Studium Języków Obcych</div>
+            <div class="text-muted small">
+                Studenci przystępujący do egzaminu B2 ACERT w sesji letniej powinni uważnie zapoznać się z harmonogramem
+                oraz procedurami zapisów. Egzamin składa się z części pisemnej i ustnej, z dodatkowymi możliwościami dla
+                osób ze szczególnymi potrzebami oraz trybem komisyjnym dla tych, którym egzamin B2 pozostał jako jedyny
+                warunek ukończenia studiów.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/meeting.jpg" alt="Staż wakacyjny RAS Tech" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-rocket-takeoff me-1"></i>Staż
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">RAS TECH Summer – płatny staż wakacyjny</div>
+                <small class="text-muted text-nowrap">13.03.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Instytut Informatyki</div>
+            <div class="text-muted small">
+                Letni program stażowy RAS TECH Summer to okazja dla studentów, by zdobyć praktyczne doświadczenie w
+                nowoczesnym środowisku technologicznym Ringier Axel Springer. Oferta skierowana jest zarówno do
+                przyszłych programistów, jak i osób zainteresowanych obszarami pokrewnymi, takimi jak dane, chmura czy
+                zarządzanie projektami – to szansa na rozwój kompetencji i zaliczenie obowiązkowej praktyki w jednym.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/parking.jpg" alt="Zmiany w zasadach wjazdu" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-exclamation-circle me-1"></i>Organizacja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Zmiany w zasadach wydawania kart wjazdowych PW
+                </div>
+                <small class="text-muted text-nowrap">07.03.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Kanclerz</div>
+            <div class="text-muted small">
+                Zaktualizowano zasady wydawania kart wjazdowych na teren kampusu Główny i Główny BIS. Nowe godziny i
+                opłata 200 zł dotyczą studentów niestacjonarnych i słuchaczy studiów podyplomowych. Szczegóły w nowym
+                regulaminie.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/science5.jpg" alt="Program KEUDOS" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-mortarboard me-1"></i>Mobilność
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Rekrutacja na studia w ramach programu KEUDOS</div>
+                <small class="text-muted text-nowrap">03.03.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. Kształcenia</div>
+            <div class="text-muted small">
+                Program KEUDOS to wyjątkowa szansa na zdobycie dwóch dyplomów – polskiego i koreańskiego – w ramach
+                jednych studiów inżynierskich. Uczestnicy spędzają trzy lata na PW i rok na KNU w Korei Południowej, a
+                rekrutacja wymaga odpowiedniego dorobku ECTS oraz udokumentowanej znajomości języka angielskiego.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni3.jpg" alt="Stypendium Jana Tomaki" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-cash-coin me-1"></i>Stypendium
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Specjalne Stypendium Jana Tomaki – nabór 2025</div>
+                <small class="text-muted text-nowrap">28.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: BK / CWM</div>
+            <div class="text-muted small">
+                Politechnika Warszawska ogłosiła nabór do edycji letniej Specjalnego Stypendium Jana Tomaki – programu
+                wspierającego studentów i doktorantów pochodzących z Etiopii lub innych krajów afrykańskich. Inicjatywa
+                ta ma na celu wyrównywanie szans i udzielanie wsparcia osobom studiującym w Polsce, które potrzebują
+                dodatkowego wsparcia finansowego.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/lecture8.jpg" alt="Erasmus 2025/2026" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-airplane me-1"></i>Erasmus+
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Rekrutacja studentów na wyjazdy – Erasmus+</div>
+                <small class="text-muted text-nowrap">27.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. Kształcenia</div>
+            <div class="text-muted small">
+                Program Erasmus+ otwiera przed studentami WEITI możliwość zdobycia międzynarodowego doświadczenia
+                akademickiego w roku 2025/2026. Aby wziąć udział w rekrutacji, należy spełnić określone kryteria
+                formalne i terminowo złożyć dokumenty, a zakwalifikowani kandydaci będą odpowiedzialni za kontakt z
+                uczelnią partnerską i przygotowanie odpowiednich porozumień.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/sad.jpg" alt="Zgłaszanie niezgodności z KPON" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-universal-access me-1"></i>Dostępność
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Zgłaszanie niezgodności projektu FERS z KPON</div>
+                <small class="text-muted text-nowrap">26.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro ds. Społecznej Odpowiedzialności Uczelni</div>
+            <div class="text-muted small">
+                W ramach realizowanego na PW projektu „Horyzont doskonałości…” istnieje możliwość zgłaszania wszelkich
+                niezgodności z międzynarodowymi standardami ochrony praw osób z niepełnosprawnościami. Biuro ds.
+                Społecznej Odpowiedzialności Uczelni przypomina, że każdy sygnał traktowany jest jako oficjalne
+                zgłoszenie, a procedura składania umożliwia kontakt zarówno drogą elektroniczną, jak i tradycyjną.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni.jpg" alt="Akcja stypendialna" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-cash-stack me-1"></i>Stypendium
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Ruszyła akcja stypendialna – semestr letni
+                    2024/2025
+                </div>
+                <small class="text-muted text-nowrap">24.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. Studenckich</div>
+            <div class="text-muted small">
+                Dziekanat ds. Studenckich WEiTI przypomina o rozpoczęciu procedury składania wniosków stypendialnych na
+                semestr letni 2024/2025. Aby nie przegapić żadnego z etapów, studenci powinni zwrócić szczególną uwagę
+                na terminy weryfikacji średniej ocen, składania wniosków i ewentualnej korekty punktów za osiągnięcia.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/safety.jpg" alt="Szkolenie BHP" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-shield-exclamation me-1"></i>BHP
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">E-kurs BHP dla studentów</div>
+                <small class="text-muted text-nowrap">21.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Inspektorat BHP</div>
+            <div class="text-muted small">
+                Zgodnie z zarządzeniem Rektora, wstępne szkolenie z zakresu bezpieczeństwa i higieny pracy jest
+                obowiązkowe dla studentów pierwszego roku wszystkich form studiów. Szkolenie realizowane jest online, a
+                jego zaliczenie stanowi warunek konieczny do dalszego toku studiów – warto więc zapoznać się z
+                instrukcją logowania i nie odkładać tego obowiązku na ostatnią chwilę.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni.jpg" alt="Opinia etyczna PW" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-clipboard-check me-1"></i>Etyka
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Wniosek o wydanie opinii etycznej</div>
+                <small class="text-muted text-nowrap">19.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Biuro Społecznej Odpowiedzialności Uczelni</div>
+            <div class="text-muted small">
+                W trosce o najwyższe standardy prowadzenia badań naukowych z udziałem ludzi, Politechnika Warszawska
+                umożliwia naukowcom złożenie wniosku o opinię etyczną dotyczącą ich projektu. Przed rozpoczęciem badań
+                warto zapoznać się z procedurą składania wniosku oraz wymaganymi dokumentami – odpowiednie informacje
+                znajdują się na stronie BiSOU.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/study2.jpg" alt="Egzaminy językowe PW" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-translate me-1"></i>Egzaminy językowe
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Sesja letnia 2024/2025 – egzaminy językowe B2 i
+                    C1
+                </div>
+                <small class="text-muted text-nowrap">14.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Studium Języków Obcych</div>
+            <div class="text-muted small">
+                Studium Języków Obcych PW ogłasza harmonogram egzaminów B2 i C1 dla studentów wszystkich trybów studiów.
+                W zależności od typu egzaminu – ACERT, Academic lub General – obowiązują różne terminy, procedury
+                rejestracji i zasady. Warto uważnie zapoznać się z wymaganiami i zaplanować udział z wyprzedzeniem.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/study3.jpg" alt="Egzamin C1 General" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-journal-text me-1"></i>C1 General
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Egzamin C1 General – sesja letnia 2024/2025</div>
+                <small class="text-muted text-nowrap">14.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Studium Języków Obcych</div>
+            <div class="text-muted small">
+                Studium Języków Obcych PW zaprasza do udziału w egzaminie C1 General, który jest okazją do formalnego
+                potwierdzenia znajomości języka angielskiego na poziomie zaawansowanym. Egzamin skierowany jest do
+                studentów studiów polskojęzycznych i nie zastępuje obowiązkowego egzaminu C1 Academic dla kierunków
+                anglojęzycznych.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/italy.jpg" alt="Język włoski z architekturą" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-buildings me-1"></i>Lektorat
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Język włoski z Architekturą – nowy lektorat</div>
+                <small class="text-muted text-nowrap">07.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: SJO / Wydział Architektury</div>
+            <div class="text-muted small">
+                Jeśli interesujesz się językiem włoskim i architekturą współczesną, nowy kurs projektowy prowadzony na
+                Wydziale Architektury może być idealną propozycją. Uczestnicy będą pracować w małych grupach nad
+                projektami, ucząc się opisywać je po włosku oraz poznając stylistykę i praktyki projektowe Mediolanu –
+                jednego z najważniejszych ośrodków architektury w Europie.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/lecture9.jpg" alt="Język polski i SDGs" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-globe2 me-1"></i>SDGs
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Lektorat: język polski w komunikacji – SDGs</div>
+                <small class="text-muted text-nowrap">07.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Studium Języków Obcych</div>
+            <div class="text-muted small">
+                Dla studentów chcących rozwijać swoje umiejętności językowe w kontekście istotnych problemów
+                współczesnego świata, Studium Języków Obcych PW przygotowało nowy lektorat oparty na Celach
+                Zrównoważonego Rozwoju ONZ. Kurs łączy naukę języka z refleksją nad tematami społecznymi, ekologicznymi
+                i ekonomicznymi, oferując praktyczne ćwiczenia komunikacyjne i angażujące materiały w językach polskim i
+                angielskim.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni3.jpg" alt="Rejestracja na semestr letni" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-primary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-calendar-check me-1"></i>Rejestracja
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Rejestracja na semestr letni 2024/2025 – ważne
+                    informacje i terminy
+                </div>
+                <small class="text-muted text-nowrap">05.02.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Prodziekan ds. Nauczania</div>
+            <div class="text-muted small">
+                Zbliża się czas rejestracji na kolejny semestr, dlatego warto zapoznać się z pełnym harmonogramem
+                działań oraz procedurami odwoławczymi. W komunikacie znajdują się szczegółowe informacje o terminach
+                składania wyjaśnień, rozmowach z kadrą dydaktyczną oraz zasadach udziału w egzaminach komisyjnych – ich
+                znajomość pomoże uniknąć nieporozumień i zapewnić ciągłość studiów.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/dorm14.jpg" alt="Zakwaterowanie w DS" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-success bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-house-door me-1"></i>Domy studenckie
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Nowy regulamin zakwaterowania w domach studenckich
+                    PW
+                </div>
+                <small class="text-muted text-nowrap">28.01.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Komisja Kwaterunkowa SSPW</div>
+            <div class="text-muted small">
+                Od 1 marca 2025 r. obowiązuje nowy regulamin zakwaterowania. Opłaty rezerwacyjne zmieniają status na
+                gwarancyjne, chyba że student złoży sprzeciw. Szczegóły zawarte w zarządzeniu Rektora.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/lecture10.jpg" alt="Kurs języka polskiego" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-warning bg-opacity-75 text-dark position-absolute top-0 end-0 m-2">
+        <i class="bi bi-chat-left-dots me-1"></i>Polski jako obcy
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Kursy języka polskiego online – przygotowanie do
+                    egzaminów B1 / B1-B2
+                </div>
+                <small class="text-muted text-nowrap">24.01.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Ośrodek Języka Polskiego</div>
+            <div class="text-muted small">
+                Dla osób przygotowujących się do egzaminów z języka polskiego jako obcego, Ośrodek Języka Polskiego
+                Politechniki Warszawskiej oferuje specjalistyczne kursy online dostosowane do poziomu A2/B1. Dzięki
+                różnym formatom zajęć uczestnicy mogą wybrać intensywną formułę weekendową lub regularne spotkania
+                tygodniowe, zapewniające solidne przygotowanie do egzaminów państwowych i telc.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/parking.jpg" alt="Regulamin parkingów PW" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-secondary bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-car-front me-1"></i>Parking
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Nowy regulamin korzystania z parkingów PW</div>
+                <small class="text-muted text-nowrap">22.01.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: Kanclerz</div>
+            <div class="text-muted small">
+                Zaktualizowano zasady wjazdu na teren kampusu, odpowiedzialności użytkowników oraz działania Straży
+                Akademickiej. Parkingi rowerowe pozostają bezpłatne. Szczegóły znajdują się w zarządzeniu.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/lecture11.jpg" alt="Zapisy na przedmioty" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-info bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-journal-check me-1"></i>Zapisy
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Procedura zapisów na przedmioty – semestr letni
+                    2024/2025
+                </div>
+                <small class="text-muted text-nowrap">22.01.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. Nauczania</div>
+            <div class="text-muted small">
+                Zbliża się okres rejestracji na przedmioty w semestrze letnim na WEiTI – kluczowy moment dla studentów
+                planujących układ zajęć na kolejny semestr. Warto zapoznać się z harmonogramem tur oraz zasadami
+                składania próśb, by sprawnie przejść przez procedurę i uniknąć problemów z zapisami.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/uni3.jpg" alt="Kierownicy specjalności WEiTI" class="w-100"
+             style="height: 160px; object-fit: cover;">
+        <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-person-lines-fill me-1"></i>Wydział
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Powołanie kierowników specjalności na WEiTI PW
+                </div>
+                <small class="text-muted text-nowrap">08.01.2025</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekan</div>
+            <div class="text-muted small">
+                W ramach działań na rzecz podnoszenia jakości kształcenia na Wydziale Elektroniki i Technik
+                Informacyjnych PW, wprowadzono strukturę kierowników specjalności odpowiedzialnych za merytoryczny
+                nadzór i organizację wybranych ścieżek edukacyjnych. Nowe decyzje mają usprawnić komunikację między
+                studentami, wykładowcami i komisjami dydaktycznymi, wspierając rozwój kierunków studiów zgodnie z
+                aktualnymi potrzebami rynku i środowiska akademickiego.
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-4 overflow-hidden shadow-sm mb-4 position-relative">
+        <img src="assets/flood.jpg" alt="Pomoc po powodzi" class="w-100" style="height: 200px; object-fit: cover;">
+        <span class="badge bg-danger bg-opacity-75 text-white position-absolute top-0 end-0 m-2">
+        <i class="bi bi-exclamation-triangle me-1"></i>Wsparcie
+    </span>
+        <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+                <div class="fw-semibold" style="font-size: 1.25rem;">Informacja dla studentów pochodzących z terenów
+                    objętych powodzią
+                </div>
+                <small class="text-muted text-nowrap">31.10.2024</small>
+            </div>
+            <div class="mb-2 text-muted small fst-italic">Autor: WEiTI / Dziekanat ds. Studenckich</div>
+            <div class="text-muted small">
+                Politechnika Warszawska wyciąga pomocną dłoń do studentów dotkniętych skutkami wrześniowej powodzi,
+                oferując możliwość otrzymania zapomogi w ramach wsparcia socjalnego. Uczelnia zachęca do składania
+                wniosków i kontaktu z dziekanatem w celu uzyskania indywidualnej pomocy.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Dolny pasek nawigacji -->
+<div class="bottom-nav">
+    <a href="/home.html"><i class="bi bi-house-door"></i></a>
+    <a href="/events.html"><i class="bi bi-ticket"></i></a>
+    <a href="/map-card.html"><i class="bi bi-geo-alt"></i></a>
+    <a href="/guides.html"><i class="bi bi-book"></i></a>
+    <a href="/news.html" class="active"><i class="bi bi-megaphone-fill"></i></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

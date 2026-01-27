@@ -1,0 +1,85 @@
+@startuml
+title PW_hub — Service Blueprint Organizator
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor White
+  BorderColor Black
+  ArrowColor Black
+}
+
+
+|Customer Actions (Organizator)|
+start
+:Otwiera panel;
+:Wybiera "Zaloguj";
+
+|Frontstage (Panel Web - Django DTL)|
+:Pokazuje ekran logowania;
+
+|Backstage (Django)|
+:Inicjuje SSO;
+:Weryfikuje tożsamość;
+
+|Support (SSO / Users)|
+:Autoryzuje użytkownika;
+:Zwraca role;
+
+|Backstage (Django)|
+:Sprawdza uprawnienia organizatora;
+:Ładuje panel;
+
+|Physical Evidence|
+:Panel po zalogowaniu;
+
+|Customer Actions (Organizator)|
+:Wybiera "Dodaj wydarzenie";
+:Wypełnia formularz;
+
+|Frontstage (Panel Web - Django DTL)|
+:Walidacja UI;
+:Podgląd;
+
+|Backstage (Django)|
+:Waliduje domenowo;
+:Zapisuje wydarzenie jako draft;
+:Zapisuje dostępność + limity;
+
+|Physical Evidence|
+:Potwierdzenie utworzenia (draft);
+
+|Customer Actions (Organizator)|
+:Klik "Opublikuj";
+
+|Frontstage (Panel Web - Django DTL)|
+:Zmienia status na "Opublikowane";
+
+|Backstage (Django)|
+:Waliduje warunki publikacji;
+:Publikuje (status=published);
+:Udostępnia w API;
+
+|Physical Evidence|
+:Status "Opublikowane";
+
+|Customer Actions (Organizator)|
+:Otwiera listę uczestników;
+
+|Frontstage (Panel Web - Django DTL)|
+:Wyświetla listę + licznik miejsc;
+
+|Backstage (Django)|
+:Pobiera listę uczestników;
+:Oblicza zajętość/limit;
+
+if (Limit osiągnięty?) then (tak)
+  :Blokuje kolejne zapisy;
+  |Frontstage (Panel Web - Django DTL)|
+  :Wyświetla alert "Brak miejsc";
+  |Physical Evidence|
+  :Znacznik FULL;
+else (nie)
+  :Pozwala na kolejne zapisy;
+endif
+
+stop
+@enduml

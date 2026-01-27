@@ -1,0 +1,69 @@
+@startsalt
+{
+  {T
+   + Panel Jednostki | Politechnika Warszawska
+  }
+  ==
+  {+
+    {/ <b>Menu Główne
+      * <&home> Dashboard
+      * <&calendar> Wydarzenia
+      * <&document> Aktualności
+      * <&bar-chart> Statystyki
+      * <&people> Użytkownicy
+      * <&cog> Ustawienia
+    | 
+    {^"Dashboard - Przegląd Panelu Jednostki"
+      {
+        == Witaj w Panelu Jednostki
+        .
+        **Nazwa jednostki:** Wydział Elektroniki i Technik Informacyjnych
+        **Typ jednostki:** Wydział
+        **Kod jednostki:** WEiTI
+      }
+      --
+      {
+        == Szybki Przegląd
+        .
+        {#
+          . **Metryka** | **Wartość** | **Zmiana**
+          . Aktywne wydarzenia | 8 | +2 od ostatniego tygodnia
+          . Opublikowane aktualności | 15 | +3 w tym miesiącu
+          . Zarejestrowani użytkownicy | 234 | +12 w tym miesiącu
+          . Oczekujące zatwierdzenia | 3 | Wymagana akcja
+        }
+      }
+      --
+      {
+        == Ostatnie Aktywności
+        .
+        {#
+          . **Data** | **Typ** | **Tytuł** | **Status**
+          . 2026-01-13 10:30 | Wydarzenie | Dni Otwarte WEiTI 2026 | Opublikowane
+          . 2026-01-13 09:15 | Aktualność | Nowe stypendium dla studentów | Wersja robocza
+          . 2026-01-12 15:45 | Wydarzenie | Hackathon AI & ML | Oczekuje na zatwierdzenie
+          . 2026-01-12 11:20 | Aktualność | Rekrutacja na studia doktoranckie | Opublikowane
+        }
+      }
+      --
+      {
+        == Szybkie Akcje
+        .
+        [+ Nowe Wydarzenie] | [+ Nowa Aktualność] | [Zarządzaj Użytkownikami]
+      }
+      --
+      {
+        == Powiadomienia (2)
+        .
+        * **Przypomnienie:** Wydarzenie "Targi Pracy" rozpoczyna się za 3 dni
+        * **Uwaga:** 3 elementy oczekują na Twoje zatwierdzenie
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Zalogowano jako: Jan Kowalski (j.kowalski@pw.edu.pl) | <&account-logout> [Wyloguj]
+  }
+}
+@endsalt

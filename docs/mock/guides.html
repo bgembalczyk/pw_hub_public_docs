@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Poradniki – PW Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f6f7f9;
+            color: #1c1c1e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #dadada;
+        }
+
+        .navbar .navbar-icon-btn {
+            color: #007aff;
+            font-size: 1.5rem;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #dadada;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1030;
+        }
+
+        .bottom-nav a {
+            color: #8e8e93;
+            font-size: 1.4rem;
+            text-decoration: none;
+            text-align: center;
+            width: 20%;
+        }
+
+        .bottom-nav a.active {
+            color: #007aff;
+        }
+
+        .notice-item {
+            display: flex;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            color: #1c1c1e;
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+            padding: 1rem;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .notice-image {
+            width: 64px;
+            height: 64px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .notice-content {
+            flex-grow: 1;
+        }
+
+        .notice-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .notice-meta {
+            font-size: 0.75rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+
+        .notice-text {
+            font-size: 0.85rem;
+            color: #3c3c43;
+            line-height: 1.35;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Górny pasek nawigacji -->
+<nav class="navbar navbar-light sticky-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+        <a href="#" class="navbar-icon-btn"><i class="bi bi-gear"></i></a>
+
+        <!-- Logo zamiast tekstu -->
+        <img src="assets/logo_black.pdf" alt="Logo" style="height: 28px;" class="mx-auto d-block"/>
+
+        <a href="#" class="navbar-icon-btn"><i class="bi bi-list"></i></a>
+    </div>
+</nav>
+
+<!-- 📇 Karta kontaktowa: Twój wydział -->
+<!-- 🎓 Pozioma galeria kontaktów z przyciskami -->
+<div class="px-3 mt-3 mb-4">
+    <h6 class="mb-3">Twoje miejsca kontaktu</h6>
+
+    <div class="d-flex overflow-auto gap-3 pb-2">
+        <!-- Dziekanat -->
+        <div class="flex-shrink-0 bg-white rounded-4 shadow-sm p-3" style="min-width: 240px; max-width: 260px;">
+            <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-building me-2 text-primary fs-5"></i>
+                <strong class="fs-6 mb-0">Dziekanat EiTI</strong>
+            </div>
+            <p class="mb-2 small text-secondary">Pokój 120, pn–pt 9:00–13:00</p>
+            <a href="mailto:de.eiti@pw.edu.pl" class="btn btn-outline-primary btn-sm w-100">Otwórz stronę</a>
+        </div>
+
+        <!-- WRS -->
+        <div class="flex-shrink-0 bg-white rounded-4 shadow-sm p-3" style="min-width: 240px; max-width: 260px;">
+            <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-people-fill me-2 text-primary fs-5"></i>
+                <strong class="fs-6 mb-0">WRS EiTI</strong>
+            </div>
+            <p class="mb-2 small text-secondary">Pokój 46A</p>
+            <a href="https://wrs.eiti.pw.edu.pl" target="_blank" class="btn btn-outline-primary btn-sm w-100">Skontaktuj się</a>
+        </div>
+
+        <!-- RM Mikrus -->
+        <div class="flex-shrink-0 bg-white rounded-4 shadow-sm p-3" style="min-width: 240px; max-width: 260px;">
+            <div class="d-flex align-items-center mb-2">
+                <i class="bi bi-house-door-fill me-2 text-primary fs-5"></i>
+                <strong class="fs-6 mb-0">RM Ustronie</strong>
+            </div>
+            <p class="mb-2 small text-secondary">Parter, 012</p>
+            <a href="mailto:rm.mikrus@pw.edu.pl" class="btn btn-outline-primary btn-sm w-100">Skontaktuj się</a>
+        </div>
+    </div>
+</div>
+
+<!-- Zawartość poradników -->
+<div class="container mt-3 mb-5 px-3">
+    <!-- Lista poradników -->
+    <div class="notice-item">
+        <img src="assets/uni3.jpg" alt="Regulamin" class="notice-image">
+        <div class="notice-content">
+            <div class="notice-title">Jak czytać Regulamin Studiów?</div>
+            <div class="notice-meta">Twoje prawa i obowiązki • WRS</div>
+            <div class="notice-text">
+                Co zrobić, jeśli masz wątpliwości co do zasad studiowania? Kto może Ci pomóc w konflikcie z prowadzącym? Sprawdź, gdzie szukać pomocy.
+            </div>
+        </div>
+    </div>
+
+    <div class="notice-item">
+        <img src="assets/study3.jpg" alt="WF i języki" class="notice-image">
+        <div class="notice-content">
+            <div class="notice-title">Zapisy na WF i języki</div>
+            <div class="notice-meta">SJO i SWFiS • Zapisy w USOS</div>
+            <div class="notice-text">
+                Instrukcja krok po kroku jak i kiedy zapisać się na obowiązkowe zajęcia wychowania fizycznego i językowe. Co, jeśli zabraknie miejsc?
+            </div>
+        </div>
+    </div>
+
+    <div class="notice-item">
+        <img src="assets/dorm11.jpg" alt="Akademik" class="notice-image">
+        <div class="notice-content">
+            <div class="notice-title">Jak dostać akademik?</div>
+            <div class="notice-meta">Zakwaterowanie • Kwaterunek SSPW</div>
+            <div class="notice-text">
+                Kiedy i jak złożyć wniosek o miejsce w domu studenckim? Jak działa system preferencji i kto ma pierwszeństwo w przydziale?
+            </div>
+        </div>
+    </div>
+
+    <div class="notice-item">
+        <img src="assets/uni.jpg" alt="Pomoc" class="notice-image">
+        <div class="notice-content">
+            <div class="notice-title">Pomoc materialna i zdrowotna</div>
+            <div class="notice-meta">Stypendia • Opieka medyczna</div>
+            <div class="notice-text">
+                Jakie stypendia Ci przysługują? Co zrobić w trudnej sytuacji materialnej? Gdzie udać się do lekarza lub po poradę psychologiczną?
+            </div>
+        </div>
+    </div>
+
+    <div class="notice-item">
+        <img src="assets/study.jpg" alt="USOS" class="notice-image">
+        <div class="notice-content">
+            <div class="notice-title">Co znajdziesz w USOS?</div>
+            <div class="notice-meta">Plan zajęć • Oceny • Zapisy</div>
+            <div class="notice-text">
+                Przegląd najważniejszych funkcji systemu USOS oraz tipy, które pomogą Ci go okiełznać. Plus: planer akademicki, który warto mieć!
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pasek dolnej nawigacji -->
+<div class="bottom-nav">
+    <a href="/home.html"><i class="bi bi-house-door"></i></a>
+    <a href="/events.html"><i class="bi bi-ticket"></i></a>
+    <a href="/map-card.html"><i class="bi bi-geo-alt"></i></a>
+    <a href="/guides.html" class="active"><i class="bi bi-book-fill"></i></a>
+    <a href="/news.html"><i class="bi bi-megaphone"></i></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

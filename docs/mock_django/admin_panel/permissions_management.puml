@@ -1,0 +1,166 @@
+@startsalt
+{
+  {T
+   + Panel Administratora | Zarządzanie Uprawnieniami
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&document> Aktualności
+      * <&calendar> Wydarzenia
+      * <&book> Poradniki
+      * <&people> Użytkownicy
+      * <&building> Jednostki
+      * <&flag> Moderacja
+      * <&graph> Statystyki
+      * <&cog> Konfiguracja
+      * <&key> <b>Uprawnienia</b>
+    | 
+    {^"Zarządzanie Uprawnieniami i Rolami"
+      {
+        == Kategorie
+        .
+        [Role Systemowe] [Uprawnienia Użytkowników] [Grupy Uprawnień] [Audyt Dostępu]
+      }
+      --
+      {
+        == Role Systemowe
+        .
+        {#
+          . **Nazwa roli** | **Poziom** | **Liczba użytkowników** | **Opis** | **Akcje**
+          . <color:red>Administrator Systemu</color> | Globalny | 3 | Pełny dostęp do wszystkich funkcji systemu | [Edytuj] [Użytkownicy]
+          . <color:orange>Administrator Merytoryczny</color> | Globalny | 5 | Zarządzanie treścią, jednostkami i moderacja | [Edytuj] [Użytkownicy]
+          . <color:blue>Administrator Jednostki</color> | Jednostka | 18 | Pełny dostęp w ramach przypisanej jednostki | [Edytuj] [Użytkownicy]
+          . <color:purple>Moderator Globalny</color> | Globalny | 8 | Moderacja treści we wszystkich jednostkach | [Edytuj] [Użytkownicy]
+          . <color:purple>Moderator Jednostki</color> | Jednostka | 54 | Moderacja treści w przypisanej jednostce | [Edytuj] [Użytkownicy]
+          . Redaktor | Jednostka | 187 | Tworzenie i edycja treści (wymaga zatwierdzenia) | [Edytuj] [Użytkownicy]
+          . Obserwator | Jednostka | 542 | Tylko odczyt statystyk i raportów | [Edytuj] [Użytkownicy]
+          . Użytkownik | Publiczny | 12,030 | Dostęp do aplikacji mobilnej | [Edytuj] [Użytkownicy]
+        }
+      }
+      --
+      {
+        [+ Dodaj Nową Rolę] | [Eksportuj konfigurację ról] | [Importuj konfigurację]
+      }
+      --
+      {
+        == Szczegóły Roli: Administrator Jednostki
+        .
+        **Podstawowe informacje:**
+        * Nazwa roli: Administrator Jednostki
+        * Poziom dostępu: Jednostka
+        * Liczba użytkowników: 18
+        * Status: <color:green>Aktywna</color>
+        .
+        **Uprawnienia - Zarządzanie Treścią:**
+        (X) Tworzenie wydarzeń
+        (X) Edycja wydarzeń
+        (X) Usuwanie wydarzeń
+        (X) Publikacja wydarzeń
+        (X) Tworzenie aktualności
+        (X) Edycja aktualności
+        (X) Usuwanie aktualności
+        (X) Publikacja aktualności
+        (X) Tworzenie poradników
+        (X) Edycja poradników
+        (X) Usuwanie poradników
+        (X) Publikacja poradników
+        .
+        **Uprawnienia - Zarządzanie Użytkownikami:**
+        (X) Przeglądanie użytkowników jednostki
+        (X) Dodawanie użytkowników do jednostki
+        (X) Edycja użytkowników jednostki
+        (X) Usuwanie użytkowników jednostki
+        (X) Zarządzanie rolami w jednostce
+        ( ) Zarządzanie użytkownikami innych jednostek
+        ( ) Zarządzanie administratorami globalnymi
+        .
+        **Uprawnienia - Statystyki i Raporty:**
+        (X) Dostęp do statystyk jednostki
+        (X) Eksport raportów jednostki
+        ( ) Dostęp do statystyk globalnych
+        ( ) Eksport raportów globalnych
+        .
+        **Uprawnienia - Konfiguracja:**
+        (X) Edycja danych jednostki
+        (X) Zarządzanie kategoriami w jednostce
+        ( ) Zmiana konfiguracji systemu
+        ( ) Zarządzanie integracjami
+        .
+        **Uprawnienia - Moderacja:**
+        (X) Moderacja treści w jednostce
+        ( ) Moderacja treści w innych jednostkach
+        ( ) Zarządzanie kolejką moderacji globalnej
+        .
+        [Zapisz zmiany] | [Anuluj] | [Duplikuj rolę]
+      }
+      --
+      {
+        == Użytkownicy z Rolą: Administrator Jednostki (18)
+        .
+        {#
+          . **Użytkownik** | **Email** | **Jednostka** | **Data przypisania** | **Przypisał** | **Akcje**
+          . Jan Kowalski | j.kowalski@pw.edu.pl | WEiTI | 2025-09-01 | Admin Systemu | [Edytuj] [Usuń rolę]
+          . Anna Nowak | a.nowak@pw.edu.pl | MEiL | 2025-09-01 | Admin Systemu | [Edytuj] [Usuń rolę]
+          . Piotr Wiśniewski | p.wisniewski@pw.edu.pl | WIL | 2025-09-05 | Admin Systemu | [Edytuj] [Usuń rolę]
+          . Maria Lewandowska | m.lewandowska@pw.edu.pl | WCH | 2025-09-10 | Admin Systemu | [Edytuj] [Usuń rolę]
+          . Tomasz Kamiński | t.kaminski@pw.edu.pl | ARCH | 2025-09-15 | Admin Systemu | [Edytuj] [Usuń rolę]
+        }
+      }
+      --
+      {
+        [< Poprzednia] | Strona 1 z 4 | [Następna >]
+      }
+      --
+      {
+        == Grupy Uprawnień (Predefiniowane Zestawy)
+        .
+        {#
+          . **Nazwa grupy** | **Zawiera uprawnienia** | **Użyte w rolach** | **Akcje**
+          . Zarządzanie treścią - pełne | Wszystkie operacje CRUD na treściach | 5 ról | [Edytuj] [Podgląd]
+          . Zarządzanie treścią - podstawowe | Tworzenie i edycja (bez publikacji) | 3 role | [Edytuj] [Podgląd]
+          . Statystyki - pełne | Dostęp do wszystkich statystyk i raportów | 4 role | [Edytuj] [Podgląd]
+          . Statystyki - jednostkowe | Dostęp tylko do statystyk jednostki | 6 ról | [Edytuj] [Podgląd]
+          . Moderacja - globalna | Moderacja we wszystkich jednostkach | 2 role | [Edytuj] [Podgląd]
+          . Moderacja - jednostkowa | Moderacja w przypisanej jednostce | 3 role | [Edytuj] [Podgląd]
+        }
+      }
+      --
+      {
+        [+ Utwórz Grupę Uprawnień]
+      }
+      --
+      {
+        == Audyt Dostępu - Ostatnie Zmiany Uprawnień
+        .
+        {#
+          . **Data** | **Administrator** | **Użytkownik** | **Zmiana** | **Szczegóły**
+          . 2026-01-13 10:30 | Admin Systemu | Katarzyna Zielińska | Dodano rolę | Moderator Jednostki (WEiTI)
+          . 2026-01-12 14:15 | Admin Systemu | Marek Szymański | Usunięto rolę | Redaktor (MEiL)
+          . 2026-01-12 11:45 | Admin Systemu | Joanna Kowalczyk | Zmieniono rolę | Redaktor → Moderator Jednostki (WIL)
+          . 2026-01-10 09:20 | Admin Systemu | Robert Nowicki | Dodano rolę | Administrator Jednostki (MINI)
+          . 2026-01-08 16:30 | Admin Systemu | Aleksandra Pawlak | Edytowano uprawnienia | Dodano dostęp do statystyk
+        }
+      }
+      --
+      {
+        [Eksportuj log audytu] | [Zaawansowane wyszukiwanie] | [Ustawienia audytu]
+      }
+      --
+      {
+        == Statystyki uprawnień
+        * Łączna liczba zdefiniowanych ról: **8**
+        * Łączna liczba użytkowników z niestandardowymi uprawnieniami: **23**
+        * Średnia liczba uprawnień na rolę: **12**
+        * Ostatnia modyfikacja ról: **2026-01-13 10:30**
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Administratora | Zalogowano: Administrator Systemu
+  }
+}
+@endsalt

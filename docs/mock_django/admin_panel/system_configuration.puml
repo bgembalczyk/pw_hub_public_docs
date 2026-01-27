@@ -1,0 +1,193 @@
+@startsalt
+{
+  {T
+   + Panel Administratora | Konfiguracja Systemu
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&document> Aktualności
+      * <&calendar> Wydarzenia
+      * <&book> Poradniki
+      * <&people> Użytkownicy
+      * <&building> Jednostki
+      * <&flag> Moderacja
+      * <&graph> Statystyki
+      * <&cog> <b>Konfiguracja</b>
+    | 
+    {^"Konfiguracja Systemu"
+      {
+        == Kategorie Konfiguracji
+        .
+        [Ogólne] [Integracje] [Bezpieczeństwo] [Email] [Moderacja] [Interfejs] [Zaawansowane]
+      }
+      --
+      {
+        == Ustawienia Ogólne
+        .
+        **Nazwa systemu:**
+        [ PW Companion App                                    ]
+        .
+        **Główny adres email kontaktowy:**
+        [ contact@pw.edu.pl                                   ]
+        .
+        **Język domyślny:**
+        [Polski ▼]
+        .
+        **Strefa czasowa:**
+        [Europe/Warsaw ▼]
+        .
+        **Format daty:**
+        [DD-MM-YYYY ▼]
+        .
+        **Format czasu:**
+        [24-godzinny ▼]
+        .
+        ( ) Tryb konserwacji (system niedostępny dla użytkowników)
+        (X) Rejestracja nowych użytkowników włączona
+        (X) Powiadomienia email włączone
+        ( ) Tryb debugowania (tylko dla rozwoju)
+      }
+      --
+      {
+        == Integracje z Systemami Zewnętrznymi
+        .
+        **USOS (System Obsługi Studiów):**
+        Status: <color:green>Połączono</color> | [Testuj połączenie] [Konfiguruj] [Synchronizuj dane]
+        Ostatnia synchronizacja: 2026-01-13 08:00
+        .
+        **SSO/LDAP (Single Sign-On):**
+        Status: <color:green>Aktywne</color> | [Testuj] [Konfiguruj]
+        Dostawca: Microsoft Azure AD
+        .
+        **System emailowy (SMTP):**
+        Status: <color:green>Skonfigurowany</color> | [Test wysyłki] [Konfiguruj]
+        Serwer: smtp.pw.edu.pl
+        .
+        **Google Analytics:**
+        Status: <color:orange>Nieaktywne</color> | [Włącz] [Konfiguruj]
+        Tracking ID: [                              ]
+      }
+      --
+      {
+        == Ustawienia Moderacji
+        .
+        **Tryb moderacji treści:**
+        ( ) Automatyczna publikacja (bez moderacji)
+        (X) Moderacja przed publikacją (zalecane)
+        ( ) Moderacja po publikacji
+        .
+        **Automatyczne zatwierdzanie:**
+        (X) Zaufane jednostki mogą publikować bez moderacji
+        ( ) Wszyscy muszą przejść przez moderację
+        .
+        **Czas oczekiwania przed przypomnieniem (dni):**
+        [ 3 ]
+        .
+        **Maksymalny czas na moderację (dni):**
+        [ 7 ]
+        .
+        **Powiadomienia dla moderatorów:**
+        (X) Email przy nowej treści do moderacji
+        (X) Email przy przekroczeniu czasu oczekiwania
+        ( ) Powiadomienia push
+      }
+      --
+      {
+        == Ustawienia Bezpieczeństwa
+        .
+        **Długość sesji użytkownika (minuty):**
+        [ 120 ]
+        .
+        **Maksymalna liczba nieudanych logowań:**
+        [ 5 ]
+        .
+        **Czas blokady konta po przekroczeniu (minuty):**
+        [ 30 ]
+        .
+        **Minimalna długość hasła:**
+        [ 8 ]
+        .
+        **Wymagania dotyczące hasła:**
+        (X) Wymaga wielkich liter
+        (X) Wymaga małych liter
+        (X) Wymaga cyfr
+        (X) Wymaga znaków specjalnych
+        .
+        **Wymuszanie zmiany hasła (dni):**
+        [ 90 ] ( ) Wyłącz wymuszanie
+        .
+        **Dwuskładnikowe uwierzytelnianie (2FA):**
+        (X) Dostępne dla użytkowników
+        ( ) Wymagane dla administratorów
+        ( ) Wymagane dla wszystkich
+      }
+      --
+      {
+        == Ustawienia Interfejsu Użytkownika
+        .
+        **Motyw kolorystyczny:**
+        (X) Jasny
+        ( ) Ciemny
+        ( ) Automatyczny (zgodnie z preferencjami systemu)
+        .
+        **Tryb wysokiego kontrastu:**
+        ( ) Włączony domyślnie
+        (X) Dostępny jako opcja
+        .
+        **Domyślna liczba elementów na stronie:**
+        [ 30 ]
+        .
+        **Elementy dostępności:**
+        (X) Etykiety ARIA dla czytników ekranu
+        (X) Nawigacja klawiaturą
+        (X) Tryb wysokiego kontrastu
+        (X) Możliwość powiększenia czcionki
+      }
+      --
+      {
+        == Ustawienia Powiadomień Email
+        .
+        **Szablon powiadomień:**
+        [Domyślny szablon PW ▼]
+        .
+        **Email nadawcy (From):**
+        [ noreply@pw.edu.pl                                   ]
+        .
+        **Nazwa nadawcy:**
+        [ PW Companion App                                    ]
+        .
+        **Typy powiadomień:**
+        (X) Nowe wydarzenie w jednostce
+        (X) Nowa aktualność w jednostce
+        (X) Przypomnienie o wydarzeniu (24h przed)
+        (X) Potwierdzenie rejestracji na wydarzenie
+        ( ) Cotygodniowe podsumowanie aktywności
+        ( ) Comiesięczny newsletter
+      }
+      --
+      {
+        [Zapisz wszystkie zmiany] | [Anuluj] | [Przywróć ustawienia domyślne]
+      }
+      --
+      {
+        == Ostatnie zmiany konfiguracji
+        .
+        {#
+          . **Data** | **Administrator** | **Zmiana** | **Akcja**
+          . 2026-01-12 14:30 | Admin Systemu | Włączono moderację przed publikacją | [Szczegóły]
+          . 2026-01-10 10:15 | Admin Systemu | Zmieniono czas sesji z 60 na 120 minut | [Szczegóły]
+          . 2026-01-08 16:00 | Admin Systemu | Dodano integrację z Google Analytics | [Szczegóły]
+          . 2026-01-05 11:20 | Admin Systemu | Aktualizowano szablon powiadomień email | [Szczegóły]
+        }
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Administratora | Zalogowano: Administrator Systemu
+  }
+}
+@endsalt

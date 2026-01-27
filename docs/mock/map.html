@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Amplitron – PW Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #000;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #dadada;
+        }
+
+        .navbar .navbar-icon-btn {
+            color: #007aff;
+            font-size: 1.5rem;
+        }
+
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #dadada;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .bottom-nav a {
+            color: #8e8e93;
+            font-size: 1.4rem;
+            text-decoration: none;
+            text-align: center;
+            width: 20%;
+        }
+
+        .bottom-nav a.active {
+            color: #007aff;
+        }
+
+
+        .event-meta-inline {
+            font-size: 0.8rem;
+            color: #a1a1aa;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .event-item {
+            display: flex;
+            align-items: stretch;
+            border-radius: 12px;
+            background: #fff;
+            color: #1c1c1e;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+            border: 1px solid #a1a1aa;
+        }
+
+        .event-type-box {
+            width: 48px;
+            background-color: #007aff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.25rem;
+        }
+
+        .event-content {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .event-meta-inline {
+            font-size: 0.8rem;
+            color: #a1a1aa;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .event-date {
+            min-width: 65px;
+            padding: 0.75rem 0.75rem 0.75rem 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-date .day {
+            font-size: 1.3rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .event-date .month {
+            font-size: 0.75rem;
+            color: #6c757d;
+        }
+
+
+        .map-background {
+            position: absolute;
+            top: 50px; /* wysokość navbara */
+            bottom: 60px; /* wysokość bottom-nav */
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .map-background iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: brightness(0.75);
+        }
+
+        /* Karta miejsca */
+        .place-card {
+            position: absolute;
+            bottom: 80px;
+            left: 10px;
+            right: 10px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            z-index: 2;
+        }
+
+        .place-card h5 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .place-card .meta {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+
+        .place-card .desc {
+            font-size: 0.9rem;
+            color: #3c3c43;
+            margin-bottom: 0.75rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Górny pasek nawigacji -->
+<nav class="navbar navbar-light sticky-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+        <a href="#" class="navbar-icon-btn"><i class="bi bi-gear"></i></a>
+
+        <!-- Logo zamiast tekstu -->
+        <img src="assets/logo_black.pdf" alt="Logo" style="height: 28px;" class="mx-auto d-block"/>
+
+        <a href="#" class="navbar-icon-btn"><i class="bi bi-list"></i></a>
+    </div>
+</nav>
+
+<!-- Mapa w tle (z marginesami u góry i dołu) -->
+<div class="map-background">
+    <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d305.54319758845975!2d21.012038000000004!3d52.218939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecce91dcfb58b%3A0x3873df8480b4ced9!2sKlub%20Studencki%20Amplitron!5e0!3m2!1spl!2sus!4v1750366265115!5m2!1spl!2sus"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+
+<!-- Nawigacja -->
+<div class="bottom-nav">
+    <a href="/home.html"><i class="bi bi-house-door"></i></a>
+    <a href="/events.html"><i class="bi bi-ticket"></i></a>
+    <a href="/map-card.html" class="active"><i class="bi bi-geo-alt-fill"></i></a>
+    <a href="/guides.html"><i class="bi bi-book"></i></a>
+    <a href="/news.html"><i class="bi bi-megaphone"></i></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

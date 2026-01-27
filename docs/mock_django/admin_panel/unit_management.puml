@@ -1,0 +1,104 @@
+@startsalt
+{
+  {T
+   + Panel Administratora | Zarządzanie Jednostkami
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&document> Aktualności
+      * <&calendar> Wydarzenia
+      * <&book> Poradniki
+      * <&people> Użytkownicy
+      * <&building> <b>Jednostki</b>
+      * <&flag> Moderacja
+      * <&graph> Statystyki
+      * <&cog> Konfiguracja
+    | 
+    {^"Zarządzanie Jednostkami Organizacyjnymi"
+      {
+        == Filtry
+        .
+        Typ jednostki: [Wszystkie ▼] | Status: [Aktywne ▼] | Sortuj: [Nazwa A-Z ▼]
+        .
+        Szukaj (nazwa, kod, opis): [                                          ] [Szukaj] [Wyczyść]
+      }
+      --
+      {
+        == Lista Jednostek Organizacyjnych (18)
+        .
+        {#
+          . **Kod** | **Nazwa jednostki** | **Typ** | **Użytkownicy** | **Publikacje** | **Status** | **Akcje**
+          . WEiTI | Wydział Elektroniki i Technik Informacyjnych | Wydział | 234 | 158 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . MEiL | Wydział Mechaniczny Energetyki i Lotnictwa | Wydział | 198 | 132 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . WIL | Wydział Inżynierii Lądowej | Wydział | 167 | 98 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . WCH | Wydział Chemiczny | Wydział | 145 | 87 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . ARCH | Wydział Architektury | Wydział | 123 | 76 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . MINI | Wydział Matematyki i Nauk Informacyjnych | Wydział | 189 | 145 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . WGiK | Wydział Geodezji i Kartografii | Wydział | 95 | 54 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . WIM | Wydział Inżynierii Materiałowej | Wydział | 112 | 67 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . SGSP | Szkoła Główna Służby Pożarniczej | Jednostka Stowarzyszona | 78 | 34 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+          . BIB | Biblioteka Główna | Jednostka Pomocnicza | 45 | 89 | <color:green>Aktywny</color> | [Edytuj] [Podgląd] [Statystyki]
+        }
+      }
+      --
+      {
+        [< Poprzednia] | Strona 1 z 2 | [Następna >]
+      }
+      --
+      {
+        [+ Dodaj Nową Jednostkę] | [Importuj strukturę] | [Eksportuj listę] | [Hierarchia jednostek]
+      }
+      --
+      {
+        == Szczegóły Wybranej Jednostki: Wydział Elektroniki i Technik Informacyjnych (WEiTI)
+        .
+        **Podstawowe informacje:**
+        * Kod jednostki: WEiTI
+        * Typ: Wydział
+        * Status: <color:green>Aktywny</color>
+        * Data utworzenia w systemie: 2025-01-15
+        .
+        **Dane kontaktowe:**
+        * Adres: ul. Nowowiejska 15/19, 00-665 Warszawa
+        * Telefon: +48 22 234 56 78
+        * Email: dziekanat@weiti.pw.edu.pl
+        * Strona WWW: https://www.weiti.pw.edu.pl
+        .
+        **Statystyki:**
+        * Liczba użytkowników: 234 (187 aktywnych)
+        * Opublikowane wydarzenia: 45 (8 aktywnych)
+        * Opublikowane aktualności: 89 (15 aktywnych)
+        * Poradniki: 24
+        .
+        **Administratorzy jednostki:**
+        * Jan Kowalski (j.kowalski@pw.edu.pl) - Administrator główny
+        * Anna Nowak (a.nowak@pw.edu.pl) - Moderator
+        * Piotr Wiśniewski (p.wisniewski@pw.edu.pl) - Moderator
+        .
+        [Edytuj dane jednostki] | [Zarządzaj administratorami] | [Zobacz pełne statystyki] | [Dezaktywuj jednostkę]
+      }
+      --
+      {
+        == Podsumowanie statystyk wszystkich jednostek
+        .
+        {#
+          . **Kategoria** | **Liczba**
+          . Łączna liczba jednostek | 18
+          . Aktywne jednostki | 18
+          . Nieaktywne jednostki | 0
+          . Łączna liczba użytkowników | 2,145
+          . Łączna liczba publikacji | 1,234
+          . Średnia liczba publikacji na jednostkę | 68.5
+        }
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Administratora | Zalogowano: Administrator Systemu
+  }
+}
+@endsalt

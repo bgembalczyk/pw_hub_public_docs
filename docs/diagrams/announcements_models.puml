@@ -1,0 +1,109 @@
+@startuml Announcements Model Relationships
+
+skinparam linetype ortho
+
+' ============================================================================
+' MODELS
+' ============================================================================
+
+class User {
+    +id: Integer
+    +username: String
+    +email: String
+    +name: String
+}
+
+class Category {
+    +id: Integer
+    +name: String
+    +slug: String
+    +color: String (hex validated)
+    +icon: String
+    --
+    +__str__(): String
+}
+
+class Announcement {
+    +id: Integer
+    +title: String
+    +content: Text
+    +excerpt: Text
+    +created_at: DateTime
+    +updated_at: DateTime
+    +author: ForeignKey
+    +unit_author: ForeignKey
+    +published: Boolean
+    +published_at: DateTime
+    +language: String (PL/EN)
+    +categories: ManyToManyField
+    --
+    +__str__(): String
+    +get_absolute_url(): String
+    +clean(): validates unit_author
+}
+
+class Image {
+    +id: Integer
+    +announcement: ForeignKey
+    +image: ImageField
+    +alt_text: String
+    +is_primary: Boolean
+    --
+    +__str__(): String
+    +clean(): validates single primary
+    +save(): calls validation
+}
+
+class Unit {
+    +id: Integer
+    +name: String
+    +short_name: String
+    +description: Text
+    +parent_unit: ForeignKey
+    +unit_head: ForeignKey
+}
+
+' ============================================================================
+' RELATIONSHIPS
+' ============================================================================
+
+User "1" --> "*" Announcement : creates (author)
+
+Unit "0..1" --> "*" Announcement : publishes (unit_author)
+
+Announcement "*" --> "*" Category : categories
+
+Announcement "1" --> "*" Image : images
+
+note right of Announcement
+  Published announcements are visible to all users.
+  Non-staff users can only see published announcements.
+  
+  Supports filtering by:
+  - Category (via slug)
+  - Language (PL/EN)
+  
+  unit_author field allows staff to publish
+  on behalf of organizational units.
+end note
+
+note bottom of Category
+  Examples: Uczelnia, Kwaterunek, 
+  Rekrutacja, Samorząd
+  
+  Color field validated with hex regex.
+  Used for filtering and organizing
+  announcements
+end note
+
+note bottom of Image
+  Images attached to announcements.
+  is_primary indicates the cover image.
+  
+  Validation ensures only one primary
+  image per announcement.
+  
+  Supports accessibility with alt_text.
+end note
+
+@enduml

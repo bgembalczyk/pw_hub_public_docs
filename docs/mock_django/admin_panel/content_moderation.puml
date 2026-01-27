@@ -1,0 +1,95 @@
+@startsalt
+{
+  {T
+   + Panel Administratora | Moderacja Treści
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&document> Aktualności
+      * <&calendar> Wydarzenia
+      * <&book> Poradniki
+      * <&people> Użytkownicy
+      * <&building> Jednostki
+      * <&flag> <b>Moderacja</b>
+      * <&graph> Statystyki
+      * <&cog> Konfiguracja
+    | 
+    {^"Moderacja Treści"
+      {
+        == Filtry
+        .
+        Typ treści: [Wszystkie ▼] | Status: [Oczekujące ▼] | Jednostka: [Wszystkie ▼] | Priorytet: [Wszystkie ▼]
+        .
+        Data dodania od: [2026-01-01] | do: [2026-01-13] | Szukaj: [                    ] [Szukaj] [Wyczyść]
+      }
+      --
+      {
+        == Kolejka Moderacji (7 elementów)
+        .
+        {#
+          . **Data** | **Typ** | **Tytuł** | **Jednostka** | **Autor** | **Priorytet** | **Akcje**
+          . 2026-01-11 14:30 | Aktualność | Nowe stypendium dla studentów | WEiTI | Jan Kowalski | <color:red>Wysoki</color> | [Podgląd] [Zatwierdź] [Odrzuć] [Edytuj]
+          . 2026-01-11 10:15 | Aktualność | Zmiana terminu egzaminu z matematyki | MEiL | Anna Nowak | <color:red>Wysoki</color> | [Podgląd] [Zatwierdź] [Odrzuć] [Edytuj]
+          . 2026-01-12 16:45 | Wydarzenie | Konferencja Naukowa 2026 | Wydział Chemiczny | Piotr Wiśniewski | Średni | [Podgląd] [Zatwierdź] [Odrzuć] [Edytuj]
+          . 2026-01-13 08:20 | Aktualność | Program Erasmus+ nabór wiosenny | WIL | Maria Lewandowska | <color:red>Wysoki</color> | [Podgląd] [Zatwierdź] [Odrzuć] [Edytuj]
+          . 2026-01-12 11:30 | Poradnik | Jak założyć konto w systemie USOS | Biuro Rektora | Tomasz Kamiński | Niski | [Podgląd] [Zatwierdź] [Odrzuć] [Edytuj]
+          . 2026-01-10 15:00 | Wydarzenie | Targi Pracy dla Absolwentów | Wydział Architektury | Katarzyna Zielińska | Średni | [Podgląd] [Zatwierdź] [Odrzuć] [Edytuj]
+          . 2026-01-09 09:45 | Aktualność | Nabór na koła naukowe 2026 | WEiTI | Marek Szymański | Niski | [Podgląd] [Zatwierdź] [Odrzuć] [Edytuj]
+        }
+      }
+      --
+      {
+        [< Poprzednia] | Strona 1 z 1 | [Następna >]
+      }
+      --
+      {
+        == Akcje masowe
+        .
+        Zaznaczone elementy (0): [Zatwierdź wszystkie] [Odrzuć wszystkie] [Przypisz moderatora]
+      }
+      --
+      {
+        == Historia Moderacji (ostatnie 10)
+        .
+        {#
+          . **Data decyzji** | **Typ** | **Tytuł** | **Jednostka** | **Decyzja** | **Moderator** | **Akcje**
+          . 2026-01-13 09:30 | Wydarzenie | Dni Otwarte WEiTI 2026 | WEiTI | <color:green>Zatwierdzono</color> | Admin Systemu | [Podgląd] [Cofnij]
+          . 2026-01-13 09:15 | Aktualność | Informacja o praktykach studenckich | MEiL | <color:green>Zatwierdzono</color> | Admin Systemu | [Podgląd] [Cofnij]
+          . 2026-01-12 16:00 | Aktualność | Promocja sklepu studenckiego | - | <color:red>Odrzucono</color> | Admin Systemu | [Podgląd] [Szczegóły]
+          . 2026-01-12 14:45 | Wydarzenie | Hackathon AI & ML | WEiTI | <color:green>Zatwierdzono z uwagami</color> | Admin Systemu | [Podgląd] [Uwagi]
+          . 2026-01-12 11:20 | Poradnik | Jak korzystać z biblioteki | Biblioteka | <color:green>Zatwierdzono</color> | Moderator 1 | [Podgląd]
+        }
+      }
+      --
+      {
+        == Statystyki moderacji
+        * Oczekujące na moderację: **7**
+        * Zatwierdzone dzisiaj: **12**
+        * Odrzucone dzisiaj: **2**
+        * Średni czas moderacji: **2.5 godziny**
+        * Średni czas oczekiwania: **1.8 dnia**
+      }
+      --
+      {
+        == Powody odrzucenia (najczęstsze)
+        1. Treść niezgodna z regulaminem (35%)
+        2. Błędy merytoryczne wymagające poprawy (28%)
+        3. Niepełne informacje (22%)
+        4. Duplikat wcześniejszej publikacji (10%)
+        5. Inne (5%)
+      }
+      --
+      {
+        [Eksportuj raport moderacji] | [Ustawienia moderacji] | [Zarządzaj moderatorami]
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Administratora | Zalogowano: Administrator Systemu
+  }
+}
+@endsalt

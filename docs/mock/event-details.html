@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Hackathon PW – Szczegóły</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f6f7f9;
+            color: #1c1c1e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding-bottom: 70px;
+        }
+
+
+        .navbar {
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #dadada;
+        }
+
+        .navbar .navbar-icon-btn {
+            color: #007aff;
+            font-size: 1.5rem;
+        }
+
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #dadada;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1030;
+        }
+
+        .bottom-nav a {
+            color: #8e8e93;
+            font-size: 1.4rem;
+            text-decoration: none;
+            text-align: center;
+            width: 20%;
+        }
+
+        .bottom-nav a.active {
+            color: #007aff;
+        }
+
+
+        .event-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 1rem;
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-top: 1rem;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .event-header {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin: 1rem;
+        }
+
+
+        .btn-group-custom {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .section {
+            background: #fff;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h5 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .section .text-muted strong {
+            font-weight: 500;
+        }
+
+        .section .table th {
+            font-weight: 500;
+            color: #6c757d;
+        }
+
+        .table td, .table th {
+            vertical-align: top;
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Górny pasek nawigacji -->
+<nav class="navbar navbar-light sticky-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+        <a href="#" class="navbar-icon-btn"><i class="bi bi-gear"></i></a>
+
+        <!-- Logo zamiast tekstu -->
+        <img src="assets/logo_black.pdf" alt="Logo" style="height: 28px;" class="mx-auto d-block"/>
+
+        <a href="#" class="navbar-icon-btn"><i class="bi bi-list"></i></a>
+    </div>
+</nav>
+
+<div class="event-header">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <div class="text-primary small">
+            <i class="bi bi-calendar-event"></i> 23 czerwca 2025
+        </div>
+        <a href="https://facebook.com/hackathonpw" class="text-primary"><i class="bi bi-facebook fs-5"></i></a>
+    </div>
+    <div class="event-title">Hackathon PW</div>
+
+    <div class="event-meta-grid mt-3">
+        <div><i class="bi bi-geo-alt me-1"></i> Aula 101, CEIT</div>
+        <div><i class="bi bi-person-fill me-1"></i> SSPW</div>
+        <div><i class="bi bi-translate me-1"></i> Polski</div>
+        <div><i class="bi bi-unlock me-1"></i> Otwarte</div>
+    </div>
+
+    <div class="btn-group-custom">
+        <button class="btn btn-outline-primary">Dodaj do kalendarza</button>
+    </div>
+</div>
+
+<!-- Sekcja: opis wydarzenia + ikonki + hasła -->
+<div class="section">
+    <h5>Opis wydarzenia</h5>
+    <p class="mb-3">
+        Całodniowy maraton kodowania z nagrodami dla najlepszych zespołów. Poznaj studentów i zdobądź doświadczenie.
+        Możesz zapisać się sam lub z zespołem. Zapewniamy przerwy kawowe, mentoring i fajną atmosferę.
+    </p>
+
+    <div class="d-flex flex-wrap gap-3 align-items-center text-muted small mb-2">
+        <div><i class="bi bi-lightbulb me-1"></i>naukowe</div>
+        <div><i class="bi bi-check-circle me-1"></i>dostępne</div>
+        <div><i class="bi bi-ear me-1"></i>ciche</div>
+        <div><i class="bi bi-camera-video-off me-1"></i>offline</div>
+        <div><i class="bi bi-translate me-1"></i>PL</div>
+        <div><i class="bi bi-people me-1"></i>80 miejsc</div>
+        <div class="ms-auto text-decoration-underline">zobacz szczegóły</div>
+    </div>
+</div>
+
+<div class="section">
+    <h5>Najczęściej zadawane pytania</h5>
+
+    <!-- Pytanie 1 -->
+    <div class="card border-0 shadow-sm mb-3">
+        <div class="card-body p-3 d-flex align-items-start">
+            <div class="flex-grow-1 pe-3">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-question-circle text-primary me-2 mt-1"></i>
+                    <div>
+                        <strong class="d-block">Czy mogę przyjść bez zapisu?</strong>
+                        <small class="text-muted">Tak, wydarzenie jest otwarte.</small>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-link btn-sm text-primary text-nowrap text-decoration-none fw-medium mt-1">
+                <i class="bi bi-stars me-1"></i>Pomocne
+            </button>
+        </div>
+    </div>
+
+    <!-- Pytanie 2 -->
+    <div class="card border-0 shadow-sm mb-3">
+        <div class="card-body p-3 d-flex align-items-start">
+            <div class="flex-grow-1 pe-3">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-question-circle text-primary me-2 mt-1"></i>
+                    <div>
+                        <strong class="d-block">Czy muszę mieć ze sobą laptopa?</strong>
+                        <small class="text-muted">Nie, ale będzie pomocny podczas warsztatów.</small>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-link btn-sm text-primary text-nowrap text-decoration-none fw-medium mt-1">
+                <i class="bi bi-stars me-1"></i>Pomocne
+            </button>
+        </div>
+    </div>
+
+    <!-- Pytanie 3 -->
+    <div class="card border-0 shadow-sm mb-3">
+        <div class="card-body p-3 d-flex align-items-start">
+            <div class="flex-grow-1 pe-3">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-question-circle text-primary me-2 mt-1"></i>
+                    <div>
+                        <strong class="d-block">Czy będą przekąski?</strong>
+                        <small class="text-muted">Tak, zapewniamy przerwy kawowe oraz lekki lunch.</small>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-link btn-sm text-primary text-nowrap text-decoration-none fw-medium mt-1">
+                <i class="bi bi-stars me-1"></i>Pomocne
+            </button>
+        </div>
+    </div>
+
+    <!-- Pytanie 4 -->
+    <div class="card border-0 shadow-sm mb-3">
+        <div class="card-body p-3 d-flex align-items-start">
+            <div class="flex-grow-1 pe-3">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-question-circle text-primary me-2 mt-1"></i>
+                    <div>
+                        <strong class="d-block">Czy mogę wziąć udział tylko w części wydarzenia?</strong>
+                        <small class="text-muted">Tak, ale zachęcamy do uczestnictwa w całości.</small>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-link btn-sm text-primary text-nowrap text-decoration-none fw-medium mt-1">
+                <i class="bi bi-stars me-1"></i>Pomocne
+            </button>
+        </div>
+    </div>
+
+    <div class="section mt-4">
+        <div class="d-flex w-100 gap-0">
+            <a href="#faq-expanded" class="btn btn-outline-secondary flex-fill rounded-0 rounded-start text-center">
+                <i class="bi bi-three-dots me-2"></i>Zobacz więcej
+            </a>
+            <a href="mailto:kontakt@sspw.pw.edu.pl?subject=Pytanie%20dotyczące%20wydarzenia"
+               class="btn btn-outline-primary flex-fill rounded-0 rounded-end text-center">
+                <i class="bi bi-chat-dots me-2"></i>Zadaj pytanie
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h5>Materiały do pobrania</h5>
+
+    <div class="d-flex flex-column gap-2">
+        <a href="#" target="_blank"
+           class="d-flex align-items-center p-3 rounded border text-decoration-none bg-light-subtle">
+            <i class="bi bi-file-earmark-text fs-5 text-primary me-3"></i>
+            <div>
+                <div class="fw-semibold">Agenda wydarzenia</div>
+                <small class="text-muted">Plik PDF z harmonogramem</small>
+            </div>
+        </a>
+
+        <a href="#" target="_blank"
+           class="d-flex align-items-center p-3 rounded border text-decoration-none bg-light-subtle">
+            <i class="bi bi-file-earmark-lock2 fs-5 text-primary me-3"></i>
+            <div>
+                <div class="fw-semibold">Regulamin uczestnictwa</div>
+                <small class="text-muted">Zasady udziału w wydarzeniu</small>
+            </div>
+        </a>
+
+        <a href="#" target="_blank"
+           class="d-flex align-items-center p-3 rounded border text-decoration-none bg-light-subtle">
+            <i class="bi bi-link-45deg fs-5 text-primary me-3"></i>
+            <div>
+                <div class="fw-semibold">Dołącz do Discorda</div>
+                <small class="text-muted">Kanał informacyjny i networking</small>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="section">
+    <h5>Zdjęcia z poprzednich edycji</h5>
+    <div class="d-flex overflow-auto gap-3 py-2 px-1">
+        <img src="assets/hackathon.jpg" alt="Zdjęcie 1" class="rounded shadow-sm" style="height: 120px; flex-shrink: 0;">
+        <img src="assets/hackathon2.jpg" alt="Zdjęcie 1" class="rounded shadow-sm" style="height: 120px; flex-shrink: 0;">
+        <img src="assets/hackathon4.jpg" alt="Zdjęcie 1" class="rounded shadow-sm" style="height: 120px; flex-shrink: 0;">
+        <img src="assets/hackathon8.jpg" alt="Zdjęcie 1" class="rounded shadow-sm" style="height: 120px; flex-shrink: 0;">
+    </div>
+</div>
+
+<div class="section">
+    <h5>Koszt uczestnictwa</h5>
+    <table class="table table-sm table-borderless small text-muted" style="max-width: 400px;">
+        <tbody>
+        <tr>
+            <td><i class="bi bi-person-bounding-box me-2"></i><strong>Studenci PW</strong></td>
+            <td>bezpłatnie</td>
+        </tr>
+        <tr>
+            <td><i class="bi bi-person me-2"></i><strong>Osoby spoza PW</strong></td>
+            <td>20 zł – płatne na miejscu lub przelewem</td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="small text-muted">W razie wątpliwości skontaktuj się z organizatorem lub sprawdź informacje w regulaminie
+        wydarzenia.</p>
+</div>
+
+<!-- Sekcja: szczegóły wydarzenia -->
+<div class="section">
+    <h5>Szczegóły wydarzenia</h5>
+    <div class="table-responsive">
+        <table class="table table-sm table-borderless align-middle text-muted"
+               style="font-size: 0.9rem; table-layout: auto;">
+            <tbody>
+            <tr>
+                <td class="text-center" style="width: 2rem;"><i class="bi bi-calendar-event"></i></td>
+                <th scope="row" class="w-25">Data:</th>
+                <td>23 czerwca 2025</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-clock"></i></td>
+                <th scope="row">Godzina:</th>
+                <td>10:00 – 18:00</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-geo-alt"></i></td>
+                <th scope="row">Miejsce:</th>
+                <td>Aula 101, CEIT</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-person-fill"></i></td>
+                <th scope="row">Organizator</th>
+                <td>Samorząd Studentów PW</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-translate"></i></td>
+                <th scope="row">Język:</th>
+                <td>Polski</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-laptop"></i></td>
+                <th scope="row">Forma:</th>
+                <td>Stacjonarne (brak transmisji)</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-door-open"></i></td>
+                <th scope="row">Dostępność fizyczna:</th>
+                <td>Tak – budynek dostępny windą, bez progów</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-ear"></i></td>
+                <th scope="row">Wydarzenie ciche:</th>
+                <td>Tak – brak muzyki, niska stymulacja</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-eye-slash"></i></td>
+                <th scope="row">Transmisja:</th>
+                <td>Brak – offline</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-people"></i></td>
+                <th scope="row">Liczba miejsc:</th>
+                <td>80 miejsc siedzących</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-person-check"></i></td>
+                <th scope="row">Rejestracja:</th>
+                <td>Niewymagana – wejście wolne</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-person-badge"></i></td>
+                <th scope="row">Grupa docelowa:</th>
+                <td>Studenci PW (wszystkie wydziały)</td>
+            </tr>
+            <tr>
+                <td class="text-center"><i class="bi bi-check-circle"></i></td>
+                <th scope="row">Wymagania:</th>
+                <td>Brak – mile widziana podstawowa znajomość programowania</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Przycisk kontaktu -->
+    <div class="mt-3">
+        <a href="mailto:kontakt@sspw.pw.edu.pl" class="btn btn-outline-primary w-100">
+            <i class="bi bi-envelope me-2"></i>Skontaktuj się z organizatorem
+        </a>
+    </div>
+</div>
+
+<div class="section">
+    <h5>Mapa wydarzenia</h5>
+    <div class="ratio ratio-16x9">
+        <iframe src="https://maps.google.com/maps?q=Politechnika%20Warszawska&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Dolna nawigacja -->
+<div class="bottom-nav">
+    <a href="/home.html"><i class="bi bi-house-door"></i></a>
+    <a href="/events.html" class="active"><i class="bi bi-ticket-fill"></i></a>
+    <a href="/map-card.html"><i class="bi bi-geo-alt"></i></a>
+    <a href="/guides.html"><i class="bi bi-book"></i></a>
+    <a href="/news.html"><i class="bi bi-megaphone"></i></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

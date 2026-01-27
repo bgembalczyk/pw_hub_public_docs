@@ -1,0 +1,134 @@
+@startsalt
+{
+  {T
+   + Panel Administratora | Statystyki Globalne
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&document> Aktualności
+      * <&calendar> Wydarzenia
+      * <&book> Poradniki
+      * <&people> Użytkownicy
+      * <&building> Jednostki
+      * <&flag> Moderacja
+      * <&graph> <b>Statystyki</b>
+      * <&cog> Konfiguracja
+    | 
+    {^"Statystyki Globalne i Raporty"
+      {
+        == Zakres czasowy i filtry
+        .
+        Okres: [Ostatnie 30 dni ▼] | Data od: [2025-12-14] | Data do: [2026-01-13]
+        .
+        Jednostka: [Wszystkie ▼] | Typ danych: [Wszystkie ▼] | [Odśwież dane]
+      }
+      --
+      {
+        == Statystyki Użytkowników
+        .
+        {#
+          . **Metryka** | **Wartość** | **Zmiana vs poprzedni okres** | **Trend**
+          . Łączna liczba użytkowników | 12,847 | +567 (+5%) | <color:green>↗ Wzrost</color>
+          . Aktywni użytkownicy (ostatnie 7 dni) | 8,456 | +423 (+5%) | <color:green>↗ Wzrost</color>
+          . Aktywni użytkownicy (ostatnie 24h) | 3,456 | +234 (+7%) | <color:green>↗ Wzrost</color>
+          . Nowe rejestracje (30 dni) | 567 | +89 (+19%) | <color:green>↗ Wzrost</color>
+          . Średni czas sesji | 12m 34s | +2m 15s (+22%) | <color:green>↗ Wzrost</color>
+        }
+      }
+      --
+      {
+        == Statystyki Treści
+        .
+        {#
+          . **Typ treści** | **Łącznie** | **Opublikowane** | **Wersje robocze** | **Oczekujące** | **Archiwalne**
+          . Wydarzenia | 245 | 145 | 32 | 7 | 61
+          . Aktualności | 1,234 | 423 | 45 | 12 | 754
+          . Poradniki | 156 | 124 | 18 | 4 | 10
+          . **Razem** | **1,635** | **692** | **95** | **23** | **825**
+        }
+      }
+      --
+      {
+        == Top 10 Najpopularniejszych Wydarzeń (ostatnie 30 dni)
+        .
+        {#
+          . **Pozycja** | **Tytuł** | **Jednostka** | **Data** | **Zapisy** | **Wyświetlenia**
+          . 1. | Targi Pracy IT 2026 | WEiTI | 2026-05-10 | 150/150 | 4,567
+          . 2. | Dni Otwarte Politechniki Warszawskiej | Biuro Rektora | 2026-03-20 | 500/500 | 8,934
+          . 3. | Konferencja Naukowa Inżynierii Materiałowej | WIM | 2026-04-15 | 200/250 | 2,345
+          . 4. | Hackathon AI & ML | WEiTI | 2026-04-20 | 50/50 | 1,876
+          . 5. | Targi Pracy dla Absolwentów | Biuro Karier | 2026-05-05 | 300/350 | 3,456
+          . 6. | Wykład gościnny: Przyszłość Energetyki | MEiL | 2026-02-28 | 120/150 | 1,234
+          . 7. | Warsztaty BIM dla Architektów | ARCH | 2026-03-10 | 30/30 | 987
+          . 8. | Konkurs na najlepszy projekt dyplomowy | WCH | 2026-06-01 | 80/100 | 1,567
+          . 9. | Dzień Geodety | WGiK | 2026-05-15 | 60/80 | 876
+          . 10. | Sympozjum Matematyki Stosowanej | MINI | 2026-04-25 | 100/120 | 1,345
+        }
+      }
+      --
+      {
+        == Top 10 Najpopularniejszych Aktualności (ostatnie 30 dni)
+        .
+        {#
+          . **Pozycja** | **Tytuł** | **Jednostka** | **Data publikacji** | **Wyświetlenia** | **Zaangażowanie**
+          . 1. | Harmonogram sesji egzaminacyjnej letniej 2026 | Biuro Rektora | 2026-01-05 | 15,234 | Bardzo wysokie
+          . 2. | Nowe stypendia rektora dla najlepszych studentów | Biuro Rektora | 2026-01-10 | 12,456 | Bardzo wysokie
+          . 3. | Zmiana regulaminu studiów - ważne informacje | Biuro Rektora | 2026-01-08 | 9,876 | Wysokie
+          . 4. | Program Erasmus+ nabór wiosenny 2026 | Biuro Współpracy Międzynarodowej | 2026-01-12 | 7,654 | Wysokie
+          . 5. | Rekrutacja na studia doktoranckie 2026/2027 | WEiTI | 2026-01-12 | 5,432 | Średnie
+          . 6. | Nowy harmonogram zajęć semestru letniego | MEiL | 2026-01-03 | 4,321 | Wysokie
+          . 7. | Otwarte laboratoria badawcze - dzień otwarty | WCH | 2026-01-07 | 3,210 | Średnie
+          . 8. | Konkurs na najlepszą pracę inżynierską | WIL | 2026-01-05 | 2,987 | Średnie
+          . 9. | Wymiana międzynarodowa - nowe kierunki | ARCH | 2025-12-28 | 2,654 | Niskie
+          . 10. | Warsztaty z GIS i teledetekcji | WGiK | 2026-01-09 | 2,345 | Niskie
+        }
+      }
+      --
+      {
+        == Statystyki według Jednostek (Top 5)
+        .
+        {#
+          . **Jednostka** | **Użytkownicy** | **Wydarzenia** | **Aktualności** | **Wyświetlenia**
+          . Wydział Elektroniki i Technik Informacyjnych | 234 | 45 | 89 | 45,678
+          . Wydział Mechaniczny Energetyki i Lotnictwa | 198 | 38 | 76 | 38,456
+          . Wydział Matematyki i Nauk Informacyjnych | 189 | 42 | 103 | 42,345
+          . Wydział Inżynierii Lądowej | 167 | 29 | 69 | 28,234
+          . Wydział Chemiczny | 145 | 32 | 55 | 25,123
+        }
+      }
+      --
+      {
+        == Statystyki Techniczne
+        .
+        {#
+          . **Metryka** | **Wartość**
+          . Średni czas ładowania strony | 1.2s
+          . Dostępność systemu (uptime) | 99.8%
+          . Liczba żądań API (ostatnie 24h) | 234,567
+          . Rozmiar bazy danych | 12.4 GB
+          . Użycie pamięci cache | 78%
+        }
+      }
+      --
+      {
+        [Eksportuj raport do PDF] | [Eksportuj do Excel] | [Zaplanuj raport automatyczny] | [Ustawienia raportowania]
+      }
+      --
+      {
+        == Uwagi
+        * Dane są aktualizowane co godzinę
+        * Statystyki obejmują wszystkie jednostki w systemie
+        * Eksport raportów dostępny w formatach PDF, Excel i CSV
+        * Można zaplanować automatyczne generowanie raportów (dziennie, tygodniowo, miesięcznie)
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Administratora | Zalogowano: Administrator Systemu
+  }
+}
+@endsalt

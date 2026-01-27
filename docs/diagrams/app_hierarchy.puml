@@ -1,0 +1,71 @@
+@startuml
+
+skinparam packageStyle rectangle
+skinparam linetype ortho
+
+title PW Companion - Hierarchia aplikacji i zależności
+
+package "Aplikacja mobilna (Flutter)" {
+  [Flutter Mobile App] as FlutterApp
+}
+
+package "Backend (Django + DRF)" {
+  [API Gateway (DRF)] as ApiGateway
+
+  package "Aplikacje Django" {
+    [Users] as UsersApp
+    [Permissions] as PermissionsApp
+    [Units] as UnitsApp
+    [Announcements] as AnnouncementsApp
+    [Events] as EventsApp
+    [Event Registration] as RegistrationApp
+    [Maps] as MapsApp
+    [Guides] as GuidesApp
+    [Notifications] as NotificationsApp
+    [USOS Integration] as UsosApp
+  }
+}
+
+package "Systemy zewnętrzne" {
+  [SSO/OAuth2] as SSO
+  [USOS API] as USOS
+  [Mapy/OSM] as MapsProvider
+  [Push (FCM/APNs)] as PushService
+}
+
+FlutterApp --> ApiGateway : "REST/HTTPS"
+
+ApiGateway --> UsersApp
+ApiGateway --> PermissionsApp
+ApiGateway --> UnitsApp
+ApiGateway --> AnnouncementsApp
+ApiGateway --> EventsApp
+ApiGateway --> RegistrationApp
+ApiGateway --> MapsApp
+ApiGateway --> GuidesApp
+ApiGateway --> NotificationsApp
+ApiGateway --> UsosApp
+
+PermissionsApp --> UsersApp : "role i uprawnienia"
+UnitsApp --> UsersApp : "kierownicy jednostek"
+AnnouncementsApp --> UsersApp : "autorzy"
+AnnouncementsApp --> UnitsApp : "jednostki publikujące"
+EventsApp --> UsersApp : "twórcy"
+EventsApp --> UnitsApp : "organizatorzy"
+EventsApp --> MapsApp : "lokalizacje"
+RegistrationApp --> EventsApp : "zapisy"
+RegistrationApp --> UsersApp : "uczestnicy"
+GuidesApp --> UsersApp : "autorzy"
+GuidesApp --> UnitsApp : "kontakty"
+NotificationsApp --> UsersApp : "odbiorcy"
+NotificationsApp --> EventsApp : "przypomnienia"
+NotificationsApp --> AnnouncementsApp : "nowe aktualności"
+NotificationsApp --> UsosApp : "przypomnienia USOS"
+UsosApp --> UsersApp : "kontekst użytkownika"
+
+UsersApp ..> SSO : "logowanie"
+UsosApp ..> USOS : "sync informacyjny"
+MapsApp ..> MapsProvider : "dane map"
+NotificationsApp ..> PushService : "push"
+
+@enduml

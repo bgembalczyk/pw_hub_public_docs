@@ -1,0 +1,95 @@
+@startsalt
+{
+  {T
+   + Panel Jednostki | Statystyki i Raporty
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&calendar> Wydarzenia
+      * <&document> Aktualności
+      * <&bar-chart> <b>Statystyki</b>
+      * <&people> Użytkownicy
+      * <&cog> Ustawienia
+    | 
+    {^"Statystyki i Raporty Jednostki"
+      {
+        == Zakres czasowy
+        .
+        Okres: [Ostatnie 30 dni ▼] | Data od: [2025-12-14] | Data do: [2026-01-13] | [Odśwież]
+      }
+      --
+      {
+        == Statystyki Ogólne
+        .
+        {#
+          . **Metryka** | **Wartość** | **Zmiana vs poprzedni okres** | **Trend**
+          . Łączna liczba użytkowników aplikacji | 2,847 | +234 (+9%) | ↗ Wzrost
+          . Aktywni użytkownicy (ostatnie 7 dni) | 1,456 | +89 (+7%) | ↗ Wzrost  
+          . Wyświetlenia aktualności | 12,345 | +1,234 (+11%) | ↗ Wzrost
+          . Zapisani na wydarzenia | 456 | +67 (+17%) | ↗ Wzrost
+          . Pobrane bilety na wydarzenia | 389 | +45 (+13%) | ↗ Wzrost
+        }
+      }
+      --
+      {
+        == Top 5 Najpopularniejszych Wydarzeń
+        .
+        {#
+          . **Pozycja** | **Tytuł wydarzenia** | **Data** | **Zapisy** | **Frekwencja**
+          . 1. | Targi Pracy IT 2026 | 2026-05-10 | 120/150 | 80%
+          . 2. | Dni Otwarte WEiTI 2026 | 2026-03-15 | 45/100 | 45%
+          . 3. | Warsztaty Python dla początkujących | 2026-03-25 | 30/30 | 100%
+          . 4. | Gala Laureatów Stypendium | 2026-06-30 | 65/100 | 65%
+          . 5. | Hackathon AI & ML | 2026-04-20 | 28/50 | 56%
+        }
+      }
+      --
+      {
+        == Top 5 Najpopularniejszych Aktualności
+        .
+        {#
+          . **Pozycja** | **Tytuł aktualności** | **Data publikacji** | **Wyświetlenia** | **Zaangażowanie**
+          . 1. | Nowy harmonogram zajęć semestru letniego | 2026-01-03 | 2,456 | Wysokie
+          . 2. | Świąteczne życzenia od Dziekana | 2025-12-23 | 3,124 | Średnie
+          . 3. | Rekrutacja na studia doktoranckie 2026/2027 | 2026-01-12 | 1,234 | Wysokie
+          . 4. | Konkurs na najlepszy projekt inżynierski | 2026-01-05 | 891 | Średnie
+          . 5. | Program wymiany międzynarodowej Erasmus+ | 2025-12-20 | 678 | Niskie
+        }
+      }
+      --
+      {
+        == Statystyki Kategorii Wydarzenia
+        .
+        {#
+          . **Kategoria** | **Liczba wydarzeń** | **Łączne zapisy** | **Średnia zapisy/wydarzenie**
+          . Rekrutacja | 3 | 145 | 48
+          . Konkurs | 2 | 78 | 39
+          . Kariera | 4 | 320 | 80
+          . Konferencja | 1 | 156 | 156
+          . Warsztat | 5 | 187 | 37
+          . Biznes | 2 | 95 | 47
+          . Uroczystość | 3 | 245 | 82
+        }
+      }
+      --
+      {
+        [Eksportuj raport do PDF] | [Eksportuj raport do Excel] | [Harmonogram raportów automatycznych]
+      }
+      --
+      {
+        == Uwagi
+        * Dane są aktualizowane co godzinę
+        * Statystyki obejmują wyłącznie treści jednostki WEiTI
+        * Eksport raportów jest dostępny w formatach PDF i Excel
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Jednostki WEiTI | Zalogowano: Jan Kowalski
+  }
+}
+@endsalt

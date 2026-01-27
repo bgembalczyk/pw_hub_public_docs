@@ -1,0 +1,64 @@
+@startsalt
+{
+  {T
+   + Panel Jednostki | Zarządzanie Wydarzeniami
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&calendar> <b>Wydarzenia</b>
+      * <&document> Aktualności
+      * <&bar-chart> Statystyki
+      * <&people> Użytkownicy
+      * <&cog> Ustawienia
+    | 
+    {^"Zarządzanie Wydarzeniami"
+      {
+        == Filtry i Wyszukiwanie
+        .
+        Status: [Wszystkie ▼] | Kategoria: [Wszystkie ▼] | Data od: [2026-01-01] | Data do: [2026-12-31]
+        .
+        Szukaj: [                                          ] [Szukaj] [Wyczyść]
+      }
+      --
+      {
+        == Lista Wydarzeń (8)
+        .
+        {#
+          . **Tytuł** | **Data** | **Kategoria** | **Status** | **Zapisy** | **Akcje**
+          . Dni Otwarte WEiTI 2026 | 2026-03-15 14:00 | Rekrutacja | <color:green>Opublikowane</color> | 45/100 | [Edytuj] [Podgląd] [Usuń]
+          . Hackathon AI & ML | 2026-04-20 10:00 | Konkurs | <color:orange>Wersja robocza</color> | 0/50 | [Edytuj] [Publikuj] [Usuń]
+          . Targi Pracy IT 2026 | 2026-05-10 09:00 | Kariera | <color:green>Opublikowane</color> | 120/150 | [Edytuj] [Zamknij zapisy] [Podgląd]
+          . Konferencja Naukowa WEiTI | 2026-06-15 10:00 | Konferencja | <color:red>Oczekuje zatwierdzenia</color> | 0/200 | [Edytuj] [Zatwierdź] [Odrzuć]
+          . Warsztaty Python dla początkujących | 2026-03-25 16:00 | Warsztat | <color:green>Opublikowane</color> | 30/30 | [Edytuj] [Lista uczestników] [Podgląd]
+          . Dzień Przedsiębiorczości | 2026-04-05 11:00 | Biznes | <color:orange>Wersja robocza</color> | 0/80 | [Edytuj] [Publikuj] [Usuń]
+          . Gala Laureatów Stypendium | 2026-06-30 18:00 | Uroczystość | <color:green>Opublikowane</color> | 65/100 | [Edytuj] [Podgląd] [Usuń]
+          . Festiwal Nauki i Techniki | 2026-09-20 10:00 | Festiwal | <color:orange>Wersja robocza</color> | 0/500 | [Edytuj] [Publikuj] [Usuń]
+        }
+      }
+      --
+      {
+        [< Poprzednia] | Strona 1 z 1 | [Następna >]
+      }
+      --
+      {
+        [+ Utwórz Nowe Wydarzenie] | [Eksportuj do CSV] | [Importuj z pliku]
+      }
+      --
+      {
+        == Legenda statusów
+        * <color:green>Opublikowane</color> - wydarzenie widoczne dla użytkowników
+        * <color:orange>Wersja robocza</color> - wydarzenie w trakcie edycji
+        * <color:red>Oczekuje zatwierdzenia</color> - wymaga zatwierdzenia przez administratora
+        * <color:gray>Archiwalne</color> - wydarzenie zakończone
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Jednostki WEiTI | Zalogowano: Jan Kowalski
+  }
+}
+@endsalt

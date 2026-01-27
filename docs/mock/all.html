@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+        PW Companion
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
+    <style>
+        body {
+            background-color: #f6f7f9;
+            color: #1c1c1e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding-bottom: 70px;
+        }
+
+
+        .bg-white {
+            background-color: #ffffff !important;
+        }
+
+        /* Kategoria: Wyjazdy studenckie */
+        .bg-travel {
+            background-color: #0d6efd; /* Bootstrap Primary */
+            color: #fff;
+        }
+
+        /* Kategoria: Integracje */
+        .bg-social {
+            background-color: #198754; /* Bootstrap Success */
+            color: #fff;
+        }
+
+        /* Kategoria: Kultura */
+        .bg-culture {
+            background-color: #d63384; /* Bootstrap Pink */
+            color: #fff;
+        }
+
+        /* Kategoria: Konferencje */
+        .bg-conference {
+            background-color: #6f42c1; /* Bootstrap Purple */
+            color: #fff;
+        }
+
+        /* Kategoria: Webinary / szkolenia */
+        .bg-training {
+            background-color: #fd7e14; /* Bootstrap Orange */
+            color: #fff;
+        }
+
+        /* Kategoria: Imprezy */
+        .bg-party {
+            background-color: #dc3545; /* Bootstrap Danger */
+            color: #fff;
+        }
+
+        /* Kategoria: Technologia i innowacje */
+        .bg-tech {
+            background-color: #6610f2; /* Bootstrap Indigo */
+            color: #fff;
+        }
+
+
+        .navbar {
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #dadada;
+        }
+
+        .navbar .navbar-icon-btn {
+            color: #007aff;
+            font-size: 1.5rem;
+        }
+
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #ffffffff;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #dadada;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1030;
+        }
+
+        .bottom-nav a {
+            color: #8e8e93;
+            font-size: 1.4rem;
+            text-decoration: none;
+            text-align: center;
+            width: 20%;
+        }
+
+        .bottom-nav a.active {
+            color: #007aff;
+        }
+
+
+        .event-meta-inline {
+            font-size: 0.8rem;
+            color: #a1a1aa;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .event-item {
+            display: flex;
+            align-items: stretch;
+            border-radius: 12px;
+            background: #fff;
+            color: #1c1c1e;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+        }
+
+        .event-type-box {
+            width: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.25rem;
+        }
+
+        .event-content {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .event-date {
+            min-width: 65px;
+            padding: 0.75rem 0.75rem 0.75rem 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-date .day {
+            font-size: 1.3rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .event-date .month {
+            font-size: 0.75rem;
+            color: #6c757d;
+        }
+
+
+        .notice-meta {
+            font-size: 0.75rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+
+        .notice-item {
+            display: flex;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            color: #1c1c1e;
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+            padding: 1rem;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .notice-image {
+            width: 64px;
+            height: 64px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .notice-content {
+            flex-grow: 1;
+        }
+
+        .notice-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .notice-text {
+            font-size: 0.85rem;
+            color: #3c3c43;
+            line-height: 1.35;
+        }
+
+
+        .text-muted {
+            color: #9e9ea0 !important;
+        }
+
+        .text-secondary {
+            color: #a1a1aa !important;
+        }
+
+        .text-primary {
+            color: #0a84ff !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Górny pasek nawigacji -->
+<nav class="navbar navbar-light sticky-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-3">
+        <a href="#" class="navbar-icon-btn">
+            <i class="bi bi-gear">
+            </i>
+        </a>
+
+        <!-- Logo zamiast tekstu -->
+        <img src="assets/logo_black.pdf" alt="Logo" style="height: 28px;" class="mx-auto d-block"/>
+
+        <a href="#" class="navbar-icon-btn">
+            <i class="bi bi-list">
+            </i>
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-3 mb-5 px-3">
+
+    <!-- 🔄 Połączona sekcja: time-sensitive + najbliższe wydarzenie -->
+    <div class="row gx-2 mb-4">
+
+        <!-- ⏰ Time-sensitive info -->
+        <div class="col-6">
+            <div class="bg-warning bg-opacity-25 rounded-4 p-3 h-100">
+                <p class="text-muted small mb-1">
+                    <i class="bi bi-exclamation-triangle-fill me-1">
+                    </i>
+                    Wybór specjalności
+                </p>
+                <p class="mb-0 small">
+                    Został ostatni dzień na wybór specjalności dla studentów Informatyki na EiTI!
+                </p>
+            </div>
+        </div>
+
+        <!-- 🔔 Najbliższe wydarzenie -->
+        <div class="col-6">
+            <div class="bg-white rounded-4 p-3 h-100 shadow-sm border-0">
+                <p class="text-muted small mb-1">
+                    Wydarzenie
+                </p>
+                <p class="mb-1 small">
+                    <strong>
+                        Egzamin z WSI
+                    </strong>
+                </p>
+                <p class="mb-0 text-secondary small">
+                    <i class="bi bi-calendar-event me-1">
+                    </i>
+                    25.06, 12:15
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📢 Skrót: ogłoszenia -->
+    <div class="mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6 class="mb-0">
+                Nowe ogłoszenia
+            </h6>
+            <a href="/news.html" class="text-decoration-none small text-primary">
+                Zobacz wszystkie
+            </a>
+        </div>
+
+        <!-- Ogłoszenie 1 -->
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Sztuczna inteligencja i cyberbezpieczeństwo sercem cyfrowej tarczy surowcowej Polski
+                </div>
+                <div class="notice-meta">
+                    20 czerwca 2025 • Wydział Elektroniki i Technik Informacyjnych
+                </div>
+                <div class="notice-text">
+                    Politechnika Warszawska i PIG-PIB realizują projekt e-Geologia, który wykorzystuje sztuczną
+                    inteligencję i cyberbezpieczeństwo do cyfrowej transformacji służby geologicznej. Inicjatywa wspiera
+                    ochronę infrastruktury krytycznej i zwiększa odporność surowcową Polski.
+                </div>
+            </div>
+            <img src="assets/ai5.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Erasmus+ Uniwersytet Deusto oferuje miejsca na staże badawcze
+                </div>
+                <div class="notice-meta">
+                    20 czerwca 2025 • WEITI / Erasmus+
+                </div>
+                <div class="notice-text">
+                    Uniwersytet Deusto zaprasza studentów PW na staże badawcze w ramach programu Erasmus+, realizowane w
+                    DeustoTech – instytucie rozwijającym innowacyjne projekty z partnerami z całego świata. Oferta
+                    skierowana jest do studentów studiów licencjackich i magisterskich.
+                </div>
+            </div>
+            <img src="assets/uni2.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Koło Naukowe Kraken i studenci spec. Inteligentne Systemy zgarniają całą pulę w Real Estate Hackaton
+                </div>
+                <div class="notice-meta">
+                    20 czerwca 2025 • KNMP Kraken
+                </div>
+                <div class="notice-text">
+                    Studenci Politechniki Warszawskiej z Koła Naukowego Kraken oraz specjalności Inteligentne Systemy
+                    zdobyli wszystkie trzy nagrody w Real Estate Hackathon 2025, wygrywając łącznie 40 tys. zł. Projekty
+                    wyróżniono za innowacyjne podejście do ekologicznych i zintegrowanych przestrzeni pracy.
+                </div>
+            </div>
+            <img src="assets/hackathon.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    EKODEMIK – studencki głos w sprawie przyszłości akademików PW
+                </div>
+                <div class="notice-meta">
+                    18 czerwca 2025 • BKiP / KN Architektury Kryzysu Klimatycznego
+                </div>
+                <div class="notice-text">
+                    Koło Naukowe Architektury Kryzysu Klimatycznego PW przedstawiło projekt EKODEMIK – koncepcję
+                    zazielenienia i usprawnienia przestrzeni akademików przy pl. Narutowicza. W projekcie uwzględniono
+                    m.in. zielone dachy, przestrzenie integracyjne i ograniczenie ruchu aut, a całość powstała we
+                    współpracy z mieszkańcami.
+                </div>
+            </div>
+            <img src="assets/dorm.jpg" alt="Makieta projektu EKODEMIK" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Od Politechniki Warszawskiej do Management Trainee!
+                </div>
+                <div class="notice-meta">
+                    18 czerwca 2025 • Biuro Karier
+                </div>
+                <div class="notice-text">
+                    Grupa Jeronimo Martins uruchomiła rekrutację do dwuletniego programu liderskiego z wynagrodzeniem
+                    8000 zł brutto i możliwością pracy w Biedronce lub Hebe. Program skierowany jest do absolwentów i
+                    studentów ostatniego roku, którzy są gotowi do relokacji i pracy na pełen etat od listopada.
+                </div>
+            </div>
+            <img src="assets/expert.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Otwieramy rekrutację do 7 edycji Programu Mentoringowego PW
+                </div>
+                <div class="notice-meta">
+                    18 czerwca 2025 • Biuro Karier
+                </div>
+                <div class="notice-text">
+                    Rekrutacja do 7. edycji Programu Mentoringowego PW rusza 25 czerwca 2025 – wtedy opublikowana
+                    zostanie lista mentorów. Program skierowany jest do studentów od 3. roku i świeżych absolwentów, a
+                    zgłoszenia można składać do 15 października.
+                </div>
+            </div>
+            <img src="assets/mentor.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Dołącz do 8. edycji Szkoły Pionierów PFR i zbuduj swój startup
+                </div>
+                <div class="notice-meta">
+                    18 czerwca 2025 • Biuro Karier
+                </div>
+                <div class="notice-text">
+                    Ruszyła rekrutacja do 8. edycji Szkoły Pionierów PFR – międzynarodowego programu dla przyszłych
+                    twórców startupów, tym razem skoncentrowanego na ClimateTech. Uczestnicy mogą liczyć na warsztaty,
+                    wsparcie ekspertów, wyjazd do Szwecji oraz nagrody z puli 110 tys. zł.
+                </div>
+            </div>
+            <img src="assets/hackathon2.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Szkoła Dostępności Cyfrowej – projekt edukacyjny dla specjalistów ds. dostępności
+                </div>
+                <div class="notice-meta">
+                    17 czerwca 2025 • Biuro ds. Społecznej Odpowiedzialności Uczelni
+                </div>
+                <div class="notice-text">
+                    Trwa rekrutacja do Szkoły Dostępności Cyfrowej – projektu przygotowującego specjalistów do audytów i
+                    projektowania dostępnych stron, aplikacji i dokumentów zgodnych z WCAG. Uczestnicy otrzymają
+                    certyfikaty zawodowe i pełne wsparcie logistyczne podczas szkoleń.
+                </div>
+            </div>
+            <img src="assets/it8.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Powołanie Komisji Rzetelności Naukowej PW
+                </div>
+                <div class="notice-meta">
+                    17 czerwca 2025 • Jego Magnificencja Rektor
+                </div>
+                <div class="notice-text">
+                    Rektor PW powołał Komisję Rzetelności Naukowej na kadencję 2024–2028, z prof. Adamem Proniem jako
+                    przewodniczącym. Komisja zajmie się analizą publikacji i współpracy naukowej pracowników uczelni,
+                    pod nadzorem prorektora ds. nauki.
+                </div>
+            </div>
+            <img src="assets/committe.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    🚨 OSTATNI DZIEŃ REJESTRACJI! Wakacyjna akcja kwaterunkowa 2025
+                </div>
+                <div class="notice-meta">
+                    16 czerwca 2025 • Komisja Kwaterunkowa Samorządu Studentów PW
+                </div>
+                <div class="notice-text">
+                    16 czerwca to ostatni dzień rejestracji na wakacyjną akcję kwaterunkową 2025 na PW – zgłoszenia
+                    odbywają się przez system ESKS. Po przyznaniu miejsca należy je potwierdzić wpłatą opłaty
+                    gwarancyjnej, chyba że została już wcześniej uiszczona.
+                </div>
+            </div>
+            <img src="assets/dorm2.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Enactus World Cup: studenci PW z projektem MedWave w globalnym finale
+                </div>
+                <div class="notice-meta">
+                    16 czerwca 2025 • BKiP / Enactus PW
+                </div>
+                <div class="notice-text">
+                    Zespół Enactus PW zwyciężył w Enactus Poland National Competition 2025 z projektem MedWave –
+                    narzędziem AI wspierającym lekarzy przez automatyczne tworzenie dokumentacji medycznej. Tym samym
+                    studenci zakwalifikowali się do Enactus World Cup w Bangkoku. Projekt tworzy pięcioro studentów z
+                    wydziałów MiNI i EiTI, a jego rozwój wspiera Inkubator Innowacyjności PW.
+                </div>
+            </div>
+            <img src="assets/hackathon4.jpg" alt="Zwycięzcy Enactus Poland National Competition 2025"
+                 class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    🚨 OSTATNI DZIEŃ REJESTRACJI! Wakacyjna akcja kwaterunkowa 2025
+                </div>
+                <div class="notice-meta">
+                    16 czerwca 2025 • Komisja Kwaterunkowa Samorządu Studentów PW
+                </div>
+                <div class="notice-text">
+                    16 czerwca to ostatni dzień, aby zarejestrować się w wakacyjnej akcji kwaterunkowej PW poprzez
+                    system ESKS. Po przyznaniu miejsca należy je potwierdzić opłatą gwarancyjną, o ile nie została już
+                    wcześniej uiszczona.
+                </div>
+            </div>
+            <img src="assets/dorm3.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    🎓 Masz dostęp do bezpłatnej opieki medycznej w CenterMed Warszawa!
+                </div>
+                <div class="notice-meta">
+                    13 czerwca 2025 • SSPW / CenterMed Warszawa
+                </div>
+                <div class="notice-text">
+                    Studenci PW mają dostęp do bezpłatnej opieki zdrowotnej w placówkach CenterMed Warszawa w ramach NFZ
+                    oraz mogą skorzystać ze zniżek na specjalistów i badania. Przychodnie są zlokalizowane w pobliżu
+                    kampusu i akademików, a rejestracja możliwa jest telefonicznie i online.
+                </div>
+            </div>
+            <img src="assets/health.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    Konkurs na granty rektorskie 2025 dla kół naukowych
+                </div>
+                <div class="notice-meta">
+                    13 czerwca 2025 • Jego Magnificencja Rektor
+                </div>
+                <div class="notice-text">
+                    Ogłoszono konkurs na granty rektorskie dla kół naukowych działających w Politechnice Warszawskiej.
+                    Wnioski należy składać do 30 czerwca przez EZD. Do rozdysponowania jest 600 tys. zł — na granty
+                    konstrukcyjne (do 50 tys. zł)
+                    i naukowe/koncepcyjno-organizacyjne (do 30 tys. zł). Kryteria oceny obejmują nowatorstwo, metodykę,
+                    efekty oraz dotychczasowe działania koła.
+                    Prezentacja wyników grantów odbędzie się podczas targów KONIK.
+                </div>
+            </div>
+            <img src="assets/teamwork.jpg" alt="Miniatura" class="notice-image">
+        </div>
+        <div class="notice-item">
+            <div class="notice-content">
+                <div class="notice-title">
+                    📢 Trwa rekrutacja do Polskiej Komisji Akredytacyjnej – dołącz do Zespołu Ekspertów ds. Studenckich!
+                </div>
+                <div class="notice-meta">
+                    13 czerwca 2025 • Parlament Studentów Rzeczypospolitej Polskiej
+                </div>
+                <div class="notice-text">
+                    Ruszyła rekrutacja do Zespołu Ekspertów ds. Studenckich Polskiej Komisji Akredytacyjnej – zgłoszenia
+                    przyjmowane są do 7 lipca 2025. Udział to szansa na rozwój kompetencji i realny wpływ na jakość
+                    kształcenia w Polsce.
+                </div>
+            </div>
+            <img src="assets/expert2.jpg" alt="Miniatura" class="notice-image">
+        </div>
+    </div>
+
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Parlament Studentów RP na konferencji o stanie akademików w Polsce
+            </div>
+            <div class="notice-meta">
+                13 czerwca 2025 • Parlament Studentów Rzeczypospolitej Polskiej
+            </div>
+            <div class="notice-text">
+                Parlament Studentów RP wziął udział w konferencji Ministerstwa Nauki dotyczącej sytuacji akademików,
+                przedstawiając raport obejmujący dane z 69 uczelni publicznych. Wydarzenie podkreśliło potrzebę
+                inwestycji w infrastrukturę i poprawy warunków życia studentów.
+            </div>
+        </div>
+        <img src="assets/dorm4.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Naukowcy z PW podglądają żywe komórki
+            </div>
+            <div class="notice-meta">
+                13 czerwca 2025 • MCHTR / QCI Lab
+            </div>
+            <div class="notice-text">
+                Zespół z QCI Lab opracował algorytm IGA, który umożliwia mikroskopowe obrazowanie żywych komórek z
+                minimalną fototoksycznością. Dzięki wykorzystaniu cyfrowej mikroskopii holograficznej i
+                nowatorskiego podejścia do redukcji szumów, naukowcy mogą rejestrować dynamiczne procesy biologiczne
+                przy bardzo niskim oświetleniu. Badania prowadzone są we współpracy z uczelniami z Norwegii i
+                Niemiec, a wyniki opublikowano w <i>ACS Photonics</i>.
+            </div>
+        </div>
+        <img src="assets/scientist.jpg" alt="Naukowcy z PW podglądają komórki" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Technologie z PW na targach w Poznaniu, Katowicach i Warszawie
+            </div>
+            <div class="notice-meta">
+                13 czerwca 2025 • Biuro Komunikacji i Promocji
+            </div>
+            <div class="notice-text">
+                Podczas trzech wydarzeń – Europejskich Targów Nauki w Poznaniu, INTARG w Katowicach i Perspektywy
+                Women in Tech Summit w Warszawie – PW zaprezentowała najnowsze osiągnięcia w dziedzinach takich jak
+                mikroelektronika, AI czy technologie kwantowe. Pokazano m.in. model motocykla wyścigowego, laserowe
+                eksperymenty z mikrograwitacją, radar pasywny oraz teleskop GROMiT. W wydarzeniach wzięli udział
+                naukowcy, studenci i władze uczelni.
+            </div>
+        </div>
+        <img src="assets/research.jpg"
+             alt="Studentki na stanowisku PW podczas konferencji Perspektywy Women in Tech Summit 2025"
+             class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Strefa relaksu i nauki – nowa przestrzeń dla studentów w płockiej Filii PW
+            </div>
+            <div class="notice-meta">
+                13 czerwca 2025 • Filia w Płocku
+            </div>
+            <div class="notice-text">
+                W Gmachu Głównym przy ul. Łukasiewicza 17 uruchomiono nową strefę relaksu i nauki dla studentów.
+                Znajdują się tam wygodne miejsca do pracy z laptopem, leżaki, strefa gier, otwarta biblioteczka oraz
+                drukarka. Przestrzeń powstała z inicjatywy Stowarzyszenia Przyjaciół PW w Płocku i została
+                zrealizowana przez firmę Artplex.
+            </div>
+        </div>
+        <img src="assets/library3.jpg" alt="Strefa relaksu i nauki - widok z góry" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Nowy komunikat w sprawie DS „Żaczek”
+            </div>
+            <div class="notice-meta">
+                13 czerwca 2025 • Rzecznik Prasowy / SSPW
+            </div>
+            <div class="notice-text">
+                W związku z decyzją Państwowej Straży Pożarnej budynek DS „Żaczek” zostanie czasowo zamknięty z
+                końcem czerwca ze względu na niespełnianie norm przeciwpożarowych. Uczelnia zapewniła alternatywne
+                zakwaterowanie wszystkim mieszkańcom, a osoby zainteresowane pobytem wakacyjnym mogą złożyć wniosek
+                do 16 czerwca. PW zapewnia wsparcie przeprowadzkowe i planuje generalny remont budynku, który potrwa
+                około 3 lat.
+            </div>
+        </div>
+        <img src="assets/dorm17.jpg" alt="Dom Studencki Żaczek" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                ✨ Goście z Zarządu Dróg Miejskich na naszym wydziale – prezentacja o bezpiecznych przejściach dla
+                pieszych
+            </div>
+            <div class="notice-meta">
+                11 czerwca 2025 • Koło Naukowe Inżynierii Komunikacyjnej
+            </div>
+            <div class="notice-text">
+                Na Wydziale Inżynierii Lądowej gościli przedstawiciele Zarządu Dróg Miejskich, prezentując
+                rozszerzoną wersję prelekcji o bezpiecznych przejściach dla pieszych. Nagranie spotkania jest
+                dostępne na YouTube dla wszystkich zainteresowanych.
+            </div>
+        </div>
+        <img src="assets/transport.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                🎓 Działasz w kole naukowym? Robisz badania na uczelni? Wypełnij ankietę PSRP!
+            </div>
+            <div class="notice-meta">
+                11 czerwca 2025 • Parlament Studentów Rzeczypospolitej Polskiej
+            </div>
+            <div class="notice-text">
+                Parlament Studentów RP zaprasza studentów prowadzących działalność naukową do wypełnienia krótkiej,
+                anonimowej ankiety. Jej wyniki posłużą do opracowania publikacji oraz rekomendacji wspierających
+                rozwój studenckich badań.
+            </div>
+        </div>
+        <img src="assets/teamwork2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                🚨 STARTUJEMY! Wakacyjna akcja kwaterunkowa oficjalnie ruszyła!
+            </div>
+            <div class="notice-meta">
+                10 czerwca 2025 • Komisja Kwaterunkowa Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                Ruszyła wakacyjna akcja kwaterunkowa PW – rejestracja potrwa do 16 czerwca 2025 przez system ESKS.
+                Im szybciej się zgłosisz, tym większy spokój i szansa na uzyskanie miejsca.
+            </div>
+        </div>
+        <img src="assets/dorm16.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Zostań Student Ambassador AstraZeneca na rok akademicki 2025/2026!
+            </div>
+            <div class="notice-meta">
+                10 czerwca 2025 • Biuro Karier
+            </div>
+            <div class="notice-text">
+                AstraZeneca prowadzi nabór do programu Student Ambassador na rok akademicki 2025/2026 – zgłoszenia
+                trwają do 30 czerwca. Program skierowany jest do studentów kierunków technicznych, medycznych i
+                biznesowych, oferując mentoring, warsztaty i współpracę z firmą.
+            </div>
+        </div>
+        <img src="assets/covid.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Funkcjonowanie PW w dniach 19–22 czerwca 2025 r.
+            </div>
+            <div class="notice-meta">
+                9 czerwca 2025 • Kanclerz
+            </div>
+            <div class="notice-text">
+                W związku z dniami wolnymi od pracy, w dniach 19–22 czerwca 2025 r. dostęp do wybranych budynków PW
+                (m.in. Gmach Główny, Stołówka Centralna, R4)
+                będzie możliwy wyłącznie na podstawie przepustki. Wprowadzono dyżury służb technicznych, obowiązuje
+                zabezpieczenie pomieszczeń
+                oraz wzmożony nadzór portierni. Awarię należy zgłaszać telefonicznie, a w sytuacjach nagłych możliwy
+                jest kontakt ze Strażą Akademicką lub dyżurującym kanclerzem.
+            </div>
+        </div>
+        <img src="assets/uni3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                🎓 Ruszyła rekrutacja do zespołu ekspertów ds. studenckich Polskiej Komisji Akredytacyjnej!
+            </div>
+            <div class="notice-meta">
+                9 czerwca 2025 • Parlament Studentów Rzeczypospolitej Polskiej
+            </div>
+            <div class="notice-text">
+                Trwa nabór do zespołu ekspertów ds. studenckich Polskiej Komisji Akredytacyjnej – to okazja, by
+                opiniować kierunki studiów i uczestniczyć w ocenach jakości kształcenia. Zgłoszenia odbywają się
+                online, a udział w programie daje szansę na rozwój i współpracę z ekspertami akademickimi.
+            </div>
+        </div>
+        <img src="assets/expert4.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                7 edycja konkursu na najlepszą pracę dyplomową AGRO
+            </div>
+            <div class="notice-meta">
+                9 czerwca 2025 • Biuro Karier
+            </div>
+            <div class="notice-text">
+                Ruszyła 7. edycja konkursu na najlepszą pracę dyplomową z zakresu nowoczesnego rolnictwa i
+                agrobiznesu – zgłoszenia przyjmowane są do 31 października 2025. Do wygrania są nagrody pieniężne,
+                publikacje, staże i nagrody rzeczowe.
+            </div>
+        </div>
+        <img src="assets/student.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                📣 Akcja kwaterunkowa zakończona! 🏁
+            </div>
+            <div class="notice-meta">
+                9 czerwca 2025 • Komisja Kwaterunkowa Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                Zakończyła się akcja kwaterunkowa PW – wyniki dostępne są na profilu ESKS. Opłatę gwarancyjną w
+                wysokości 500 zł należy wpłacić do 23 czerwca 2025, a odwołania można składać do 12 czerwca.
+            </div>
+        </div>
+        <img src="assets/dorm7.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                ⏳ Ostatnie odliczanie – nie przegap ankiet! / Last chance – don’t miss the surveys!
+            </div>
+            <div class="notice-meta">
+                7 czerwca 2025 • Komisja Dydaktyczna Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                🇵🇱 To ostatnia chwila, by podzielić się swoimi wrażeniami o prowadzących! Każda Twoja uwaga to
+                paliwo do ulepszania zajęć na naszym wydziale. 📝<br>
+                Twoja opinia ma znaczenie – wypełnij wszystkie ankiety już teraz i pomóż nam osiągnąć perfekcję!
+                🚀<br><br>
+            </div>
+        </div>
+        <img src="assets/survey.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                ⏰ Zostały tylko 3 dni! Wakacyjna akcja kwaterunkowa kończy się 16 czerwca
+            </div>
+            <div class="notice-meta">
+                6 czerwca 2025 • Komisja Kwaterunkowa Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                Tylko do 16 czerwca trwa rejestracja w ramach wakacyjnej akcji kwaterunkowej PW – zgłoszenia przez
+                ESKS. Po przyznaniu miejsca należy wpłacić opłatę gwarancyjną, by je potwierdzić.
+            </div>
+        </div>
+        <img src="assets/dorm8.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Sesja – czas najwyższego stresu studenckiego!
+            </div>
+            <div class="notice-meta">
+                6 czerwca 2025 • Wydziałowa Rada Samorządu Wydziału Matematyki i Nauk Informacyjnych
+            </div>
+            <div class="notice-text">
+                MiNI PW udostępnia sale 318, 313 i 314 na czas sesji – klucze do odbioru na portierni. Samorząd
+                życzy studentom powodzenia i jak najmniejszej liczby poprawek.
+            </div>
+        </div>
+        <img src="assets/study.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                📣 Sklep z merchem PW Elektryczny znów otwarty!
+            </div>
+            <div class="notice-meta">
+                6 czerwca 2025 • Wydziałowa Rada Samorządu Wydziału Elektryczny PW
+            </div>
+            <div class="notice-text">
+                Ruszyła nowa tura zamówień na bluzy Wydziału Elektrycznego PW – można je składać od 16 do 30
+                czerwca. Ze względu na wakacyjną dostawę odbiór na wydziale nie będzie możliwy.
+            </div>
+        </div>
+        <img src="assets/uni2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                DataArt International IT Camp 2025 – bezpłatny program online dla początkujących w IT
+            </div>
+            <div class="notice-meta">
+                6 czerwca 2025 • Biuro Karier
+            </div>
+            <div class="notice-text">
+                DataArt International IT Camp 2025 to bezpłatny program online dla osób początkujących w IT,
+                oferujący webinary i warsztaty prowadzone przez ekspertów. Liczba miejsc jest ograniczona, a udział
+                można dostosować do własnych zainteresowań.
+            </div>
+        </div>
+        <img src="assets/it3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Obowiązek wykwaterowania z DS „Żaczek”
+            </div>
+            <div class="notice-meta">
+                6 czerwca 2025 • Kanclerz
+            </div>
+            <div class="notice-text">
+                Ze względu na pogarszający się stan techniczny budynku, mieszkańcy Domu Studenckiego „Żaczek” przy
+                ul. Wołoskiej 141A
+                muszą wykwaterować się do 7 lipca 2025 r. Politechnika zapewni miejsca zastępcze w innych
+                akademikach PW.
+                Za realizację zadania odpowiada zastępca kanclerza ds. działalności podstawowej.
+            </div>
+        </div>
+        <img src="assets/dorm19.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                ✨🎓 Złota Kreda 2025 – Głos w Twoich Rękach! 🎓✨
+            </div>
+            <div class="notice-meta">
+                6 czerwca 2025 • Komisja Dydaktyczna Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                Trwa głosowanie w plebiscycie Złota Kreda 2025 – studenci mogą do 6 lipca wybrać najlepszych
+                prowadzących w czterech kategoriach poprzez USOS. To okazja, by wyrazić wdzięczność tym, którzy
+                inspirują i wspierają podczas zajęć.
+            </div>
+        </div>
+        <img src="assets/lecture.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Dołącz do Hack4Music – stwórz z nami przyszłość muzyki
+            </div>
+            <div class="notice-meta">
+                5 czerwca 2025 • Biuro Karier
+            </div>
+            <div class="notice-text">
+                Hack4Music to bezpłatny, dwudniowy hackathon organizowany przez NOSPR w Katowicach, który odbędzie
+                się 24–25 września 2025 i skupia się na zwiększaniu dostępności muzyki. Zgłoszenia indywidualne lub
+                zespołowe przyjmowane są do 30 czerwca – liczba miejsc jest ograniczona.
+            </div>
+        </div>
+        <img src="assets/hackathon4.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Reprezentantki PW na liście TOP100 Women in Engineering
+            </div>
+            <div class="notice-meta">
+                5 czerwca 2025 • Biuro Komunikacji i Promocji
+            </div>
+            <div class="notice-text">
+                Aż 8 badaczek z Politechniki Warszawskiej znalazło się w rankingu „TOP 100 Kobiet w Inżynierii w
+                Polsce”. Nagrodę Excellence in Engineering w kategorii Ethical Engineering and Responsible
+                Innovation otrzymała dr hab. inż. Agnieszka Gadomska-Gajadhur z Wydziału Chemicznego. Gala wręczenia
+                odbyła się podczas Perspektywy Women in Tech Summit 2025.
+            </div>
+        </div>
+        <img src="assets/scientist8.jpg" alt="Laureatki Excellence in Engineering 2025" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Sukces reprezentantów KN Kraken na SpaceShield Hack
+            </div>
+            <div class="notice-meta">
+                5 czerwca 2025 • BKiP / KN Kraken
+            </div>
+            <div class="notice-text">
+                Reprezentanci Koła Naukowego Kraken zdobyli I miejsce w kategorii SPACE podczas hackathonu
+                SpaceShield Hack, prezentując projekt „Totalizator Wodny” przeciwdziałający suszy hydrologicznej.
+                Wydarzenie odbyło się w ramach programu SPACE 4 TALENTS na Politechnice Rzeszowskiej.
+            </div>
+        </div>
+        <img src="assets/hackathon5.jpg" alt="KN Kraken" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Nieobecność Prodziekana ds. nauczania i dodatkowe terminy przyjęć studentów
+            </div>
+            <div class="notice-meta">
+                4 czerwca 2025 • WEITI / Dziekanat ds. nauczania
+            </div>
+            <div class="notice-text">
+                Prodziekan ds. nauczania dr inż. Piotr Firek będzie nieobecny w dniach 9–11 czerwca 2025, a
+                przyjęcia studentów w tych terminach zostają odwołane. Dodatkowe spotkania odbędą się 12 czerwca w
+                godz. 9:00–10:00 i 15:00–16:00.
+            </div>
+        </div>
+        <img src="assets/committe2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                IV Zwyczajne Posiedzenie Parlamentu Samorządu Studentów PW
+            </div>
+            <div class="notice-meta">
+                4 czerwca 2025 • Parlament Studentów PW
+            </div>
+            <div class="notice-text">
+                Dziś o 18:15 w Małej Auli Gmachu Głównego odbędzie się IV Zwyczajne Posiedzenie Parlamentu SSPW z
+                udziałem władz uczelni. Wśród tematów m.in. sytuacja Domu Studenckiego „Żaczek”.
+            </div>
+        </div>
+        <img src="assets/meeting2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Komunikat w sprawie Domu Studenckiego „Żaczek”
+            </div>
+            <div class="notice-meta">
+                4 czerwca 2025 • Rzecznik Prasowy
+            </div>
+            <div class="notice-text">
+                W związku z decyzją Państwowej Straży Pożarnej oraz trwającym remontem, Politechnika Warszawska
+                podjęła decyzję o sukcesywnym przenoszeniu studentów z DS „Żaczek” do innych domów studenckich i
+                zamknięciu akademika. Uczelnia planuje generalny remont budynku i zapewnia wsparcie oraz miejsca
+                zakwaterowania dla wszystkich obecnych mieszkańców. Harmonogram działań zostanie wkrótce
+                przedstawiony mieszkańcom i pracownikom.
+            </div>
+        </div>
+        <img src="assets/dorm10.jpg" alt="Dom Studencki Żaczek" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                📣 Wakacyjna akcja kwaterunkowa startuje!
+            </div>
+            <div class="notice-meta">
+                3 czerwca 2025 • Komisja Kwaterunkowa Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                Wakacyjna akcja kwaterunkowa PW startuje 10 czerwca – rejestracja odbywa się przez system ESKS. To
+                czas na zaplanowanie letniego pobytu lub wyprowadzki z akademika.
+            </div>
+        </div>
+        <img src="assets/dorm11.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                💼 Czas na ankietyzację!
+            </div>
+            <div class="notice-meta">
+                3 czerwca 2025 • Komisja Dydaktyczna Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                Trwa ankietyzacja w USOS – studenci mogą anonimowo ocenić prowadzących i zajęcia, wpływając na
+                jakość dydaktyki. Ankiety zamykają się wraz z ostatnimi zajęciami danego przedmiotu, więc warto je
+                wypełnić wcześniej.
+            </div>
+        </div>
+        <img src="assets/survey2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                📃 Ankietyzacja – podziel się opinią o przedmiotach i prowadzących!
+            </div>
+            <div class="notice-meta">
+                2 czerwca 2025 • Komisja Dydaktyczna Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                Na USOS dostępne są ankiety oceniające przedmioty i prowadzących – udział co najmniej 30% studentów
+                warunkuje ich uwzględnienie. Wypełniając wszystkie ankiety, można wziąć udział w loterii i wygrać
+                bluzę z logo MiNI.
+            </div>
+        </div>
+        <img src="assets/survey4.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Wydłużone godziny otwarcia Biblioteki Wydziałowej
+            </div>
+            <div class="notice-meta">
+                2 czerwca 2025 • WEITI / Biblioteka
+            </div>
+            <div class="notice-text">
+                W związku z okresem sesyjnym Biblioteka Wydziałowa będzie czynna dłużej w wybranych dniach:
+                <ul>
+                    <li><strong>9–13 czerwca, 16–18 czerwca i 23–24 czerwca 2025:</strong> 9:00 – 20:00</li>
+                    <li><strong>14–15 czerwca oraz 19–22 czerwca 2025:</strong> <span style="color: red;">Biblioteka NIECZYNNA</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img src="assets/library5.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Centrum Wiarygodnej Sztucznej Inteligencji na PW zainaugurowało swoją działalność
+            </div>
+            <div class="notice-meta">
+                1 czerwca 2025 • Centrum Wiarygodnej Sztucznej Inteligencji
+            </div>
+            <div class="notice-text">
+                Na Politechnice Warszawskiej rozpoczęło działalność Centrum Wiarygodnej Sztucznej Inteligencji
+                (CCAI), pod kierownictwem prof. Przemysława Biecka. Centrum powstało w ramach programu
+                Międzynarodowe Agendy Badawcze i będzie rozwijać transparentne, bezpieczne i wyjaśnialne systemy AI.
+                Celem jednostki jest m.in. tworzenie narzędzi explainable AI, audyt modeli oraz kształcenie nowych
+                specjalistów. Centrum działa na styku informatyki, matematyki, inżynierii danych i nauk społecznych.
+            </div>
+        </div>
+        <img src="assets/ai.jpg" alt="Centrum Wiarygodnej Sztucznej Inteligencji" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Laboratorium dla elektroniki nowej generacji
+            </div>
+            <div class="notice-meta">
+                30 maja 2025 • CEZAMAT
+            </div>
+            <div class="notice-text">
+                W CEZAMAT powstało laboratorium LATTICE, wyposażone w nowoczesny reaktor MOCVD do syntezy materiałów
+                dwuwymiarowych (2D) dla elektroniki. Zespół PW bada możliwości ich zastosowania m.in. w
+                tranzystorach i fotodetektorach. Technologie 2D mogą zrewolucjonizować elektronikę dzięki
+                miniaturyzacji, oszczędności energii i nowym właściwościom materiałowym. Projekt realizuje grupa
+                prof. Mariusza Zdrojka z udziałem dr inż. Jakuba Sitka i innych badaczy. Inwestycja została
+                sfinansowana przez MEiN kwotą 9,3 mln zł.
+            </div>
+        </div>
+        <img src="assets/electronics2.jpg" alt="Laboratorium LATTICE w CEZAMAT" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Wakacyjne praktyki w Rhenus – zdobywaj doświadczenie w branży TSL
+            </div>
+            <div class="notice-meta">
+                29 maja 2025 • Biuro Karier
+            </div>
+            <div class="notice-text">
+                Rhenus oferuje wakacyjne praktyki dla uczniów i studentów bez wcześniejszego doświadczenia –
+                wystarczy zaangażowanie. Praktyki odbywają się od czerwca do września i obejmują pracę z
+                dokumentacją, systemami TMS/WMS oraz wsparcie zespołu logistycznego.
+            </div>
+        </div>
+        <img src="assets/logistics.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Apply to First Ascent Poland! – bezpłatny tech retreat dla studentów
+            </div>
+            <div class="notice-meta">
+                29 maja 2025 • Biuro Karier
+            </div>
+            <div class="notice-text">
+                First Ascent Poland to bezpłatny, trzydniowy tech retreat organizowany przez Bending Spoons dla 20
+                uzdolnionych studentów zainteresowanych programowaniem. Wydarzenie odbędzie się 23–26 października
+                2025, a aplikacje przyjmowane są do 24 czerwca.
+            </div>
+        </div>
+        <img src="assets/it24.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Program wakacyjny Java JUMP – intensywny kurs dla kobiet w IT
+            </div>
+            <div class="notice-meta">
+                28 maja 2025 • Biuro Karier
+            </div>
+            <div class="notice-text">
+                Java JUMP to bezpłatny, 90-godzinny wakacyjny kurs online dla kobiet zainteresowanych karierą w IT –
+                przygotowuje do udziału w programie HSBC. Uczestniczki nie muszą mieć wykształcenia technicznego,
+                liczy się motywacja, znajomość angielskiego i dobre wyniki na studiach.
+            </div>
+        </div>
+        <img src="assets/it23.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Nowa rakieta studentów PW – Twardowsky 2
+            </div>
+            <div class="notice-meta">
+                28 maja 2025 • BKiP / SKA
+            </div>
+            <div class="notice-text">
+                Studenckie Koło Astronautyczne PW zaprezentowało swoją największą dotąd rakietę – Twardowsky 2.
+                Konstrukcja o długości ponad 4 m i hybrydowym silniku własnej produkcji ma wynieść ładunek CubeSat
+                na wysokość 9 km. Modułowa budowa, zaawansowana awionika i nowatorski system odzysku to tylko
+                niektóre z rozwiązań zastosowanych w projekcie. Rakieta została przygotowana z myślą o udziale w
+                zawodach EuRoC i Spaceport America Cup.
+            </div>
+        </div>
+        <img src="assets/rocket.jpg" alt="Rakieta Twardowsky 2 i jej twórcy" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Budowa hali sportowo-widowiskowej na Stadionie Syrenki
+            </div>
+            <div class="notice-meta">
+                26 maja 2025 • Jego Magnificencja Rektor
+            </div>
+            <div class="notice-text">
+                Rektor PW podjął decyzję o uruchomieniu inwestycji pn. „Budowa kompleksu sportowego – Hala
+                sportowo-widowiskowa na terenie Stadionu Syrenki”.
+                Projekt będzie finansowany ze środków centralnych i ma kosztorysową wartość 100 mln zł. Termin
+                zakończenia inwestycji ustalono na 30 czerwca 2028 r.
+                Koordynatorem zadania został mgr inż. Mirosław Dudra.
+            </div>
+        </div>
+        <img src="assets/sport2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Rurki z klejem i Mostozaury na podium wyKOMBinuj mOst 2025
+            </div>
+            <div class="notice-meta">
+                23 maja 2025 • BKiP / WIL
+            </div>
+            <div class="notice-text">
+                Zespoły z PW zdobyły 1. i 3. miejsce w konkursie „wyKOMBinuj mOst 2025”, tworząc mosty z brystolu i
+                kleju. Konstrukcja „Rurek z klejem” uniosła imponujące 366,9 kg przy masie zaledwie 1069 g.
+            </div>
+        </div>
+        <img src="assets/civil2.jpg" alt="Zespoły Rurki z klejem i Mostozaury" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Montaż drzwi EI 60 w DS Babilon
+            </div>
+            <div class="notice-meta">
+                21 maja 2025 • Jego Magnificencja Rektor
+            </div>
+            <div class="notice-text">
+                Rektor PW zatwierdził inwestycję polegającą na montażu drzwi o odporności ogniowej EI 60 w
+                rozdzielniach elektrycznych
+                Domu Studenckiego PW Babilon przy ul. Kopińskiej 12/16. Wartość inwestycji wynosi 200 tys. zł, a jej
+                realizacja ma zakończyć się
+                do 31 grudnia 2025 r. Koordynatorem zadania został mgr Rafał Byczot.
+            </div>
+        </div>
+        <img src="assets/dorm24.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Przebudowa windy przeciwpożarowej w DS Riviera
+            </div>
+            <div class="notice-meta">
+                21 maja 2025 • Jego Magnificencja Rektor
+            </div>
+            <div class="notice-text">
+                Rektor PW ogłosił rozpoczęcie inwestycji polegającej na przebudowie windy przeciwpożarowej
+                w Domu Studenckim Riviera przy ul. Waryńskiego 12. Prace będą finansowane ze środków centralnych,
+                a ich koszt wyniesie 800 tys. zł. Termin zakończenia realizacji to 31 grudnia 2025 r.
+                Koordynatorem projektu został Michał Waś.
+            </div>
+        </div>
+        <img src="assets/dorm25.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Ambipolarny przełom w elektronice organicznej – badania naukowców z PW
+            </div>
+            <div class="notice-meta">
+                21 maja 2025 • Wydział Chemiczny
+            </div>
+            <div class="notice-text">
+                Naukowcy z PW opracowali pierwszy ambipolarny elektrochemiczny tranzystor organiczny działający w
+                środowisku wodnym, eliminujący pułapkowanie ładunków. Odkrycie opublikowano w prestiżowym
+                czasopiśmie Small i ma potencjał w neuroelektronice.
+            </div>
+        </div>
+        <img src="assets/scientist2.jpg" alt="Dr hab. Renata Rybakiewicz-Sekita oraz mgr inż. Roman Gańczarczyk"
+             class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Dr Agnieszka Kucharska z PW z nagrodą 2025 SAS Educator Award
+            </div>
+            <div class="notice-meta">
+                20 maja 2025 • Wydział Zarządzania
+            </div>
+            <div class="notice-text">
+                Dr Agnieszka Kucharska z PW otrzymała nagrodę 2025 SAS Educator Award za koordynację kursu z zakresu
+                analizy danych i AI. Wyróżnienie przyznano podczas konferencji SAS Innovate w Orlando.
+            </div>
+        </div>
+        <img src="assets/scientist5.jpg" alt="Dr Agnieszka Kucharska, laureatka SAS Educator Award 2025"
+             class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                DeepQuadrature: jedna ramka, pełna precyzja
+            </div>
+            <div class="notice-meta">
+                20 maja 2025 • Wydział Mechatroniki
+            </div>
+            <div class="notice-text">
+                Zespół QCI Lab PW opracował DeepQuadrature – narzędzie AI do analizy hologramów z jednej ramki,
+                które upraszcza pomiary optyczne bez konieczności użycia kosztownego sprzętu. Rozwiązanie osiąga
+                precyzję klasycznych metod i ma zastosowanie m.in. w medycynie i biologii.
+            </div>
+        </div>
+        <img src="assets/ai8.jpg" alt="Neural Hologram Vision – projekt DeepQuadrature"
+             class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Cyberbezpieczeństwo w praktyce – studenci PW uczą w szkołach
+            </div>
+            <div class="notice-meta">
+                19 maja 2025 • Biuro Komunikacji i Promocji
+            </div>
+            <div class="notice-text">
+                Studenci PW w ramach projektu Google Cybersecurity Seminars prowadzą zajęcia o cyberbezpieczeństwie
+                w szkołach podstawowych i średnich. Do września 2026 planują dotrzeć do 250 placówek, edukując w
+                zakresie cyberhigieny i ochrony prywatności.
+            </div>
+        </div>
+        <img src="assets/it13.jpg" alt="Lekcja pokazowa w ramach projektu Google Cybersecurity Seminars PW"
+             class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Nowości biblioteczne – maj 2025
+            </div>
+            <div class="notice-meta">
+                15 maja 2025 • WEITI / Biblioteka
+            </div>
+            <div class="notice-text">
+                Biblioteka Wydziału Elektroniki i Technik Informacyjnych PW wzbogaciła księgozbiór o nowe pozycje z
+                zakresu AI, big data, DevOps i programowania. Szczegółowe opisy książek dostępne są w plikach .doc –
+                kontakt mailowy: bwepw.elka@pw.edu.pl.
+            </div>
+        </div>
+        <img src="assets/library6.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Harmonogram roku akademickiego 2025/2026
+            </div>
+            <div class="notice-meta">
+                14 maja 2025 • Komisja Dydaktyczna Samorządu Studentów PW
+            </div>
+            <div class="notice-text">
+                Ogłoszono szczegółowy harmonogram roku akademickiego 2025/2026. Zajęcia rozpoczną się 2 października
+                2025 r.,
+                a zakończą 30 września 2026 r. W harmonogramie uwzględniono terminy sesji egzaminacyjnych, przerw
+                świątecznych,
+                Juwenaliów, a także terminy składania prac dyplomowych. Dla Filii w Płocku przewidziano odrębny
+                dzień Juwenaliów.
+            </div>
+        </div>
+        <img src="assets/uni.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Wydłużenie terminu składania wniosków o Stypendium Senatu PW dla studentów i doktorantów
+            </div>
+            <div class="notice-meta">
+                14 maja 2025 • Biuro Kanclerza
+            </div>
+            <div class="notice-text">
+                Termin składania wniosków o Stypendium Senatu PW dla studentów i doktorantów został przedłużony do
+                20 maja 2025. Formularze i szczegóły dostępne są na stronie internetowej programu.
+            </div>
+        </div>
+        <img src="assets/uni3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Wybór specjalności dla studentów 4 semestru studiów pierwszego stopnia w semestrze 25L
+            </div>
+            <div class="notice-meta">
+                5 maja 2025 • WEiTI / Dziekanat ds. nauczania
+            </div>
+            <div class="notice-text">
+                Studenci 4. semestru I stopnia na kierunkach Informatyka, Inżynieria biomedyczna i Telekomunikacja
+                mogą wybierać specjalności w USOS-web od 5 do 26 maja 2025. Konieczne jest przypisanie priorytetów
+                wszystkim dostępnym opcjom – brak pełnej deklaracji może skutkować nieuwzględnieniem preferencji.
+            </div>
+        </div>
+        <img src="assets/it11.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                ODBIÓR DYPLOMÓW – zmiana lokalizacji!
+            </div>
+            <div class="notice-meta">
+                28 kwietnia 2025 • Dział ds. Studiów
+            </div>
+            <div class="notice-text">
+                Odbiór dyplomów odbywa się teraz w nowej lokalizacji – Rektorska 4, pokój 0.12, w Dziale ds.
+                Studiów. Obowiązują zmienione godziny otwarcia, a instrukcja odbioru jest dostępna w formacie PDF.
+            </div>
+        </div>
+        <img src="assets/diploma.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Zmiana organizacji zajęć 15 maja 2025 r. na WEiTI PW
+            </div>
+            <div class="notice-meta">
+                28 kwietnia 2025 • WEiTI / Dziekan
+            </div>
+            <div class="notice-text">
+                15 maja 2025 r. na WEiTI odwołane zostają jedynie wykłady rozpoczynające się po godz. 14:00 –
+                pozostałe zajęcia, w tym ćwiczenia i laboratoria, odbywają się zgodnie z planem. Zmiana wynika z
+                organizacji pikniku wydziałowego i Elkonaliów.
+            </div>
+        </div>
+        <img src="assets/uni2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Zmiany w Regulaminie studiów PW od października 2025 r.
+            </div>
+            <div class="notice-meta">
+                23 kwietnia 2025 • Senat PW
+            </div>
+            <div class="notice-text">
+                Senat PW przyjął zmiany w Regulaminie studiów, które wejdą w życie 1 października 2025 r.
+                Nowe przepisy dotyczą m.in. zasad udostępniania regulaminu przedmiotu, składania ślubowania
+                akademickiego,
+                procedur odwoławczych oraz szczegółowych zasad uczestnictwa w zajęciach. Wprowadzono też możliwość
+                wyznaczenia
+                opiekuna wydziałowego dla studentów z niepełnosprawnością.
+            </div>
+        </div>
+        <img src="assets/committe2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Odbiór decyzji stypendialnych
+            </div>
+            <div class="notice-meta">
+                17 kwietnia 2025 • WEiTI / Dziekanat ds. Studenckich
+            </div>
+            <div class="notice-text">
+                Decyzje o stypendiach i zapomogach dostępne są wyłącznie w USOSWeb. Studenci mogą przyspieszyć
+                wypłatę świadczeń, zrzekając się prawa do odwołania – wówczas przelew może nastąpić już w kwietniu.
+            </div>
+        </div>
+        <img src="assets/uni3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                W dniach 10–11 kwietnia 2025 r. Dziekanat ds. Studenckich jest nieczynny
+            </div>
+            <div class="notice-meta">
+                17 kwietnia 2025 • WEiTI / Dziekanat ds. Studenckich
+            </div>
+            <div class="notice-text">
+                Dziekanat ds. Studenckich WEiTI był nieczynny w dniach 10–11 kwietnia 2025 r. W pilnych sprawach
+                należało zgłaszać się do pokojów 111 i 112 (dziekanaty ds. nauczania).
+            </div>
+        </div>
+        <img src="assets/uni.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Egzamin B2 dla studentów studiów niestacjonarnych – sesja letnia 2024/2025
+            </div>
+            <div class="notice-meta">
+                1 kwietnia 2025 • Studium Języków Obcych
+            </div>
+            <div class="notice-text">
+                Egzamin B2 dla studentów niestacjonarnych odbędzie się 15 czerwca 2025 r. (pisemny) oraz 17–18
+                czerwca (ustny i komisyjny). Zapisy trwają od 14 kwietnia do 20 maja przez USOSweb.
+            </div>
+        </div>
+        <img src="assets/study3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Zaliczanie praktyk zawodowych w semestrze 2025L
+            </div>
+            <div class="notice-meta">
+                31 marca 2025 • WEiTI / Dziekanat ds. Studenckich
+            </div>
+            <div class="notice-text">
+                Studenci WEiTI muszą zapisać się na praktyki zawodowe w USOS między 26 marca a 12 czerwca 2025 r.,
+                wybierając odpowiednią nazwę przedmiotu w zależności od języka studiów. Po zapisaniu się należy
+                skontaktować się z opiekunem praktyk w instytucie dyplomującym.
+            </div>
+        </div>
+        <img src="assets/hackathon7.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                C1 Exam in Academic English – sesja letnia 2024/2025
+            </div>
+            <div class="notice-meta">
+                28 marca 2025 • Studium Języków Obcych
+            </div>
+            <div class="notice-text">
+                Egzamin C1 Academic dla studentów anglojęzycznych odbędzie się 13 czerwca 2025 (pisemny) oraz 24 i
+                26 czerwca (ustny), a zapisy prowadzone są przez USOSweb. Zwolnienie z części ustnej możliwe jest na
+                podstawie ocen z zajęć – szczegóły i harmonogramy dostępne na stronie SJO.
+            </div>
+        </div>
+        <img src="assets/study5.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Egzamin B2 ACERT w sesji letniej 2024/2025 – szczegóły i zapisy
+            </div>
+            <div class="notice-meta">
+                25 marca 2025 • Studium Języków Obcych
+            </div>
+            <div class="notice-text">
+                Egzamin B2 ACERT odbędzie się 13 czerwca 2025 r. (część pisemna), a ustna w dniach 24–27 czerwca;
+                zapisy przez USOSweb trwają od 14 kwietnia do 20 maja. W wyjątkowych przypadkach możliwy jest
+                egzamin komisyjny 30 czerwca – wymagane jest podanie i zaświadczenie z dziekanatu.
+            </div>
+        </div>
+        <img src="assets/study2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                RAS TECH Summer – 3-miesięczny, płatny staż w Ringier Axel Springer Tech
+            </div>
+            <div class="notice-meta">
+                13 marca 2025 • WEiTI / Institut Informatyki
+            </div>
+            <div class="notice-text">
+                Ringier Axel Springer Tech zaprasza studentów na płatny, 3-miesięczny staż wakacyjny 2025,
+                obejmujący m.in. programowanie, DevOps, chmurę i zarządzanie projektami. Udział w stażu można
+                zaliczyć jako praktykę obowiązkową, a rekrutacja wymaga wypełnienia formularza i rozwiązania
+                zadania.
+            </div>
+        </div>
+        <img src="assets/meeting.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Zmiany w zasadach wydawania kart wjazdowych PW
+            </div>
+            <div class="notice-meta">
+                7 marca 2025 • Kanclerz
+            </div>
+            <div class="notice-text">
+                Zmieniono regulamin wydawania kart wjazdowych na teren Główny i Główny BIS PW.
+                Nowe zasady dotyczą studentów studiów niestacjonarnych i uczestników studiów podyplomowych.
+                Wjazd możliwy w piątki 14:00–22:00 oraz w weekendy 7:00–22:00. Opłata: 200 zł.
+                Szczegóły zawarte są w zaktualizowanym regulaminie.
+            </div>
+        </div>
+        <img src="assets/parking.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Rekrutacja na studia w ramach programu Podwójnego Dyplomowania KEUDOS!
+            </div>
+            <div class="notice-meta">
+                3 marca 2025 • WEiTI / Dziekanat ds. Kształcenia
+            </div>
+            <div class="notice-text">
+                Trwa rekrutacja do programu Podwójnego Dyplomowania KEUDOS – trzy lata nauki na PW i rok na
+                Kyungpook National University w Korei zakończone dwoma dyplomami inżynierskimi. Zgłoszenia do I
+                etapu należy przesłać mailowo do 25 marca 2025.
+            </div>
+        </div>
+        <img src="assets/science5.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Specjalne Stypendium Jana Tomaki – nabór na semestr letni 2024/2025
+            </div>
+            <div class="notice-meta">
+                28 lutego 2025 • BK / CWM
+            </div>
+            <div class="notice-text">
+                Studenci i doktoranci PW pochodzący z Etiopii lub innych krajów afrykańskich mogą składać wnioski o
+                Specjalne Stypendium Jana Tomaki w terminie 1–31 marca 2025. Szczegółowe warunki oraz formularze
+                dostępne są w załączonych regulaminach i wnioskach.
+            </div>
+        </div>
+        <img src="assets/uni3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Rekrutacja studentów na wyjazdy – Erasmus+ 2025/2026
+            </div>
+            <div class="notice-meta">
+                27 lutego 2025 • WEiTI / Dziekanat ds. Kształcenia
+            </div>
+            <div class="notice-text">
+                Rozpoczęła się rekrutacja na wyjazdy Erasmus+ z WEITI na rok akademicki 2025/2026 – wnioski można
+                składać od 1 do 31 marca. Warunkiem udziału jest średnia ocen minimum 3,5 oraz ukończenie co
+                najmniej pierwszego roku studiów.
+            </div>
+        </div>
+        <img src="assets/lecture8.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Możliwość zgłaszania niezgodności Projektu FERS lub działań Uczelni z Konwencją o prawach osób
+                niepełnosprawnych
+            </div>
+            <div class="notice-meta">
+                26 lutego 2025 • Biuro ds. Społecznej Odpowiedzialności Uczelni
+            </div>
+            <div class="notice-text">
+                Studenci PW mogą zgłaszać niezgodności projektu FERS lub działań uczelni z Konwencją o prawach osób
+                niepełnosprawnych. Zgłoszenia przyjmowane są m.in. przez ePUAP oraz pocztą tradycyjną do MFiPR i
+                NCBR.
+            </div>
+        </div>
+        <img src="assets/sad.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Ruszyła akcja stypendialna – semestr letni 2024/2025
+            </div>
+            <div class="notice-meta">
+                24 lutego 2025 • WEiTI / Dziekanat ds. Studenckich
+            </div>
+            <div class="notice-text">
+                Trwa akcja stypendialna na semestr letni – wnioski o stypendium socjalne i dla osób z
+                niepełnosprawnościami można składać do 7 marca, a o stypendium rektora – w dniach 8–14 marca 2025 r.
+                Wcześniej, od 27 lutego do 5 marca, należy zweryfikować swoją średnią ocen w USOSweb.
+            </div>
+        </div>
+        <img src="assets/uni.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                E-kurs BHP dla studentów
+            </div>
+            <div class="notice-meta">
+                21 lutego 2025 • Inspektorat BHP
+            </div>
+            <div class="notice-text">
+                Wszyscy nowo przyjęci studenci PW mają obowiązek zaliczenia szkolenia BHP w formie e-kursu na
+                platformie LeOn. Studenci są zapisywani automatycznie przez USOS, a w razie problemów z dostępem
+                należy skontaktować się z Inspektoratem BHP.
+            </div>
+        </div>
+        <img src="assets/safety.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Wniosek o wydanie opinii o zgodności projektu badań naukowych z zasadami etyki
+            </div>
+            <div class="notice-meta">
+                19 lutego 2025 • Biuro Społecznej Odpowiedzialności Uczelni
+            </div>
+            <div class="notice-text">
+                Zespół ds. etyki badań naukowych PW przypomina o obowiązku uzyskania opinii etycznej dla projektów z
+                udziałem ludzi. Formularz wniosku i instrukcje jego przesłania znajdują się na stronie Biura
+                Społecznej Odpowiedzialności Uczelni.
+            </div>
+        </div>
+        <img src="assets/uni.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Sesja letnia 2024/2025 – egzaminy językowe B2 i C1
+            </div>
+            <div class="notice-meta">
+                14 lutego 2025 • Studium Języków Obcych
+            </div>
+            <div class="notice-text">
+                Trwają zapisy na egzaminy językowe B2 i C1 w sesji letniej 2024/2025 – pisemne i ustne części odbędą
+                się w czerwcu, a rejestracja przez USOSweb trwa od 14 kwietnia do 22 czerwca. Egzamin C1 General
+                wymaga oddzielnego zgłoszenia i opłaty, a nie zwalnia z obowiązkowego egzaminu C1 Academic dla
+                studentów anglojęzycznych.
+            </div>
+        </div>
+        <img src="assets/study2.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Egzamin C1 General – sesja letnia 2024/2025
+            </div>
+            <div class="notice-meta">
+                14 lutego 2025 • Studium Języków Obcych
+            </div>
+            <div class="notice-text">
+                Egzamin C1 General z języka ogólnego odbędzie się 15 i 21 maja 2025 r., a zgłoszenia przyjmowane są
+                mailowo do 6 maja. Egzamin nie dotyczy studentów studiów anglojęzycznych i wiąże się z opłatą 153
+                zł.
+            </div>
+        </div>
+        <img src="assets/study3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Lektorat: Język włoski z Architekturą / Projekty Współczesnej Architektury Mediolanu
+            </div>
+            <div class="notice-meta">
+                7 lutego 2025 • SJO / Wydział Architektury
+            </div>
+            <div class="notice-text">
+                W semestrze letnim 2024/2025 rusza lektorat tematyczny „Język włoski z Architekturą / Projekty
+                współczesnej architektury Mediolanu”, realizowany z udziałem gości z Politechniki w Mediolanie.
+                Zajęcia odbywają się we wtorki o 16:15, a warunkiem uczestnictwa jest znajomość włoskiego na
+                poziomie A1+/A2 i angielskiego na poziomie B1+/B2.
+            </div>
+        </div>
+        <img src="assets/italy.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Nowy lektorat tematyczny: Język polski w skutecznej komunikacji na podstawie 17 Celów Zrównoważonego
+                Rozwoju ONZ
+            </div>
+            <div class="notice-meta">
+                7 lutego 2025 • Studium Języków Obcych
+            </div>
+            <div class="notice-text">
+                W semestrze letnim 2024/2025 rusza nowy lektorat tematyczny „Język polski w skutecznej komunikacji
+                na podstawie 17 Celów Zrównoważonego Rozwoju ONZ”, skierowany do osób na poziomie B2/B2+. Zajęcia
+                odbywają się we wtorki o godz. 14:15 i skupiają się na rozwijaniu kompetencji językowych wokół
+                tematów globalnych wyzwań.
+            </div>
+        </div>
+        <img src="assets/lecture9.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Rejestracja na semestr letni 2024/2025 – ważne informacje i terminy
+            </div>
+            <div class="notice-meta">
+                5 lutego 2025 • WEiTI / Prodziekan ds. Nauczania
+            </div>
+            <div class="notice-text">
+                Rejestracja na semestr letni 2024/2025 na WEiTI rozpoczyna się 13 lutego, a wyjaśnienia dotyczące
+                braku rejestracji można składać od 14 lutego – przez USOS-web lub mailowo, w zależności od semestru.
+                Odwołania należy złożyć do 15 lutego, a rozmowy z Dziekanem i egzaminy komisyjne odbędą się 17
+                lutego.
+            </div>
+        </div>
+        <img src="assets/uni3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Nowy regulamin zakwaterowania w domach studenckich PW
+            </div>
+            <div class="notice-meta">
+                28 stycznia 2025 • Komisja Kwaterunkowa Samorządów Studentów PW
+            </div>
+            <div class="notice-text">
+                Rektor PW wprowadził nowy regulamin przyznawania miejsc zakwaterowania oraz opłat za zakwaterowanie
+                w domach studenckich,
+                który wejdzie w życie 1 marca 2025 r. Opłaty rezerwacyjne wniesione przed tą datą stają się opłatami
+                gwarancyjnymi,
+                chyba że student złoży sprzeciw w ciągu 14 dni. Regulamin stanowi załącznik do zarządzenia.
+            </div>
+        </div>
+        <img src="assets/dorm14.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Kursy języka polskiego online – przygotowanie do egzaminów B1 / B1-B2
+            </div>
+            <div class="notice-meta">
+                24 stycznia 2025 • Ośrodek Języka Polskiego
+            </div>
+            <div class="notice-text">
+                Ośrodek Języka Polskiego PW prowadzi zapisy na dwa kursy online przygotowujące do egzaminów B1 i
+                B1/B2 z języka polskiego jako obcego – w formie intensywnego weekendowego kursu lub zajęć
+                cotygodniowych. Kursy odbywają się na Zoomie i przewidziano zniżki dla większych grup.
+            </div>
+        </div>
+        <img src="assets/lecture10.jpg" alt="Kurs języka polskiego telc B1/B2"
+             class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Nowy regulamin korzystania z parkingów PW
+            </div>
+            <div class="notice-meta">
+                22 stycznia 2025 • Kanclerz
+            </div>
+            <div class="notice-text">
+                Wprowadzono nowy regulamin korzystania z parkingów Politechniki Warszawskiej.
+                Określa on zasady wjazdu, obowiązki użytkowników, działania Straży Akademickiej, a także kwestie
+                odpowiedzialności i ewentualnych kar. Parkingi rowerowe na terenie uczelni pozostają bezpłatne i
+                czynne w godzinach 7:00–22:00.
+                Szczegóły zawarte są w załączniku do zarządzenia.
+            </div>
+        </div>
+        <img src="assets/parking.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Procedura zapisów na przedmioty – semestr letni 2024/2025
+            </div>
+            <div class="notice-meta">
+                22 stycznia 2025 • WEiTI / Dziekanat ds. Nauczania
+            </div>
+            <div class="notice-text">
+                Prośby o zapis na przedmioty w semestrze letnim 2024/2025 można składać przez USOS-web od 23
+                stycznia do 9 lutego, a tury zapisów odbędą się w dniach 14–21 lutego. Korekty przydziałów do grup
+                rozpoczną się od III tury, a podania o wypis lub zapis poza terminem można składać do 27 lutego.
+            </div>
+        </div>
+        <img src="assets/lecture11.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Powołanie kierowników specjalności na WEiTI PW
+            </div>
+            <div class="notice-meta">
+                8 stycznia 2025 • WEiTI / Dziekan
+            </div>
+            <div class="notice-text">
+                Na mocy decyzji Dziekana WEiTI PW powołano nowych kierowników specjalności dla poszczególnych
+                kierunków studiów, w tym m.in. dla Informatyki, Telekomunikacji i Inżynierii biomedycznej. Celem tej
+                zmiany jest poprawa koordynacji specjalności i jakości kształcenia na wydziale.
+            </div>
+        </div>
+        <img src="assets/uni3.jpg" alt="Miniatura" class="notice-image">
+    </div>
+    <div class="notice-item">
+        <div class="notice-content">
+            <div class="notice-title">
+                Informacja dla studentów pochodzących z terenów objętych powodzią
+            </div>
+            <div class="notice-meta">
+                31 października 2024 • WEiTI / Dziekanat ds. Studenckich
+            </div>
+            <div class="notice-text">
+                Studenci PW z terenów dotkniętych powodzią we wrześniu 2024 r. mogą ubiegać się o zapomogę
+                niezależnie od innych świadczeń. Wniosek należy złożyć przez USOS, dołączając potwierdzenie
+                zameldowania oraz dokumenty potwierdzające straty.
+            </div>
+        </div>
+        <img src="assets/flood.jpg" alt="Miniatura" class="notice-image">
+    </div>
+
+
+    <!-- 🗓️ Skrót: wydarzenia -->
+    <div class="mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6 class="mb-0">
+                Wydarzenia dla Ciebie
+            </h6>
+            <a href="/events.html" class="text-decoration-none small text-primary">
+                Zobacz wszystkie
+            </a>
+        </div>
+
+        <!-- Wydarzenie 1 -->
+        <div class="event-item">
+            <div class="event-type-box bg-culture">
+                <i class="bi bi-music-note-beamed"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">
+                    Vivaldi & Morricone – Koncert w Filharmonii
+                </div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Filharmonia Narodowa
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            Komisja Kultury SSPW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">22</div>
+                <div class="month">czerwca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-culture">
+                <i class="bi bi-music-note-beamed"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">
+                    The Dumplings z orkiestrą
+                </div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Klub Stodoła, Warszawa
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            Komisja Kultury SSPW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">22</div>
+                <div class="month">czerwca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-training">
+                <i class="bi bi-journal-richtext"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">
+                    LinkedIn z Europass i Euroguidance
+                </div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Online
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            Biuro Karier
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">24</div>
+                <div class="month">czerwca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-culture">
+                <i class="bi bi-music-note-beamed"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Morgan Jay – Stand-up i muzyka</div>
+                <div class="event-meta-inline">
+            <span>
+                <i class="bi bi-geo-alt me-1"></i>
+                Klub Stodoła, Warszawa
+            </span>
+                    <span>
+                <i class="bi bi-person-fill me-1"></i>
+                Komisja Kultury SSPW
+            </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">25–26</div>
+                <div class="month">czerwca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-party">
+                <i class="bi bi-stars">
+                </i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">
+                    Queerowe zakończenie semestru
+                </div>
+                <div class="event-meta-inline">
+                    <span>
+                        <i class="bi bi-geo-alt me-1">
+                        </i>
+                        La Pose, Mazowiecka 6/8
+                    </span>
+                    <span>
+                        <i class="bi bi-person-fill me-1">
+                        </i>
+                        Queer UW / QRA PW
+                    </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">
+                    26
+                </div>
+                <div class="month">
+                    czerwca
+                </div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-social">
+                <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Ognisko Posesyjne</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Plaża Poniatówka
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            WRS MiNI / WRS EE PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">26</div>
+                <div class="month">czerwca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-party">
+                <i class="bi bi-stars"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Tropikalne Pool Party</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Baseny Kora, Warszawa
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SSPW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">27</div>
+                <div class="month">czerwca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-conference">
+                <i class="bi bi-easel-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Konferencja NAOKOŁO</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Politechnika Warszawska
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            FUT / SSPW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">27–29</div>
+                <div class="month">czerwca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Autostop po sąsiedzku</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Warszawa - Cz. Praga
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            WRS GiK PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">28.06–1.07</div>
+                <div class="month"></div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-tech">
+                <i class="bi bi-cpu"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Premiera bolidu WUT-6</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Gmach Główny
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            WUT Racing
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">2</div>
+                <div class="month">lipca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Rejs po Lago di Garda</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Lago di Garda, Włochy
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">5–8</div>
+                <div class="month">lipca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Rejs Amsterdam – Londyn</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Amsterdam – Londyn
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">5–12</div>
+                <div class="month">lipca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Rejs po Szkocji</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Largs, Szkocja
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">5–12</div>
+                <div class="month">lipca</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-conference">
+                <i class="bi bi-easel-fill">
+                </i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">
+                    BEST Conference Day
+                </div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1">
+                            </i>
+                            Politechnika Warszawska
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1">
+                            </i>
+                            BEST Warsaw
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">5</div>
+                <div class="month">sierpnia</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Rejs po Norwegii</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Ålesund - Trondheim
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">23–30</div>
+                <div class="month">sierpnia</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Szwedzkie Szkiery</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Archipelag Sztokholmski
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">30.08–6.09</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-training">
+                <i class="bi bi-journal-richtext"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Szkolenie na Żeglarza Jachtowego</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Węgorzewo, Mazury
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">13–20</div>
+                <div class="month">września</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Sztokholm → Gdańsk</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Sztokholm - Gdańsk
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">13–20</div>
+                <div class="month">września</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">EuroRace PW</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Warszawa - ???
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SSPW / SGGW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">15–21</div>
+                <div class="month">września</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Chorwa – Chorwacja z SKŻ</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Chorwacja
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">19–28</div>
+                <div class="month">września</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Żeglarska Wrześniówka</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Ruciane-Nida, Mazury
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            NZS PW / SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">21–28</div>
+                <div class="month">września</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-travel">
+                <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Rejs na STS Generał Zaruski</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Stavanger - Oslo
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            SKŻ PW
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">22–29</div>
+                <div class="month">września</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-conference">
+                <i class="bi bi-easel-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">COMSYS 2025</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            MiNI PW, Koszykowa 75
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            WEiTI II
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">25–27</div>
+                <div class="month">września</div>
+            </div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-type-box bg-social">
+                <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="event-content">
+                <div class="event-title">Naukowy Mixxer Młodych</div>
+                <div class="event-meta-inline">
+                        <span>
+                            <i class="bi bi-geo-alt me-1"></i>
+                            Rektorska 4, Warszawa
+                        </span>
+                    <span>
+                            <i class="bi bi-person-fill me-1"></i>
+                            Rada Młodych Uczonych
+                        </span>
+                </div>
+            </div>
+            <div class="event-date">
+                <div class="day">29</div>
+                <div class="month">września</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Dolny pasek nawigacyjny -->
+<div class="bottom-nav">
+    <a href="/home.html" class="active">
+        <i class="bi bi-house-door-fill">
+        </i>
+    </a>
+    <a href="/events">
+        <i class="bi bi-ticket">
+        </i>
+    </a>
+    <a href="/map-card.html">
+        <i class="bi bi-geo-alt">
+        </i>
+    </a>
+    <a href="/guides.html">
+        <i class="bi bi-book">
+        </i>
+    </a>
+    <a href="/news.html">
+        <i class="bi bi-megaphone">
+        </i>
+    </a>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

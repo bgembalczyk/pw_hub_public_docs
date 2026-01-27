@@ -1,0 +1,309 @@
+@startsalt
+{
+  {T
+   + Komponenty Wielokrotnego Użytku | Wspólne Elementy
+  }
+  ==
+  {
+    == 1. Karty Statystyk (Metrics Cards)
+    .
+    {
+      .
+      [Aktywni użytkownicy]      [Opublikowane wydarzenia]     [Nowe aktualności]
+      [    3,456                 [         145                 [        34      ]
+      [    +234 (+7%)  ↗         [     +12 (+9%)  ↗            [    +8 (+31%) ↗]
+      .
+    }
+  }
+  --
+  {
+    == 2. Karta Pojedynczej Metryki - Rozszerzona
+    .
+    {
+      ==================================================
+      **Aktywni użytkownicy (ostatnie 24h)**
+      .
+      <size:24><b>3,456</b></size>
+      .
+      <color:green>↗ +234 (+7%)</color> vs poprzedni dzień
+      .
+      Trend: <color:green>████████░░</color> 80% wzrost w tygodniu
+      ==================================================
+    }
+  }
+  --
+  {
+    == 3. Alerty i Powiadomienia
+    .
+    **Sukces:**
+    {
+      <color:green>✓ Sukces</color>
+      Wydarzenie zostało pomyślnie opublikowane
+      [×]
+    }
+    .
+    **Informacja:**
+    {
+      <color:blue>ⓘ Informacja</color>
+      Twoje zmiany zostały zapisane jako wersja robocza
+      [×]
+    }
+    .
+    **Ostrzeżenie:**
+    {
+      <color:orange>⚠ Ostrzeżenie</color>
+      To wydarzenie ma mniej niż 10 zapisanych uczestników
+      [×]
+    }
+    .
+    **Błąd:**
+    {
+      <color:red>✗ Błąd</color>
+      Nie udało się zapisać zmian. Sprawdź połączenie internetowe.
+      [×]
+    }
+  }
+  --
+  {
+    == 4. Odznaki Statusu (Status Badges)
+    .
+    <color:green><b>[Opublikowane]</b></color> | <color:orange><b>[Wersja robocza]</b></color> | <color:red><b>[Oczekuje zatwierdzenia]</b></color>
+    .
+    <color:gray><b>[Archiwalne]</b></color> | <color:blue><b>[Zaplanowane]</b></color> | <color:purple><b>[W trakcie]</b></color>
+  }
+  --
+  {
+    == 5. Przyciski - Warianty
+    .
+    **Podstawowe:**
+    [Przycisk Podstawowy]
+    .
+    **Główny (Primary):**
+    <color:blue>[Zapisz]</color> <color:blue>[Publikuj]</color> <color:blue>[Zatwierdź]</color>
+    .
+    **Drugorzędny (Secondary):**
+    [Anuluj] [Wstecz] [Pomiń]
+    .
+    **Niebezpieczny (Danger):**
+    <color:red>[Usuń]</color> <color:red>[Odrzuć]</color> <color:red>[Zablokuj]</color>
+    .
+    **Sukces:**
+    <color:green>[Zatwierdź]</color> <color:green>[Opublikuj]</color>
+    .
+    **Nieaktywny:**
+    [Zapisz] <i>(disabled)</i>
+    .
+    **Z ikoną:**
+    [+ Dodaj] [✓ Zapisz] [🗑 Usuń] [📥 Eksportuj]
+  }
+  --
+  {
+    == 6. Okno Modalne (Modal Dialog)
+    .
+    ====================================================
+    **Potwierdź usunięcie**                         [×]
+    ====================================================
+    .
+    Czy na pewno chcesz usunąć wydarzenie
+    "Dni Otwarte WEiTI 2026"?
+    .
+    <color:orange>⚠ Tej operacji nie można cofnąć.</color>
+    .
+    [Anuluj] [<color:red>Usuń</color>]
+    ====================================================
+  }
+  --
+  {
+    == 7. Tabela z Akcjami
+    .
+    {#
+      . **Tytuł** | **Data** | **Status** | **Akcje**
+      . Dni Otwarte WEiTI | 2026-03-15 | <color:green>Opublikowane</color> | [Edytuj] [Podgląd] [⋮]
+      . Hackathon AI | 2026-04-20 | <color:orange>Wersja robocza</color> | [Edytuj] [Publikuj] [⋮]
+      . Targi Pracy | 2026-05-10 | <color:green>Opublikowane</color> | [Edytuj] [Podgląd] [⋮]
+    }
+    .
+    **Akcje masowe:**
+    [ ] Zaznacz wszystkie | Zaznaczone (0): [Usuń] [Eksportuj] [Zmień status]
+  }
+  --
+  {
+    == 8. Lista z Checkboxami
+    .
+    **Wybierz uprawnienia:**
+    [X] Tworzenie wydarzeń
+    [X] Edycja wydarzeń
+    [ ] Usuwanie wydarzeń
+    [X] Publikacja wydarzeń
+    [ ] Moderacja treści
+    [X] Dostęp do statystyk
+    .
+    [Zaznacz wszystkie] | [Odznacz wszystkie]
+  }
+  --
+  {
+    == 9. Accordion (Rozwijane Sekcje)
+    .
+    [▼] **Podstawowe informacje** (rozwinięte)
+        Tytuł: Dni Otwarte WEiTI 2026
+        Data: 2026-03-15 14:00
+        Lokalizacja: Gmach Główny WEiTI
+    .
+    [▶] **Szczegóły wydarzenia** (zwinięte)
+    .
+    [▶] **Rejestracja i uczestnicy** (zwinięte)
+    .
+    [▶] **Statystyki** (zwinięte)
+  }
+  --
+  {
+    == 10. Pasek Postępu (Progress Bar)
+    .
+    **Zapisywanie zmian...**
+    <color:blue>████████████░░░░░░░░</color> 60%
+    .
+    **Zapisy na wydarzenie:**
+    <color:green>██████████████████░░</color> 45/100 (45%)
+  }
+  --
+  {
+    == 11. Tooltips (Podpowiedzi)
+    .
+    [Pomoc (?)]  ← po najechaniu: "Kliknij aby zobaczyć dokumentację"
+    .
+    Status: <color:green>[Opublikowane]</color> ← po najechaniu: "Treść widoczna dla wszystkich użytkowników"
+  }
+  --
+  {
+    == 12. Empty State (Pusty Stan)
+    .
+    ====================================================
+    .
+              📭
+    .
+    **Brak wydarzeń**
+    .
+    Nie masz jeszcze żadnych wydarzeń.
+    Rozpocznij od stworzenia pierwszego!
+    .
+    [+ Utwórz Pierwsze Wydarzenie]
+    .
+    ====================================================
+  }
+  --
+  {
+    == 13. Loading State (Stan Ładowania)
+    .
+    ====================================================
+    .
+              ⏳
+    .
+    **Ładowanie danych...**
+    .
+    Proszę czekać, trwa pobieranie informacji.
+    .
+    ====================================================
+    .
+    LUB:
+    .
+    <color:blue>⟳ Ładowanie...</color> (animowany spinner)
+  }
+  --
+  {
+    == 14. Breadcrumb Trail (Okruszki)
+    .
+    <&home> [Strona główna] > [Wydarzenia] > [Dni Otwarte] > Edycja
+  }
+  --
+  {
+    == 15. Avatar z Inicjałami
+    .
+    ( JK ) Jan Kowalski
+    ( AN ) Anna Nowak
+    ( PW ) Piotr Wiśniewski
+  }
+  --
+  {
+    == 16. Dropdown Menu (Rozwijane Menu)
+    .
+    [Akcje ▼]
+    .
+    Po kliknięciu:
+    * Edytuj
+    * Duplikuj
+    * --
+    * Eksportuj do PDF
+    * Eksportuj do Excel
+    * --
+    * <color:red>Usuń</color>
+  }
+  --
+  {
+    == 17. Chip/Tag (Etykieta)
+    .
+    <color:blue>[rekrutacja ×]</color> <color:purple>[warsztat ×]</color> <color:green>[bezpłatne ×]</color>
+    .
+    [+ Dodaj tag]
+  }
+  --
+  {
+    == 18. Date Picker (Wybór Daty)
+    .
+    **Data wydarzenia:**
+    [2026-03-15] [📅]
+    .
+    Po kliknięciu [📅] otwiera się kalendarz:
+    {#
+      . P | W | Ś | C | P | S | N
+      . - | - | - | - | - | 1 | 2
+      . 3 | 4 | 5 | 6 | 7 | 8 | 9
+      . 10 | 11 | 12 | 13 | 14 | <b>15</b> | 16
+      . 17 | 18 | 19 | 20 | 21 | 22 | 23
+    }
+    [Dziś] [Wyczyść] [Anuluj]
+  }
+  --
+  {
+    == 19. Sortowanie w Tabeli
+    .
+    {#
+      . **Tytuł ↕** | **Data ↓** | **Status ↕** | **Akcje**
+      . Hackathon AI | 2026-04-20 | Draft | [...]
+      . Targi Pracy | 2026-05-10 | Opublikowane | [...]
+      . Dni Otwarte | 2026-03-15 | Opublikowane | [...]
+    }
+    .
+    ↕ - sortowanie dostępne, nie zastosowane
+    ↓ - sortowanie malejące
+    ↑ - sortowanie rosnące
+  }
+  --
+  {
+    == 20. Wyświetlanie Błędów Systemowych
+    .
+    ====================================================
+    <color:red>⚠ Wystąpił błąd</color>
+    .
+    Nie udało się załadować danych.
+    .
+    **Kod błędu:** 500
+    **Komunikat:** Internal Server Error
+    .
+    [Spróbuj ponownie] [Zgłoś problem] [Wróć do strony głównej]
+    ====================================================
+  }
+  --
+  {
+    == Zasady Projektowania Komponentów (WCAG 2.1)
+    .
+    * Odpowiedni kontrast kolorów (minimum 4.5:1 dla tekstu)
+    * Etykiety ARIA dla wszystkich interaktywnych elementów
+    * Wsparcie nawigacji klawiaturowej (Tab, Enter, Esc)
+    * Fokus wizualny na aktywnym elemencie
+    * Komunikaty o błędach czytelne dla czytników ekranu
+    * Animacje z możliwością wyłączenia (prefers-reduced-motion)
+    * Responsywność i adaptacja do różnych rozmiarów ekranu
+    * Semantyczne znaczniki HTML (button, nav, main, etc.)
+  }
+}
+@endsalt

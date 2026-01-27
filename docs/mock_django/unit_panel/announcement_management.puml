@@ -1,0 +1,74 @@
+@startsalt
+{
+  {T
+   + Panel Jednostki | Zarządzanie Aktualnościami
+  }
+  ==
+  {+
+    {/ <b>Menu
+      * <&home> Dashboard
+      * <&calendar> Wydarzenia
+      * <&document> <b>Aktualności</b>
+      * <&bar-chart> Statystyki
+      * <&people> Użytkownicy
+      * <&cog> Ustawienia
+    | 
+    {^"Zarządzanie Aktualnościami i Ogłoszeniami"
+      {
+        == Filtry
+        .
+        Status: [Wszystkie ▼] | Kategoria: [Wszystkie ▼] | Priorytet: [Wszystkie ▼]
+        .
+        Szukaj w tytule i treści: [                                    ] [Szukaj] [Wyczyść]
+      }
+      --
+      {
+        == Lista Aktualności (15)
+        .
+        {#
+          . **Tytuł** | **Data publikacji** | **Kategoria** | **Priorytet** | **Status** | **Wyświetlenia** | **Akcje**
+          . Nowe stypendium dla wyróżniających się studentów | 2026-01-13 09:00 | Stypendia | <color:red>Wysoki</color> | <color:orange>Wersja robocza</color> | 0 | [Edytuj] [Publikuj] [Usuń]
+          . Rekrutacja na studia doktoranckie 2026/2027 | 2026-01-12 14:30 | Rekrutacja | <color:red>Wysoki</color> | <color:green>Opublikowane</color> | 1,234 | [Edytuj] [Podgląd] [Archiwizuj]
+          . Zmiana godzin otwarcia dziekanatu | 2026-01-10 10:15 | Organizacyjne | Średni | <color:green>Opublikowane</color> | 567 | [Edytuj] [Podgląd] [Archiwizuj]
+          . Warsztaty z programowania w Pythonie | 2026-01-08 16:00 | Edukacja | Niski | <color:green>Opublikowane</color> | 342 | [Edytuj] [Podgląd] [Archiwizuj]
+          . Konkurs na najlepszy projekt inżynierski | 2026-01-05 11:45 | Konkursy | Średni | <color:green>Opublikowane</color> | 891 | [Edytuj] [Podgląd] [Archiwizuj]
+          . Nowy harmonogram zajęć semestru letniego | 2026-01-03 08:00 | Organizacyjne | <color:red>Wysoki</color> | <color:green>Opublikowane</color> | 2,456 | [Edytuj] [Podgląd] [Archiwizuj]
+          . Program wymiany międzynarodowej Erasmus+ | 2025-12-20 13:30 | Międzynarodowe | Średni | <color:green>Opublikowane</color> | 678 | [Edytuj] [Podgląd] [Archiwizuj]
+          . Świąteczne życzenia od Dziekana | 2025-12-23 12:00 | Ogłoszenia | Niski | <color:gray>Archiwalne</color> | 3,124 | [Podgląd] [Przywróć] [Usuń]
+        }
+      }
+      --
+      {
+        [< Poprzednia] | Strona 1 z 2 | [Następna >]
+      }
+      --
+      {
+        [+ Utwórz Nową Aktualność] | [Eksportuj statystyki] | [Zarządzaj kategoriami]
+      }
+      --
+      {
+        == Statystyki szybkie
+        .
+        * Aktualności opublikowane w tym miesiącu: **15**
+        * Średnia liczba wyświetleń: **1,284**
+        * Najpopularniejsza aktualność: "Nowy harmonogram zajęć semestru letniego" (2,456 wyświetleń)
+      }
+      --
+      {
+        == Legenda
+        * <color:red>Wysoki</color> - priorytet wysoki (wyświetlane na górze listy)
+        * Średni - priorytet standardowy
+        * Niski - priorytet niski
+        * <color:green>Opublikowane</color> - widoczne dla użytkowników
+        * <color:orange>Wersja robocza</color> - w trakcie edycji
+        * <color:gray>Archiwalne</color> - nieaktywne
+      }
+    }
+    }
+  }
+  --
+  {
+    <i>Panel Jednostki WEiTI | Zalogowano: Jan Kowalski
+  }
+}
+@endsalt

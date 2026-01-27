@@ -1,0 +1,1731 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css"
+     data-diagram-type="DESCRIPTION" height="1877px" preserveAspectRatio="none"
+     style="width:4973px;height:1877px;background:#FFFFFF;" version="1.1" viewBox="0 0 4973 1877" width="4973px"
+     zoomAndPan="magnify">
+    <title>PW Companion - Component Diagram</title>
+    <defs>
+        <filter height="1" id="buvobmurtllc40" width="1" x="0" y="0">
+            <feFlood flood-color="#E3F2FD" result="flood"/>
+            <feComposite in="SourceGraphic" in2="flood" operator="over"/>
+        </filter>
+        <filter height="1" id="buvobmurtllc41" width="1" x="0" y="0">
+            <feFlood flood-color="#BBDEFB" result="flood"/>
+            <feComposite in="SourceGraphic" in2="flood" operator="over"/>
+        </filter>
+        <filter height="1" id="buvobmurtllc42" width="1" x="0" y="0">
+            <feFlood flood-color="#C5CAE9" result="flood"/>
+            <feComposite in="SourceGraphic" in2="flood" operator="over"/>
+        </filter>
+        <filter height="1" id="buvobmurtllc43" width="1" x="0" y="0">
+            <feFlood flood-color="#FFCCBC" result="flood"/>
+            <feComposite in="SourceGraphic" in2="flood" operator="over"/>
+        </filter>
+    </defs>
+    <g>
+        <g class="title" data-source-line="7">
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="274.7842" x="2342.5506" y="23.5352">PW Companion - Component Diagram
+            </text>
+        </g><!--cluster Mobile Application Layer-->
+        <g class="cluster" data-entity="Mobile Application Layer" data-source-line="27" data-uid="ent0002"
+           id="cluster_Mobile Application Layer">
+            <rect fill="#E3F2FD" height="202.97" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="1586"
+                  x="1126" y="222.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="178.5752" x="1829.7124" y="238.1334">Mobile Application Layer
+            </text>
+        </g><!--cluster FlutterApp-->
+        <g class="cluster" data-entity="FlutterApp" data-source-line="29" data-uid="ent0003" id="cluster_FlutterApp">
+            <rect fill="#BBDEFB" height="119.97" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="1522"
+                  x="1158" y="273.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="134.0254" x="1851.9873" y="289.1334">Flutter Mobile App
+            </text>
+        </g><!--cluster Backend API Layer-->
+        <g class="cluster" data-entity="Backend API Layer" data-source-line="46" data-uid="ent0013"
+           id="cluster_Backend API Layer">
+            <rect fill="#E3F2FD" height="339.22" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="1034"
+                  x="1011" y="449.5683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="131.8994" x="1462.0503" y="465.1034">Backend API Layer
+            </text>
+        </g><!--cluster DRF-->
+        <g class="cluster" data-entity="DRF" data-source-line="48" data-uid="ent0014" id="cluster_DRF">
+            <rect fill="#BBDEFB" height="256.22" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="970"
+                  x="1043" y="500.5683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="176.9756" x="1439.5122" y="516.1034">Django REST Framework
+            </text>
+        </g><!--cluster Business Logic Layer (Django Apps)-->
+        <g class="cluster" data-entity="Business Logic Layer .Django Apps." data-source-line="64" data-uid="ent0023"
+           id="cluster_Business Logic Layer .Django Apps.">
+            <rect fill="#E3F2FD" height="470.93" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="3165"
+                  x="7" y="812.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="258.1113" x="1460.4443" y="828.3234">Business Logic Layer (Django Apps)
+            </text>
+        </g><!--cluster Users App-->
+        <g class="cluster" data-entity="Users App" data-source-line="66" data-uid="ent0024" id="cluster_Users App">
+            <path d="M971.5,855.7883 L1046.6836,855.7883 A3.75,3.75 0 0 1 1049.1836,858.2883 L1056.1836,878.2766 L1410.5,878.2766 A2.5,2.5 0 0 1 1413,880.7766 L1413,1061.9983 A2.5,2.5 0 0 1 1410.5,1064.4983 L971.5,1064.4983 A2.5,2.5 0 0 1 969,1061.9983 L969,858.2883 A2.5,2.5 0 0 1 971.5,855.7883"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="969" x2="1056.1836" y1="878.2766" y2="878.2766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="74.1836" x="973" y="871.3234">Users App
+            </text>
+        </g><!--cluster Announcements App-->
+        <g class="cluster" data-entity="Announcements App" data-source-line="74" data-uid="ent0030"
+           id="cluster_Announcements App">
+            <path d="M33.5,855.7883 L184.2207,855.7883 A3.75,3.75 0 0 1 186.7207,858.2883 L193.7207,878.2766 L474.5,878.2766 A2.5,2.5 0 0 1 477,880.7766 L477,1070.2383 A2.5,2.5 0 0 1 474.5,1072.7383 L33.5,1072.7383 A2.5,2.5 0 0 1 31,1070.2383 L31,858.2883 A2.5,2.5 0 0 1 33.5,855.7883"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="31" x2="193.7207" y1="878.2766" y2="878.2766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="149.7207" x="35" y="871.3234">Announcements App
+            </text>
+        </g><!--cluster Events App-->
+        <g class="cluster" data-entity="Events App" data-source-line="81" data-uid="ent0035" id="cluster_Events App">
+            <path d="M1613.5,864.0383 L1695.6768,864.0383 A3.75,3.75 0 0 1 1698.1768,866.5383 L1705.1768,886.5266 L2057.5,886.5266 A2.5,2.5 0 0 1 2060,889.0266 L2060,1070.2383 A2.5,2.5 0 0 1 2057.5,1072.7383 L1613.5,1072.7383 A2.5,2.5 0 0 1 1611,1070.2383 L1611,866.5383 A2.5,2.5 0 0 1 1613.5,864.0383"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="1611" x2="1705.1768" y1="886.5266" y2="886.5266"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="81.1768" x="1615" y="879.5734">Events App
+            </text>
+        </g><!--cluster Event Registration App-->
+        <g class="cluster" data-entity="Event Registration App" data-source-line="88" data-uid="ent0040"
+           id="cluster_Event Registration App">
+            <path d="M503.5,855.7883 L670.5723,855.7883 A3.75,3.75 0 0 1 673.0723,858.2883 L680.0723,878.2766 L942.5,878.2766 A2.5,2.5 0 0 1 945,880.7766 L945,1070.2383 A2.5,2.5 0 0 1 942.5,1072.7383 L503.5,1072.7383 A2.5,2.5 0 0 1 501,1070.2383 L501,858.2883 A2.5,2.5 0 0 1 503.5,855.7883"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="501" x2="680.0723" y1="878.2766" y2="878.2766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="166.0723" x="505" y="871.3234">Event Registration App
+            </text>
+        </g><!--cluster Maps App-->
+        <g class="cluster" data-entity="Maps App" data-source-line="95" data-uid="ent0045" id="cluster_Maps App">
+            <path d="M2833.5,855.7883 L2906.1064,855.7883 A3.75,3.75 0 0 1 2908.6064,858.2883 L2915.6064,878.2766 L3145.5,878.2766 A2.5,2.5 0 0 1 3148,880.7766 L3148,1070.2383 A2.5,2.5 0 0 1 3145.5,1072.7383 L2833.5,1072.7383 A2.5,2.5 0 0 1 2831,1070.2383 L2831,858.2883 A2.5,2.5 0 0 1 2833.5,855.7883"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="2831" x2="2915.6064" y1="878.2766" y2="878.2766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="71.6064" x="2835" y="871.3234">Maps App
+            </text>
+        </g><!--cluster Guides App-->
+        <g class="cluster" data-entity="Guides App" data-source-line="102" data-uid="ent0050" id="cluster_Guides App">
+            <path d="M1439.5,855.7883 L1523.5566,855.7883 A3.75,3.75 0 0 1 1526.0566,858.2883 L1533.0566,878.2766 L1584.5,878.2766 A2.5,2.5 0 0 1 1587,880.7766 L1587,1061.9983 A2.5,2.5 0 0 1 1584.5,1064.4983 L1439.5,1064.4983 A2.5,2.5 0 0 1 1437,1061.9983 L1437,858.2883 A2.5,2.5 0 0 1 1439.5,855.7883"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="1437" x2="1533.0566" y1="878.2766" y2="878.2766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="83.0566" x="1441" y="871.3234">Guides App
+            </text>
+        </g><!--cluster Notifications App-->
+        <g class="cluster" data-entity="Notifications App" data-source-line="107" data-uid="ent0053"
+           id="cluster_Notifications App">
+            <path d="M2262.5,855.7883 L2389.2197,855.7883 A3.75,3.75 0 0 1 2391.7197,858.2883 L2398.7197,878.2766 L2558.5,878.2766 A2.5,2.5 0 0 1 2561,880.7766 L2561,1070.2383 A2.5,2.5 0 0 1 2558.5,1072.7383 L2262.5,1072.7383 A2.5,2.5 0 0 1 2260,1070.2383 L2260,858.2883 A2.5,2.5 0 0 1 2262.5,855.7883"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="2260" x2="2398.7197" y1="878.2766" y2="878.2766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="125.7197" x="2264" y="871.3234">Notifications App
+            </text>
+        </g><!--cluster Permissions & Authorization-->
+        <g class="cluster" data-entity="Permissions . Authorization" data-source-line="113" data-uid="ent0057"
+           id="cluster_Permissions . Authorization">
+            <path d="M2587.5,855.7883 L2794.9658,855.7883 A3.75,3.75 0 0 1 2797.4658,858.2883 L2804.4658,878.2766 L2804.5,878.2766 A2.5,2.5 0 0 1 2807,880.7766 L2807,1257.2183 A2.5,2.5 0 0 1 2804.5,1259.7183 L2587.5,1259.7183 A2.5,2.5 0 0 1 2585,1257.2183 L2585,858.2883 A2.5,2.5 0 0 1 2587.5,855.7883"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="2585" x2="2804.4658" y1="878.2766" y2="878.2766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="206.4658" x="2589" y="871.3234">Permissions &amp; Authorization
+            </text>
+        </g><!--cluster Units App-->
+        <g class="cluster" data-entity="Units App" data-source-line="119" data-uid="ent0061" id="cluster_Units App">
+            <path d="M2086.5,855.7883 L2158.6211,855.7883 A3.75,3.75 0 0 1 2161.1211,858.2883 L2168.1211,878.2766 L2233.5,878.2766 A2.5,2.5 0 0 1 2236,880.7766 L2236,1070.2383 A2.5,2.5 0 0 1 2233.5,1072.7383 L2086.5,1072.7383 A2.5,2.5 0 0 1 2084,1070.2383 L2084,858.2883 A2.5,2.5 0 0 1 2086.5,855.7883"
+                  fill="#BBDEFB" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="2084" x2="2168.1211" y1="878.2766" y2="878.2766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="71.1211" x="2088" y="871.3234">Units App
+            </text>
+        </g><!--cluster Data Access Layer-->
+        <g class="cluster" data-entity="Data Access Layer" data-source-line="129" data-uid="ent0064"
+           id="cluster_Data Access Layer">
+            <rect fill="#E3F2FD" height="186.49" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="490"
+                  x="1062" y="1307.7183"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="130.8125" x="1241.5938" y="1323.2534">Data Access Layer
+            </text>
+        </g><!--cluster ORM-->
+        <g class="cluster" data-entity="ORM" data-source-line="131" data-uid="ent0065" id="cluster_ORM">
+            <rect fill="#BBDEFB" height="103.49" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="426"
+                  x="1094" y="1358.7183"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="89.8721" x="1262.064" y="1374.2534">Django ORM
+            </text>
+        </g><!--cluster Database Layer-->
+        <g class="cluster" data-entity="Database Layer" data-source-line="142" data-uid="ent0069"
+           id="cluster_Database Layer">
+            <rect fill="#E3F2FD" height="217.98" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="1289"
+                  x="437" y="1526.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="110.5781" x="1026.2109" y="1541.9834">Database Layer
+            </text>
+        </g><!--cluster PostgreSQL-->
+        <g class="cluster" data-entity="PostgreSQL" data-source-line="144" data-uid="ent0070" id="cluster_PostgreSQL">
+            <path d="M469,1587.4483 C469,1577.4483 1081.5,1577.4483 1081.5,1577.4483 C1081.5,1577.4483 1694,1577.4483 1694,1587.4483 L1694,1702.4283 C1694,1712.4283 1081.5,1712.4283 1081.5,1712.4283 C1081.5,1712.4283 469,1712.4283 469,1702.4283 L469,1587.4483"
+                  fill="#C5CAE9" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M469,1587.4483 C469,1597.4483 1081.5,1597.4483 1081.5,1597.4483 C1081.5,1597.4483 1694,1597.4483 1694,1587.4483"
+                  fill="none" style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="82.5918" x="1040.2041" y="1612.9834">PostgreSQL
+            </text>
+        </g><!--cluster External Systems-->
+        <g class="cluster" data-entity="External Systems" data-source-line="161" data-uid="ent0080"
+           id="cluster_External Systems">
+            <rect fill="#E3F2FD" height="405.71" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="1529"
+                  x="3196" y="1096.7383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="122.958" x="3899.021" y="1112.2734">External Systems
+            </text>
+        </g><!--cluster USOS-->
+        <g class="cluster" data-entity="USOS" data-source-line="163" data-uid="ent0081" id="cluster_USOS">
+            <rect fill="#FFCCBC" height="314.46" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="335"
+                  x="3594" y="1155.9883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="65.9805" x="3728.5098" y="1171.5234">USOS API
+            </text>
+        </g><!--cluster SSO-->
+        <g class="cluster" data-entity="SSO" data-source-line="170" data-uid="ent0086" id="cluster_SSO">
+            <rect fill="#FFCCBC" height="322.71" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="199"
+                  x="3969" y="1147.7383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="99.7979" x="4018.6011" y="1163.2734">SSO / OAuth2
+            </text>
+        </g><!--cluster MapsService-->
+        <g class="cluster" data-entity="MapsService" data-source-line="175" data-uid="ent0089" id="cluster_MapsService">
+            <rect fill="#FFCCBC" height="119.98" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="326"
+                  x="3228" y="1147.7383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="93.8232" x="3344.0884" y="1163.2734">Maps Service
+            </text>
+        </g><!--cluster PushNotifService-->
+        <g class="cluster" data-entity="PushNotifService" data-source-line="180" data-uid="ent0092"
+           id="cluster_PushNotifService">
+            <rect fill="#FFCCBC" height="296.58" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="485"
+                  x="4208" y="1173.8683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="123.833" x="4388.5835" y="1189.4034">Push Notification
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="51.0781" x="4424.9609" y="1205.8917">Service
+            </text>
+        </g><!--entity AuthModule-->
+        <g class="entity" data-entity="AuthModule" data-source-line="30" data-uid="ent0004" id="entity_AuthModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="119.5176" x="1993.24" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.5176"
+                  x="2003.24" y="340.1334">Authentication
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.0049"
+                  x="2003.24" y="356.6217">Module
+            </text>
+        </g><!--entity NewsModule-->
+        <g class="entity" data-entity="NewsModule" data-source-line="31" data-uid="ent0005" id="entity_NewsModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="173.3232" x="1182.34" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153.3232"
+                  x="1192.34" y="340.1334">News/Announcements
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.0049"
+                  x="1192.34" y="356.6217">Module
+            </text>
+        </g><!--entity EventsModule-->
+        <g class="entity" data-entity="EventsModule" data-source-line="32" data-uid="ent0006" id="entity_EventsModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="70.0049" x="1711" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.6953"
+                  x="1721" y="340.1334">Events
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.0049"
+                  x="1721" y="356.6217">Module
+            </text>
+        </g><!--entity RegistrationModule-->
+        <g class="entity" data-entity="RegistrationModule" data-source-line="33" data-uid="ent0007"
+           id="entity_RegistrationModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="142.8213" x="1815.59" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122.8213"
+                  x="1825.59" y="340.1334">Event Registration
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.0049"
+                  x="1825.59" y="356.6217">Module
+            </text>
+        </g><!--entity MapsModule-->
+        <g class="entity" data-entity="MapsModule" data-source-line="34" data-uid="ent0008" id="entity_MapsModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="146.7588" x="2147.62" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126.7588"
+                  x="2157.62" y="340.1334">Maps &amp; Navigation
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.0049"
+                  x="2157.62" y="356.6217">Module
+            </text>
+        </g><!--entity UsosClientModule-->
+        <g class="entity" data-entity="UsosClientModule" data-source-line="35" data-uid="ent0009"
+           id="entity_UsosClientModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="134.6045" x="2329.7" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.6045"
+                  x="2339.7" y="340.1334">USOS Integration
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.0049"
+                  x="2339.7" y="356.6217">Module
+            </text>
+        </g><!--entity NotifModule-->
+        <g class="entity" data-entity="NotifModule" data-source-line="36" data-uid="ent0010" id="entity_NotifModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="106.0303" x="1390.98" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.0303"
+                  x="1400.98" y="340.1334">Notifications
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.0049"
+                  x="1400.98" y="356.6217">Module
+            </text>
+        </g><!--entity GuidesModule-->
+        <g class="entity" data-entity="GuidesModule" data-source-line="37" data-uid="ent0011" id="entity_GuidesModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="144.708" x="1531.65" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124.708"
+                  x="1541.65" y="340.1334">Guides &amp; Contacts
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.0049"
+                  x="1541.65" y="356.6217">Module
+            </text>
+        </g><!--entity QRModule-->
+        <g class="entity" data-entity="QRModule" data-source-line="38" data-uid="ent0012" id="entity_QRModule">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="136.833" x="2499.58" y="316.5983"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116.833"
+                  x="2509.58" y="340.1334">QR Code Scanner
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.6211"
+                  x="2509.58" y="356.6217">&amp; Generator
+            </text>
+        </g><!--entity APIRouter-->
+        <g class="entity" data-entity="APIRouter" data-source-line="49" data-uid="ent0015" id="entity_APIRouter">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="90.7656" x="1629.62" y="543.5683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.7656"
+                  x="1639.62" y="567.1034">API Router
+            </text>
+        </g><!--entity AuthAPI-->
+        <g class="entity" data-entity="AuthAPI" data-source-line="50" data-uid="ent0016" id="entity_AuthAPI">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="119.5176" x="1615.24" y="679.8083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.5176"
+                  x="1625.24" y="703.3434">Authentication
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6074"
+                  x="1625.24" y="719.8317">Endpoints
+            </text>
+        </g><!--entity NewsAPI-->
+        <g class="entity" data-entity="NewsAPI" data-source-line="51" data-uid="ent0017" id="entity_NewsAPI">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="129.915" x="1067.04" y="679.8083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109.915"
+                  x="1077.04" y="703.3434">Announcements
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6074"
+                  x="1077.04" y="719.8317">Endpoints
+            </text>
+        </g><!--entity EventsAPI-->
+        <g class="entity" data-entity="EventsAPI" data-source-line="52" data-uid="ent0018" id="entity_EventsAPI">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="87.6074" x="1770.2" y="679.8083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.6953"
+                  x="1780.2" y="703.3434">Events
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6074"
+                  x="1780.2" y="719.8317">Endpoints
+            </text>
+        </g><!--entity RegAPI-->
+        <g class="entity" data-entity="RegAPI" data-source-line="53" data-uid="ent0019" id="entity_RegAPI">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="101.833" x="1232.08" y="679.8083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.833"
+                  x="1242.08" y="703.3434">Registration
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6074"
+                  x="1242.08" y="719.8317">Endpoints
+            </text>
+        </g><!--entity UserAPI-->
+        <g class="entity" data-entity="UserAPI" data-source-line="54" data-uid="ent0020" id="entity_UserAPI">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="87.6074" x="1369.2" y="679.8083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30.3652"
+                  x="1379.2" y="703.3434">User
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6074"
+                  x="1379.2" y="719.8317">Endpoints
+            </text>
+        </g><!--entity MapsAPI-->
+        <g class="entity" data-entity="MapsAPI" data-source-line="55" data-uid="ent0021" id="entity_MapsAPI">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="87.6074" x="1893.2" y="679.8083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35.7383"
+                  x="1903.2" y="703.3434">Maps
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6074"
+                  x="1903.2" y="719.8317">Endpoints
+            </text>
+        </g><!--entity GuidesAPI-->
+        <g class="entity" data-entity="GuidesAPI" data-source-line="56" data-uid="ent0022" id="entity_GuidesAPI">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="87.6074" x="1492.2" y="679.8083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46.6006"
+                  x="1502.2" y="703.3434">Guides
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.6074"
+                  x="1502.2" y="719.8317">Endpoints
+            </text>
+        </g><!--entity UserModel-->
+        <g class="entity" data-entity="UserModel" data-source-line="67" data-uid="ent0025" id="entity_UserModel">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="103.248" x="1132.38" y="1012.0083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.248"
+                  x="1142.38" y="1035.5434">User Models
+            </text>
+        </g><!--entity UserViews-->
+        <g class="entity" data-entity="UserViews" data-source-line="68" data-uid="ent0026" id="entity_UserViews">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="93.7188" x="985.14" y="899.0383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73.7188"
+                  x="995.14" y="922.5734">User Views
+            </text>
+        </g><!--entity UserViewSet-->
+        <g class="entity" data-entity="UserViewSet" data-source-line="69" data-uid="ent0027" id="entity_UserViewSet">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="140.1553" x="1113.92" y="899.0383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120.1553"
+                  x="1123.92" y="922.5734">User API ViewSets
+            </text>
+        </g><!--entity UserSerializer-->
+        <g class="entity" data-entity="UserSerializer" data-source-line="70" data-uid="ent0028"
+           id="entity_UserSerializer">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="124.4258" x="1270.79" y="1012.0083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.4258"
+                  x="1280.79" y="1035.5434">User Serializers
+            </text>
+        </g><!--entity UserPrefs-->
+        <g class="entity" data-entity="UserPrefs" data-source-line="71" data-uid="ent0029" id="entity_UserPrefs">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="107.5342" x="1289.23" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5381"
+                  x="1299.23" y="914.3234">Preferences
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.5342"
+                  x="1299.23" y="930.8117">Management
+            </text>
+        </g><!--entity AnnouncementModel-->
+        <g class="entity" data-entity="AnnouncementModel" data-source-line="75" data-uid="ent0031"
+           id="entity_AnnouncementModel">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="122.7783" x="46.61" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102.7783"
+                  x="56.61" y="1027.3034">Announcement
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48.4531"
+                  x="56.61" y="1043.7917">Models
+            </text>
+        </g><!--entity AnnouncementViews-->
+        <g class="entity" data-entity="AnnouncementViews" data-source-line="76" data-uid="ent0032"
+           id="entity_AnnouncementViews">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="122.7783" x="264.61" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102.7783"
+                  x="274.61" y="914.3234">Announcement
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38.9238"
+                  x="274.61" y="930.8117">Views
+            </text>
+        </g><!--entity ContentMod-->
+        <g class="entity" data-entity="ContentMod" data-source-line="77" data-uid="ent0033" id="entity_ContentMod">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="97.3008" x="204.35" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.9355"
+                  x="214.35" y="1027.3034">Content
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77.3008"
+                  x="214.35" y="1043.7917">Moderation
+            </text>
+        </g><!--entity I18nAnnouncement-->
+        <g class="entity" data-entity="I18nAnnouncement" data-source-line="78" data-uid="ent0034"
+           id="entity_I18nAnnouncement">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="124.3232" x="336.84" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.3232"
+                  x="346.84" y="1027.3034">Multi-language
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.416"
+                  x="346.84" y="1043.7917">Support
+            </text>
+        </g><!--entity EventModel-->
+        <g class="entity" data-entity="EventModel" data-source-line="82" data-uid="ent0036" id="entity_EventModel">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="109.4414" x="1627.28" y="1012.0083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.4414"
+                  x="1637.28" y="1035.5434">Event Models
+            </text>
+        </g><!--entity EventViews-->
+        <g class="entity" data-entity="EventViews" data-source-line="83" data-uid="ent0037" id="entity_EventViews">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="99.9121" x="1776.04" y="899.0383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.9121"
+                  x="1786.04" y="922.5734">Event Views
+            </text>
+        </g><!--entity EventFilters-->
+        <g class="entity" data-entity="EventFilters" data-source-line="84" data-uid="ent0038" id="entity_EventFilters">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="133.4834" x="1771.26" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113.4834"
+                  x="1781.26" y="1027.3034">Event Categories
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55.6924"
+                  x="1781.26" y="1043.7917">&amp; Filters
+            </text>
+        </g><!--entity AccessibilityInfo-->
+        <g class="entity" data-entity="AccessibilityInfo" data-source-line="85" data-uid="ent0039"
+           id="entity_AccessibilityInfo">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="103.624" x="1940.19" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.624"
+                  x="1950.19" y="1027.3034">Accessibility
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.5703"
+                  x="1950.19" y="1043.7917">Information
+            </text>
+        </g><!--entity RegModel-->
+        <g class="entity" data-entity="RegModel" data-source-line="89" data-uid="ent0041" id="entity_RegModel">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="101.833" x="517.08" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.833"
+                  x="527.08" y="1027.3034">Registration
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48.4531"
+                  x="527.08" y="1043.7917">Models
+            </text>
+        </g><!--entity TicketGen-->
+        <g class="entity" data-entity="TicketGen" data-source-line="90" data-uid="ent0042" id="entity_TicketGen">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="133.1484" x="653.43" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113.1484"
+                  x="663.43" y="1027.3034">Ticket Generator
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28.834"
+                  x="663.43" y="1043.7917">(QR)
+            </text>
+        </g><!--entity ParticipantMgmt-->
+        <g class="entity" data-entity="ParticipantMgmt" data-source-line="91" data-uid="ent0043"
+           id="entity_ParticipantMgmt">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="107.5342" x="743.23" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72.167"
+                  x="753.23" y="914.3234">Participant
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.5342"
+                  x="753.23" y="930.8117">Management
+            </text>
+        </g><!--entity CapacityMgmt-->
+        <g class="entity" data-entity="CapacityMgmt" data-source-line="92" data-uid="ent0044" id="entity_CapacityMgmt">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="107.5342" x="821.23" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57.7295"
+                  x="831.23" y="1027.3034">Capacity
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.5342"
+                  x="831.23" y="1043.7917">Management
+            </text>
+        </g><!--entity LocationModel-->
+        <g class="entity" data-entity="LocationModel" data-source-line="96" data-uid="ent0046"
+           id="entity_LocationModel">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="130.4209" x="2846.79" y="899.0383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.4209"
+                  x="2856.79" y="922.5734">Location Models
+            </text>
+        </g><!--entity RouteCalc-->
+        <g class="entity" data-entity="RouteCalc" data-source-line="97" data-uid="ent0047" id="entity_RouteCalc">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="95.6738" x="3026.16" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39.1768"
+                  x="3036.16" y="914.3234">Route
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.6738"
+                  x="3036.16" y="930.8117">Calculation
+            </text>
+        </g><!--entity AccessibleRoute-->
+        <g class="entity" data-entity="AccessibleRoute" data-source-line="98" data-uid="ent0048"
+           id="entity_AccessibleRoute">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="134.3857" x="2997.81" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.3857"
+                  x="3007.81" y="1027.3034">Accessible Route
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58.3584"
+                  x="3007.81" y="1043.7917">Planning
+            </text>
+        </g><!--entity CampusMaps-->
+        <g class="entity" data-entity="CampusMaps" data-source-line="99" data-uid="ent0049" id="entity_CampusMaps">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="115.293" x="2847.35" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95.293"
+                  x="2857.35" y="1027.3034">Campus Maps
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.1855"
+                  x="2857.35" y="1043.7917">Data
+            </text>
+        </g><!--entity GuideModel-->
+        <g class="entity" data-entity="GuideModel" data-source-line="103" data-uid="ent0051" id="entity_GuideModel">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="112.3467" x="1455.83" y="1012.0083"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.3467"
+                  x="1465.83" y="1035.5434">Guide Models
+            </text>
+        </g><!--entity GuideContent-->
+        <g class="entity" data-entity="GuideContent" data-source-line="104" data-uid="ent0052" id="entity_GuideContent">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="117.8291" x="1453.09" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97.8291"
+                  x="1463.09" y="914.3234">Guide Content
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.5342"
+                  x="1463.09" y="930.8117">Management
+            </text>
+        </g><!--entity NotifModel-->
+        <g class="entity" data-entity="NotifModel" data-source-line="108" data-uid="ent0054" id="entity_NotifModel">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="98.8936" x="2275.55" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.8936"
+                  x="2285.55" y="1027.3034">Notification
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48.4531"
+                  x="2285.55" y="1043.7917">Models
+            </text>
+        </g><!--entity PushService-->
+        <g class="entity" data-entity="PushService" data-source-line="109" data-uid="ent0055" id="entity_PushService">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="135.5752" x="2409.21" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.5752"
+                  x="2419.21" y="914.3234">Push Notification
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47.332"
+                  x="2419.21" y="930.8117">Service
+            </text>
+        </g><!--entity NotifPrefs-->
+        <g class="entity" data-entity="NotifPrefs" data-source-line="110" data-uid="ent0056" id="entity_NotifPrefs">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="98.8936" x="2275.55" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.8936"
+                  x="2285.55" y="914.3234">Notification
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5381"
+                  x="2285.55" y="930.8117">Preferences
+            </text>
+        </g><!--entity PermModel-->
+        <g class="entity" data-entity="PermModel" data-source-line="114" data-uid="ent0058" id="entity_PermModel">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="93.9922" x="2614" y="1190.7383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73.9922"
+                  x="2624" y="1214.2734">Permission
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48.4531"
+                  x="2624" y="1230.7617">Models
+            </text>
+        </g><!--entity PermGroups-->
+        <g class="entity" data-entity="PermGroups" data-source-line="115" data-uid="ent0059" id="entity_PermGroups">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="147.5039" x="2601.25" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127.5039"
+                  x="2611.25" y="1027.3034">Permission Groups
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73.3975"
+                  x="2611.25" y="1043.7917">&amp; Schemes
+            </text>
+        </g><!--entity RBAC-->
+        <g class="entity" data-entity="RBAC" data-source-line="116" data-uid="ent0060" id="entity_RBAC">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="148.1943" x="2600.9" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.1943"
+                  x="2610.9" y="914.3234">Role-based Access
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100.3721"
+                  x="2610.9" y="930.8117">Control (RBAC)
+            </text>
+        </g><!--entity UnitModel-->
+        <g class="entity" data-entity="UnitModel" data-source-line="120" data-uid="ent0062" id="entity_UnitModel">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="119.9072" x="2100.05" y="1003.7683"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.9072"
+                  x="2110.05" y="1027.3034">Organizational
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80.5547"
+                  x="2110.05" y="1043.7917">Unit Models
+            </text>
+        </g><!--entity UnitHierarchy-->
+        <g class="entity" data-entity="UnitHierarchy" data-source-line="121" data-uid="ent0063"
+           id="entity_UnitHierarchy">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="116.5986" x="2101.7" y="890.7883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96.5986"
+                  x="2111.7" y="914.3234">Unit Hierarchy
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87.5342"
+                  x="2111.7" y="930.8117">Management
+            </text>
+        </g><!--entity ModelsLayer-->
+        <g class="entity" data-entity="ModelsLayer" data-source-line="132" data-uid="ent0066" id="entity_ModelsLayer">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="108.9219" x="1117.54" y="1401.7183"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88.9219"
+                  x="1127.54" y="1425.2534">Models Layer
+            </text>
+        </g><!--entity QuerySets-->
+        <g class="entity" data-entity="QuerySets" data-source-line="133" data-uid="ent0067" id="entity_QuerySets">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="88.1201" x="1261.94" y="1401.7183"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.1201"
+                  x="1271.94" y="1425.2534">QuerySets
+            </text>
+        </g><!--entity Migrations-->
+        <g class="entity" data-entity="Migrations" data-source-line="134" data-uid="ent0068" id="entity_Migrations">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="92.0029" x="1385" y="1401.7183"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72.0029"
+                  x="1395" y="1425.2534">Migrations
+            </text>
+        </g><!--entity UserTables-->
+        <g class="entity" data-entity="UserTables" data-source-line="145" data-uid="ent0071" id="entity_UserTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="108.3955" x="897.8" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88.3955"
+                  x="907.8" y="1658.9834">Users &amp; Auth
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="907.8" y="1675.4717">Tables
+            </text>
+        </g><!--entity NewsTables-->
+        <g class="entity" data-entity="NewsTables" data-source-line="146" data-uid="ent0072" id="entity_NewsTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="129.915" x="1041.04" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109.915"
+                  x="1051.04" y="1658.9834">Announcements
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="1051.04" y="1675.4717">Tables
+            </text>
+        </g><!--entity EventTables-->
+        <g class="entity" data-entity="EventTables" data-source-line="147" data-uid="ent0073" id="entity_EventTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="64.3789" x="1205.81" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.6953"
+                  x="1215.81" y="1658.9834">Events
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="1215.81" y="1675.4717">Tables
+            </text>
+        </g><!--entity RegTables-->
+        <g class="entity" data-entity="RegTables" data-source-line="148" data-uid="ent0074" id="entity_RegTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="108.9697" x="1305.52" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88.9697"
+                  x="1315.52" y="1658.9834">Registrations
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="1315.52" y="1675.4717">Tables
+            </text>
+        </g><!--entity PermTables-->
+        <g class="entity" data-entity="PermTables" data-source-line="149" data-uid="ent0075" id="entity_PermTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="101.1289" x="1449.44" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.1289"
+                  x="1459.44" y="1658.9834">Permissions
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="1459.44" y="1675.4717">Tables
+            </text>
+        </g><!--entity UnitTables-->
+        <g class="entity" data-entity="UnitTables" data-source-line="150" data-uid="ent0076" id="entity_UnitTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="64.3789" x="1585.81" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34.8086"
+                  x="1595.81" y="1658.9834">Units
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="1595.81" y="1675.4717">Tables
+            </text>
+        </g><!--entity MapsTables-->
+        <g class="entity" data-entity="MapsTables" data-source-line="151" data-uid="ent0077" id="entity_MapsTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="127.7549" x="493.12" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107.7549"
+                  x="503.12" y="1658.9834">Maps/Locations
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="503.12" y="1675.4717">Tables
+            </text>
+        </g><!--entity GuidesTables-->
+        <g class="entity" data-entity="GuidesTables" data-source-line="152" data-uid="ent0078" id="entity_GuidesTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="66.6006" x="655.7" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46.6006"
+                  x="665.7" y="1658.9834">Guides
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="665.7" y="1675.4717">Tables
+            </text>
+        </g><!--entity NotifTables-->
+        <g class="entity" data-entity="NotifTables" data-source-line="153" data-uid="ent0079" id="entity_NotifTables">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="106.0303" x="756.98" y="1635.4483"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.0303"
+                  x="766.98" y="1658.9834">Notifications
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.3789"
+                  x="766.98" y="1675.4717">Tables
+            </text>
+        </g><!--entity USOSCourses-->
+        <g class="entity" data-entity="USOSCourses" data-source-line="164" data-uid="ent0082" id="entity_USOSCourses">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="103.2549" x="3618.37" y="1198.9883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83.2549"
+                  x="3628.37" y="1222.5234">Course Data
+            </text>
+        </g><!--entity USOSExams-->
+        <g class="entity" data-entity="USOSExams" data-source-line="165" data-uid="ent0083" id="entity_USOSExams">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="129.0879" x="3756.46" y="1198.9883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109.0879"
+                  x="3766.46" y="1222.5234">Exam Schedules
+            </text>
+        </g><!--entity USOSPayments-->
+        <g class="entity" data-entity="USOSPayments" data-source-line="166" data-uid="ent0084" id="entity_USOSPayments">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="108.4775" x="3617.76" y="1401.7183"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88.4775"
+                  x="3627.76" y="1425.2534">Payment Info
+            </text>
+        </g><!--entity USOSDeadlines-->
+        <g class="entity" data-entity="USOSDeadlines" data-source-line="167" data-uid="ent0085"
+           id="entity_USOSDeadlines">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="101.833" x="3761.08" y="1393.4783"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.833"
+                  x="3771.08" y="1417.0134">Registration
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.5479"
+                  x="3771.08" y="1433.5017">Deadlines
+            </text>
+        </g><!--entity IdP-->
+        <g class="entity" data-entity="IdP" data-source-line="171" data-uid="ent0087" id="entity_IdP">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="131.2959" x="3993.35" y="1190.7383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.9443"
+                  x="4003.35" y="1214.2734">University
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111.2959"
+                  x="4003.35" y="1230.7617">Identity Provider
+            </text>
+        </g><!--entity OAuth-->
+        <g class="entity" data-entity="OAuth" data-source-line="172" data-uid="ent0088" id="entity_OAuth">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="119.5176" x="3996.24" y="1393.4783"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.001"
+                  x="4006.24" y="1417.0134">OAuth2
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.5176"
+                  x="4006.24" y="1433.5017">Authentication
+            </text>
+        </g><!--entity OSM-->
+        <g class="entity" data-entity="OSM" data-source-line="176" data-uid="ent0090" id="entity_OSM">
+            <rect fill="#F1F1F1" height="36.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="124.1182" x="3386.94" y="1198.9883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.1182"
+                  x="3396.94" y="1222.5234">OpenStreetMap
+            </text>
+        </g><!--entity PWMaps-->
+        <g class="entity" data-entity="PWMaps" data-source-line="177" data-uid="ent0091" id="entity_PWMaps">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="99.2695" x="3252.37" y="1190.7383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.2695"
+                  x="3262.37" y="1214.2734">PW Campus
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71.3535"
+                  x="3262.37" y="1230.7617">Maps Data
+            </text>
+        </g><!--entity FCM-->
+        <g class="entity" data-entity="FCM" data-source-line="181" data-uid="ent0093" id="entity_FCM">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="206.416" x="4231.79" y="1393.4783"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29.251"
+                  x="4241.79" y="1417.0134">FCM
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186.416"
+                  x="4241.79" y="1433.5017">(Firebase Cloud Messaging)
+            </text>
+        </g><!--entity APNs-->
+        <g class="entity" data-entity="APNs" data-source-line="182" data-uid="ent0094" id="entity_APNs">
+            <rect fill="#F1F1F1" height="52.9766" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="195.376" x="4473.31" y="1393.4783"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34.877"
+                  x="4483.31" y="1417.0134">APNs
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175.376"
+                  x="4483.31" y="1433.5017">(Apple Push Notifications)
+            </text>
+        </g>
+        <g class="entity" data-entity="GMN167" data-source-line="309" data-uid="ent0168" id="entity_GMN167">
+            <path d="M2552.43,43.4883 L2552.43,206.5938 L2791.5672,206.5938 L2791.5672,53.4883 L2781.5672,43.4883 L2552.43,43.4883"
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M2781.5672,43.4883 L2781.5672,53.4883 L2791.5672,53.4883 L2781.5672,43.4883" fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="218.1372"
+                  x="2558.43" y="61.0566">Cross-platform mobile application
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125.1758"
+                  x="2558.43" y="76.3672">for Android and iOS
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4.1133"
+                  x="2558.43" y="91.6777">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82.0688"
+                  x="2558.43" y="106.9883">Key features:
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="162.6904"
+                  x="2558.43" y="122.2988">- News &amp; announcements
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="193.6606"
+                  x="2558.43" y="137.6094">- Event calendar &amp; registration
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="170.2124"
+                  x="2558.43" y="152.9199">- Digital tickets (QR codes)
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="184.0439"
+                  x="2558.43" y="168.2305">- Campus maps &amp; navigation
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118.0664"
+                  x="2558.43" y="183.541">- USOS integration
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="142.6255"
+                  x="2558.43" y="198.8516">- Accessibility support
+            </text>
+        </g>
+        <g class="entity" data-entity="GMN170" data-source-line="322" data-uid="ent0171" id="entity_GMN170">
+            <path d="M2060.67,640.0583 L2060.67,772.5427 L2279.336,772.5427 L2279.336,650.0583 L2269.336,640.0583 L2060.67,640.0583"
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M2269.336,640.0583 L2269.336,650.0583 L2279.336,650.0583 L2269.336,640.0583" fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="134.6655"
+                  x="2066.67" y="657.6266">RESTful API built with
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153.5117"
+                  x="2066.67" y="672.9372">Django REST Framework
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4.1133"
+                  x="2066.67" y="688.2477">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57.1416"
+                  x="2066.67" y="703.5583">Provides:
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133.4849"
+                  x="2066.67" y="718.8688">- JSON API endpoints
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="197.666"
+                  x="2066.67" y="734.1794">- Authentication &amp; permissions
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="196.2441"
+                  x="2066.67" y="749.4899">- API documentation (Swagger)
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99.29"
+                  x="2066.67" y="764.8005">- CORS support
+            </text>
+        </g>
+        <g class="entity" data-entity="GMN173" data-source-line="333" data-uid="ent0174" id="entity_GMN173">
+            <path d="M1742.26,1603.3483 L1742.26,1720.5221 L1907.7454,1720.5221 L1907.7454,1613.3483 L1897.7454,1603.3483 L1742.26,1603.3483"
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M1897.7454,1603.3483 L1897.7454,1613.3483 L1907.7454,1613.3483 L1897.7454,1603.3483" fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122.7573"
+                  x="1748.26" y="1620.9166">Relational database
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4.1133"
+                  x="1748.26" y="1636.2272">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57.624"
+                  x="1748.26" y="1651.5377">Features:
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118.8218"
+                  x="1748.26" y="1666.8483">- ACID compliance
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="144.4854"
+                  x="1748.26" y="1682.1588">- GIS support (PostGIS)
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="111.8584"
+                  x="1748.26" y="1697.4694">- Full-text search
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95.7227"
+                  x="1748.26" y="1712.7799">- JSON support
+            </text>
+        </g>
+        <g class="entity" data-entity="GMN176" data-source-line="343" data-uid="ent0177" id="entity_GMN176">
+            <path d="M4741.11,1166.2983 L4741.11,1268.1616 L4966.8854,1268.1616 L4966.8854,1176.2983 L4956.8854,1166.2983 L4741.11,1166.2983"
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M4956.8854,1166.2983 L4956.8854,1176.2983 L4966.8854,1176.2983 L4956.8854,1166.2983" fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="162.957"
+                  x="4747.11" y="1183.8666">External academic system
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4.1133"
+                  x="4747.11" y="1199.1772">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112.9692"
+                  x="4747.11" y="1214.4877">Integration mode:
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121.6909"
+                  x="4747.11" y="1229.7983">- Read-only access
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93.9834"
+                  x="4747.11" y="1245.1088">- Periodic sync
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="204.7754"
+                  x="4747.11" y="1260.4194">- No modifications to USOS data
+            </text>
+        </g>
+        <g class="entity" data-entity="GMN179" data-source-line="352" data-uid="ent0180" id="entity_GMN179">
+            <path d="M4741.29,1361.3783 L4741.29,1478.5521 L4940.7163,1478.5521 L4940.7163,1371.3783 L4930.7163,1361.3783 L4741.29,1361.3783"
+                  fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M4930.7163,1361.3783 L4930.7163,1371.3783 L4940.7163,1371.3783 L4930.7163,1361.3783" fill="#FEFFDD"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160.9448"
+                  x="4747.29" y="1378.9466">University Single Sign-On
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4.1133"
+                  x="4747.29" y="1394.2572">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57.624"
+                  x="4747.29" y="1409.5677">Features:
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156.165"
+                  x="4747.29" y="1424.8783">- OAuth2/OIDC protocol
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="178.4263"
+                  x="4747.29" y="1440.1888">- Centralized authentication
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133.5356"
+                  x="4747.29" y="1455.4994">- No local passwords
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="115.6289"
+                  x="4747.29" y="1470.8099">- Role assignment
+            </text>
+        </g><!--link AuthModule to APIRouter-->
+        <g class="link" data-entity-1="AuthModule" data-entity-2="APIRouter" data-source-line="190" data-uid="lnk95"
+           id="link_AuthModule_APIRouter">
+            <path d="M1998.62,369.7683 C1998.62,425.7683 1998.62,550.4283 1998.62,550.4283 C1998.62,550.4283 1815.89,550.4283 1726.68,550.4283"
+                  fill="none" id="AuthModule-to-APIRouter" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1720.68,550.4283,1729.68,554.4283,1725.68,550.4283,1729.68,546.4283,1720.68,550.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77.4858"
+                  x="1871.98" y="546.9966">HTTPS/REST
+            </text>
+        </g><!--link NewsModule to APIRouter-->
+        <g class="link" data-entity-1="NewsModule" data-entity-2="APIRouter" data-source-line="191" data-uid="lnk96"
+           id="link_NewsModule_APIRouter">
+            <path d="M1344.79,369.8483 C1344.79,426.7183 1344.79,554.4283 1344.79,554.4283 C1344.79,554.4283 1532.85,554.4283 1623.43,554.4283"
+                  fill="none" id="NewsModule-to-APIRouter" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1629.43,554.4283,1620.43,550.4283,1624.43,554.4283,1620.43,558.4283,1629.43,554.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77.4858"
+                  x="1316.82" y="550.9966">HTTPS/REST
+            </text>
+        </g><!--link EventsModule to APIRouter-->
+        <g class="link" data-entity-1="EventsModule" data-entity-2="APIRouter" data-source-line="192" data-uid="lnk97"
+           id="link_EventsModule_APIRouter">
+            <path d="M1715.69,369.8983 C1715.69,414.8483 1715.69,498.2683 1715.69,537.0983" fill="none"
+                  id="EventsModule-to-APIRouter" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1715.69,543.0983,1719.69,534.0983,1715.69,538.0983,1711.69,534.0983,1715.69,543.0983"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77.4858"
+                  x="1637.69" y="453.0666">HTTPS/REST
+            </text>
+        </g><!--link RegistrationModule to APIRouter-->
+        <g class="link" data-entity-1="RegistrationModule" data-entity-2="APIRouter" data-source-line="193"
+           data-uid="lnk98" id="link_RegistrationModule_APIRouter">
+            <path d="M1836.7,369.7983 C1836.7,425.1883 1836.7,547.4283 1836.7,547.4283 C1836.7,547.4283 1774.3,547.4283 1726.47,547.4283"
+                  fill="none" id="RegistrationModule-to-APIRouter" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1720.47,547.4283,1729.47,551.4283,1725.47,547.4283,1729.47,543.4283,1720.47,547.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77.4858"
+                  x="1758.7" y="513.2966">HTTPS/REST
+            </text>
+        </g><!--link MapsModule to APIRouter-->
+        <g class="link" data-entity-1="MapsModule" data-entity-2="APIRouter" data-source-line="194" data-uid="lnk99"
+           id="link_MapsModule_APIRouter">
+            <path d="M2213.48,369.7183 C2213.48,426.3283 2213.48,553.4283 2213.48,553.4283 C2213.48,553.4283 1856.27,553.4283 1726.45,553.4283"
+                  fill="none" id="MapsModule-to-APIRouter" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1720.45,553.4283,1729.45,557.4283,1725.45,553.4283,1729.45,549.4283,1720.45,553.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77.4858"
+                  x="1980.81" y="549.9966">HTTPS/REST
+            </text>
+        </g><!--link UsosClientModule to APIRouter-->
+        <g class="link" data-entity-1="UsosClientModule" data-entity-2="APIRouter" data-source-line="195"
+           data-uid="lnk100" id="link_UsosClientModule_APIRouter">
+            <path d="M2352.07,369.7983 C2352.07,427.2583 2352.07,557.4283 2352.07,557.4283 C2352.07,557.4283 1878.84,557.4283 1726.74,557.4283"
+                  fill="none" id="UsosClientModule-to-APIRouter" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1720.74,557.4283,1729.74,561.4283,1725.74,557.4283,1729.74,553.4283,1720.74,557.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77.4858"
+                  x="2052.22" y="570.9966">HTTPS/REST
+            </text>
+        </g><!--link NotifModule to APIRouter-->
+        <g class="link" data-entity-1="NotifModule" data-entity-2="APIRouter" data-source-line="196" data-uid="lnk101"
+           id="link_NotifModule_APIRouter">
+            <path d="M1474.5,369.9283 C1474.5,425.5883 1474.5,548.4283 1474.5,548.4283 C1474.5,548.4283 1564.08,548.4283 1623.25,548.4283"
+                  fill="none" id="NotifModule-to-APIRouter" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1629.25,548.4283,1620.25,544.4283,1624.25,548.4283,1620.25,552.4283,1629.25,548.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77.4858"
+                  x="1396.5" y="533.1266">HTTPS/REST
+            </text>
+        </g><!--link GuidesModule to APIRouter-->
+        <g class="link" data-entity-1="GuidesModule" data-entity-2="APIRouter" data-source-line="197" data-uid="lnk102"
+           id="link_GuidesModule_APIRouter">
+            <path d="M1652.99,369.8983 C1652.99,414.8483 1652.99,498.2683 1652.99,537.0983" fill="none"
+                  id="GuidesModule-to-APIRouter" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1652.99,543.0983,1656.99,534.0983,1652.99,538.0983,1648.99,534.0983,1652.99,543.0983"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77.4858"
+                  x="1653.99" y="470.0666">HTTPS/REST
+            </text>
+        </g><!--link APIRouter to AuthAPI-->
+        <g class="link" data-entity-1="APIRouter" data-entity-2="AuthAPI" data-source-line="203" data-uid="lnk103"
+           id="link_APIRouter_AuthAPI">
+            <path d="M1675,580.4083 C1675,605.5583 1675,644.5883 1675,673.4183" fill="none" id="APIRouter-to-AuthAPI"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="1675,679.4183,1679,670.4183,1675,674.4183,1671,670.4183,1675,679.4183"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link APIRouter to NewsAPI-->
+        <g class="link" data-entity-1="APIRouter" data-entity-2="NewsAPI" data-source-line="204" data-uid="lnk104"
+           id="link_APIRouter_NewsAPI">
+            <path d="M1629.34,559.4283 C1508.52,559.4283 1189.65,559.4283 1189.65,559.4283 C1189.65,559.4283 1189.65,630.9583 1189.65,673.3583"
+                  fill="none" id="APIRouter-to-NewsAPI" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1189.65,679.3583,1193.65,670.3583,1189.65,674.3583,1185.65,670.3583,1189.65,679.3583"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link APIRouter to EventsAPI-->
+        <g class="link" data-entity-1="APIRouter" data-entity-2="EventsAPI" data-source-line="205" data-uid="lnk105"
+           id="link_APIRouter_EventsAPI">
+            <path d="M1720.59,574.4283 C1747.21,574.4283 1775.6,574.4283 1775.6,574.4283 C1775.6,574.4283 1775.6,635.0783 1775.6,673.6183"
+                  fill="none" id="APIRouter-to-EventsAPI" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1775.6,679.6183,1779.6,670.6183,1775.6,674.6183,1771.6,670.6183,1775.6,679.6183"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link APIRouter to RegAPI-->
+        <g class="link" data-entity-1="APIRouter" data-entity-2="RegAPI" data-source-line="206" data-uid="lnk106"
+           id="link_APIRouter_RegAPI">
+            <path d="M1629.27,564.4283 C1525.86,564.4283 1283,564.4283 1283,564.4283 C1283,564.4283 1283,632.5183 1283,673.6183"
+                  fill="none" id="APIRouter-to-RegAPI" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="1283,679.6183,1287,670.6183,1283,674.6183,1279,670.6183,1283,679.6183"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link APIRouter to UserAPI-->
+        <g class="link" data-entity-1="APIRouter" data-entity-2="UserAPI" data-source-line="207" data-uid="lnk107"
+           id="link_APIRouter_UserAPI">
+            <path d="M1629.24,569.4283 C1556.81,569.4283 1423.89,569.4283 1423.89,569.4283 C1423.89,569.4283 1423.89,633.7483 1423.89,673.5883"
+                  fill="none" id="APIRouter-to-UserAPI" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1423.89,679.5883,1427.89,670.5883,1423.89,674.5883,1419.89,670.5883,1423.89,679.5883"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link APIRouter to MapsAPI-->
+        <g class="link" data-entity-1="APIRouter" data-entity-2="MapsAPI" data-source-line="208" data-uid="lnk108"
+           id="link_APIRouter_MapsAPI">
+            <path d="M1720.71,568.4283 C1793.05,568.4283 1925.8,568.4283 1925.8,568.4283 C1925.8,568.4283 1925.8,633.2683 1925.8,673.3883"
+                  fill="none" id="APIRouter-to-MapsAPI" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1925.8,679.3883,1929.8,670.3883,1925.8,674.3883,1921.8,670.3883,1925.8,679.3883"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link APIRouter to GuidesAPI-->
+        <g class="link" data-entity-1="APIRouter" data-entity-2="GuidesAPI" data-source-line="209" data-uid="lnk109"
+           id="link_APIRouter_GuidesAPI">
+            <path d="M1629.23,574.4283 C1595.59,574.4283 1555.72,574.4283 1555.72,574.4283 C1555.72,574.4283 1555.72,635.0783 1555.72,673.6183"
+                  fill="none" id="APIRouter-to-GuidesAPI" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1555.72,679.6183,1559.72,670.6183,1555.72,674.6183,1551.72,670.6183,1555.72,679.6183"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link AuthAPI to UserViewSet-->
+        <g class="link" data-entity-1="AuthAPI" data-entity-2="UserViewSet" data-source-line="215" data-uid="lnk110"
+           id="link_AuthAPI_UserViewSet">
+            <path d="M1621.26,733.1783 C1621.26,746.3483 1621.26,759.4283 1621.26,759.4283 C1621.26,759.4283 1248.58,759.4283 1248.58,759.4283 C1248.58,759.4283 1248.58,850.7383 1248.58,892.5483"
+                  fill="none" id="AuthAPI-to-UserViewSet" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1248.58,898.5483,1252.58,889.5483,1248.58,893.5483,1244.58,889.5483,1248.58,898.5483"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link UserAPI to UserViewSet-->
+        <g class="link" data-entity-1="UserAPI" data-entity-2="UserViewSet" data-source-line="216" data-uid="lnk111"
+           id="link_UserAPI_UserViewSet">
+            <path d="M1382.98,733.2883 C1382.98,740.5483 1382.98,746.4283 1382.98,746.4283 C1382.98,746.4283 1243.08,746.4283 1243.08,746.4283 C1243.08,746.4283 1243.08,848.3883 1243.08,892.6683"
+                  fill="none" id="UserAPI-to-UserViewSet" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1243.08,898.6683,1247.08,889.6683,1243.08,893.6683,1239.08,889.6683,1243.08,898.6683"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link NewsAPI to AnnouncementViews-->
+        <g class="link" data-entity-1="NewsAPI" data-entity-2="AnnouncementViews" data-source-line="217"
+           data-uid="lnk112" id="link_NewsAPI_AnnouncementViews">
+            <path d="M1066.72,706.4283 C874.84,706.4283 326,706.4283 326,706.4283 C326,706.4283 326,827.8383 326,884.5783"
+                  fill="none" id="NewsAPI-to-AnnouncementViews" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="326,890.5783,330,881.5783,326,885.5783,322,881.5783,326,890.5783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link EventsAPI to EventViews-->
+        <g class="link" data-entity-1="EventsAPI" data-entity-2="EventViews" data-source-line="218" data-uid="lnk113"
+           id="link_EventsAPI_EventViews">
+            <path d="M1816.92,733.0183 C1816.92,776.4883 1816.92,855.4083 1816.92,892.8183" fill="none"
+                  id="EventsAPI-to-EventViews" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1816.92,898.8183,1820.92,889.8183,1816.92,893.8183,1812.92,889.8183,1816.92,898.8183"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link RegAPI to ParticipantMgmt-->
+        <g class="link" data-entity-1="RegAPI" data-entity-2="ParticipantMgmt" data-source-line="219" data-uid="lnk114"
+           id="link_RegAPI_ParticipantMgmt">
+            <path d="M1237.58,733.2583 C1237.58,785.2783 1237.58,894.4283 1237.58,894.4283 C1237.58,894.4283 974.67,894.4283 857.02,894.4283"
+                  fill="none" id="RegAPI-to-ParticipantMgmt" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="851.02,894.4283,860.02,898.4283,856.02,894.4283,860.02,890.4283,851.02,894.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link MapsAPI to LocationModel-->
+        <g class="link" data-entity-1="MapsAPI" data-entity-2="LocationModel" data-source-line="220" data-uid="lnk115"
+           id="link_MapsAPI_LocationModel">
+            <path d="M1953.73,733.2583 C1953.73,775.2283 1953.73,851.4283 1953.73,851.4283 C1953.73,851.4283 2912,851.4283 2912,851.4283 C2912,851.4283 2912,873.1183 2912,892.5883"
+                  fill="none" id="MapsAPI-to-LocationModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="2912,898.5883,2916,889.5883,2912,893.5883,2908,889.5883,2912,898.5883"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link GuidesAPI to GuideContent-->
+        <g class="link" data-entity-1="GuidesAPI" data-entity-2="GuideContent" data-source-line="221" data-uid="lnk116"
+           id="link_GuidesAPI_GuideContent">
+            <path d="M1531.56,733.0183 C1531.56,773.4883 1531.56,843.8983 1531.56,884.4383" fill="none"
+                  id="GuidesAPI-to-GuideContent" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1531.56,890.4383,1535.56,881.4383,1531.56,885.4383,1527.56,881.4383,1531.56,890.4383"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link UserViewSet to UserModel-->
+        <g class="link" data-entity-1="UserViewSet" data-entity-2="UserModel" data-source-line="227" data-uid="lnk117"
+           id="link_UserViewSet_UserModel">
+            <path d="M1184,935.9383 C1184,956.8683 1184,984.6283 1184,1005.5683" fill="none"
+                  id="UserViewSet-to-UserModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="1184,1011.5683,1188,1002.5683,1184,1006.5683,1180,1002.5683,1184,1011.5683"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link UserViews to UserModel-->
+        <g class="link" data-entity-1="UserViews" data-entity-2="UserModel" data-source-line="228" data-uid="lnk118"
+           id="link_UserViews_UserModel">
+            <path d="M1059.95,935.9583 C1059.95,968.0983 1059.95,1030.4283 1059.95,1030.4283 C1059.95,1030.4283 1092.12,1030.4283 1126.11,1030.4283"
+                  fill="none" id="UserViews-to-UserModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1132.11,1030.4283,1123.11,1026.4283,1127.11,1030.4283,1123.11,1034.4283,1132.11,1030.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link UserViewSet to UserSerializer-->
+        <g class="link" data-entity-1="UserViewSet" data-entity-2="UserSerializer" data-source-line="229"
+           data-uid="lnk119" id="link_UserViewSet_UserSerializer">
+            <path d="M1244.85,935.9583 C1244.85,968.0983 1244.85,1030.4283 1244.85,1030.4283 C1244.85,1030.4283 1249.99,1030.4283 1264.35,1030.4283"
+                  fill="none" id="UserViewSet-to-UserSerializer" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1270.35,1030.4283,1261.35,1026.4283,1265.35,1030.4283,1261.35,1034.4283,1270.35,1030.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link AnnouncementViews to AnnouncementModel-->
+        <g class="link" data-entity-1="AnnouncementViews" data-entity-2="AnnouncementModel" data-source-line="231"
+           data-uid="lnk120" id="link_AnnouncementViews_AnnouncementModel">
+            <path d="M264.11,917.4283 C199.66,917.4283 108,917.4283 108,917.4283 C108,917.4283 108,964.1483 108,997.5183"
+                  fill="none" id="AnnouncementViews-to-AnnouncementModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="108,1003.5183,112,994.5183,108,998.5183,104,994.5183,108,1003.5183"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link AnnouncementViews to I18nAnnouncement-->
+        <g class="link" data-entity-1="AnnouncementViews" data-entity-2="I18nAnnouncement" data-source-line="232"
+           data-uid="lnk121" id="link_AnnouncementViews_I18nAnnouncement">
+            <path d="M362.11,944.0483 C362.11,961.9283 362.11,979.3583 362.11,997.2783" fill="none"
+                  id="AnnouncementViews-to-I18nAnnouncement" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="362.11,1003.2783,366.11,994.2783,362.11,998.2783,358.11,994.2783,362.11,1003.2783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link AnnouncementViews to ContentMod-->
+        <g class="link" data-entity-1="AnnouncementViews" data-entity-2="ContentMod" data-source-line="233"
+           data-uid="lnk122" id="link_AnnouncementViews_ContentMod">
+            <path d="M283.13,944.0483 C283.13,961.9283 283.13,979.3583 283.13,997.2783" fill="none"
+                  id="AnnouncementViews-to-ContentMod" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="283.13,1003.2783,287.13,994.2783,283.13,998.2783,279.13,994.2783,283.13,1003.2783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link EventViews to EventModel-->
+        <g class="link" data-entity-1="EventViews" data-entity-2="EventModel" data-source-line="235" data-uid="lnk123"
+           id="link_EventViews_EventModel">
+            <path d="M1775.78,917.4283 C1740.26,917.4283 1698.93,917.4283 1698.93,917.4283 C1698.93,917.4283 1698.93,973.5783 1698.93,1005.6283"
+                  fill="none" id="EventViews-to-EventModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1698.93,1011.6283,1702.93,1002.6283,1698.93,1006.6283,1694.93,1002.6283,1698.93,1011.6283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link EventViews to EventFilters-->
+        <g class="link" data-entity-1="EventViews" data-entity-2="EventFilters" data-source-line="236" data-uid="lnk124"
+           id="link_EventViews_EventFilters">
+            <path d="M1826,935.9383 C1826,954.3583 1826,976.7283 1826,997.5383" fill="none"
+                  id="EventViews-to-EventFilters" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="1826,1003.5383,1830,994.5383,1826,998.5383,1822,994.5383,1826,1003.5383"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link EventViews to AccessibilityInfo-->
+        <g class="link" data-entity-1="EventViews" data-entity-2="AccessibilityInfo" data-source-line="237"
+           data-uid="lnk125" id="link_EventViews_AccessibilityInfo">
+            <path d="M1876.2,917.4283 C1916.81,917.4283 1967.27,917.4283 1967.27,917.4283 C1967.27,917.4283 1967.27,964.1483 1967.27,997.5183"
+                  fill="none" id="EventViews-to-AccessibilityInfo" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1967.27,1003.5183,1971.27,994.5183,1967.27,998.5183,1963.27,994.5183,1967.27,1003.5183"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ParticipantMgmt to RegModel-->
+        <g class="link" data-entity-1="ParticipantMgmt" data-entity-2="RegModel" data-source-line="239"
+           data-uid="lnk126" id="link_ParticipantMgmt_RegModel">
+            <path d="M743.02,917.4283 C675.32,917.4283 568,917.4283 568,917.4283 C568,917.4283 568,964.1483 568,997.5183"
+                  fill="none" id="ParticipantMgmt-to-RegModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="568,1003.5183,572,994.5183,568,998.5183,564,994.5183,568,1003.5183"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ParticipantMgmt to TicketGen-->
+        <g class="link" data-entity-1="ParticipantMgmt" data-entity-2="TicketGen" data-source-line="240"
+           data-uid="lnk127" id="link_ParticipantMgmt_TicketGen">
+            <path d="M764.9,944.0483 C764.9,961.9283 764.9,979.3583 764.9,997.2783" fill="none"
+                  id="ParticipantMgmt-to-TicketGen" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="764.9,1003.2783,768.9,994.2783,764.9,998.2783,760.9,994.2783,764.9,1003.2783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ParticipantMgmt to CapacityMgmt-->
+        <g class="link" data-entity-1="ParticipantMgmt" data-entity-2="CapacityMgmt" data-source-line="241"
+           data-uid="lnk128" id="link_ParticipantMgmt_CapacityMgmt">
+            <path d="M836,944.0483 C836,961.9283 836,979.3583 836,997.2783" fill="none"
+                  id="ParticipantMgmt-to-CapacityMgmt" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="836,1003.2783,840,994.2783,836,998.2783,832,994.2783,836,1003.2783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link LocationModel to CampusMaps-->
+        <g class="link" data-entity-1="LocationModel" data-entity-2="CampusMaps" data-source-line="243"
+           data-uid="lnk129" id="link_LocationModel_CampusMaps">
+            <path d="M2905,935.9383 C2905,954.3583 2905,976.7283 2905,997.5383" fill="none"
+                  id="LocationModel-to-CampusMaps" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="2905,1003.5383,2909,994.5383,2905,998.5383,2901,994.5383,2905,1003.5383"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link RouteCalc to AccessibleRoute-->
+        <g class="link" data-entity-1="RouteCalc" data-entity-2="AccessibleRoute" data-source-line="244"
+           data-uid="lnk130" id="link_RouteCalc_AccessibleRoute">
+            <path d="M3074,944.0483 C3074,961.9283 3074,979.3583 3074,997.2783" fill="none"
+                  id="RouteCalc-to-AccessibleRoute" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="3074,1003.2783,3078,994.2783,3074,998.2783,3070,994.2783,3074,1003.2783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link GuideContent to GuideModel-->
+        <g class="link" data-entity-1="GuideContent" data-entity-2="GuideModel" data-source-line="246" data-uid="lnk131"
+           id="link_GuideContent_GuideModel">
+            <path d="M1512,944.0483 C1512,964.9283 1512,987.3883 1512,1005.7883" fill="none"
+                  id="GuideContent-to-GuideModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="1512,1011.7883,1516,1002.7883,1512,1006.7883,1508,1002.7883,1512,1011.7883"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link PushService to NotifModel-->
+        <g class="link" data-entity-1="PushService" data-entity-2="NotifModel" data-source-line="248" data-uid="lnk132"
+           id="link_PushService_NotifModel">
+            <path d="M2454.4,944.0883 C2454.4,977.5483 2454.4,1030.4283 2454.4,1030.4283 C2454.4,1030.4283 2417.15,1030.4283 2380.66,1030.4283"
+                  fill="none" id="PushService-to-NotifModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="2374.66,1030.4283,2383.66,1034.4283,2379.66,1030.4283,2383.66,1026.4283,2374.66,1030.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link NotifPrefs to NotifModel-->
+        <g class="link" data-entity-1="NotifPrefs" data-entity-2="NotifModel" data-source-line="249" data-uid="lnk133"
+           id="link_NotifPrefs_NotifModel">
+            <path d="M2325,944.0483 C2325,961.9283 2325,979.3583 2325,997.2783" fill="none"
+                  id="NotifPrefs-to-NotifModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="2325,1003.2783,2329,994.2783,2325,998.2783,2321,994.2783,2325,1003.2783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link PermGroups to PermModel-->
+        <g class="link" data-entity-1="PermGroups" data-entity-2="PermModel" data-source-line="251" data-uid="lnk134"
+           id="link_PermGroups_PermModel">
+            <path d="M2661,1057.0483 C2661,1092.5883 2661,1148.9683 2661,1184.4883" fill="none"
+                  id="PermGroups-to-PermModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="2661,1190.4883,2665,1181.4883,2661,1185.4883,2657,1181.4883,2661,1190.4883"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link RBAC to PermGroups-->
+        <g class="link" data-entity-1="RBAC" data-entity-2="PermGroups" data-source-line="252" data-uid="lnk135"
+           id="link_RBAC_PermGroups">
+            <path d="M2675,944.0483 C2675,961.9283 2675,979.3583 2675,997.2783" fill="none" id="RBAC-to-PermGroups"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="2675,1003.2783,2679,994.2783,2675,998.2783,2671,994.2783,2675,1003.2783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link UnitHierarchy to UnitModel-->
+        <g class="link" data-entity-1="UnitHierarchy" data-entity-2="UnitModel" data-source-line="254" data-uid="lnk136"
+           id="link_UnitHierarchy_UnitModel">
+            <path d="M2160,944.0483 C2160,961.9283 2160,979.3583 2160,997.2783" fill="none"
+                  id="UnitHierarchy-to-UnitModel" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="2160,1003.2783,2164,994.2783,2160,998.2783,2156,994.2783,2160,1003.2783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link UserModel to ORM-->
+        <g class="link" data-entity-1="UserModel" data-entity-2="ORM" data-source-line="260" data-uid="lnk137"
+           id="link_UserModel_ORM">
+            <path d="M1229.52,1048.9483 C1229.52,1089.0683 1229.52,1186.9383 1229.52,1274.7783 C1229.52,1296.7383 1229.52,1318.0714 1229.52,1337.7186 C1229.52,1342.6304 1229.52,1347.4368 1229.52,1352.1213 C1229.52,1353.2924 1229.52,1354.456 1229.52,1355.6116 C1229.52,1356.1894 1229.52,1350.7652 1229.52,1351.3391"
+                  fill="none" id="UserModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1229.52,1357.3391,1233.52,1348.3391,1229.52,1352.3391,1225.52,1348.3391,1229.52,1357.3391"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link AnnouncementModel to ORM-->
+        <g class="link" data-entity-1="AnnouncementModel" data-entity-2="ORM" data-source-line="261" data-uid="lnk138"
+           id="link_AnnouncementModel_ORM">
+            <path d="M108,1057.0183 C108,1162.1983 108,1541.4283 108,1541.4283 C108,1541.4283 1512,1541.4283 1512,1541.4283 C1512,1541.4283 1512,1513.8433 1512,1484.9645 C1512,1477.7448 1512,1470.4443 1512,1463.4737 C1512,1463.2559 1512,1469.0384 1512,1468.8212"
+                  fill="none" id="AnnouncementModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="1512,1462.8212,1508,1471.8212,1512,1467.8212,1516,1471.8212,1512,1462.8212"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link EventModel to ORM-->
+        <g class="link" data-entity-1="EventModel" data-entity-2="ORM" data-source-line="262" data-uid="lnk139"
+           id="link_EventModel_ORM">
+            <path d="M1638.73,1048.9683 C1638.73,1127.8883 1638.73,1429.4283 1638.73,1429.4283 C1638.73,1429.4283 1607.1725,1429.4283 1575.615,1429.4283 C1559.8362,1429.4283 1544.0575,1429.4283 1532.2234,1429.4283 C1529.2649,1429.4283 1526.5529,1429.4283 1524.1492,1429.4283 C1522.9473,1429.4283 1521.8224,1429.4283 1520.7823,1429.4283 C1520.5223,1429.4283 1526.2675,1429.4283 1526.0182,1429.4283"
+                  fill="none" id="EventModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1520.0182,1429.4283,1529.0182,1433.4283,1525.0182,1429.4283,1529.0182,1425.4283,1520.0182,1429.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link RegModel to ORM-->
+        <g class="link" data-entity-1="RegModel" data-entity-2="ORM" data-source-line="263" data-uid="lnk140"
+           id="link_RegModel_ORM">
+            <path d="M551.03,1056.9883 C551.03,1127.7283 551.03,1314.4283 551.03,1314.4283 C551.03,1314.4283 1511.67,1314.4283 1511.67,1314.4283 C1511.67,1314.4283 1511.67,1320.4202 1511.67,1329.5484 C1511.67,1334.1126 1511.67,1339.4608 1511.67,1345.2362 C1511.67,1348.1239 1511.67,1351.1184 1511.67,1354.1751 C1511.67,1354.9393 1511.67,1355.7073 1511.67,1356.4786 C1511.67,1356.8642 1511.67,1357.2506 1511.67,1357.6377 C1511.67,1357.8313 1511.67,1352.025 1511.67,1352.219"
+                  fill="none" id="RegModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1511.67,1358.219,1515.67,1349.219,1511.67,1353.219,1507.67,1349.219,1511.67,1358.219"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link LocationModel to ORM-->
+        <g class="link" data-entity-1="LocationModel" data-entity-2="ORM" data-source-line="264" data-uid="lnk141"
+           id="link_LocationModel_ORM">
+            <path d="M2969.93,935.7783 C2969.93,1026.5583 2969.93,1420.4283 2969.93,1420.4283 C2969.93,1420.4283 2613.94,1420.4283 2253.7787,1420.4283 C2073.6981,1420.4283 1892.5747,1420.4283 1754.3858,1420.4283 C1685.2913,1420.4283 1626.9305,1420.4283 1584.8005,1420.4283 C1563.7355,1420.4283 1546.7282,1420.4283 1534.4657,1420.4283 C1531.4001,1420.4283 1528.631,1420.4283 1526.1693,1420.4283 C1524.9384,1420.4283 1523.7843,1420.4283 1522.7084,1420.4283 C1522.1705,1420.4283 1527.652,1420.4283 1527.1533,1420.4283"
+                  fill="none" id="LocationModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1521.1533,1420.4283,1530.1533,1424.4283,1526.1533,1420.4283,1530.1533,1416.4283,1521.1533,1420.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link GuideModel to ORM-->
+        <g class="link" data-entity-1="GuideModel" data-entity-2="ORM" data-source-line="265" data-uid="lnk142"
+           id="link_GuideModel_ORM">
+            <path d="M1512.33,1048.7883 C1512.33,1086.6033 1512.33,1175.9858 1512.33,1257.5608 C1512.33,1277.9545 1512.33,1297.8603 1512.33,1316.3504 C1512.33,1325.5954 1512.33,1334.4865 1512.33,1342.9078 C1512.33,1347.1184 1512.33,1351.2115 1512.33,1355.1727 C1512.33,1356.163 1512.33,1351.145 1512.33,1352.1186"
+                  fill="none" id="GuideModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1512.33,1358.1186,1516.33,1349.1186,1512.33,1353.1186,1508.33,1349.1186,1512.33,1358.1186"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link NotifModel to ORM-->
+        <g class="link" data-entity-1="NotifModel" data-entity-2="ORM" data-source-line="266" data-uid="lnk143"
+           id="link_NotifModel_ORM">
+            <path d="M2325,1057.0083 C2325,1144.9283 2325,1419.4283 2325,1419.4283 C2325,1419.4283 2128.0525,1419.4283 1928.0275,1419.4283 C1828.015,1419.4283 1727.2331,1419.4283 1649.9156,1419.4283 C1611.2569,1419.4283 1578.4642,1419.4283 1554.5669,1419.4283 C1542.6182,1419.4283 1532.8934,1419.4283 1525.771,1419.4283 C1523.9904,1419.4283 1528.3725,1419.4283 1526.9231,1419.4283"
+                  fill="none" id="NotifModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1520.9231,1419.4283,1529.9231,1423.4283,1525.9231,1419.4283,1529.9231,1415.4283,1520.9231,1419.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link PermModel to ORM-->
+        <g class="link" data-entity-1="PermModel" data-entity-2="ORM" data-source-line="267" data-uid="lnk144"
+           id="link_PermModel_ORM">
+            <path d="M2613.67,1217.4283 C2395.77,1217.4283 1499.67,1217.4283 1499.67,1217.4283 C1499.67,1217.4283 1499.67,1267.9283 1499.67,1318.4283 C1499.67,1331.0533 1499.67,1343.6783 1499.67,1355.5142 C1499.67,1356.254 1499.67,1350.9906 1499.67,1351.724"
+                  fill="none" id="PermModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1499.67,1357.724,1503.67,1348.724,1499.67,1352.724,1495.67,1348.724,1499.67,1357.724"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link UnitModel to ORM-->
+        <g class="link" data-entity-1="UnitModel" data-entity-2="ORM" data-source-line="268" data-uid="lnk145"
+           id="link_UnitModel_ORM">
+            <path d="M2160,1056.9983 C2160,1089.0283 2160,1138.4283 2160,1138.4283 C2160,1138.4283 1488.33,1138.4283 1488.33,1138.4283 C1488.33,1138.4283 1488.33,1208.9283 1488.33,1279.4283 C1488.33,1297.0533 1488.33,1314.6783 1488.33,1331.2017 C1488.33,1339.4634 1488.33,1347.4498 1488.33,1355.023 C1488.33,1355.9697 1488.33,1350.9099 1488.33,1351.8433"
+                  fill="none" id="UnitModel-to-ORM" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1488.33,1357.8433,1492.33,1348.8433,1488.33,1352.8433,1484.33,1348.8433,1488.33,1357.8433"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ORM to PostgreSQL-->
+        <g class="link" data-entity-1="ORM" data-entity-2="PostgreSQL" data-source-line="274" data-uid="lnk146"
+           id="link_ORM_PostgreSQL">
+            <path d="M1520.0165,1420.4283 C1520.3137,1420.4283 1520.6182,1420.4283 1520.93,1420.4283 C1521.5537,1420.4283 1522.2062,1420.4283 1522.8865,1420.4283 C1528.3286,1420.4283 1535.5446,1420.4283 1543.9167,1420.4283 C1560.6609,1420.4283 1582.0294,1420.4283 1603.0788,1420.4283 C1645.1775,1420.4283 1686,1420.4283 1686,1420.4283 C1686,1420.4283 1686,1477.0908 1686,1535.5245 C1686,1542.8288 1686,1550.1606 1686,1557.413 C1686,1561.0392 1686,1564.6455 1686,1568.2185 C1686,1570.005 1686,1571.7832 1686,1573.5514 C1686,1574.4355 1686,1569.3171 1686,1570.196"
+                  fill="none" id="ORM-to-PostgreSQL" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="1686,1576.196,1690,1567.196,1686,1571.196,1682,1567.196,1686,1576.196"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to UserTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="UserTables" data-source-line="275" data-uid="lnk147"
+           id="link_ModelsLayer_UserTables">
+            <path d="M1117.17,1430.4283 C1065.41,1430.4283 995.67,1430.4283 995.67,1430.4283 C995.67,1430.4283 995.67,1568.5683 995.67,1629.3783"
+                  fill="none" id="ModelsLayer-to-UserTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="995.67,1635.3783,999.67,1626.3783,995.67,1630.3783,991.67,1626.3783,995.67,1635.3783"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to NewsTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="NewsTables" data-source-line="276" data-uid="lnk148"
+           id="link_ModelsLayer_NewsTables">
+            <path d="M1144.25,1438.5483 C1144.25,1481.0483 1144.25,1579.4583 1144.25,1628.9983" fill="none"
+                  id="ModelsLayer-to-NewsTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1144.25,1634.9983,1148.25,1625.9983,1144.25,1629.9983,1140.25,1625.9983,1144.25,1634.9983"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to EventTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="EventTables" data-source-line="277" data-uid="lnk149"
+           id="link_ModelsLayer_EventTables">
+            <path d="M1209.94,1438.5483 C1209.94,1481.0483 1209.94,1579.4583 1209.94,1628.9983" fill="none"
+                  id="ModelsLayer-to-EventTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1209.94,1634.9983,1213.94,1625.9983,1209.94,1629.9983,1205.94,1625.9983,1209.94,1634.9983"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to RegTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="RegTables" data-source-line="278" data-uid="lnk150"
+           id="link_ModelsLayer_RegTables">
+            <path d="M1218.2,1438.5083 C1218.2,1441.9183 1218.2,1444.4283 1218.2,1444.4283 C1218.2,1444.4283 1327.79,1444.4283 1327.79,1444.4283 C1327.79,1444.4283 1327.79,1571.1883 1327.79,1629.2683"
+                  fill="none" id="ModelsLayer-to-RegTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1327.79,1635.2683,1331.79,1626.2683,1327.79,1630.2683,1323.79,1626.2683,1327.79,1635.2683"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to PermTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="PermTables" data-source-line="279" data-uid="lnk151"
+           id="link_ModelsLayer_PermTables">
+            <path d="M1222.33,1438.5183 C1222.33,1440.8383 1222.33,1442.4283 1222.33,1442.4283 C1222.33,1442.4283 1463.22,1442.4283 1463.22,1442.4283 C1463.22,1442.4283 1463.22,1570.4083 1463.22,1629.0283"
+                  fill="none" id="ModelsLayer-to-PermTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1463.22,1635.0283,1467.22,1626.0283,1463.22,1630.0283,1459.22,1626.0283,1463.22,1635.0283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to UnitTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="UnitTables" data-source-line="280" data-uid="lnk152"
+           id="link_ModelsLayer_UnitTables">
+            <path d="M1214.07,1438.2183 C1214.07,1449.7283 1214.07,1462.4283 1214.07,1462.4283 C1214.07,1462.4283 1600.53,1462.4283 1600.53,1462.4283 C1600.53,1462.4283 1600.53,1574.5783 1600.53,1629.0283"
+                  fill="none" id="ModelsLayer-to-UnitTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="1600.53,1635.0283,1604.53,1626.0283,1600.53,1630.0283,1596.53,1626.0283,1600.53,1635.0283"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to MapsTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="MapsTables" data-source-line="281" data-uid="lnk153"
+           id="link_ModelsLayer_MapsTables">
+            <path d="M1117.3,1409.4283 C971.57,1409.4283 584.97,1409.4283 584.97,1409.4283 C584.97,1409.4283 584.97,1564.5583 584.97,1629.3983"
+                  fill="none" id="ModelsLayer-to-MapsTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="584.97,1635.3983,588.97,1626.3983,584.97,1630.3983,580.97,1626.3983,584.97,1635.3983"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to GuidesTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="GuidesTables" data-source-line="282"
+           data-uid="lnk154" id="link_ModelsLayer_GuidesTables">
+            <path d="M1117.06,1416.4283 C990.47,1416.4283 689,1416.4283 689,1416.4283 C689,1416.4283 689,1565.5683 689,1629.1983"
+                  fill="none" id="ModelsLayer-to-GuidesTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="689,1635.1983,693,1626.1983,689,1630.1983,685,1626.1983,689,1635.1983"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link ModelsLayer to NotifTables-->
+        <g class="link" data-entity-1="ModelsLayer" data-entity-2="NotifTables" data-source-line="283" data-uid="lnk155"
+           id="link_ModelsLayer_NotifTables">
+            <path d="M1117.16,1423.4283 C1023.36,1423.4283 842.12,1423.4283 842.12,1423.4283 C842.12,1423.4283 842.12,1566.6683 842.12,1629.0483"
+                  fill="none" id="ModelsLayer-to-NotifTables" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="842.12,1635.0483,846.12,1626.0483,842.12,1630.0483,838.12,1626.0483,842.12,1635.0483"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link AuthAPI to SSO-->
+        <g class="link" data-entity-1="AuthAPI" data-entity-2="SSO" data-source-line="289" data-uid="lnk156"
+           id="link_AuthAPI_SSO">
+            <path d="M1663.11,733.0783 C1663.11,764.5183 1663.11,812.4283 1663.11,812.4283 C1663.11,812.4283 4160,812.4283 4160,812.4283 C4160,812.4283 4160,908.9408 4160,1007.7158 C4160,1057.1033 4160,1107.0564 4160,1145.7939 C4160,1146.3992 4160,1141.0017 4160,1141.6015"
+                  fill="none" id="AuthAPI-to-SSO" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818" points="4160,1147.6015,4164,1138.6015,4160,1142.6015,4156,1138.6015,4160,1147.6015"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="48.2866"
+                  x="3003.0113" y="793.9966">OAuth2
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92.4092"
+                  x="2980.95" y="809.3072">Authentication
+            </text>
+        </g><!--link IdP to OAuth-->
+        <g class="link" data-entity-1="IdP" data-entity-2="OAuth" data-source-line="290" data-uid="lnk157"
+           id="link_IdP_OAuth">
+            <path d="M4036.08,1244.1483 C4036.08,1283.0383 4036.08,1348.4883 4036.08,1387.2583" fill="none"
+                  id="IdP-to-OAuth" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818"
+                     points="4036.08,1393.2583,4040.08,1384.2583,4036.08,1388.2583,4032.08,1384.2583,4036.08,1393.2583"
+                     style="stroke:#181818;stroke-width:1;"/>
+        </g><!--link OAuth to UserModel-->
+        <g class="link" data-entity-1="OAuth" data-entity-2="UserModel" data-source-line="291" data-uid="lnk158"
+           id="link_OAuth_UserModel">
+            <path d="M4075.92,1393.1383 C4075.92,1382.3583 4075.92,1372.4283 4075.92,1372.4283 C4075.92,1372.4283 1232.57,1372.4283 1232.57,1372.4283 C1232.57,1372.4283 1232.57,1125.7283 1232.57,1054.6483"
+                  fill="none" id="OAuth-to-UserModel" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818"
+                     points="1232.57,1048.6483,1228.57,1057.6483,1232.57,1053.6483,1236.57,1057.6483,1232.57,1048.6483"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105.5679"
+                  x="2396.71" y="1353.9966">Creates/Updates
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28.1963"
+                  x="2435.3958" y="1369.3072">User
+            </text>
+        </g><!--link UsosClientModule to USOS-->
+        <g class="link" data-entity-1="UsosClientModule" data-entity-2="USOS" data-source-line="293" data-uid="lnk159"
+           id="link_UsosClientModule_USOS">
+            <path d="M2436.76,369.7683 C2436.76,394.4783 2436.76,427.4283 2436.76,427.4283 C2436.76,427.4283 3921,427.4283 3921,427.4283 C3921,427.4283 3921,618.7558 3921,813.0733 C3921,910.232 3921,1008.1383 3921,1083.2498 C3921,1102.0277 3921,1119.381 3921,1134.9417 C3921,1138.8318 3921,1142.61 3921,1146.2704 C3921,1148.1005 3921,1149.9013 3921,1151.6718 C3921,1152.5571 3921,1147.4349 3921,1148.305"
+                  fill="none" id="UsosClientModule-to-USOS"
+                  style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818" points="3921,1154.305,3925,1145.305,3921,1149.305,3917,1145.305,3921,1154.305"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66.8979"
+                  x="3477.66" y="423.9966">HTTPS/API
+            </text>
+        </g><!--link EventModel to USOS-->
+        <g class="link" data-entity-1="EventModel" data-entity-2="USOS" data-source-line="294" data-uid="lnk160"
+           id="link_EventModel_USOS">
+            <path d="M1711.86,1048.6783 C1711.86,1072.6283 1711.86,1111.4283 1711.86,1111.4283 C1711.86,1111.4283 3902.77,1111.4283 3902.77,1111.4283 C3902.77,1111.4283 3902.77,1118.0533 3902.77,1127.9908 C3902.77,1132.9595 3902.77,1138.7564 3902.77,1144.9673 C3902.77,1148.0728 3902.77,1151.2818 3902.77,1154.5425 C3902.77,1154.9501 3902.77,1149.3585 3902.77,1149.7676"
+                  fill="none" id="EventModel-to-USOS" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818"
+                     points="3902.77,1155.7676,3906.77,1146.7676,3902.77,1150.7676,3898.77,1146.7676,3902.77,1155.7676"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92.8726"
+                  x="2744.66" y="1107.9966">Sync deadlines
+            </text>
+        </g><!--link MapsModule to MapsService-->
+        <g class="link" data-entity-1="MapsModule" data-entity-2="MapsService" data-source-line="296" data-uid="lnk161"
+           id="link_MapsModule_MapsService">
+            <path d="M2286.86,369.8583 C2286.86,411.0883 2286.86,485.4283 2286.86,485.4283 C2286.86,485.4283 3546,485.4283 3546,485.4283 C3546,485.4283 3546,661.3033 3546,840.6133 C3546,930.2683 3546,1020.782 3546,1090.5995 C3546,1108.0539 3546,1124.2148 3546,1138.7453 C3546,1140.5616 3546,1142.3525 3546,1144.1172 C3546,1144.9995 3546,1139.8754 3546,1140.7446"
+                  fill="none" id="MapsModule-to-MapsService"
+                  style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818" points="3546,1146.7446,3550,1137.7446,3546,1141.7446,3542,1137.7446,3546,1146.7446"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66.8979"
+                  x="3157.13" y="481.9966">HTTPS/API
+            </text>
+        </g><!--link CampusMaps to PWMaps-->
+        <g class="link" data-entity-1="CampusMaps" data-entity-2="PWMaps" data-source-line="297" data-uid="lnk162"
+           id="link_CampusMaps_PWMaps">
+            <path d="M2905,1057.0683 C2905,1108.8283 2905,1217.4283 2905,1217.4283 C2905,1217.4283 3139.5,1217.4283 3246.12,1217.4283"
+                  fill="none" id="CampusMaps-to-PWMaps" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818"
+                     points="3252.12,1217.4283,3243.12,1213.4283,3247.12,1217.4283,3243.12,1221.4283,3252.12,1217.4283"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74.9722"
+                  x="2923.38" y="1213.9966">Data source
+            </text>
+        </g><!--link RouteCalc to OSM-->
+        <g class="link" data-entity-1="RouteCalc" data-entity-2="OSM" data-source-line="298" data-uid="lnk163"
+           id="link_RouteCalc_OSM">
+            <path d="M3122.26,917.4283 C3223.54,917.4283 3449,917.4283 3449,917.4283 C3449,917.4283 3449,1127.8383 3449,1192.9283"
+                  fill="none" id="RouteCalc-to-OSM" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818" points="3449,1198.9283,3453,1189.9283,3449,1193.9283,3445,1189.9283,3449,1198.9283"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49.0674"
+                  x="3376.38" y="913.9966">Routing
+            </text>
+        </g><!--link PushService to PushNotifService-->
+        <g class="link" data-entity-1="PushService" data-entity-2="PushNotifService" data-source-line="300"
+           data-uid="lnk164" id="link_PushService_PushNotifService">
+            <path d="M2499.6,944.1383 C2499.6,991.3783 2499.6,1084.4283 2499.6,1084.4283 C2499.6,1084.4283 4335,1084.4283 4335,1084.4283 C4335,1084.4283 4335,1114.5883 4335,1146.162 C4335,1154.0555 4335,1162.0373 4335,1169.6583 C4335,1170.6109 4335,1171.5579 4335,1172.4983 C4335,1172.7335 4335,1166.9682 4335,1167.2025"
+                  fill="none" id="PushService-to-PushNotifService"
+                  style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818" points="4335,1173.2025,4339,1164.2025,4335,1168.2025,4331,1164.2025,4335,1173.2025"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112.9565"
+                  x="3300.13" y="1080.9966">Send notifications
+            </text>
+        </g><!--link PushNotifService to FCM-->
+        <g class="link" data-entity-1="PushNotifService" data-entity-2="FCM" data-source-line="301" data-uid="lnk165"
+           id="link_PushNotifService_FCM">
+            <path d="M4335,1217.8083 C4335,1226.9183 4335,1334.5783 4335,1387.3583" fill="none"
+                  id="PushNotifService-to-FCM" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818" points="4335,1393.3583,4339,1384.3583,4335,1388.3583,4331,1384.3583,4335,1393.3583"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50.4639"
+                  x="4284" y="1302.1566">Android
+            </text>
+        </g><!--link PushNotifService to APNs-->
+        <g class="link" data-entity-1="PushNotifService" data-entity-2="APNs" data-source-line="302" data-uid="lnk166"
+           id="link_PushNotifService_APNs">
+            <path d="M4335.68,1217.4283 C4349.52,1217.4283 4571,1217.4283 4571,1217.4283 C4571,1217.4283 4571,1331.9783 4571,1387.0683"
+                  fill="none" id="PushNotifService-to-APNs"
+                  style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+            <polygon fill="#181818" points="4571,1393.0683,4575,1384.0683,4571,1388.0683,4567,1384.0683,4571,1393.0683"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20.8584"
+                  x="4520.16" y="1213.9966">iOS
+            </text>
+        </g><!--link GMN167 to FlutterApp-->
+        <g class="link" data-entity-1="GMN167" data-entity-2="FlutterApp" data-source-line="309" data-uid="lnk169"
+           id="link_GMN167_FlutterApp">
+            <path d="M2672,206.8483 C2672,221.3508 2672,236.5389 2672,251.2945 C2672,258.6723 2672,265.942 2672,272.9638"
+                  fill="none" id="GMN167-FlutterApp" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+        </g><!--link DRF to GMN170-->
+        <g class="link" data-entity-1="DRF" data-entity-2="GMN170" data-source-line="322" data-uid="lnk172"
+           id="link_DRF_GMN170">
+            <path d="M2013.0499,660.4283 C2013.5139,660.4283 2013.9957,660.4283 2014.4948,660.4283 C2016.4912,660.4283 2018.7634,660.4283 2021.2738,660.4283 C2031.315,660.4283 2045.165,660.4283 2060.4,660.4283"
+                  fill="none" id="DRF-GMN170" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+        </g><!--link PostgreSQL to GMN173-->
+        <g class="link" data-entity-1="PostgreSQL" data-entity-2="GMN173" data-source-line="333" data-uid="lnk175"
+           id="link_PostgreSQL_GMN173">
+            <path d="M1694.0421,1662.4283 C1694.0967,1662.4283 1694.1515,1662.4283 1694.2066,1662.4283 C1694.3169,1662.4283 1694.428,1662.4283 1694.5402,1662.4283 C1694.7645,1662.4283 1694.9926,1662.4283 1695.2245,1662.4283 C1696.1522,1662.4283 1697.1404,1662.4283 1698.1846,1662.4283 C1700.2729,1662.4283 1702.5853,1662.4283 1705.0862,1662.4283 C1715.09,1662.4283 1728.11,1662.4283 1741.87,1662.4283"
+                  fill="none" id="PostgreSQL-GMN173" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+        </g><!--link GMN176 to USOS-->
+        <g class="link" data-entity-1="GMN176" data-entity-2="USOS" data-source-line="343" data-uid="lnk178"
+           id="link_GMN176_USOS">
+            <path d="M4740.99,1256.4283 C4616.795,1256.4283 4411.7975,1256.4283 4237.8488,1256.4283 C4150.8744,1256.4283 4071.6622,1256.4283 4014.1936,1256.4283 C3985.4593,1256.4283 3962.1609,1256.4283 3946.0461,1256.4283 C3942.0174,1256.4283 3938.4376,1256.4283 3935.3342,1256.4283 C3933.7825,1256.4283 3932.3498,1256.4283 3931.0396,1256.4283 C3930.3845,1256.4283 3929.7601,1256.4283 3929.1667,1256.4283"
+                  fill="none" id="GMN176-USOS" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+        </g><!--link SSO to GMN179-->
+        <g class="link" data-entity-1="SSO" data-entity-2="GMN179" data-source-line="352" data-uid="lnk181"
+           id="link_SSO_GMN179">
+            <path d="M4168.2991,1382.4283 C4168.7906,1382.4283 4169.3029,1382.4283 4169.8358,1382.4283 C4171.9671,1382.4283 4174.4265,1382.4283 4177.1958,1382.4283 C4188.2731,1382.4283 4204.309,1382.4283 4224.1436,1382.4283 C4263.8128,1382.4283 4318.6769,1382.4283 4379.4563,1382.4283 C4501.015,1382.4283 4646.235,1382.4283 4740.88,1382.4283"
+                  fill="none" id="SSO-GMN179" style="stroke:#181818;stroke-width:1;stroke-dasharray:7,7;"/>
+        </g>
+        <g class="legend" data-source-line="15">
+            <rect fill="#DDDDDD" height="96.4414" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1;"
+                  width="227.3213" x="4720.5641" y="1761.4283"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="38.7734" x="4730.1784" y="1781.9634">Color
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="122.8896" x="4778.1803" y="1781.9634">Component Type
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297"
+                  x="4725.5641" y="1798.4517">&#160;
+            </text>
+            <text fill="#000000" filter="url(#buvobmurtllc40)" font-family="sans-serif" font-size="14"
+                  lengthAdjust="spacing" textLength="13.2891" x="4729.9938" y="1798.4517">&#160;&#160;&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297"
+                  x="4743.2829" y="1798.4517">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109.5869"
+                  x="4777.9957" y="1798.4517">Container/Layer
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297"
+                  x="4725.5641" y="1814.94">&#160;
+            </text>
+            <text fill="#000000" filter="url(#buvobmurtllc41)" font-family="sans-serif" font-size="14"
+                  lengthAdjust="spacing" textLength="13.2891" x="4729.9938" y="1814.94">&#160;&#160;&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297"
+                  x="4743.2829" y="1814.94">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160.46"
+                  x="4777.9957" y="1814.94">Application Component
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297"
+                  x="4725.5641" y="1831.4283">&#160;
+            </text>
+            <text fill="#000000" filter="url(#buvobmurtllc42)" font-family="sans-serif" font-size="14"
+                  lengthAdjust="spacing" textLength="13.2891" x="4729.9938" y="1831.4283">&#160;&#160;&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297"
+                  x="4743.2829" y="1831.4283">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.665"
+                  x="4777.9957" y="1831.4283">Database
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297"
+                  x="4725.5641" y="1847.9166">&#160;
+            </text>
+            <text fill="#000000" filter="url(#buvobmurtllc43)" font-family="sans-serif" font-size="14"
+                  lengthAdjust="spacing" textLength="13.2891" x="4729.9938" y="1847.9166">&#160;&#160;&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4.4297"
+                  x="4743.2829" y="1847.9166">&#160;
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107.9326"
+                  x="4777.9957" y="1847.9166">External System
+            </text>
+            <line style="stroke:#000000;stroke-width:1;" x1="4725.5641" x2="4942.8854" y1="1768.4283" y2="1768.4283"/>
+            <line style="stroke:#000000;stroke-width:1;" x1="4725.5641" x2="4942.8854" y1="1784.9166" y2="1784.9166"/>
+            <line style="stroke:#000000;stroke-width:1;" x1="4725.5641" x2="4942.8854" y1="1801.4048" y2="1801.4048"/>
+            <line style="stroke:#000000;stroke-width:1;" x1="4725.5641" x2="4942.8854" y1="1817.8931" y2="1817.8931"/>
+            <line style="stroke:#000000;stroke-width:1;" x1="4725.5641" x2="4942.8854" y1="1834.3814" y2="1834.3814"/>
+            <line style="stroke:#000000;stroke-width:1;" x1="4725.5641" x2="4942.8854" y1="1850.8697" y2="1850.8697"/>
+            <line style="stroke:#000000;stroke-width:1;" x1="4725.5641" x2="4725.5641" y1="1768.4283" y2="1850.8697"/>
+            <line style="stroke:#000000;stroke-width:1;" x1="4773.5661" x2="4773.5661" y1="1768.4283" y2="1850.8697"/>
+            <line style="stroke:#000000;stroke-width:1;" x1="4942.8854" x2="4942.8854" y1="1768.4283" y2="1850.8697"/>
+        </g><!--SRC=[nLhfZzku5V-kluBh0kdaWtVGBGgqmMu0ZsnFlEihbgTfK1S5Ot4yR6JAq369z_ZV-nv9yP3e6HSORnV1ZlKEaUyYt_lPtwJidWj6LgDuFPZVJaV_ZXVJnOhyOVJdyNVZOVIDviUBsN8n7ytN3V_cPZWQtnZ-SB0Ut0mIenx_9HwC_cROet-iHwlvODgmn-CulecZgE9LniZo0udp_O4AdWlIbvzpmKH5Xfpk2hgFel8p5mSA7ycsOIRL4LGBjgses6NC4SbWnUfuO2GlgeSyYlv8VdZ1_-1rqz7jQ3vywVTcRCT4IWg-UwWYGdxz0HoHvONwq7XaZNRzYcpo_IUw_Vn61-ej8UJxQwIy1LQSYug25uhhAJsombTGaVCL1eT3nhUqmW3OnJmr5L5VRKWh-ecMhHsfuFgIewyLAmJDI78iAxO71R1LMNo10CqMDvFfY0oMo-aa7gmdYpcP3ZwELY-zKcJIZ_Hc-ISEVrrFIkVtEhNr2pWB_fbC9hrnLbVW7sBVqIEq99eCZvtwmtUuh_ZdeAuUu8DUUYDcULfdx5_u6cIfnxRId7qfhmT2vBNOiZsGIayHsM75qMD7M96U42ShjkDbLNGtw3B2BvZHGqbUaJbzvBkkFdB3UdV98Y4JKR5TODcxCY_ZZ8FW2U_a5R_N3cqv1ZbXfTkQfmptAcjmstAIueOrtwz09sKasL81fRiHhyWjWm-qoWkf_7vb57-BVhj0sGoM4t8xM8y-33wIQt8pY7-2O-xobNC3PmIUVBZysIKp_0zevo2OhCaOJdts9Iy-owePhiPdb0kijSfhg2vL8ik9Udgkh4OYFUGS4jrK5gXsbFoAydMmg08wJKNvmeeQ4FThoLS2Na3ZhiISyYMH5X35UcgB8YqWgXAwBQoeIlmogNfpbqpceoGXqyNj95OvIgvqKi21MRw-QCRM9TokPKcc-OvlLTBwgvzCuGCaEzt1Ez3tfJhgdyrMb8NB8MMPZPjy30h-dKEA6Jdv59J36a1kmYfV70X1XOGLd6RyPzYuaRUqjigoOFUiO507U0PI0LPZGHXDv9SoGNp7UDLpfeDS7NdWDfvo6K6F-PhMTIuzw48ytyrggX2begO3jLDMTLRnVWP9KeEX6v7KXmEqg59hygU_2dV9W5_KMN2cGzIDwpX24e8UKABMSlaSD5b9nXIkqxpW6DPNPCopgia7oTU4Zf-ta0SbX_w6LyUDc8ZxlDXRhtbiP9voWDSidEcCJkFHE0KOGPUiETn8bRr-D-Bg_UgrL54iu7JIdHPmJN2OOgfEkZkysMxVAQwOWetIBIszXg6LsWwHNT5vBfZckYTrh6zeGHV8wt0ZOffjwyp6IPAHU2g-S3ngrILakk1YvyKtOvBRzS3-KAjBPYDmgj3c8nM90UDretMU-LBOjLqIWeOhKLlTVaGaLpC3c_9QnZFtvkfusTbqcTqzBkloWVXwS0u_ygtgCf6jdvzUp3cYxOgdpkKbA_OSOeYMlPAj3nm2FyitdM6brVPiH7BOH2DFRekyFiZ39ja-G2Yifk9qKpTZVHnBKvrsaCOGiIBFoDKAkbfLoFWfOEMTu6SViejYHuLs0Sqs0dMzQngUmzSq2hxZSBWKsuTksIFRS2_MGY5aGmPnBBkeI_VuMDCw6lzpZxzOpMHZ3t-VZubolrf3DQwI89yx4rVDYgFfVinJvvLSJu-w4pQF5mqDecc_JrmaWlDqKD96hBVCosfNiEJzLCR4FhOXm60JsvmS6x6cS1VODb8zFZD8EJeuHOLrca7A4PQaiBJR6lXAm0chEEUWfu3qi8OyKtoJWHAMnTlkkhcPVILaXPMQASmHLgImU0lOSDsA7ADqcUHki62IV4pMerbooVHkmOxbEQUEn8nWDfBvBHzQwFKltL6WBg0sJD-2IehMpSwlT2-lCGHoIYEDv6wYqICcFi5ss4XgOlbqZpjaD4KOtAvWAFRESsnEaWMv9WiipU-atKXupcn8uaSeQTNFfuYIL4UoBF97o3nrzaxIPUVEb6jiX0-iI6d92cvFDhgwe-arfQ2Vdztcui14KXMCLQ2b5afc7Lz_qDqcNiQmc8dbyeFVVpgxEjs5zPekJ7BFtUWudi6WCUO5aqTjdELrIcPmOz8TjD6gQm6PBfGrXrrV8V3CI6TFvMiDSCqlLz6hqLI2xCcxoJ8X_GR6hdAYeRqNBt4BQPD-_ws5xyWRqdktNY-JQmG6Uv55i9-MSy7hfoMxMFNJyXQRVbgk3KO_OvS5e9yMT07dfoKldnOMSyNKC8ZXooU7CL4Qh35QdzgWi3xLmgq-NIEgFh41JtrgWvFwL0k8NjxDnh7evGRVkqW5Oa0RJpIueVPAXwuThaBImTQCusqO54DvNbBR88hsjEJvK8RnjlLzCx9VtlqjR1XYe2QG5u-0urtZRMM_WNrFq5qD1x-DEd7fH4kz9opNWJ33OWu-6jb0sxYh9KAS1bbiyRhGOTHAbQQ6rQj3J8lgXRWU31TvkQRv1gSo-9YtjGRrYjnSjCcfzXKvi8qweop-Ou6PDYUoE8Yg4WEe8C1XI1efYJneGIM10Id-7xK1C_r52iC61rVefB3Xs9Gpf2PH3A4RSAJQo1cI3OiXcN0OYl6teLpUxuYSWBEROV_5FOxlbvbcq838WLtCMQC7opRBcUNRB7ToR_FiWDxcE9DuPnjsy6wpdF6wpVA6wSxsdPdvToWX_MKvTb2juVPYT_ottxwL0o5qZE7nhHV1f2V5r0md_o-VRIs2SbmmMh7o-kwGuj-DG6ulwlQ-KXCdRzEZuZpk5gihaHp5bgJDV0llStfkb7E7HV-5zk2MWchMGna9LvOmmiCivvpfqi9aXX98XAcivn_RyYtjkG-tY24JxbZMYpfog0pp7SeFH5haF3qXXCCSIl55Sec-VRvOZruUbG7hSIGyaFpU-M4JpAHnaPTb_v3H2hyI97irF5BxEogG0GxHFY4KN0cMgt7y9tOazv1LTS7AD_3SbwS9UGLI3dGe6UhhmotD81Qq09726UMan93lU0NrLCbke2HNxrSmQ4FblvPi_INLNlqMIPZV8accJ4PkVsaaYLvhGahrVM-aSu5fdtpAgohVerk6gp6euJXsNsToNFfKGyz3ld29YmH_ygBSe54NxO8VayLSgZCpOydTU3KB9Xmiaga4G2NDjpNwJCbS9L_eRiSAxO35AZbbXVpP8XhXt05W2ylqjoC6GbOR7din6yIJeOGqCaw5_DAgJsudPYroXIy5Wjh6kCwoViM-LgHasCTOcq_iBMFtSciO8n0svoRTqfJjeH4fvG6gTkRyMWnoCMLgXoiuNlgvo8wWX36LHBXdU9vAVR5LoPUZZlCL81pJCZFG-jE1XyCLr2sUHX8kySk4xqH_8K8kKmVnzM8oZCcXoAjycsSgI12yGdRqK2fUn9iTPj3FPEH0on8IA5Mcu7Tc12YmeEpTpLR_2m00]-->
+    </g>
+</svg>

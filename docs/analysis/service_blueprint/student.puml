@@ -1,0 +1,107 @@
+@startuml
+title PW_hub — Service Blueprint Student
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor White
+  BorderColor Black
+  ArrowColor Black
+}
+
+
+|Customer Actions (Student)|
+start
+:Uruchamia aplikację;
+:Wybiera "Zaloguj";
+
+|Frontstage (Flutter UI)|
+:Pokazuje ekran logowania SSO;
+
+|Backstage (Django/DRF)|
+:Inicjuje flow OAuth2/SSO;
+:Weryfikuje token / tworzy sesję;
+
+|Support (SSO uczelni)|
+:Autoryzuje użytkownika;
+:Zwraca token / atrybuty;
+
+|Backstage (Django/DRF)|
+:Mapuje użytkownika (konto PW_hub);
+:Zwraca dane startowe;
+
+|Physical Evidence|
+:Komunikat "Zalogowano";
+:Widok startowy;
+
+|Customer Actions (Student)|
+:Otwiera "Aktualności";
+:Ustawia filtry;
+
+|Frontstage (Flutter UI)|
+:Wyświetla listę newsów;
+
+|Backstage (Django/DRF)|
+:Pobiera newsy wg filtrów i języka;
+
+|Physical Evidence|
+:Lista aktualności;
+
+|Customer Actions (Student)|
+:Otwiera "Wydarzenia";
+:Wybiera wydarzenie;
+
+|Frontstage (Flutter UI)|
+:Wyświetla listę/kalendarz;
+:Otwiera szczegóły wydarzenia;
+
+|Backstage (Django/DRF)|
+:Pobiera wydarzenia + metadane dostępności;
+:Pobiera szczegóły + limit miejsc + status zapisu;
+
+|Support (Mapy kampusu)|
+:Udostępnia lokalizację/POI;
+
+|Physical Evidence|
+:Karta wydarzenia + mapa;
+
+|Customer Actions (Student)|
+:Klik "Zapisz się";
+
+|Frontstage (Flutter UI)|
+:Pokazuje loading / potwierdzenie;
+
+|Backstage (Django/DRF)|
+:Waliduje status wydarzenia i uprawnienia;
+:Sprawdza limit miejsc (atomowo);
+
+if (Są wolne miejsca?) then (tak)
+  :Rejestruje uczestnika;
+  :Generuje wejściówkę/QR;
+  :Planuje przypomnienia;
+
+  |Support (Push notifications)|
+  :Przyjmuje harmonogram powiadomień;
+
+  |Frontstage (Flutter UI)|
+  :Pokazuje status "Zapisany";
+  :Wyświetla QR;
+
+  |Physical Evidence|
+  :Wejściówka QR;
+else (nie)
+  :Zwraca błąd "Brak miejsc";
+
+  |Frontstage (Flutter UI)|
+  :Wyświetla alert "Brak miejsc";
+
+  |Physical Evidence|
+  :Alert;
+endif
+
+|Customer Actions (Student)|
+:Otwiera powiadomienie push;
+
+|Frontstage (Flutter UI)|
+:Przenosi do wydarzenia / QR;
+
+stop
+@enduml
