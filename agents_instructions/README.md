@@ -90,3 +90,55 @@ Dobre issue powinno zawierać:
 - **Ryzyka i kompromisy** – co może pójść źle.
 - **Test plan** – jak sprawdzimy, że działa.
 - **Wskazanie agenta/creedu** (jeśli ma być użyty) lub notatka, że agent ma dobrać sam.
+
+---
+
+## Weryfikacja końcowa (obowiązkowa)
+
+Każda zmiana w repozytorium jest uznana za „done” dopiero po przejściu pełnej weryfikacji:
+1) `pre-commit` (format/lint/konwencje)
+2) `pytest` (testy)
+
+### Procedura (pętla „do skutku”)
+
+1. Uruchom `pre-commit` na całości zmian:
+   - `pre-commit run --show-diff-on-failure --color=always --all-files`
+
+2. Jeśli `pre-commit` nie przejdzie:
+   - Przeanalizuj output (który hook, jakie pliki, jaki typ naruszenia).
+   - Zastanów się, czy do kontekstu należy dołączyć dodatkowych agentów/creedy:
+     - problemy z jakością Python / style / typowe błędy → **Python Samurai**, **Creed of Style**
+     - problemy Django/DRF / konfiguracja / idiomy frameworka → **Django Netrunner**
+     - problemy z architekturą granic / zależnościami → **System Worldshaper**, **Creed of Boundaries**
+     - problemy refaktoryzacyjne / dług / rozjechane moduły → **Refactoring Purifier**, **Creed of Form**
+     - problemy z testami / brak pokrycia / flaky tests → **QA Witcher**, **Creed of Truth**
+     - problemy z toolingiem / CI / środowiskiem → **Platform Ripper**, **DevOps Gatekeeper**
+   - Dołącz wybrane pliki agentów do kontekstu (zgodnie z zasadami systemu agentowego).
+   - Popraw błędy w kodzie / konfiguracji.
+   - Wróć do kroku 1.
+
+3. Gdy `pre-commit` przejdzie, uruchom testy:
+   - `docker compose -f docker-compose.local.yml run --rm django pytest`
+
+4. Jeśli `pytest` nie przejdzie:
+   - Przeanalizuj output (fail/traceback, błędne założenie testu vs bug w kodzie).
+   - Dobierz agenta/creed do kontekstu na podstawie typu problemu np.:
+     - logika testów / scenariusze / testowalność → **QA Witcher**
+     - błąd domenowy / kontrakty / niejednoznaczne zachowanie → **Software Artificer**, **Creed of Truth**
+     - błąd danych / migracji / integralności → **Data Broker**
+     - błąd w API / schematach / zgodności kontraktu → **API Fixer**, **Creed of Boundaries**
+     - błąd asynchroniczny / retry / idempotencja → **Async Process Hacker**
+   - Dołącz wybrane pliki agentów do kontekstu.
+   - Napraw kod i/lub testy (z zachowaniem intencji i zakresu).
+   - Uruchom ponownie:
+     - `pre-commit run --show-diff-on-failure --color=always --all-files  `
+     - `docker compose -f docker-compose.local.yml run --rm django pytest`
+   - Powtarzaj aż oba kroki przejdą.
+
+### Definicja „zieloności”
+
+Zmiana jest gotowa do PR / merge tylko jeśli:
+- `pre-commit run --show-diff-on-failure --color=always --all-files` kończy się sukcesem,
+- `docker compose -f docker-compose.local.yml run --rm django pytest` kończy się sukcesem,
+- poprawki nie wprowadzają scope creep (zgodnie z Non-Goals),
+- a dobór agentów został odnotowany (w PR lub notatce developerskiej).
