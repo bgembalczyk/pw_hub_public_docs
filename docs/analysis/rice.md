@@ -1,6 +1,5 @@
 # Analiza RICE — PW_hub (priorytety inicjatyw MVP)
 
----
 
 ## 1. Rola dokumentu
 
@@ -25,7 +24,6 @@ RICE w tym dokumencie:
 - **nie identyfikuje problemów użytkownika** (robi to Opportunity),
 - służy do ustalenia **co realizujemy wcześniej, a co później w MVP**.
 
----
 
 ## 2. Kontekst decyzyjny
 
@@ -40,7 +38,6 @@ Zgodnie z wcześniejszymi decyzjami projektu:
 Analiza RICE dotyczy **inicjatyw funkcjonalnych**, a nie pojedynczych ekranów
 czy elementów UI.
 
----
 
 ## 3. Źródła (Source of Truth)
 
@@ -50,7 +47,6 @@ czy elementów UI.
 - Non-Goals
 - ADR: Events jako jedyny moduł interaktywny
 
----
 
 ## 4. Metodyka RICE
 
@@ -74,7 +70,6 @@ RICE = (Reach × Impact × Confidence) / Effort
 > (brak danych MAU/DAU i finalnych estymat inżynierskich).
 > Analiza służy do **porównania względnego**, nie do predykcji absolutnej.
 
----
 
 ## 5. Zakres analizowanych inicjatyw
 
@@ -105,7 +100,6 @@ Zakres analizowanych inicjatyw obejmuje:
 - Obsługę wejścia na wydarzenia (wejściówki)
 - Logowanie i identyfikację użytkownika (SSO) — jako etap finalny przed MVP
 
----
 
 ## 6. Tabela RICE (ASSUMPTION)
 
@@ -117,7 +111,6 @@ Zakres analizowanych inicjatyw obejmuje:
 | **Wejściówki (QR)**                         |           400 |    1.5 |        0.5 |               1.5 |  **200** | Funkcja wtórna, ale wymagana do realnych testów wydarzeń                     |
 | **Logowanie SSO**                           |          3000 |    3.0 |        0.7 |               2.0 | **3150** | Wymóg formalny przed MVP; integracja możliwa dopiero po stabilizacji systemu |
 
----
 
 ## 7. Ranking inicjatyw (z uwzględnieniem realiów wdrożeniowych)
 
@@ -132,7 +125,6 @@ Zakres analizowanych inicjatyw obejmuje:
 
 5. **Logowanie SSO**
 
----
 
 ## 8. Interpretacja wyników
 
@@ -149,7 +141,6 @@ Zakres analizowanych inicjatyw obejmuje:
     - **nie determinuje kolejności „od zera”**,
     - lecz **porządkuje sensowną sekwencję dojrzewania produktu**.
 
----
 
 ## 9. Spójność z innymi decyzjami
 
@@ -161,7 +152,6 @@ Zakres analizowanych inicjatyw obejmuje:
 RICE **nie zmienia zakresu MVP**, a jedynie dostosowuje jego realizację
 do realiów organizacyjnych PW.
 
----
 
 ## 10. Ryzyka i ograniczenia
 
@@ -172,7 +162,6 @@ do realiów organizacyjnych PW.
 
 Ryzyka te są **nieuniknione i akceptowane** w modelu uczelnianym.
 
----
 
 ## 11. Dalsze kroki
 
@@ -181,7 +170,6 @@ Ryzyka te są **nieuniknione i akceptowane** w modelu uczelnianym.
 3. Zebrać feedback interesariuszy PW.
 4. Uruchomić proces integracji SSO jako krok przed MVP produkcyjnym.
 
----
 
 **Status:** wersja robocza (ASSUMPTION)  
 **Zakres:** prototyp → MVP PW_hub  

@@ -71,6 +71,8 @@ Assumption Mapping w układzie **Wpływ (Impact)** × **Pewność (Certainty)**.
 
 ## Szczegóły założeń i plan walidacji
 
+> **Szczegółowy plan, metody i backlog walidacji znajdują się w dokumencie: [Plan Walidacji Hipotez](hypothesis-validation-plan.md).**
+
 ### High Impact / Low Certainty — priorytet walidacji
 
 #### A1 — Centralne narzędzie
@@ -118,10 +120,10 @@ Walidowane oportunistycznie, bez blokowania decyzji MVP.
 
 ## Następne kroki
 
-1. Wybrać **3–5 założeń z czerwonej ćwiartki** do walidacji w najbliższym sprincie.
-2. Przypisać **właścicieli walidacji** (Product / Tech / Compliance).
-3. Utworzyć **backlog walidacyjny** (badania, PoC, testy).
-4. Aktualizować mapę po każdej istotnej decyzji produktowej.
+1. **[ZROBIONE]** Wybrano 5 założeń do walidacji: A1, A2, A4, A6, A13. Szczegóły w [Planie Walidacji](hypothesis-validation-plan.md).
+2. **[ZROBIONE]** Utworzono backlog walidacyjny i przypisano właścicieli.
+3. Przeprowadzić walidację zgodnie z harmonogramem sprintu.
+4. Zaktualizować mapę (Certainty) na podstawie wyników walidacji.
 
 ---
 

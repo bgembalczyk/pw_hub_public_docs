@@ -182,6 +182,8 @@ docs/
 ├── users.rst                  # User documentation
 ├── Makefile                   # Build documentation
 ├── make.bat                   # Build documentation (Windows)
+├── analysis/                  # Analysis and design documents
+│   └── index.rst             # Index of analysis documents
 ├── diagrams/                  # PlantUML diagrams
 │   ├── README.md             # Diagrams overview and summary
 │   ├── database.puml         # Original database schema
@@ -351,13 +353,14 @@ Before considering code complete:
 To build and view the documentation locally:
 
 ```bash
-# Build HTML documentation
-cd docs
-make html
+# Build HTML documentation using Just
+just docs
 
 # View documentation
 # Open docs/_build/html/index.html in a browser
 ```
+
+**Verification Requirement**: Agents and developers must run `just docs` to verify documentation before finishing tasks, just like `just precommit` or `just pytest`.
 
 ## Tips
 

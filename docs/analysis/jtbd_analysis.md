@@ -121,11 +121,14 @@ Job uznajemy za wykonany, gdy użytkownik:
 - nie musi szukać jej w wielu źródłach,
 - czuje się poinformowany i spokojny co do swoich obowiązków.
 
-### Przykładowe wskaźniki:
+### Wskaźniki sukcesu (KPI - ADR-003):
+- **Event Signup Conversion Rate** — walidacja joba „udział w wydarzeniach”,
+- **Weekly Active Devices (WAD)** — walidacja joba „orientacja informacyjna”,
+- **30-Day Retention** — walidacja joba „poczucie bycia na bieżąco”.
+
+Dodatkowe wskaźniki (jakościowe/badawcze):
 - skrócenie czasu dotarcia do informacji,
-- wzrost udziału w wydarzeniach,
-- spadek liczby powtarzalnych pytań informacyjnych,
-- wzrost powracających użytkowników.
+- spadek liczby powtarzalnych pytań informacyjnych.
 
 ---
 

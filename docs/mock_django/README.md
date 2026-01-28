@@ -381,7 +381,7 @@ plantuml mock_django/**/*.puml
 ## 📚 Related Documentation / Powiązana Dokumentacja
 
 - **Full mock-ups documentation / Pełna dokumentacja mock-upów**: [`docs/MOCKUPY.md`](../MOCKUPY.md)
-- **Flutter app mock-ups / Mock-upy aplikacji Flutter**: [`docs/mock/`](../mock/)
+- **Flutter app mock-ups / Mock-upy aplikacji Flutter**: [`docs/mock/`](../mock/index.rst)
 - **Requirements / Wymagania**: [`docs/docs.md`](../docs.md)
 - **Functional specification / Specyfikacja funkcjonalna**: [`docs/specs.md`](../specs.md)
 - **PlantUML Salt Documentation**: https://plantuml.com/salt

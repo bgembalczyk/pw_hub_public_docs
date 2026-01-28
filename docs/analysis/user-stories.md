@@ -21,6 +21,9 @@ a nie rozwiązania techniczne.
     - panele webowe **Django (DTL)** dla organizatorów i administratorów merytorycznych.
 - Integracje zewnętrzne (np. **USOS**) są **wyłącznie w trybie odczytu**.
 - System nie zastępuje istniejących narzędzi uczelnianych.
+- **Wielojęzyczność (MVP Strategy):**
+    - Interfejs (UI) aplikacji mobilnej i paneli jest w pełni dwujęzyczny (PL/EN).
+    - Treści (News/Events) są tworzone w jednym języku, ale posiadają atrybut języka (PL/EN) umożliwiający filtrowanie.
 - Wymagania **dostępności (WCAG 2.1)**, **bezpieczeństwa** i **RODO**
   są kryteriami przekrojowymi dla wszystkich User Stories.
 
@@ -98,17 +101,19 @@ Brak User Story oznacza **świadomy Non-Goal**, a nie lukę w analizie.
 
 | ID     | User Story                                                                                                                                  | Priorytet |
 |--------|---------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| STU-01 | Jako **Student** chcę zalogować się przez uczelniane SSO, aby korzystać z aplikacji bez zakładania lokalnego konta.                         | Must      |
+| STU-01 | Jako **Student** chcę zalogować się przez uczelniane SSO, aby korzystać z aplikacji bez zakładania lokalnego konta.                         | Deferred (ADR-003) |
+| STU-12 | Jako **Student** chcę szybko uzupełnić profil (wydział, rok, grupa opcjonalnie), aby widzieć treści dopasowane do mojego kontekstu.        | Must      |
 | STU-02 | Jako **Student** chcę przeglądać aktualności uczelniane i organizacyjne, aby być na bieżąco z ważnymi informacjami.                         | Must      |
 | STU-03 | Jako **Student** chcę filtrować aktualności po kategoriach, aby szybciej znaleźć interesujące mnie treści.                                  | Should    |
-| STU-04 | Jako **Student** chcę przeglądać wydarzenia w widoku listy i kalendarza, aby zaplanować swój czas.                                          | Must      |
-| STU-05 | Jako **Student** chcę wyszukiwać i filtrować wydarzenia (kategoria, język, dostępność), aby znaleźć wydarzenia dopasowane do moich potrzeb. | Must      |
-| STU-06 | Jako **Student** chcę zobaczyć szczegóły wydarzenia (termin, lokalizacja, dostępność), aby świadomie zdecydować o udziale.                  | Must      |
+| STU-04 | Jako **Student** chcę przeglądać wydarzenia w widoku listy (chronologicznie), aby zaplanować swój czas.                                     | Must      |
+| STU-05 | Jako **Student** chcę filtrować wydarzenia (wydział/jednostka, kategoria, zakres dat), aby znaleźć wydarzenia dopasowane do moich potrzeb.  | Must      |
+| STU-06 | Jako **Student** chcę zobaczyć szczegóły wydarzenia (opis, data, lokalizacja, organizator, tagi), aby świadomie zdecydować o udziale.       | Must      |
 | STU-07 | Jako **Student** chcę zapisać się lub wypisać z wydarzenia, aby zarządzać swoją obecnością.                                                 | Must      |
 | STU-08 | Jako **Student** chcę otrzymać wejściówkę z kodem QR, aby móc potwierdzić udział w wydarzeniu.                                              | Must      |
 | STU-09 | Jako **Student** chcę korzystać z mapy kampusu, aby bez stresu dotrzeć na miejsce wydarzenia.                                               | Should    |
 | STU-10 | Jako **Student** chcę otrzymywać powiadomienia o wydarzeniach i aktualnościach, aby nie przegapić ważnych informacji.                       | Should    |
 | STU-11 | Jako **Student** chcę mieć podgląd informacji z USOS w trybie tylko do odczytu, aby znać kluczowe terminy akademickie.                      | Could     |
+| STU-12 | Jako **Student** chcę widzieć liczbę wyników i czytelny stan „brak wydarzeń”, aby wiedzieć, czy filtry zawęziły listę.                      | Must      |
 
 ---
 
@@ -127,13 +132,12 @@ Brak User Story oznacza **świadomy Non-Goal**, a nie lukę w analizie.
 
 ### 5.3 Administrator merytoryczny (panel Django)
 
-| ID     | User Story                                                                                                       | Priorytet |
-|--------|------------------------------------------------------------------------------------------------------------------|-----------|
-| ADM-01 | Jako **Administrator** chcę zarządzać użytkownikami i rolami, aby kontrolować dostęp do systemu.                 | Must      |
-| ADM-02 | Jako **Administrator** chcę moderować treści wszystkich jednostek, aby utrzymać spójność i zgodność komunikacji. | Must      |
-| ADM-03 | Jako **Administrator** chcę zarządzać strukturą jednostek organizacyjnych, aby odzwierciedlać strukturę uczelni. | Must      |
-| ADM-04 | Jako **Administrator** chcę przeglądać podstawowe statystyki systemowe, aby monitorować wykorzystanie systemu.   | Should    |
-| ADM-05 | Jako **Administrator** chcę konfigurować integracje informacyjne (np. USOS), aby zapewnić aktualność danych.     | Should    |
+| ID     | User Story                                                                                                                        | Priorytet |
+|--------|-----------------------------------------------------------------------------------------------------------------------------------|-----------|
+| ADM-01 | Jako **Administrator** chcę zarządzać użytkownikami i rolami, aby kontrolować dostęp do systemu.                                  | Must      |
+| ADM-02 | Jako **Administrator** chcę moderować treści i wydarzenia (akceptacja/odrzucenie/prośba o poprawę), aby utrzymać spójność treści. | Must      |
+| ADM-03 | Jako **Administrator** chcę publikować lub cofać publikację treści z uzasadnieniem, aby ograniczać ryzyko błędnej informacji.     | Must      |
+| ADM-04 | Jako **Administrator** chcę zarządzać strukturą jednostek organizacyjnych, aby odzwierciedlać strukturę uczelni.                  | Must      |
 
 ---
 

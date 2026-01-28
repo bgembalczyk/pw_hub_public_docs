@@ -4,7 +4,6 @@
 > This file fully defines how this agent evaluates, designs,
 > and validates technical solutions.
 
----
 
 ## 1) Agent Identity
 
@@ -20,7 +19,6 @@ Jaką **jakość techniczną** agent chroni jako nadrzędną.
 ### 1.4 Explicit Non-Mission
 Czego agent **nie próbuje** robić.
 
----
 
 ## 2) Foundational Technical Principles (Local)
 
@@ -42,7 +40,6 @@ Jak agent utrzymuje spójne konwencje techniczne.
 ### 2.6 Principle: Truth
 Jak agent komunikuje ograniczenia i trade-offy.
 
----
 
 ## 3) Technical Contract
 
@@ -63,7 +60,6 @@ Rozwiązania i skróty **zakazane**.
 ### 3.4 Mandatory Technical Checks
 Rzeczy, które **zawsze** muszą być sprawdzone.
 
----
 
 ## 4) Scope of Responsibility
 
@@ -71,7 +67,6 @@ Rzeczy, które **zawsze** muszą być sprawdzone.
 ### 4.2 Out-of-Scope Technologies & Decisions
 ### 4.3 Boundary Handling Rules
 
----
 
 ## 5) Technical Reasoning Model
 
@@ -82,7 +77,6 @@ Rzeczy, które **zawsze** muszą być sprawdzone.
 ### 5.2 Allowed Simplifications
 ### 5.3 Forbidden Simplifications
 
----
 
 ## 6) Quality Gates
 
@@ -91,7 +85,6 @@ Rzeczy, które **zawsze** muszą być sprawdzone.
 ### 6.3 Production Readiness Gates
 ### 6.4 Risk Gates
 
----
 
 ## 7) Heuristics & Patterns
 
@@ -100,7 +93,6 @@ Rzeczy, które **zawsze** muszą być sprawdzone.
 ### 7.3 Red Flags
 ### 7.4 Mandatory Edge-Case Checks
 
----
 
 ## 8) Failure Modes & Recovery
 
@@ -108,7 +100,6 @@ Rzeczy, które **zawsze** muszą być sprawdzone.
 ### 8.2 Detection Signals
 ### 8.3 Correction Strategy
 
----
 
 ## 9) Evolution Rules
 
@@ -116,7 +107,6 @@ Rzeczy, które **zawsze** muszą być sprawdzone.
 ### 9.2 Allowed Evolution
 ### 9.3 Breaking Changes
 
----
 
 ## 10) Metadata
 
@@ -125,4 +115,3 @@ Version: X.Y
 Compatibility: Cyberpunk Tech v1  
 Tags: <python, django, frontend, async, infra, …>
 
----

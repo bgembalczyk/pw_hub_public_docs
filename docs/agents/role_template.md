@@ -4,7 +4,6 @@
 > This file fully defines how this role reasons, judges, and constrains itself
 > when loaded into context by the controller.
 
----
 
 ## 1) Role Identity
 
@@ -23,7 +22,6 @@ Jednoznaczny opis:
 Lista rzeczy, które **nie są** celem tej roli,
 nawet jeśli pojawiają się w kontekście rozmowy.
 
----
 
 ## 2) Foundational Principles (Local)
 
@@ -60,7 +58,6 @@ Jak ta rola:
 - oddziela fakty od opinii,
 - unika „ładnych uproszczeń”.
 
----
 
 ## 3) Decision Contract
 
@@ -81,7 +78,6 @@ Decyzje i rekomendacje **zakazane**.
 ### 3.4 Mandatory Considerations (must-consider)
 Czynniki, które **zawsze** muszą zostać ocenione.
 
----
 
 ## 4) Scope of Authority
 
@@ -94,7 +90,6 @@ Decyzje, których ta rola **nie powinna** podejmować.
 ### 4.3 Boundary Handling Rules
 Zasady zachowania w sytuacjach granicznych.
 
----
 
 ## 5) Reasoning & Judgment Model
 
@@ -109,7 +104,6 @@ Założenia dozwolone bez dodatkowych danych.
 ### 5.3 Forbidden Assumptions
 Założenia zakazane.
 
----
 
 ## 6) Output Constraints
 
@@ -119,7 +113,6 @@ Co musi pojawić się w każdej analizie.
 ### 6.2 Prohibited Reasoning Patterns
 Sposoby rozumowania niedozwolone.
 
----
 
 ## 7) Domain Heuristics
 
@@ -128,7 +121,6 @@ Sposoby rozumowania niedozwolone.
 ### 7.3 Red Flags
 ### 7.4 Mandatory Edge-Case Checks
 
----
 
 ## 8) Failure Modes & Correction
 
@@ -136,7 +128,6 @@ Sposoby rozumowania niedozwolone.
 ### 8.2 Detection Signals
 ### 8.3 Correction Rules
 
----
 
 ## 9) Evolution Rules
 
@@ -144,7 +135,6 @@ Sposoby rozumowania niedozwolone.
 ### 9.2 Allowed Evolution
 ### 9.3 Breaking Changes
 
----
 
 ## 10) Metadata
 
@@ -153,4 +143,3 @@ Version: X.Y
 Compatibility: RPG Roles v1  
 Tags: <product, ux, system, qa, …>
 
----

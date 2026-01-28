@@ -1,4 +1,9 @@
-# TODO: Task Analysis / Hierarchical Task Analysis (HTA) — PW_hub
+# Task Analysis / Hierarchical Task Analysis (HTA) — PW_hub
+
+**Status:** Accepted / Final
+**Decision date:** 2024-10-24
+**Owner:** PW_hub team / Product Owner
+**Scope:** MVP (SSO integration deferred to pre-prod phase)
 
 ## 1. Kontekst i rola dokumentu
 Dokument opisuje **Task Analysis / HTA** dla kluczowych ról i ścieżek MVP PW_hub:
@@ -14,12 +19,12 @@ Jest to artefakt wspierający:
 - ochronę zakresu MVP.
 
 Źródła prawdy:
-- `docs/specs.md` (funkcje i role),
-- `docs/user-stories.md`,
-- `docs/user-journey-map.md`,
-- `docs/moscow.md`,
-- `docs/acceptance-criteria-analysis.md`,
-- `docs/problem_statement_analysis.md`.
+- `../specs.md` (funkcje i role),
+- `user-stories.md`,
+- `user-journey-map.md`,
+- `moscow.md`,
+- `acceptance-criteria-analysis.md`,
+- `problem_statement_analysis.md`.
 
 ---
 
@@ -33,8 +38,9 @@ tak aby:
 ---
 
 ## 3. Zakres i zasady
-- HTA obejmuje **MVP**, w którym jedynym modułem „write-enabled” dla Studenta są **wydarzenia** (zapisy/wejściówki).  
+- HTA obejmuje **MVP**, w którym jedynym modułem „write-enabled” dla Studenta są **wydarzenia** (zapisy/wejściówki).
 - Integracje zewnętrzne są **informacyjne** (read-only) i nie mogą blokować podstawowej ścieżki MVP.
+- Integracja SSO (Logowanie) jest częścią MVP produkcyjnego, ale może być odroczona w fazie developmentu (zgodnie z `docs/deferred_tasks.md`).
 - Dostępność (WCAG 2.1) jest wymaganiem przekrojowym dla wszystkich kroków krytycznych.
 
 ---
@@ -145,17 +151,9 @@ W dniu wydarzenia wykonaj 4 (operacyjnie).
 
 ---
 
-## 5. Kryteria akceptacji dokumentu HTA (artefakt)
-- Plik znajduje się w `docs/analysis/`.
-- Zawiera cele G1–G3 oraz hierarchię zadań z numeracją.
-- Zawiera plany (Plan G1/G2/G3) i warianty (co najmniej dla błędów/braku miejsc).
-- Zawiera diagramy WBS w PlantUML dla co najmniej G1 i G2.
+## 5. Diagramy PlantUML — WBS
 
----
-
-## 6. Diagramy PlantUML — WBS
-
-### 6.1 WBS — Student (G1)
+### 5.1 WBS — Student (G1)
 
 #### Schemat PlantUML
 
@@ -195,7 +193,7 @@ W dniu wydarzenia wykonaj 4 (operacyjnie).
 
 ![WBS Student](assets/HTA_G1.png)
 
-### 6.2 WBS — Organizator (G2)
+### 5.2 WBS — Organizator (G2)
 
 #### Schemat PlantUML
 
@@ -231,7 +229,7 @@ W dniu wydarzenia wykonaj 4 (operacyjnie).
 
 ![WBS Organizator](assets/HTA_G2.png)
 
-### 6.3 WBS — Administrator merytoryczny (G3)
+### 5.3 WBS — Administrator merytoryczny (G3)
 
 #### Schemat PlantUML
 
@@ -260,7 +258,7 @@ W dniu wydarzenia wykonaj 4 (operacyjnie).
 
 ---
 
-## 7. Uwagi do utrzymania
+## 6. Uwagi do utrzymania
 
 - Każda nowa funkcja w MVP powinna dać się dopisać jako:
   - nowy krok w G1/G2/G3 **albo** 

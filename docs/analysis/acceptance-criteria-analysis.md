@@ -46,6 +46,7 @@ AC **nie rozszerzają zakresu** względem powyższych dokumentów.
 
 Zakres funkcji objętych AC:
 - logowanie SSO,
+- onboarding profilu studenta (wydział/rok/grupa opcjonalnie),
 - przegląd aktualności,
 - przegląd, filtrowanie i wyszukiwanie wydarzeń,
 - zapisy / rezygnacje z wydarzeń,
@@ -53,6 +54,60 @@ Zakres funkcji objętych AC:
 - mapa kampusu,
 - powiadomienia,
 - informacyjny podgląd danych z USOS.
+
+---
+
+### AC-1a: Kalendarz wydarzeń z filtrowaniem (P1 — odkrywanie)
+
+**Given**
+- użytkownik jest w module listy wydarzeń,
+
+**When**
+- wybiera filtr „Wydział/Jednostka”,
+
+**Then**
+- lista pokazuje tylko wydarzenia przypisane do tej jednostki,
+- licznik wyników odpowiada zastosowanym filtrom.
+
+**Given**
+- aktywne są filtry wydział + kategoria,
+
+**When**
+- użytkownik zmienia zakres dat (np. dziś / tydzień / miesiąc lub zakres niestandardowy),
+
+**Then**
+- lista i licznik aktualizują się zgodnie z nowymi kryteriami (filtry łączone AND),
+- kolejność wyników pozostaje chronologiczna.
+
+**Given**
+- filtry zawężają listę do pustego zbioru,
+
+**When**
+- lista się odświeża,
+
+**Then**
+- użytkownik widzi czytelny stan „brak wydarzeń” bez błędów,
+- użytkownik ma opcję wyczyszczenia filtrów.
+
+**Given**
+- użytkownik otwiera szczegóły wydarzenia,
+
+**When**
+- przegląda ekran szczegółów,
+
+**Then**
+- widzi pełny opis, datę/zakres dat, lokalizację, organizatora oraz kategorie/tagi,
+- nie widzi funkcji rejestracji, biletów ani QR (out of scope dla P1).
+
+**Given**
+- użytkownik wybiera zakres dat niepoprawny (data od > data do),
+
+**When**
+- system waliduje zakres,
+
+**Then**
+- użytkownik widzi komunikat o błędzie walidacji,
+- nie jest wykonywane zapytanie lub API zwraca 400 z błędem walidacji.
 
 ---
 
@@ -145,6 +200,88 @@ Zakres dostępności obejmuje m.in.:
   - jasno komunikuje statusy (zapisany, brak miejsc, błąd),
   - nie wymaga szkolenia ani instrukcji,
   - nie zmusza do korzystania z zewnętrznych narzędzi.
+
+---
+
+### AC-6: Onboarding profilu studenta (P1)
+
+**Given**
+- użytkownik loguje się do aplikacji po raz pierwszy,
+- profil studenta nie zawiera wydziału i roku studiów,
+
+**When**
+- użytkownik przechodzi onboarding,
+
+**Then**
+- profil zapisuje **wydział** i **rok studiów** jako wymagane,
+- **grupa** jest zapisana tylko jeśli użytkownik ją wybierze (pole opcjonalne),
+- onboarding kończy się w maksymalnie 1–3 krokach.
+
+**Given**
+- użytkownik przerwa onboarding przed zapisaniem profilu,
+
+**When**
+- wraca do aplikacji,
+
+**Then**
+- onboarding jest ponownie oferowany,
+- treści pozostają **niepersonalizowane** do czasu uzupełnienia profilu.
+
+**Given**
+- użytkownik ma uzupełniony profil,
+
+**When**
+- przegląda listę wydarzeń,
+
+**Then**
+- domyślnie zastosowany jest filtr **wydziału** użytkownika,
+- użytkownik może zmienić filtr ręcznie (poza zakresem implementacji P1).
+
+---
+
+### AC-7: Moderacja i publikacja treści (administrator merytoryczny)
+
+**Given**
+- administrator merytoryczny jest zalogowany do panelu Django,
+- treść lub wydarzenie posiada status „do moderacji”,
+
+**When**
+- administrator ocenia treść,
+
+**Then**
+- może wykonać jedną z akcji: **zaakceptować**, **odrzucić** lub **poprosić o poprawę**,
+- każda decyzja wymaga uzasadnienia widocznego dla autora/organizatora,
+- status treści zmienia się zgodnie z decyzją.
+
+**Given**
+- treść jest opublikowana,
+
+**When**
+- administrator cofa publikację,
+
+**Then**
+- treść traci status „opublikowana”,
+- decyzja cofnięcia jest zapisana z uzasadnieniem.
+
+---
+
+### AC-7: Obsługa błędów i walidacja (MVP)
+
+**Given**
+- użytkownik wykonuje akcję zdefiniowaną w User Stories MVP,
+
+**When**
+- przekazuje błędne dane wejściowe **lub**
+- nie posiada wymaganych uprawnień **lub**
+- wystąpi błąd integracji zewnętrznej,
+
+**Then**
+- system zwraca **spójny status HTTP** zgodny z kategorią błędu (400/403/404/409/5xx),
+- odpowiedź błędu nie ujawnia detali technicznych,
+- błąd jest logowany po stronie serwera z kontekstem,
+- scenariusze negatywne są objęte testami (unit + integration).
+
+Szczegóły scenariuszy i formatów błędów: `docs/negative-test-plan.md`.
 
 ---
 

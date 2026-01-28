@@ -114,6 +114,7 @@ ale:
 - gotowość CI PW do integracji.
 
 ### Referencje
+- **ADR-003: Wyłączenie SSO z zakresu MVP**
 - RICE: SSO jako etap końcowy
 - Context Diagram
 - AC-1 (docelowo)

@@ -11,9 +11,15 @@ License: MIT
 
 ### Project Documentation / Dokumentacja Projektu
 
+> **💡 Analytical Artifacts / Analiza**: Analytical artifacts (User Stories, HTA, MoSCoW, etc.) live in [`docs/analysis/`](docs/analysis/).
+
 - **[Requirements & Concept](docs/docs.md)** - Wymagania i koncepcja wdrożenia
 - **[Functional Specification](docs/specs.md)** - Specyfikacja funkcjonalna
+- **[Reference test environment & fixtures](docs/qa_reference_test_environment.md)** - Kontrakt QA: środowisko testowe i dane
+- **[A11y Quality Gate](docs/a11y_quality_gate.md)** - Obowiązkowy gate dostępności (focus, kontrast, reduced motion)
+- **[Task Analysis (HTA)](docs/analysis/task-analysis-hta.md)** - Analiza zadań i celów użytkowników (Source of Truth for Backlog)
 - **[Development Guidelines](agents.md)** - Wytyczne dla developerów
+- **[HSTS Rollout](docs/ops/hsts_rollout.md)** - Plan wdrożenia i walidacji HSTS
 - **[Mock-ups Documentation](docs/MOCKUPY.md)** - ⭐ Dokumentacja mock-upów i paneli administracyjnych
 
 ### Mock-ups / Mock-upy
@@ -58,6 +64,11 @@ To run the tests, check your test coverage, and generate an HTML coverage report
 #### Running tests with pytest
 
     uv run pytest
+
+#### Test fixtures (deterministic baseline)
+
+Referencyjny opis środowiska i minimalnego zestawu fixtures znajduje się w
+[`docs/qa_reference_test_environment.md`](docs/qa_reference_test_environment.md).
 
 ### Live reloading and Sass CSS compilation
 

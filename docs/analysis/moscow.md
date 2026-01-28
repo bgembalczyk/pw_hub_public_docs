@@ -62,7 +62,7 @@ porządkuje istniejące.
 - Moduł `events` jest jedynym modułem **write-enabled**
   (zapisy, wejściówki, stan użytkownika).
 - Pozostałe moduły (`announcements`, `guides`) są w MVP **read-only**.
-- Integracje zewnętrzne (USOS, dane mapowe) mają charakter **informacyjny**.
+- Integracje zewnętrzne (USOS, dane mapowe) są **wyłączone z MVP** (patrz: Deferred Tasks).
 - Dostępność (WCAG 2.1 AA) jest **wymaganiem jakościowym**, nie opcją.
 
 ---
@@ -73,7 +73,6 @@ porządkuje istniejące.
 
 | Element                                | Uzasadnienie                                     |
 |----------------------------------------|--------------------------------------------------|
-| Logowanie SSO (CAS / Entra ID)         | Wymóg organizacyjny; brak lokalnych kont i haseł |
 | Centralne repozytorium treści          | Realizacja głównego Problem Statement            |
 | System aktualności (read-only)         | Podstawowa orientacja informacyjna studentów     |
 | Moduł wydarzeń (events)                | Kluczowy obszar aktywizacji użytkowników         |
@@ -85,6 +84,8 @@ porządkuje istniejące.
 | Podstawowe role i uprawnienia          | Ochrona danych i kontroli dostępu                |
 | Obsługa błędów integracji (read-only)  | Stabilność MVP                                   |
 | Zgodność z WCAG 2.1 AA (MVP scope)     | Wymóg formalny i jakościowy                      |
+| Internacjonalizacja Interfejsu (UI i18n) | Wymóg dostępności dla studentów zagranicznych  |
+| Oznaczanie języka treści (atrybut)     | Umożliwia filtrowanie treści (zastępuje tłumaczenia) |
 
 > Jeśli którykolwiek z powyższych elementów nie zostanie dostarczony,
 > **produkt nie spełnia definicji MVP**.
@@ -99,7 +100,6 @@ porządkuje istniejące.
 |-----------------------------------------------------|------------------------------------|
 | Filtrowanie wydarzeń (kategoria, język, dostępność) | Wspiera orientację i planowanie    |
 | Wyszukiwanie wydarzeń                               | Skraca czas dotarcia do informacji |
-| Wielojęzyczność treści (PL / EN)                    | Wspiera inkluzywność               |
 | Lista uczestników dla organizatora                  | Wymóg operacyjny wydarzeń          |
 | Weryfikacja wejściówek (QR scan / status)           | Ułatwia obsługę wydarzeń           |
 | Moderacja treści                                    | Kontrola jakości informacji        |
@@ -113,11 +113,11 @@ porządkuje istniejące.
 
 | Element                                 | Uzasadnienie                   |
 |-----------------------------------------|--------------------------------|
-| Mapy kampusu                            | Wsparcie kontekstu wydarzeń    |
-| Prosta nawigacja piesza                 | Wartość dodatkowa UX           |
 | Powiadomienia push                      | Zwiększają frekwencję          |
 | Przypomnienia o zapisanych wydarzeniach | Komfort użytkownika            |
 | Rozszerzone statystyki                  | Przydatne, ale brak JTBD w MVP |
+
+> **Uwaga:** Mapy kampusu zostały przesunięte do **Won't Have** (Deferred Tasks), aby chronić zakres MVP.
 
 ---
 
@@ -127,12 +127,16 @@ porządkuje istniejące.
 
 | Element                                     | Powód                           |
 |---------------------------------------------|---------------------------------|
+| Logowanie SSO (CAS / Entra ID)              | Reclassified by **ADR-003** (Deferred Tasks priority) |
+| **Mapy kampusu i nawigacja**                | MMF-2 (Deferred Tasks)          |
+| **Integracja z USOS API (read-only)**       | MMF-3 (Deferred Tasks)          |
 | Zastępowanie USOS                           | Poza celem projektu             |
 | Dwukierunkowa integracja z USOS             | Wysokie ryzyko organizacyjne    |
 | Płatności / e-commerce                      | Brak JTBD i właściciela         |
 | Funkcje społecznościowe (czaty, komentarze) | Scope creep, koszty moderacji   |
 | Obsługa innych uczelni                      | MVP jednoznacznie dedykowane PW |
 | Zaawansowana analityka BI                   | Brak wartości krytycznej w MVP  |
+| Wielojęzyczność treści (tłumaczenia 1:1)    | Decyzja: Hybrydowe podejście (tylko atrybut) |
 
 ---
 

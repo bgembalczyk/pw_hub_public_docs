@@ -131,6 +131,22 @@ Zaawansowana analityka:
 
 ---
 
+### 4.9 Publiczny feed opinii i komentarzy do wydarzeń
+**Poza zakresem MVP.**
+
+Feedback po wydarzeniu pozostaje prywatny i agregowany.
+Nie przewiduje się publicznych komentarzy ani feedu społecznościowego.
+
+---
+
+### 4.10 Feedback od osób nieobecnych oraz automatyczne e-maile
+**Poza zakresem MVP.**
+
+MVP nie zbiera opinii od osób bez potwierdzonej obecności (scan QR)
+oraz nie wysyła automatycznych e-maili z prośbą o feedback.
+
+---
+
 ## 5. Otwarte pytania decyzyjne
 1. Czy MVP obejmuje **wyłącznie PW**, czy wymaga od razu architektury wielouczelnianej?
 2. Czy organizatorzy mają dostęp do **jakichkolwiek metryk** poza listą uczestników?

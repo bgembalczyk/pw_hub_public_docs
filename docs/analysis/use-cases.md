@@ -17,7 +17,6 @@ Dokument:
 Diagramy Use Case znajdują się w:
 `docs/diagrams/use_case.puml`.
 
----
 
 ## 2. Zakres i założenia
 
@@ -29,7 +28,6 @@ Diagramy Use Case znajdują się w:
   - **IN (MVP)**,
   - **OUT (MMF / później)**.
 
----
 
 ## 3. Aktorzy
 
@@ -47,7 +45,6 @@ Diagramy Use Case znajdują się w:
   Użytkownik dedykowanego panelu Django (nie Django Admin).  
   Zarządza rolami, strukturą jednostek i moderacją treści.
 
----
 
 ### 3.2 Systemy zewnętrzne (aktorzy wtórni)
 
@@ -61,11 +58,9 @@ Diagramy Use Case znajdują się w:
 - **System powiadomień**  
   Kanały e-mail / push (w MVP ograniczone lub wyłączone).
 
----
 
 ## 4. Pakiety przypadków użycia (wg domen)
 
----
 
 ## 4.1 Uwierzytelnianie i role (MVP — IN)
 
@@ -76,7 +71,6 @@ Diagramy Use Case znajdują się w:
 
 > Brak lokalnych kont i haseł.
 
----
 
 ## 4.2 Aktualności i treści informacyjne (MVP — IN)
 
@@ -89,7 +83,6 @@ Diagramy Use Case znajdują się w:
 
 > Moduł **read-only** dla Studentów w MVP.
 
----
 
 ## 4.3 Wydarzenia — odkrywanie (MVP — IN)
 
@@ -101,7 +94,6 @@ Diagramy Use Case znajdują się w:
 
 > To są Use Cases **odkrywania i oceny**, bez zmiany stanu użytkownika.
 
----
 
 ## 4.4 Wydarzenia — zapisy i wejściówki (MVP — IN)
 
@@ -114,9 +106,19 @@ Diagramy Use Case znajdują się w:
 
 > To **jedyny obszar write-enabled dla Studenta w MVP**.
 
+
+## 4.5 Feedback po wydarzeniu (MVP — IN)
+
+### Use Cases
+- **UC-EVT-14: Przesłać feedback po wydarzeniu** (Student)
+- **UC-EVT-15: Wyświetlić własny feedback** (Student)
+
+> Feedback jest dostępny tylko dla uczestników z potwierdzoną obecnością
+> (scan QR) i tylko po zakończeniu wydarzenia.
+
 ---
 
-## 4.5 Zarządzanie wydarzeniami (MVP — IN)
+## 4.6 Zarządzanie wydarzeniami (MVP — IN)
 
 ### Use Cases
 - **UC-EVT-10: Utworzyć wydarzenie** (Organizator)
@@ -124,9 +126,8 @@ Diagramy Use Case znajdują się w:
 - **UC-EVT-12: Opublikować wydarzenie** (Organizator)
 - **UC-EVT-13: Zarządzać zapisami i listą uczestników** (Organizator)
 
----
 
-## 4.6 Administracja merytoryczna (MVP — IN)
+## 4.7 Administracja merytoryczna (MVP — IN)
 
 ### Use Cases
 - **UC-ADM-01: Zarządzać użytkownikami**
@@ -134,9 +135,8 @@ Diagramy Use Case znajdują się w:
 - **UC-ADM-03: Moderować treści globalnie**
 - **UC-ADM-04: Konfigurować zasady publikacji**
 
----
 
-## 4.7 Mapy kampusu i nawigacja (MMF — OUT of MVP)
+## 4.8 Mapy kampusu i nawigacja (MMF — OUT of MVP)
 
 ### Use Cases (odroczone)
 - Wyświetlić mapę kampusu
@@ -146,9 +146,8 @@ Diagramy Use Case znajdują się w:
 
 > Funkcjonalność **poza MVP**, zależna od danych CENAGIS / GiK.
 
----
 
-## 4.8 Integracja z USOS (MMF — OUT of MVP)
+## 4.9 Integracja z USOS (MMF — OUT of MVP)
 
 ### Use Cases (read-only)
 - Wyświetlić przypomnienia z USOS
@@ -159,16 +158,14 @@ Diagramy Use Case znajdują się w:
 - edycji danych,
 - krytycznych zależności dla MVP.
 
----
 
-## 4.9 Powiadomienia (MMF — OUT of MVP)
+## 4.10 Powiadomienia (MMF — OUT of MVP)
 
 ### Use Cases (odroczone)
 - Otrzymać powiadomienie push
 - Zarządzać preferencjami powiadomień
 - Przeglądać historię powiadomień
 
----
 
 ## 5. Relacje między przypadkami użycia
 
@@ -183,7 +180,6 @@ Diagramy Use Case znajdują się w:
 - **UC-EVT-10 (Utworzyć wydarzenie)**  
   `include` → **UC-AUTH-01**
 
----
 
 ### Extend (warianty / rozszerzenia)
 
@@ -196,7 +192,6 @@ Diagramy Use Case znajdują się w:
 - **UC-EVT-04 (Sprawdzić dostępność)**  
   `extend` → **UC-EVT-03 (Szczegóły wydarzenia)**
 
----
 
 ## 6. Przypisanie aktorów do pakietów (skrót)
 
@@ -215,7 +210,6 @@ Diagramy Use Case znajdują się w:
 - Moderacja treści.
 - Zasady publikacji i porządek systemowy.
 
----
 
 ## 7. Relacja do innych artefaktów
 
@@ -226,7 +220,6 @@ Diagramy Use Case znajdują się w:
 
 Brak Use Case = **świadomy Non-Goal**, nie luka analizy.
 
----
 
 ## 8. Pliki powiązane
 

@@ -10,6 +10,9 @@ The Guides API provides RESTful endpoints for accessing guides, categories, and 
 
 **Authentication:** Public read access (no auth required)
 
+**Response Envelope Status:** **Legacy (raw payload)** — to be migrated to the
+standard envelope. See [API Response Envelope](./response_envelope.md).
+
 ## Query Parameters
 
 ### Publication Filter
@@ -30,6 +33,8 @@ The Guides API provides RESTful endpoints for accessing guides, categories, and 
 
 Returns a list of guides with minimal data for efficient list display.
 
+**Envelope:** Legacy (raw list)
+
 **Query Parameters:**
 - `published` (optional, default: `true`)
 - `language` (optional, default: `pl`)
@@ -39,7 +44,7 @@ Returns a list of guides with minimal data for efficient list display.
 GET /api/guides/?language=pl&published=true
 ```
 
-**Example Response:**
+**Example Response (legacy):**
 ```json
 [
   {
@@ -63,6 +68,8 @@ GET /api/guides/?language=pl&published=true
 
 Returns detailed information about a specific guide.
 
+**Envelope:** Legacy (raw object)
+
 **Path Parameters:**
 - `id` (required): Guide ID (integer)
 
@@ -74,7 +81,7 @@ Returns detailed information about a specific guide.
 GET /api/guides/1/?language=pl
 ```
 
-**Example Response:**
+**Example Response (legacy):**
 ```json
 {
   "id": 1,
@@ -102,15 +109,26 @@ GET /api/guides/1/?language=pl
 
 ```json
 {
-  "detail": "Guide not found or not published."
+  "errors": [
+    {
+      "code": "NOT_FOUND",
+      "message": "Guide not found or not published."
+    }
+  ]
 }
 ```
+
+> **Legacy note:** the current implementation still returns DRF-style
+> `{"detail": ...}` responses for these cases and should be migrated to the
+> standard envelope.【F:pw_hub/guides/api/views.py†L103-L132】
 
 ### 3. List Categories
 
 **GET** `/api/categories/`
 
 Returns a list of guide categories with count of published guides.
+
+**Envelope:** Legacy (raw list)
 
 **Query Parameters:**
 - `published` (optional, default: `true`)
@@ -120,7 +138,7 @@ Returns a list of guide categories with count of published guides.
 GET /api/categories/?published=true
 ```
 
-**Example Response:**
+**Example Response (legacy):**
 ```json
 [
   {
@@ -146,6 +164,8 @@ GET /api/categories/?published=true
 
 Returns detailed category information including its published guides.
 
+**Envelope:** Legacy (raw object)
+
 **Path Parameters:**
 - `slug` (required): Category slug (string)
 
@@ -157,7 +177,7 @@ Returns detailed category information including its published guides.
 GET /api/categories/academic/?language=pl
 ```
 
-**Example Response:**
+**Example Response (legacy):**
 ```json
 {
   "id": 1,
@@ -187,6 +207,8 @@ GET /api/categories/academic/?language=pl
 
 Returns a list of contacts with minimal data.
 
+**Envelope:** Legacy (raw list)
+
 **Query Parameters:**
 - `published` (optional, default: `true`)
 
@@ -195,7 +217,7 @@ Returns a list of contacts with minimal data.
 GET /api/contacts/?published=true
 ```
 
-**Example Response:**
+**Example Response (legacy):**
 ```json
 [
   {
@@ -214,6 +236,8 @@ GET /api/contacts/?published=true
 
 Returns detailed information about a specific contact.
 
+**Envelope:** Legacy (raw object)
+
 **Path Parameters:**
 - `id` (required): Contact ID (integer)
 
@@ -222,7 +246,7 @@ Returns detailed information about a specific contact.
 GET /api/contacts/1/
 ```
 
-**Example Response:**
+**Example Response (legacy):**
 ```json
 {
   "id": 1,

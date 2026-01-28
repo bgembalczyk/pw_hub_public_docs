@@ -105,19 +105,6 @@ MVP:
 
 ## 7. MVP — zakres funkcjonalny („IN”)
 
-### 7.1 Logowanie i role (SSO)
-
-**User story:**  
-Jako student chcę zalogować się kontem uczelnianym,
-aby korzystać z aplikacji bez tworzenia nowego konta.
-
-**AC:**
-- Logowanie wyłącznie przez CAS USOSweb / Microsoft Entra ID.
-- Brak lokalnych haseł.
-- Automatyczne przypisanie roli użytkownika.
-
----
-
 ### 7.2 Aktualności (student)
 
 **User story:**  
@@ -183,19 +170,21 @@ aby zachować spójność i jakość informacji.
 
 **AC:**
 - Zarządzanie użytkownikami i rolami.
-- Moderacja treści.
-- Zarządzanie jednostkami.
+- Moderacja treści i wydarzeń (akceptacja/odrzucenie/prośba o poprawę).
+- Publikacja i cofanie publikacji z uzasadnieniem decyzji.
+- Zarządzanie strukturą jednostek.
 
 ---
 
 ## 8. MVP — zakres poza zakresem („OUT”)
 
 Świadomie odroczone:
+- **Logowanie SSO** (przesunięte do pre-prod, patrz **ADR-003**).
 - Mapy kampusu i nawigacja.
 - Integracja z USOS (read-only).
 - Powiadomienia push i przypomnienia.
 - Personalizacja treści.
-- Analityka i metryki dla autorów treści.
+- Raporty i statystyki skuteczności treści (dla autorów i administratorów).
 
 Odroczenie ≠ rezygnacja.
 
@@ -245,12 +234,26 @@ Odroczenie ≠ rezygnacja.
 
 ---
 
+### MMF-5: Raporty i audyt treści
+
+**Zakres:**
+- raporty i statystyki skuteczności treści,
+- rozszerzony audyt działań moderacyjnych,
+- wersjonowanie kluczowych zmian treści (metadane).
+
+**Wartość:** lepsza kontrola jakości i zgodności komunikacji.
+
+---
+
 ## 10. Kryteria sukcesu MVP
 
-- liczba aktywnych użytkowników,
-- liczba zapisów na wydarzenia,
-- liczba aktywnych jednostek publikujących treści,
-- retencja po 14 i 30 dniach.
+Szczegółowa definicja KPI znajduje się w **ADR-003**.
+
+Główne metryki walidacyjne (mierzalne bez SSO):
+- **Weekly Active Devices (WAD)** — > 500 (pilot),
+- **Event Signup Conversion Rate** — > 5%,
+- **Active Unit Rate** — > 80% jednostek,
+- **30-Day Retention** — > 15%.
 
 Metryki służą **walidacji wartości**, nie raportowaniu.
 
